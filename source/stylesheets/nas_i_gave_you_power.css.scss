@@ -1,0 +1,65 @@
+// Copyright olliekav.com 2012 -----------------------------------------------------------------
+
+// Import our other sass partials --------------------------------------------------------------
+
+@import "partials/reset";
+
+html {
+  height:101%;
+  width:100%;
+}
+body {
+  background-color:#e13131;
+  color:#fff;
+  font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
+  *font-size:small;
+  font-weight:300;
+  height:100%;
+  width:100%;
+}
+#main {
+  margin:0 auto;
+  padding:0 30px;
+}
+article {
+  margin:0 auto;
+  width:848px;
+  > header {
+    background:url(../images/nas_power.png) no-repeat bottom left;
+    padding-bottom:471px;
+    > h2 {
+      border-bottom:15px solid #fff;
+      font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
+      font-weight:400;
+      font-size:18.4em;
+      line-height:0.8;
+      margin:0 auto 30px;
+      width:678px;
+      > b {
+        border-bottom:15px solid #fff;
+        display:block;
+        font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
+        font-size:0.375em;
+        font-weight:300;
+        margin-bottom:30px;
+        padding-bottom:20px;
+        text-align:justify;
+        text-transform:uppercase;
+      }
+      span {
+        left:-13px;
+        position:relative;
+      }
+    }
+  }
+  > blockquote {
+    margin:0 auto;
+    position:relative;
+    top:-130px;
+    right:-180px;
+    width:500px;
+    > p {
+      margin-bottom:1.5em;
+    }
+  }
+}
