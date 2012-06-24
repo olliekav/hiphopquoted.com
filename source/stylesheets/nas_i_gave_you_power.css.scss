@@ -1,25 +1,11 @@
-// Copyright olliekav.com 2012 -----------------------------------------------------------------
+// Nas - I gave you power -----------------------------------------------------------------
 
-// Import our other sass partials --------------------------------------------------------------
-
-@import "partials/reset";
-
-html {
-  height:101%;
-  width:100%;
-}
 body {
   background-color:#e13131;
   color:#fff;
   font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
   *font-size:small;
   font-weight:300;
-  height:100%;
-  width:100%;
-}
-#main {
-  margin:0 auto;
-  padding:0 30px;
 }
 article {
   margin:0 auto;
@@ -60,6 +46,15 @@ article {
     width:500px;
     > p {
       margin-bottom:1.5em;
+      &.chorus {
+        border-left:15px solid #fff;
+        font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
+        font-size:2.556em;
+        font-weight:400;
+        line-height:1.2;
+        margin:0 0 0.5em -100px;
+        padding-left:30px;
+      }
     }
   }
 }

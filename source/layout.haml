@@ -7,7 +7,8 @@
     %meta{ :name => 'description', :content => 'A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction. Brought to you by olliekav.com' }
     %meta{ :name => 'keywords', :content => 'Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS, HTML, Art Direction, Typography, Fonts' }
     %meta{ :name => 'viewport', :content => 'width=device-width' }
-    %link{ href: '/images/favicon.ico', rel: 'shortcut icon' }/
+    %link{ href: '/images/favicon.ico', rel: 'shortcut icon' }
+    = stylesheet_link_tag "/stylesheets/site.css"
     = yield_content :stylesheet
 
     /[if lt IE 9] 
