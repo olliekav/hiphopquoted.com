@@ -24,6 +24,9 @@
     = partial "footer"
     
     = yield_content :typekit
+    %script{ :src => '/javascripts/audio.min.js' }
+    %script
+      audiojs.events.ready(function() { var as = audiojs.createAll(); });
     %script
       try{Typekit.load();}catch(e){}
     %script{ :type => "application/x-javascript" }
