@@ -7,11 +7,16 @@ body {
   *font-size:small;
   font-weight:300;
 }
+#header {
+  > a {
+    background:url(../images/logo_white.png) no-repeat top left;
+  }
+}
 article {
   margin:0 auto;
   width:848px;
   > header {
-    background:url(../images/nas_power.png) no-repeat bottom left;
+    background:url(../images/nas/nas_power.png) no-repeat bottom left;
     padding-bottom:471px;
     > h2 {
       border-bottom:15px solid #fff;
