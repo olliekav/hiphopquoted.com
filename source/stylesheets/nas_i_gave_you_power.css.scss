@@ -18,6 +18,7 @@ article {
   > header {
     background:url(../images/nas/nas_power.png) no-repeat bottom left;
     padding-bottom:471px;
+    position:relative;
     > h2 {
       border-bottom:15px solid #fff;
       font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
@@ -42,6 +43,22 @@ article {
         position:relative;
       }
     }
+    > h3 {
+      bottom:435px;
+      color:#e13131;
+      font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
+      font-size:0.833em;
+      letter-spacing:1px;
+      left:100px;
+      position:absolute;
+      text-transform:uppercase;
+      > a {
+        color:#e13131;
+        &:hover {
+          text-decoration:none;
+        }
+      }
+    }
   }
   > blockquote {
     margin:0 auto;
@@ -54,7 +71,7 @@ article {
       &.chorus {
         border-left:15px solid #fff;
         font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
-        font-size:2.556em;
+        font-size:2.111em;
         font-weight:400;
         line-height:1.2;
         margin:0 0 0.5em -100px;
