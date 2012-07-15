@@ -1,0 +1,31 @@
+- content_for :head do
+  %title Ludicris - MVP
+
+- content_for :stylesheet do
+  = stylesheet_link_tag "/stylesheets/ludacris_mvp.css"
+
+- content_for :typekit do
+  %script{ :src => '//use.typekit.com/cbs4rag.js' }
+
+- content_for :audio do
+  <audio src="/audio/ludacris-mvp.mp3" preload="auto" />
+
+%article
+  %header
+
+    %h2 
+      I'm the MVP
+
+    %h3#track_info
+      Quote by 
+      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
+      from
+      = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+      on the album 
+      = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+
+  %blockquote
+    When Premier puts the needle on the record then I put it on blast<br/>
+    Your flow is garbage, I throw it in the trash<br/>
+    I'm the MVP, I'm stupid with this rap shit<br/>
+    Rewind the verse, make the track do a back flip<br/>

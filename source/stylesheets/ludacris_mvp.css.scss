@@ -5,15 +5,15 @@
 $red:#e13131;
 
 body {
-  background-color:#e13131;
-  color:#fff;
+  background-color:#fff;
+  color:#000;
   font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
   *font-size:small;
   font-weight:300;
 }
 #header {
   > a {
-    background:url(../images/logo_white.png) no-repeat top left;
+    background:url(../images/logo_black.png) no-repeat top left;
   }
 }
 #footer a {
@@ -24,10 +24,8 @@ body {
 }
 article {
   margin:0 auto;
-  width:848px;
+  width:670px;
   > header {
-    background:url(../images/nas/nas_power.png) no-repeat bottom left;
-    padding-bottom:471px;
     position:relative;
     > h2 {
       border-bottom:15px solid #fff;
