@@ -5,15 +5,15 @@
 $red:#e13131;
 
 body {
-  background-color:#e13131;
-  color:#fff;
-  font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
+  background:url(../images/nas_raekwon_ghostface/natural_paper.png);
+  color:#000;
+  font:137.5%/1.5 "garamond-premier-pro-display", 'Palatino Linotype', Times New Roman, Times, serif;
   *font-size:small;
-  font-weight:300;
+  font-weight:400;
 }
 #header {
   > a {
-    background:url(../images/logo_white.png) no-repeat top left;
+    background:url(../images/logo_black.png) no-repeat top left;
   }
   > nav a {
     background-color:#fff;
@@ -36,46 +36,26 @@ body {
 }
 article {
   margin:0 auto;
-  width:848px;
+  overflow:hidden;
+  width:940px;
   > header {
-    background:url(../images/nas/nas_power.png) no-repeat bottom left;
-    padding-bottom:471px;
     > h2 {
-      border-bottom:15px solid #fff;
-      font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
-      font-weight:400;
-      font-size:18.4em;
+      font-weight:700;
+      font-size:6.5em;
       line-height:0.8;
       margin:0 auto 30px;
-      width:678px;
-      > b {
-        border-bottom:15px solid #fff;
-        display:block;
-        font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
-        font-size:0.375em;
-        font-weight:300;
-        margin-bottom:30px;
-        padding-bottom:20px;
-        text-align:justify;
-        text-transform:uppercase;
-      }
-      span {
-        left:-13px;
-        position:relative;
-      }
     }
   }
   > blockquote {
     margin:0 auto;
     position:relative;
-    top:-130px;
-    right:-180px;
-    width:500px;
+    float:left;
+    margin-right:20px;
+    width:300px;
     > p {
       margin-bottom:1.5em;
       &.chorus {
         border-left:15px solid #fff;
-        font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
         font-size:2.111em;
         font-weight:400;
         line-height:1.2;
@@ -85,7 +65,6 @@ article {
       > cite {
         top:-328px;
         color:#e13131;
-        font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
         font-size:0.833em;
         letter-spacing:2px;
         left:-255px;

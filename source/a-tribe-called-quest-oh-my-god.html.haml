@@ -1,0 +1,43 @@
+- content_for :head do
+  %title A Tribe Called Quest – Oh My God
+
+- content_for :stylesheet do
+  = stylesheet_link_tag "/stylesheets/a_tribe_called-quest_oh_my_god.css"
+
+- content_for :typekit do
+  %script{ :src => '//use.typekit.com/cbs4rag.js' }
+
+- content_for :audio do
+  <audio src="/audio/a-tribe-called-quest-oh-my-god.mp3" preload="auto" />
+
+%article
+  %header
+
+    %h2 
+      Oh my god
+
+  %blockquote
+    %p
+      Listen up everybody the bottom line
+      I’m a black intellect, but unrefined
+      With precision like a bullet, target bound
+      just livin like a hooker, the harlot sounds
+      now when I say the harlot,
+      you know I mean the hot
+      V-A-V-A-Vader, the brothers in the spot
+      Jalick, Jalick ya wind up ya hit
+      Captain of the poets, I’m the #7 pick
+      lick, lick, lick boy on your backside
+      lick, lick, lick boy on your backside
+      listen to the fader, Shaheed lets it glide
+      Tip the earthly body
+      heavens on my side
+      even in Santo Domingo…
+    %p
+      %cite
+        Quote by 
+        = link_to("ATCQ", "http://en.wikipedia.org/wiki/A_Tribe_Called_Quest")
+        from
+        = link_to("Oh my god", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670679&id=265670545&s=143441&uo=6")
+        on the album 
+        = link_to("Midnight Maruaders", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670650&id=265670545&s=143441&uo=6")

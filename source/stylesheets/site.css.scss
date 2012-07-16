@@ -21,13 +21,32 @@ body {
   > h1 {
     position:absolute;
     right:20px;
-    top:30px;
+    top:25px;
   }
   > #logo {
     display:inline-block;
     height:67px;
     text-indent:-99999px;
     width:218px;
+  }
+  > nav {
+    position:absolute;
+    right:20px;
+    top:60px;
+    > ul {
+      margin:0;
+      > li {
+        display:inline;
+        margin-left:10px;
+        > a {
+          border-radius:5px;
+          display:inline-block;
+          padding:5px 10px;
+          text-decoration:none;
+          -webkit-transition:0.2s ease;-moz-transition:0.2s ease;
+        }
+      }
+    }
   }
 }
 #footer {
