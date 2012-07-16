@@ -10,6 +10,11 @@
 - content_for :audio do
   <audio src="/audio/nas-gave-you-power.mp3" preload="auto" />
 
+- content_for :posts_navigation do
+  %nav
+    %ul
+      %li=link_to("Next", "/nas-raekwon-ghostface-killah-verbal-intercourse")
+
 %article
   %header
 
@@ -17,14 +22,6 @@
       %b 
         %span I gave you 
       %span power
-
-    %h3#track_info
-      Quote by 
-      = link_to("Nas", "http://en.wikipedia.org/wiki/Nas")
-      from
-      = link_to("I gave your power", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
-      on the album 
-      = link_to("It was written", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
 
   %blockquote
     %p 
@@ -110,3 +107,12 @@
       Heard mad niggaz screamin, niggaz runnin, cops is comin <br/>
       Now I'm happy, until I felt somebody else grab me <br/>
       Damn!
+
+    %p
+      %cite
+        Quote by 
+        = link_to("Nas", "http://en.wikipedia.org/wiki/Nas")
+        from
+        = link_to("I gave your power", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
+        on the album 
+        = link_to("It was written", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
