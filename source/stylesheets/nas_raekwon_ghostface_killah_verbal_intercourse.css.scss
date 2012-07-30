@@ -7,8 +7,11 @@ $red:#e13131;
 body {
   background:url(../images/nas_raekwon_ghostface/natural_paper.png);
   color:#000;
-  font:137.5%/1.5 "garamond-premier-pro-display", 'Palatino Linotype', Times New Roman, Times, serif;
+  font:112.5%/1.5 "ff-tisa-web-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
   *font-size:small;
+  font-weight:400;
+}
+h1,h2,h3 {
   font-weight:400;
 }
 #header {
@@ -16,19 +19,18 @@ body {
     background:url(../images/logo_black.png) no-repeat top left;
   }
   > nav a {
-    background-color:#fff;
-    color:$red;
+    background-color:#000;
+    color:#fff;
     font-size:0.611em;
     &:hover {
-      background-color:shade($red, 40%);
+      background-color:tint(#000, 40%);
       color:#fff;
     }
   }
 }
 #footer {
-  color:shade($red, 40%);
   a {
-    color:#fff;
+    color:#000;
     &:hover {
       text-decoration:underline;
     }
@@ -41,17 +43,16 @@ article {
   > header {
     > h2 {
       font-weight:700;
-      font-size:6.5em;
+      font-size:5.556em;
       line-height:0.8;
-      margin:0 auto 30px;
+      margin:0 auto 80px;
+      padding-bottom:40px;
+      text-align:center;
     }
   }
   > blockquote {
     margin:0 auto;
     position:relative;
-    float:left;
-    margin-right:20px;
-    width:300px;
     > p {
       margin-bottom:1.5em;
       &.chorus {
@@ -62,18 +63,37 @@ article {
         margin:0 0 0.5em -100px;
         padding-left:30px;
       }
+      &.column {
+        float:left;
+        margin-right:20px;
+        width:300px;
+      }
+      &#quote_three {
+        margin-right:0;
+      }
+      > span {
+        display:block;
+        margin-bottom:1.5em;
+        font-size:1.556em;
+      }
+      > img {
+        display:block;
+        margin-bottom:1.5em;
+      }
       > cite {
-        top:-328px;
-        color:#e13131;
-        font-size:0.833em;
-        letter-spacing:2px;
-        left:-255px;
+        border-top:1px solid #000;
+        border-bottom:1px solid #000;
+        font-size:0.889em;
+        left:0;
+        letter-spacing:1px;
+        padding:10px 0;
         position:absolute;
         font-style:normal;
-        text-transform:uppercase;
-        width:678px;
+        text-align:center;
+        top:-80px;
+        width:940px;
         > a {
-          color:#e13131;
+          color:#000;
           &:hover {
             text-decoration:none;
           }
@@ -86,20 +106,20 @@ article {
 // Audio player
 
 .audiojs {
-  background-color:#fff;
+  background-color:#000;
   .time {
-    color:$red;
+    color:#e1e1e1;
   }
   .loaded {
-    background-color:$red;
+    background-color:#e1e1e1;
   }
   .play {
-    border-left-color:$red;
+    border-left-color:#e1e1e1;
   }
   .progress {
-    background-color:shade($red, 20%);
+    background-color:shade(#e1e1e1, 20%);
   }
   .pause {
-    border-color:$red;
+    border-color:#e1e1e1;
   }
 }
