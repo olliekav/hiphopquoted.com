@@ -23,7 +23,7 @@ require 'haml-coderay'
 
 # CoffeeScript filters in Haml
 # First: gem install coffee-filter
-require 'coffee-filter'
+#require 'coffee-filter'
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
