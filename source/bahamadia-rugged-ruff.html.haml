@@ -1,0 +1,60 @@
+- content_for :head do
+  %title Bahamadia – Rugged Ruff 
+
+- content_for :stylesheet do
+  = stylesheet_link_tag "/stylesheets/bahamadia-rugged-ruff.css"
+
+- content_for :typekit do
+  %script{ :src => '//use.typekit.com/cbs4rag.js' }
+
+- content_for :audio do
+  <audio src="/audio/bahamadia-rugged-ruff.mp3" preload="auto" />
+
+- content_for :posts_navigation do
+  %nav
+    %ul
+      %li=link_to("Next", "/ludacris–mvp")
+      %li=link_to("Prev", "/nas-i-gave-you-power")
+
+%article
+  %header
+    %h1 
+      Rugged Ruff
+
+%figure
+  %blockquote
+    %p
+      I got it hemmed - mad methods to microphone mechanism from inner city
+      Curriculm to cuttin edge for headz like circumcisions in yah mental
+      Zone I'm sly-er than Stallone basic instincts like Sharon Stone
+      Pockets Puffy-er than Combs caliber narrated rate supreme elevation,
+      Fly-er than aviation plus freaky as domonatrix, dramatics are
+      Manifested, thought spreadin like infection at pinnacle of perfection
+      Brain runs on fuel injection, cyphers are intercepted like plays by
+      Quarter backs bare witness to the fitness I be layin on the wax.....
+    %p
+      Compositions be causin calamities rapidly, what mc would dare take a
+      Stab at three vocabulary mastery presented retention extended through
+      Iller style invented brain cells excel like v6 engines when I be
+      Enterin' - grammatical vortexes twistin' like rolodexes context is
+      Randomly selected ran like red lights by eager paramedics majestic
+      Verbal fragments tagged dah graphics dat wreck more havoc on niggas
+      Cabbages den semi automatic, plus automated but never faded datum kick
+      In verbatim related to hip-hop....
+    %p
+      In stereo phonic or mono my lingo tingle topics revolves around
+      Science of optics and poses as nuances scripture glitters like
+      Diamonds or sparkle like magnesium -premium equates da medium that
+      Blows me up like helium histionics provided pumped up more Jam than
+      Technotronix prime and mo' toxic than hydrocarbon in dioxin rupture
+      Rhythms with quartz deletin jumble diction I rips it in repetition
+      Like salots in Hinduism - It's like dat...
+
+  %figcaption
+      Quote by 
+      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
+      %cite
+        from
+        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        on the album 
+        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")

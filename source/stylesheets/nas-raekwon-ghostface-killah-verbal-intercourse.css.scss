@@ -13,8 +13,8 @@ h1,h2,h3 {
   font-weight:400;
 }
 #header {
-  > a {
-    background:url(../images/logo_black.png) no-repeat top left;
+  #logo path {
+    fill: #000;
   }
   > nav a {
     background-color:#000;
@@ -38,7 +38,7 @@ article {
   margin:0 auto;
   width:940px;
   > header {
-    > h2 {
+    > h1 {
       font-weight:900;
       font-size:5.556em;
       line-height:0.8;

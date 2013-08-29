@@ -13,8 +13,8 @@ h1,h2,h3 {
   font-weight:400;
 }
 #header {
-  > a {
-    background:url(../images/logo-white.png) no-repeat top left;
+  #logo path {
+    fill: #fff;
   }
   > nav a {
     background-color:#fff;
@@ -39,7 +39,7 @@ article {
   position:relative;
   width:990px;
   > header {
-    > h2 {
+    > h1 {
       color:rgba(#AD8030, 0.2);
       font-weight:400;
       font-size:21.111em;
