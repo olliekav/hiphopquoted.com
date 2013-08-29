@@ -1,0 +1,100 @@
+- content_for :head do
+  %title Jehst – City Of Industry
+
+- content_for :stylesheet do
+  = stylesheet_link_tag "/stylesheets/jehst–city-of-industry.css"
+
+- content_for :typekit do
+  %script{ :src => '//use.typekit.com/cbs4rag.js' }
+
+- content_for :audio do
+  <audio src="/audio/jehst–city-of-industry.mp3" preload="auto" />
+
+- content_for :posts_navigation do
+  %nav
+    %ul
+      %li=link_to("Next", "/ludacris–mvp")
+      %li=link_to("Prev", "/nas-i-gave-you-power")
+
+%article
+  %header
+    %h1 
+      City Of Industry
+
+%figure
+  %blockquote
+    %p
+      Airborne
+      My thoughts shrouded by cloud-form
+      The land ravaged in the wake of this ground war
+      The quintessential outlaw
+      Eye of the storm
+      My tears fall as the torrential downpour
+      The flood
+      Your death wish written in blood
+      I came in from the cold
+      Clothes drippin’ with mud
+      Grippin’ a club
+      Primitive as Stig Of The Dump
+      Swingin’ a punch
+      The bad seed
+      Pick of the bunch
+      I drink black rain
+      Take another swig and I’m drunk,
+      Taste venom on the tip of my tongue
+      My lip’s cold
+      Spittin’ out toxins I couldn’t dissolve
+      Or withhold
+      I never sold my soul for fool’s gold
+      So I’m still free
+      But too numb to feel pity
+      Some broke down
+      Now the steel city’s a ghost town
+      Snowflakes cover the ground in white carpets
+      Seasons of espionage as time passes
+      The lion-hearted
+      Survival of the hardest artist
+      My open arms embrace darkness
+      Still cravin’ carnage and infamy
+      But even parasites starve in this carcass of industry
+    %p
+      You can see me as cynical
+      Trapped in my own gothic vision
+      Encapsulating chaos in this composition
+      Calculated
+      Like the lies of a politician
+      Grippin’ a slingshot
+      I size up the opposition
+      I drop a match in the clouds and watch the flames rise
+      Fire-water fallin’ from these grey skies
+      To painted trainlines
+      Chrome over redbrick
+      Reflective
+      Like a gemstone in a cesspit
+      Jehst gives belief to a skeptic
+      The truth neglected
+      Like open wounds that turn septic
+      Infected
+      By the forked tongue of a liar
+      Now my thoughts are the colour of fire
+      And my nights spent bunnin’ the kya
+      Uninspired by the freak-show
+      I see ghosts
+      dance in the trail of my weed smoke
+      My words are folklore
+      That survived the cold war
+      New world order and so forth
+      I go north
+      Ankle deep in snowfall
+      Leapin’ over dry stone walls with a holdall
+      Steam clouds rise from my fiery breath
+      It’s the last twilight before the silence of death
+
+  %figcaption
+      Quote by 
+      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
+      %cite
+        from
+        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        on the album 
+        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")

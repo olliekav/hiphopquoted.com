@@ -10,22 +10,69 @@
 - content_for :audio do
   <audio src="/audio/ludacris-mvp.mp3" preload="auto" />
 
+- content_for :posts_navigation do
+  %nav
+    %ul
+      %li=link_to("Next", "/ludacris–mvp")
+      %li=link_to("Prev", "/nas-i-gave-you-power")
+
 %article
   %header
+    %h1 
+      I'm the MVP, I'm stupid with this rap shit 
 
-    %h2 
-      I'm the MVP
+%figure
+  %blockquote
+    %p
+      When Premier puts the needle on the record then I put it on blaast, 
+      your flow is garbage, I throw it in the trash, 
+      I'm the MVP, I'm stupid with this rap shit, 
+      rewind the verse, make the track do a back flip, 
+      your speakers poppin' on a handstand, 
+      they snaek dissin' niggas, throwin' little jabs like Bam-Bam, 
+      and I'm a bad man, 
+      they amatures like at Apollo, I wipe 'em off the stage like Sandman, 
+      damn man, what the hell you smokin' on, 
+      it's Ludacris I got more cheese than Prombolon, 
+      and the chrome is home, so I'm never home alone, 
+      and only keep friends with 2-X chromosomes, 
+      so I command all these rappers: "Put the mic down!", 
+      throw a grenade in your mouth "Nigga, bite down!!", 
+      'cause I'm back with Premo on the track, 
+      takin' it to the essence, showin' niggas how to rap 
+    %p
+      Still hungry as the day I began 
+      I heat the booth up so much the engineer caught a muthafuckin' tan, 
+      I'm the truth, when it comes to it, 
+      I hold Hip Hop for hostage, since 2000 I put a gun to it, 
+      and I run through it, like a jamaican boat, 
+      and everyday is a vacation on jamaican smoke, 
+      charge your whole block, 
+      talk shit, they hear the four pop, 
+      "One, Two!" and it don't stop, 
+      and my deliveries invaded your vicinity, Hennesy is my remedy, takin' shots like Kennedy, 
+      and I've been a G, for a long time, 
+      to these streets I'm connected like I'm online, 
+      on time for whatever, 
+      and everytime and album drop, I drop big like Voletta, 
+      I'm ahead of the competition, they wishin' I just fade off, 
+      my career for your life, let's trade off 
+    %p
+      8 years in the game, ain't a damn thang change, 
+      so I brought it back to one of the tracks, so where the damn thang came, 
+      and he goin' down in history, 'cause he don't sleep, 
+      and he the first southern rapper on a Premo beat, 
+      I ate the kick and the snare, 
+      the samples always taste fine, 
+      and I shoot a hot sixteen from the baseline, 
+      I'm on point like CP3, 
+      and I'll be goin' down in rap as the MVP 
 
-    %h3#track_info
+  %figcaption
       Quote by 
       = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      from
-      = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
-      on the album 
-      = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
-
-  %blockquote
-    When Premier puts the needle on the record then I put it on blast<br/>
-    Your flow is garbage, I throw it in the trash<br/>
-    I'm the MVP, I'm stupid with this rap shit<br/>
-    Rewind the verse, make the track do a back flip<br/>
+      %cite
+        from
+        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        on the album 
+        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")

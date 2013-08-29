@@ -30,6 +30,8 @@ require 'haml-coderay'
 
 activate :directory_indexes
 
+activate :asset_hash
+
 ###
 # Page command
 ###

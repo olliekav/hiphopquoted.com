@@ -13,11 +13,11 @@ h1,h2,h3 {
   font-weight:400;
 }
 #header {
-  > a {
-    background:url(../images/logo-ohmygod.png) no-repeat top left;
+  #logo path {
+    fill: #AD8030;
   }
   > nav a {
-    background-color:#AD8030;
+    background-color: #AD8030;
     color:#fff;
     font-size:0.611em;
     &:hover {
