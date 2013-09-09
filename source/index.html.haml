@@ -1,2 +1,13 @@
 - content_for :head do
-  %title Hip Hop Quoted – Hip Hop Quotes brought to life with Typography   
+  %title Hip Hop Quoted – Hip Hop Quotes brought to life with Typography
+
+%section#home
+  %h1 Hip Hop Quoted – Hip Hop Quotes brought to life with Typography
+
+  - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}
+  %nav
+    %ul
+    - pages.each do |p|
+      - if(p.data.title)
+        %li
+          = link_to p.data.title, p.url

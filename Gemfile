@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
-gem "middleman", "~>3.1.4"
+gem "middleman"
+#gem "middleman-listpages", "~> 0.0.2", :git => 'git://github.com/olliekav/middleman-listpages'
 #gem "coffee-filter"
-gem "haml-coderay"
+#gem "haml-coderay"
+#gem "middleman-navigation"
