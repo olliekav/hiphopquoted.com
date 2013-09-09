@@ -39,16 +39,18 @@ article {
   max-width:848px;
   width: 100%;
   > header {
-    background:url(../images/nas/nas_power.png) no-repeat bottom left;
+    background:url(../images/gun.svg) no-repeat bottom left;
+    background-size: 91% auto;
     padding-bottom:471px;
     > h1 {
       border-bottom:15px solid #fff;
       font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
       font-weight:400;
-      font-size:18.4em;
+      font-size:18em;
       line-height:0.8;
+      text-align: justify;
       margin:0 auto 30px;
-      width:678px;
+      width:80%;
       > b {
         border-bottom:15px solid #fff;
         display:block;
@@ -59,20 +61,17 @@ article {
         padding-bottom:20px;
         text-align:justify;
         text-transform:uppercase;
-      }
-      span {
-        left:-13px;
-        position:relative;
+        width: 80%;
       }
     }
   }
-  > blockquote {
+  > figure {
     font-weight: 400;
     margin:0 auto;
     position:relative;
     top:-130px;
     right:-180px;
-    width:500px;
+    width:60%;
     > p {
       margin-bottom:1.5em;
       &.chorus {

@@ -15,6 +15,17 @@
       %script{ :src => '/javascripts/html5shiv.js' } 
 
   %body#hiphopquoted{ :class => "page_" + page_classes }
+
+    //- for page in current_page.children
+    //  = link_to page.data.title, page.url
+
+    - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
+    %nav
+      %ul
+      - pages.each do |p|
+        - if(p.data.title)
+          %li
+            = link_to p.data.title, p.url
     
     = partial "header"
     
@@ -25,11 +36,11 @@
     
     = yield_content :typekit
     %script{ :src => '/javascripts/audio.min.js' }
-    %script{ :src => '/javascripts/jquery.fittext.js' }
     %script
       audiojs.events.ready(function() { var as = audiojs.createAll(); });
     %script
       try{Typekit.load();}catch(e){}
+    = yield_content :javascript
     %script{ :type => "application/x-javascript" }
       function hideURLbar(){ window.scrollTo(0,1); }
       addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);

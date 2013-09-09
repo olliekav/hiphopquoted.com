@@ -19,7 +19,7 @@ set :markdown, :layout_engine => :haml
 
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
-require 'haml-coderay'
+# require 'haml-coderay'
 
 # CoffeeScript filters in Haml
 # First: gem install coffee-filter
@@ -31,6 +31,8 @@ require 'haml-coderay'
 activate :directory_indexes
 
 activate :asset_hash
+
+activate :navigation
 
 ###
 # Page command
