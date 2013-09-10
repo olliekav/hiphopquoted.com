@@ -15,19 +15,16 @@
       %script{ :src => '/javascripts/html5shiv.js' } 
 
   %body#hiphopquoted{ :class => "page_" + page_classes }
-
-    //- for page in current_page.children
-    //  = link_to page.data.title, page.url
+    
+    = partial "header"
 
     - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
-    %nav
+    %nav#nav
       %ul
       - pages.each do |p|
         - if(p.data.title)
           %li
             = link_to p.data.title, p.url
-    
-    = partial "header"
     
     %section#main{ :role => 'main' }
       = yield
@@ -36,8 +33,6 @@
     
     = yield_content :typekit
     %script{ :src => '/javascripts/audio.min.js' }
-    %script
-      audiojs.events.ready(function() { var as = audiojs.createAll(); });
     %script
       try{Typekit.load();}catch(e){}
     = yield_content :javascript

@@ -17,33 +17,63 @@ body {
 }
 #header {
   padding:20px 20px 60px 20px;
-  position:relative;
   > h2 {
     font-weight: normal;
     position:absolute;
     right:20px;
     top:25px;
   }
-  > nav {
-    position:absolute;
-    right:20px;
-    top:60px;
-    > ul {
-      margin:0;
-      > li {
-        display:inline;
-        margin-left:10px;
-        > a {
-          border-radius:5px;
-          display:inline-block;
-          padding:5px 10px;
-          text-decoration:none;
-          -webkit-transition:0.2s ease;-moz-transition:0.2s ease;
-        }
-      }
-    }
+}
+
+// Responsive nav 
+
+#nav {
+  background-color: #000;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+#nav li {
+  width: 100%;
+  display: block;
+}
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+@media screen and (min-width: 40em) {
+  .js #nav {
+    position: relative;
+  }
+  .js #nav.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
   }
 }
+
 #footer {
   overflow:hidden;
   padding:0 20px 20px;
