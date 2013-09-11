@@ -1,8 +1,12 @@
 - content_for :head do
   %title Hip Hop Quoted – Hip Hop Quotes brought to life with Typography
 
+- content_for :typekit do
+  %script{ :src => '//use.typekit.com/ngu1xuv.js' }
+
 %section#home
-  %h1 Hip Hop Quoted – Hip Hop Quotes brought to life with Typography
+  
+  %h1 Hip Hop Quotes brought to life with Typography
 
   - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}
   %nav
