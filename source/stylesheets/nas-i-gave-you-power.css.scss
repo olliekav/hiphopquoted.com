@@ -15,15 +15,6 @@ body {
   #logo path {
     fill: #fff;
   }
-  > nav a {
-    background-color:#fff;
-    color:$red;
-    font-size:0.611em;
-    &:hover {
-      background-color:shade($red, 40%);
-      color:#fff;
-    }
-  }
 }
 #footer {
   color:shade($red, 40%);

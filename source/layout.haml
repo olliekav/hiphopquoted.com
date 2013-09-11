@@ -14,22 +14,23 @@
     /[if lt IE 9] 
       %script{ :src => '/javascripts/html5shiv.js' } 
 
-  %body#hiphopquoted{ :class => "page_" + page_classes }
+  %body#hiphopquoted{ :class => "page-" + page_classes }
     
-    = partial "header"
-
     - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
-    %nav#nav
+    %input{ :type => "checkbox", :class => "main-nav-check", :id => "main-nav-check" }
+    %nav#main-nav.main-nav
       %ul
-      - pages.each do |p|
-        - if(p.data.title)
-          %li
-            = link_to p.data.title, p.url
+        - pages.each do |p|
+          - if(p.data.title)
+            %li
+              = link_to p.data.title, p.url
+
+    = partial "header"
     
     %section#main{ :role => 'main' }
       = yield
         
-    = partial "footer"
+      = partial "footer"
     
     = yield_content :typekit
     %script{ :src => '/javascripts/audio.min.js' }
