@@ -1,12 +1,11 @@
 %footer#footer
-  #audio_clip
-    = yield_content :audio
-    %p If you want this clip removed please contact me. All clips have links to purchase the record
+  - if(!current_page.path == "index.html")
+    #audio_clip
+      = yield_content :audio
+      %p If you want this clip removed please contact me. All clips have links to purchase the record
   %ul
     %li
       Made by 
       = link_to("olliekav", "http://olliekav.com")
     %li
       = link_to("About", "/about")
-    %li
-      = link_to("Archive", "/archive")

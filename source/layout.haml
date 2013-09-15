@@ -24,12 +24,10 @@
           - if(p.data.title)
             %li
               = link_to p.data.title, p.url
-
-    = partial "header"
     
     %section#main{ :role => 'main' }
+      = partial "header"
       = yield
-        
       = partial "footer"
     
     = yield_content :typekit
