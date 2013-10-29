@@ -35,11 +35,13 @@ h1,h2,h3 {
   }
 }
 article {
-  background:url(../images/atcq/book_background.jpg);
+  background:url(../images/atcq/book_background.jpg) no-repeat top center;
+  background-size: 100% auto;
   height:1191px;
   margin:0 auto 100px;
+  max-width: 868px;
   position:relative;
-  width:823px;
+  width:100%;
   > header {
     > h2 {
       color:rgba(#AD8030, 0.2);
