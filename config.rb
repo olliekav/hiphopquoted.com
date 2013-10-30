@@ -1,7 +1,7 @@
-set :markdown, :layout_engine => :haml
-
 ### 
 # Compass
+Encoding.default_internal = "utf-8"
+
 ###
 
 # Susy grids in Compass
@@ -12,6 +12,8 @@ set :markdown, :layout_engine => :haml
 # compass_config do |config|
 #   config.output_style = :compact
 # end
+
+set :markdown, :layout_engine => :haml
 
 ###
 # Haml
@@ -31,8 +33,6 @@ set :markdown, :layout_engine => :haml
 activate :directory_indexes
 
 activate :asset_hash
-
-activate :navigation
 
 ###
 # Page command
