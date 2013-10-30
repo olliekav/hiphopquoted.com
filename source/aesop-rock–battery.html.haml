@@ -1,15 +1,20 @@
 ---
-title: Aesop Rock – Battery
+title: Aesop Rock - Battery
 ---
 
 - content_for :head do
   %title Aesop Rock – Battery
 
 - content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/aesop-rock–battery.css"
+  = stylesheet_link_tag("/stylesheets/aesop-rock-battery.css")
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
+- content_for :javascript do
+  = javascript_include_tag "/javascripts/jquery-1.10.2.min.js"
+  = javascript_include_tag "/javascripts/bigtext.js"
+  :javascript
+    $(function(){
+      $('h1').bigtext();
+    });
 
 - content_for :audio do
   <audio src="/audio/aesop-rock–battery.mp3" preload="auto" />
@@ -22,13 +27,17 @@ title: Aesop Rock – Battery
 
 %article
   %header
-    %h1 
-      Battery
+    %h1
+      %span
+        Yo change the 
+      %span
+        fuckin 
+      %span
+        channel
 
 %figure
   %blockquote
     %p
-      Yo change the fuckin channel<br/>
       I burn a Coma candle<br/>
       When the flame fades, consider my flatline a soldier's sample<br/>
       We them cats talkin noise behind that New York trash heap<br/>

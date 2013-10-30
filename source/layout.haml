@@ -18,20 +18,20 @@
     
     - pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
     %input{ :type => "checkbox", :class => "main-nav-check", :id => "main-nav-check" }
-    %nav#main-nav.main-nav
+    %nav#navigation.main-nav
       %ul
         - pages.each do |p|
           - if(p.data.title)
             %li
               = link_to p.data.title, p.url
     
-    %section#main{ :role => 'main' }
+    %main#main{ :role => 'main' }
       = partial "header"
       = yield
       = partial "footer"
     
     = yield_content :typekit
-    %script{ :src => '/javascripts/audio.min.js' }
+    = javascript_include_tag "/javascripts/audio.min.js"
     %script
       try{Typekit.load();}catch(e){}
     = yield_content :javascript

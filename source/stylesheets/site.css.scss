@@ -13,6 +13,7 @@ body {
 }
 #main {
   background-color: #fff;
+  display: block;
   float: left;
   margin:0 auto;
   padding:0 30px;
@@ -20,7 +21,7 @@ body {
   width: 100%;
   z-index: 10;
   @include box-sizing(border-box);
-  @include transition(width 0.3s ease)
+  @include transition(width 0.3s ease);
 }
 #header {
   padding:20px 0 40px;
@@ -49,6 +50,9 @@ body {
       width: 100%;
     }
   }
+  label {
+    @include transition(color 0.1s linear)
+  }
 }
 a {
   color: #232323;
@@ -60,7 +64,7 @@ a {
 .main-nav-check {
   display: none;
 }
-#main-nav {
+#navigation {
   background-color: #232323;
   bottom: 0;
   height: 100%;
@@ -76,21 +80,21 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
-    > li {
-      border-bottom: 1px solid #323232;
-      > a {
-        color: #fff;
-        display: block;
-        padding: 0.6em;
-        @include transition(background-color 0.25s ease);
-        &:hover {
-          background-color: #2f2f2f;
-        }
+  }
+  li {
+    border-bottom: 1px solid #323232;
+    > a {
+      color: #fff;
+      display: block;
+      padding: 0.6em 1em;
+      @include transition(background-color 0.25s ease);
+      &:hover {
+        background-color: #2f2f2f;
       }
     }
   }
 }
-/*#main-nav-check:checked + #main-nav {
+/*#main-nav-check:checked ~ #main-nav {
   width: 30%;
 }*/
 #main-nav-check:checked ~ #main {
