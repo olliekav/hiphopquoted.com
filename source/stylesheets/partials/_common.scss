@@ -48,7 +48,7 @@
 }
 
 // Transitions
-@mixin transition($transition) {
+@mixin transition($transition...) {
   -webkit-transition: $transition;
   -moz-transition: $transition;
   -ms-transition: $transition;
@@ -76,6 +76,16 @@
   -khtml-opacity: $opacity / 100;
   -moz-opacity: $opacity / 100;
   opacity: $opacity / 100;
+}
+
+// Columns
+@mixin columns($count: 3, $gap: 10) {
+  -webkit-column-count: $count;
+  -moz-column-count:    $count;
+  column-count:         $count;
+  -webkit-column-gap:   $gap;
+  -moz-column-gap:      $gap;
+  column-gap:           $gap;
 }
 
 // Custom functions ------------------------------------------------------------------------

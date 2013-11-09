@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <title><%= current_page.data.title || "Hip Hop Quoted – Hip Hop Quotes brought to life with Typography" %></title>
+    <meta content="A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction. Brought to you by olliekav.com" name="description"/>
+    <meta content="Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS, HTML, Art Direction, Typography, Fonts" name="keywords"/>
+    <meta content="width=device-width" name="viewport"/>
+    <link href="/images/favicon.ico" rel="shortcut icon"></link>
+    <%= stylesheet_link_tag "site.css" %>
+    <%= yield_content :stylesheet %>
+    <%= javascript_include_tag("jquery-1.10.2.min.js") %>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <%= yield_content :javascript %>
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag("html5shiv.js") %>
+    <![endif]-->
+  </head>
+  <body class="page-<%= page_classes %>" id="hiphopquoted">
+    <%= partial "navigation" unless (current_page.path == "index.html") %>
+    <main id="main" role="main">
+      <%= partial "header" %>
+      <%= yield %>
+      <%= partial "footer" %>
+    </main>
+    <script>
+      var _gaq = [['_setAccount', 'UA-10920756-1'], ['_trackPageview']];
+      (function(d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.async = true;
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+  </body>
+</html>

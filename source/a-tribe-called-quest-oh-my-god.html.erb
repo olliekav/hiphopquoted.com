@@ -1,33 +1,29 @@
 ---
 title: A Tribe Called Quest – Oh My God
+player_color: 000000
+track: tribe called quest oh my god
 ---
 
-- content_for :head do
-  %title A Tribe Called Quest – Oh My God
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("/stylesheets/a-tribe-called-quest-oh-my-god.css") %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/a-tribe-called-quest-oh-my-god.css"
+<% content_for :javascript do %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'npk5zfs' }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/npk5zfs.js' }
-
-- content_for :audio do
-  <audio src="/audio/a-tribe-called-quest-oh-my-god.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/notorious-big-10-crack-commandments")
-      %li=link_to("Prev", "/nas-raekwon-ghostface-killah-verbal-intercourse")
-
-%article
-  %header
-
-    %h2 
-      Oh My God
-
-  %blockquote
-    %p
+<article>
+  <header>
+    <h1>Oh My God</h1>
+  </header>
+  <blockquote>
+    <p>
       Listen up everybody the bottom line<br/>
       I’m a black intellect, but unrefined<br/>
       With precision like a bullet, target bound<br/>
@@ -63,12 +59,17 @@ title: A Tribe Called Quest – Oh My God
       Shaheed push the fader from here to Granada<br/>
       Mister Energetic, who me, sound pathetic?<br/>
       When's the last time you heard a funky diabetic?
-
-    %p
-      %cite
+    </p>
+    <p>
+      <cite>
         Quote by 
-        = link_to("ATCQ", "http://en.wikipedia.org/wiki/A_Tribe_Called_Quest")
+        <%= link_to("ATCQ", "http://en.wikipedia.org/wiki/A_Tribe_Called_Quest") %>
         from
-        = link_to("Oh my god", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670679&id=265670545&s=143441&uo=6")
+        <%= link_to("Oh my god", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670679&id=265670545&s=143441&uo=6") %>
         on the album 
-        = link_to("Midnight Maruaders", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670650&id=265670545&s=143441&uo=6")
+        <%= link_to("Midnight Maruaders", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=265670650&id=265670545&s=143441&uo=6") %>
+      </cite>
+    </p>
+  </blockquote>
+</article>
+

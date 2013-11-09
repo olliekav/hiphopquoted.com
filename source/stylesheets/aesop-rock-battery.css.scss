@@ -4,6 +4,7 @@
 
 $primary-color:#76251C;
 $secondary-color:#404e4f;
+$background-color: #ddd4b7; 
 
 @font-face {
     font-family: 'veneerlowresregular';
@@ -17,128 +18,113 @@ $secondary-color:#404e4f;
 
 }
 body {
-  background-color:#e13131;
+  background-color:$background-color;
   color:$primary-color;
   font:112.5%/1.5 georgia, serif;
   *font-size:small;
   font-weight:300;
 }
+a, label {
+  color:$primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:$secondary-color;
+  }
+}
 #main {
-  background-color: #ddd4b7;
+  background-color: $background-color;
 }
 #navigation {
   background-color: $primary-color;
   li {
-    border-color: darken($primary-color, 5%);
+    border-color: darken($primary-color, 3%);
     a:hover {
-      background-color: darken($primary-color, 2%);
+      background-color: darken($primary-color, 4%);
     }
   }
 }
 #header {
-  #logo path {
-    fill: $primary-color;
-  }
-  label:hover {
-    color: $secondary-color;
-  }
-}
-#footer {
-  color:shade($primary-color, 40%);
-  a {
-    color:$primary-color;
-    &:hover {
-      text-decoration:underline;
+  #logo {
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+      @include transition(fill 0.1s linear);
+    }
+    &:hover path {
+    fill: $secondary-color;
     }
   }
 }
 article {
-  margin:0 auto;
-  max-width:848px;
+  margin: 0 auto 3em;
+  max-width: 700px;
   width: 100%;
-  > header {
-    background:url(../images/gun.svg) no-repeat bottom left;
-    background-size: 91% auto;
-    padding-bottom:471px;
-    > h1 {
-      border-bottom:15px solid #fff;
-      font-family:"veneerlowresregular", 'Helvetica Neue', Helvetica, arial, sans-serif;
-      font-weight:400;
-      font-size:18em;
-      line-height:0.8;
-      text-align: justify;
-      margin:0 auto 30px;
-      width:80%;
-      > b {
-        border-bottom:15px solid #fff;
-        display:block;
-        font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
-        font-size:0.375em;
-        font-weight:300;
-        margin-bottom:30px;
-        padding-bottom:20px;
-        text-align:justify;
-        text-transform:uppercase;
-        width: 80%;
-      }
+  h1, p.chorus, figcaption {
+    background-image: url("../images/aesop-rock/header_border.png"), url("../images/aesop-rock/header_border.png");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    display: block;
+    font-family:"veneerlowresregular", 'Helvetica Neue', Helvetica, arial, sans-serif;
+    font-weight:400;
+    font-size:18em;
+    line-height:0.8;
+    text-align: justify;
+    margin:0.1em auto;
+    max-width: 700px;
+    padding: 0.1em 0;
+    width:100%;
+    span:first-child,
+    span:nth-child(3n) {
+      color: $secondary-color;
     }
   }
   > figure {
-    font-weight: 400;
     margin:0 auto;
     position:relative;
-    top:-130px;
-    right:-180px;
-    width:60%;
-    > p {
-      margin-bottom:1.5em;
-      &.chorus {
-        border-left:15px solid #fff;
-        font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
-        font-size:2.111em;
-        font-weight:400;
-        line-height:1.2;
-        margin:0 0 0.5em -100px;
-        padding-left:30px;
-      }
-      > cite {
-        top:-328px;
-        color:#e13131;
-        font-size:0.833em;
-        letter-spacing:2px;
-        left:-255px;
-        position:absolute;
-        font-style:normal;
-        text-transform:uppercase;
-        width:678px;
-        > a {
-          color:#e13131;
-          &:hover {
-            text-decoration:none;
-          }
-        }
-      }
+    width: 100%;
+  }
+  p {
+    text-align: justify;
+    @include columns(2, 6%);
+    &.chorus {
+      @include columns(1, 0);
+    } 
+  }
+  cite {
+    display: block;
+    font-style: normal;
+    max-width: 700px;
+    text-align: justify;
+    width: 100%;
+    a {
+      display: block;
     }
   }
 }
+@media screen and (max-width: 500px) {
+  article p {
+    @include columns(1, 0);
+  }
+} 
 
 // Audio player
-
-.audiojs {
-  background-color:#fff;
-  .time {
-    color:$primary-color;
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  @include transition(background-color 0.1s linear);
+  &:hover {
+    background-color: $secondary-color;
   }
-  .loaded {
-    background-color:$primary-color;
-  }
-  .play {
-    border-left-color:$primary-color;
-  }
-  .progress {
-    background-color:shade($primary-color, 20%);
-  }
-  .pause {
-    border-color:$primary-color;
-  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
 }
