@@ -2,39 +2,130 @@
 
 @import "partials/common";
 
+$primary-color: #000000;
+$secondary-color: #AD8030;
+$background-color: #ffffff;
+
 body {
-  background-color:#fff;
-  color:#AD8030;
-  font:112.5%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+  background:url("../images/atcq/book_background.jpg") no-repeat top center fixed;
+  background-size: cover;
+  color:$primary-color;
+  font:125%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
   *font-size:small;
-  font-weight:400;
 }
-h1,h2,h3 {
-  font-weight:400;
-}
-#header {
-  #logo path {
-    fill: #AD8030;
+a, label {
+  color:$primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:$primary-color;
   }
-  > nav a {
-    background-color: #AD8030;
-    color:#fff;
-    font-size:0.611em;
-    &:hover {
-      background-color:tint(#AD8030, 40%);
-      color:#fff;
+}
+#main {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
     }
   }
 }
-#footer {
-  a {
-    color:#AD8030;
+#header {
+  #logo {
+    opacity: 0.2;
+    @include transition(opacity 0.1s linear);
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+    }
     &:hover {
-      text-decoration:underline;
+      opacity: 1;
     }
   }
 }
 article {
+  margin: 0 auto 3em;
+  max-width: 500px;
+  width: 100%;
+  h1 {
+    display: block;
+    font-weight:400;
+    font-size:18em;
+    line-height:0.8;
+    text-align: justify;
+    margin:0.1em auto;
+    max-width: 700px;
+    padding: 0.1em 0;
+    width:100%;
+  }
+  > figure {
+    margin:0 auto;
+    position:relative;
+    width: 100%;
+  }
+  cite {
+    display: block;
+    font-style: normal;
+    max-width: 700px;
+    text-align: justify;
+    width: 100%;
+    a {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  article p {
+    @include columns(1, 0);
+  }
+} 
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+  @include transition(background-color 0.1s linear);
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*article {
   background:url(../images/atcq/book_background.jpg) no-repeat top center;
   background-size: 100% auto;
   height:1191px;
@@ -91,25 +182,4 @@ article {
       clear: both;
     }
   }
-}
-
-// Audio player
-
-.audiojs {
-  background-color:#AD8030;
-  .time {
-    color:#000;
-  }
-  .loaded {
-    background-color:#000;
-  }
-  .play {
-    border-left-color:#000;
-  }
-  .progress {
-    background-color:shade(#AD8030, 20%);
-  }
-  .pause {
-    border-color:#000;
-  }
-}
+}*/

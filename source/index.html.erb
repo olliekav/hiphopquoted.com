@@ -1,0 +1,28 @@
+<% content_for :javascript do %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'ngu1xuv' }
+      });
+    });
+  </script>
+<% end %>
+
+<section id="home">
+  
+  <h1>Hip Hop Quotes brought to life with Typography</h1>
+
+  <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)} %>
+
+  <nav>
+    <ul>
+      <% pages.each do |p| %>
+        <% if(p.data.title)  %>
+          <li><%= link_to p.data.title, p.url %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
+
+</section>
+          

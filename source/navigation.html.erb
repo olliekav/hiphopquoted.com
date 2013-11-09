@@ -1,0 +1,13 @@
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) } %>
+<input class="main-nav-check" id="main-nav-check" type="checkbox"></input>
+<nav class="main-nav" id="navigation">
+  <ul>
+    <% pages.each do |p| %>
+      <% if(p.data.title) %>
+        <li>
+          <%= link_to p.data.title, p.url %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>

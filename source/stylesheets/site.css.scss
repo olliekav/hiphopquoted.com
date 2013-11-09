@@ -2,6 +2,7 @@
 
 @import "partials/common";
 @import "partials/reset";
+@import "partials/itunes_preview_player";
 
 html {
   height:101%;
@@ -14,14 +15,13 @@ body {
 #main {
   background-color: #fff;
   display: block;
-  float: left;
   margin:0 auto;
   padding:0 30px;
   position: relative;
   width: 100%;
   z-index: 10;
   @include box-sizing(border-box);
-  @include transition(width 0.3s ease);
+  @include transition(all 0.3s ease);
 }
 #header {
   padding:20px 0 40px;
@@ -69,13 +69,14 @@ a {
   bottom: 0;
   height: 100%;
   font-size: 0.8em;
+  margin-right: -300px;
   position: fixed;
   right: 0;
   top: 0;
   overflow-y: scroll;
-  width: 30%;
+  width: 300px;
   z-index: 1;
-  @include transition(width 0.3s ease);
+  @include transition(all 0.3s ease);
   > ul {
     list-style: none;
     margin: 0;
@@ -87,32 +88,38 @@ a {
       color: #fff;
       display: block;
       padding: 0.6em 1em;
-      @include transition(background-color 0.25s ease);
+      @include transition(background-color 0.25s slide);
       &:hover {
         background-color: #2f2f2f;
       }
     }
   }
 }
-/*#main-nav-check:checked ~ #main-nav {
-  width: 30%;
-}*/
+#main-nav-check:checked ~ #navigation {
+  margin-right: 0;
+}
 #main-nav-check:checked ~ #main {
-  width: 70%;
+  margin-left: -300px;
 }
 #footer {
-  overflow:hidden;
-  padding:0 20px 20px;
+  padding:3em 1.5em 0;
   position:relative;
   > ul {
+    bottom:1.5em;
     margin:0;
     position:absolute;
-    right:20px;
-    bottom:20px;
+    right:0;
     > li {
       display:inline;
       margin-left:20px;
     }
+  }
+  #audio-clip {
+    bottom:1em;
+    left:0;
+    overflow: hidden;
+    position: absolute;
+    width: 200px;
   }
 }
 
@@ -142,6 +149,15 @@ a {
       width: 50%;
       > svg path {
         fill: #fff;
+      }
+    }
+  }
+  #navigation {
+    background-color: darken(#36D7B7, 5%);
+    li {
+      border-color: #36D7B7;
+      a:hover {
+        background-color: darken(#36D7B7, 10%);
       }
     }
   }
@@ -186,31 +202,3 @@ a {
   visibility: visible;
   @include transition(opacity 0.24s ease-in-out);
 }
-
-// Audio player 
-
-.audiojs audio { position: absolute; left: -1px; }         
-.audiojs { border-radius:5px;width: 350px; height: 35px;overflow: hidden; font-family: monospace; font-size: 11px; }         
-.audiojs .play-pause { width: 25px; height: 40px; padding: 4px 6px; margin: 0px; float: left; overflow: hidden;text-align:center; }         
-.audiojs p { display: none; width: 25px; height: 40px; margin: 0px; cursor: pointer; }         
-.audiojs .play { display: block; }         
-.audiojs .scrubber { position: relative; float: left; width: 190px; height: 14px; margin: 10px 0 10px 10px;overflow: hidden; }         
-.audiojs .progress { position: absolute; top: 0px; left: 0px; height: 14px; width: 0px; z-index: 1; }         
-.audiojs .loaded { position: absolute; top: 0px; left: 0px; height: 14px; width: 0px; }         
-.audiojs .time { float: left; height: 36px; line-height: 36px; margin: 0px 0px 0px 6px; padding: 0px 6px 0px 12px; color: #3e3e3e;  }
-.audiojs .time em { padding: 0px 2px 0px 0px;font-style: normal; }         
-.audiojs .time strong { padding: 0px 0px 0px 2px; font-weight: normal; }         
-.audiojs .error-message { float: left; display: none; margin: 0px 10px; height: 36px; width: 400px; overflow: hidden; line-height: 36px; white-space: nowrap; color: #fff;text-overflow: ellipsis; -o-text-overflow: ellipsis; -icab-text-overflow: ellipsis; -khtml-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }         
-.audiojs .error-message a { color: #eee; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #999; white-space: wrap; }                 
-.audiojs .play { border-top: 6px solid transparent;border-bottom: 6px solid transparent;border-left: 6px solid #3e3e3e;height:0;width:0;margin:7px 0 0 15px; }         
-.audiojs .loading { background: url(../images/player-graphics.gif) -2px -31px no-repeat; }         
-.audiojs .error { background: url(../images/player-graphics.gif) -2px -61px no-repeat; }         
-.audiojs .pause { border-right:4px solid #3e3e3e;border-left:4px solid #3e3e3e;height:12px;width:2px;margin:7px 0 0 12px; }                 
-.playing .play, .playing .loading, .playing .error { display: none; }         
-.playing .pause { display: block; }                 
-.loading .play, .loading .pause, .loading .error { display: none; }         
-.loading .loading { display: block; }                
-.error .time, .error .play, .error .pause, .error .scrubber, .error .loading { display: none; }         
-.error .error { display: block; } 
-.error .play-pause p { cursor: auto; }         
-.error .error-message { display: block; }

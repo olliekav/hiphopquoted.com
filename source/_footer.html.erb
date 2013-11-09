@@ -1,0 +1,17 @@
+<footer id="footer">
+  <% unless(current_page.path == "index.html") %>
+    <div id="audio-clip">
+      <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
+      <script>
+        var track = "<%= data.page.track %>";
+        var playerColor = "#<%= data.page.player_color %>";
+        var player = new iTunesPreviewPlayer(track);
+        document.getElementById("audio-clip").appendChild(player.DOMElement());
+      </script>
+    </div>
+  <% end %>
+  <ul>
+    <li>Made by <%= link_to("olliekav", "http://olliekav.com") %></li>
+    <li><%= link_to("About", "/about") %></li>
+  </ul>
+</footer>
