@@ -1,21 +1,20 @@
-// Bahamadia – Rugged Ruff -----------------------------------------------------------------
+// Big L – Ebonics -----------------------------------------------------------------
 
 @import "partials/common";
 
-$primary-color: #CB5B10;
-$secondary-color: #423A34;
+$primary-color: #000000;
 
 body {
-  background-color: $primary-color;
-  color:lighten($primary-color, 20%);
-  font:100%/1.5 "helvetica", Arial, sans-serif;
+  background: url("../images/big-l/linedpaper.png");
+  color: $primary-color;
+  font:112.5%/1.56 "minion-pro", Georgia, serif;
   font-weight: 500;
 }
 b {
   font-weight: 500;
 }
 a, label {
-  color:$secondary-color;
+  color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
@@ -23,11 +22,11 @@ a, label {
   }
 }
 #navigation {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   li {
-    border-color: lighten($secondary-color, 8%);
+    border-color: lighten($primary-color, 8%);
     a:hover {
-      background-color: lighten($secondary-color, 10%);
+      background-color: lighten($primary-color, 10%);
     }
   }
 }
@@ -35,7 +34,7 @@ a, label {
   #logo {
     @include transition(fill 0.1s linear);
     path {
-      fill: $secondary-color;
+      fill: $primary-color;
       pointer-events: all;
     }
     &:hover path {
@@ -49,7 +48,7 @@ article {
   position: relative;
   width: 960px;
   h1 {
-    color: $secondary-color;
+    color: $primary-color;
     display: inline-block;
     font-family: "tungsten", impact, sans-serif;
     font-weight:700;
@@ -101,7 +100,7 @@ article {
       padding-top: 130px;
       position: relative;
       &:before {
-        color: $secondary-color;
+        color: $primary-color;
         content: '“';
         font-size: 20em;
         left: 0;
@@ -115,7 +114,7 @@ article {
     &.three {
       margin-top: 560px;
       &:after {
-        color: $secondary-color;
+        color: $primary-color;
         content: '”';
         font-family: "tungsten", impact, sans-serif;
         font-size: 37.5em;
@@ -141,7 +140,7 @@ article {
 
 // Audio player
 .iTunesPreviewPlayer {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   &:hover {
     background-color: lighten($primary-color, 20%);
   }

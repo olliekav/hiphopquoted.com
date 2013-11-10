@@ -1,33 +1,37 @@
+<%# -- encoding : utf-8 -- %>
 ---
 title: Big L – Ebonics
+player_color: ffffff
+track: big l ebonics
 ---
 
-- content_for :head do
-  %title Big L – Ebonics
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("big-l–ebonics.css") %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/big-l–ebonics.css"
+<% content_for :javascript do %>
+  <%= javascript_include_tag("jquery.lettering-0.6.1.min.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'lnv1nzw' },
+        active: function() {
+          $("h1").lettering('words');
+        }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/big-l–ebonics.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris–mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Ebonics
-
-%figure
-  %blockquote
-    %p
+<article>
+  <header>
+    <h1><%= current_page.data.title %></h1>
+  </header>
+</article>
+<figure>
+  <blockquote>
+    <p class="intro">Pay attention. <span>And listen real closely how I break this slang shit down</span></p>
+    <p class="verse">
       Check it, my weed smoke is my lye
       A ki of coke is a pie
       When I'm lifted, I'm high
@@ -47,7 +51,8 @@ title: Big L – Ebonics
       To clean is to buff, a bull scare is a strong bluff
       I know you like the way I'm freaking it
       I talk with slang and I'mma never stop speaking it
-    %p
+    </p>
+    <p class="verse">
       Yo yo, A burglary is a jook, a wolf's a crook
       Mobb Deep already explained the meanin' of shook
       If you caught a felony, you caught a F
@@ -67,7 +72,8 @@ title: Big L – Ebonics
       The studio is the lab and heated is mad
       I know you like the way I'm freaking it
       I talk with slang and I'mma never stop speaking it
-    %p
+    </p>
+    <p class="verse">
       The iron horse is the train and champagne is bubbly
       A deuce is a honey that's ugly
       If your girl is fine, she's a dime
@@ -86,12 +92,13 @@ title: Big L – Ebonics
       To show off mean floss, uh
       I know you like the way I'm freaking it
       I talk with slang and I'mma never stop speaking it
-
-  %figcaption
-      Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
-        from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
-        on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+    </p>
+  </blockquote>
+  <figcaption>
+    Quote by <%= link_to("Big L", "http://en.wikipedia.org/wiki/Big_L") %>
+    <cite>
+      from <%= link_to("Ebonics", "http://itunes.apple.com/gb/album/ebonics-explicit/id21394711?i=21394734&uo=6") %>
+      on the album <%= link_to("The Big Picture", "http://itunes.apple.com/gb/album/deadly-combination-explicit/id21394711?i=21394745&uo=6") %>
+    </cite>
+  </figcaption>
+</figure>

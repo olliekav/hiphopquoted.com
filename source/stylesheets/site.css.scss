@@ -32,10 +32,10 @@ body {
   width: 100%;
   @include transition(width 0.3s ease);
   .toggle-menu {
-    font-size: 1.8em;
+    font-size: 28px;
     position: absolute;
     right: 30px;
-    top: 20px;
+    top: 26px;
   }
   #logo {
     display: inline-block;
