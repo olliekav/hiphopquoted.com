@@ -1,88 +1,95 @@
 ---
 title: AZ – Rather Unique
+player_color: 000000
+track: az rather unique
 ---
 
-- content_for :head do
-  %title AZ – Rather Unique
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("/stylesheets/az-rather-unique.css") %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/az-rather-unique.css"
+<% content_for :javascript do %>
+  <%= javascript_include_tag("jquery.lettering-0.6.1.min.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'jsv0omn' },
+        active: function() {
+          $("h1>b, .chorus>b").lettering('words');
+        }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/az-rather-unique.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris–mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Rather Unique
-
-%figure
-  %blockquote
-    %p
-      We was already molded into people's minds as mulignanes
-      Now we more fucked up with a mayor named Giuliani
-      You can try to blind me, analyze but can't define me
-      My mind's divine, heavily entwined with Gandhi's
-      Far from feeble, I leave your nostrils hard to breathe through
-      Cause my cerebrals are more of a higher plane than the Hebrews
-      My mic devotion brings out my deepest emotions
-      Overdosing wannabes posing, sending them through convulsions
-      Too hard to follow, you took a bite but couldn't swallow
-      Your mind's boggled, but I'm as deep as Donald Goines novels
-      My whole persona's kinda laid back like a recliner
-      And since a minor, I been fucking with marijuana
-      Wavy-haired, my skin got a money getting glare
-      Strictly menace wear, macking offa Guinness beer
-      So where it all begins is here, destiny and me finally meet
-      So how can I be weak? I'm rather unique
-    %p
-      My verbals rip shit, brains give birth to thoughts in triplets
-      Fuck it I'm on some flip shit, ready to let my clip spit
-      Dramatical, vocals release shells like automatics do
-      Music's magical causing any battles to be tragical
-      Child, got a style sick as hell, sicker than sickle cell anemia
-      Slaughter your circulatory like lukemia
-      Filled with larceny, who want parts of me? I'm vicious
-      Mad malicious, cause it's real on this road to riches
-      I got this mastered, other rappers'll craft it
-      Weak and wicked camouflaged as killers how they speak and kick it
-      Peep this uniqueness, non-believers I'm leaving speechless
-      Left to choke as if skunk smoke was coming through the speakers
-      Surgically nice with any verbal device, trife
-      Breathing life into mics, my insight's beyond the twilight
-      So die or fight, no surrender, no retreat
-      Techniques speak, I'm rather unique
-    %p
-      So it's gonna take more than your astrologist to knowledge this
-      A physiologist couldn't even figure out the exoticness
-      Raps demolishing certified the way I style it
-      My wordplay blaze with the rays of ultraviolet
-      My culture's smiling, getting more in depth with each breath
-      Autobiography follows the footsteps of Malcolm X
-      Money and sex, Gore-Tex, Donna Karan and Guess
-      Finesse, success through the life stress, mics I bless
-      Puffing trees to get me high as trapeze, looking Japanese
-      At ease when I'm stacking G's, so let's discuss, plus degrees
-      How the rhyme forces the source for thoughts that's lost
-      So don't cross cause it'll cost
-      The ghetto savior, smooth, the real playa with flavor
-      Moves be major, with un-explainable behavior
-      The word's on the street so keep your ears to the concrete
-
-  %figcaption
+<article>
+  <header>
+    <h1><b class="word1">AZ</b> <b class="word2">-</b> <b class="word3">Rather</b> <b class="word4">Unique</b></h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p class="verse one">
+        We was already molded into people's minds as mulignanes
+        Now we more fucked up with a mayor named Giuliani
+        You can try to blind me, analyze but can't define me
+        My mind's divine, heavily entwined with Gandhi's
+        Far from feeble, I leave your nostrils hard to breathe through
+        Cause my cerebrals are more of a higher plane than the Hebrews
+        My mic devotion brings out my deepest emotions
+        Overdosing wannabes posing, sending them through convulsions
+        Too hard to follow, you took a bite but couldn't swallow
+        Your mind's boggled, but I'm as deep as Donald Goines novels
+        My whole persona's kinda laid back like a recliner
+        And since a minor, I been fucking with marijuana
+        Wavy-haired, my skin got a money getting glare
+        Strictly menace wear, macking offa Guinness beer
+        So where it all begins is here, destiny and me finally meet
+        So how can I be weak? I'm rather unique
+        <span class="chorus one"><b>Unique</b></span>
+      </p>
+      <p class="verse two">
+        My verbals rip shit, brains give birth to thoughts in triplets
+        Fuck it I'm on some flip shit, ready to let my clip spit
+        Dramatical, vocals release shells like automatics do
+        Music's magical causing any battles to be tragical
+        Child, got a style sick as hell, sicker than sickle cell anemia
+        Slaughter your circulatory like lukemia
+        Filled with larceny, who want parts of me? I'm vicious
+        Mad malicious, cause it's real on this road to riches
+        I got this mastered, other rappers'll craft it
+        Weak and wicked camouflaged as killers how they speak and kick it
+        Peep this uniqueness, non-believers I'm leaving speechless
+        Left to choke as if skunk smoke was coming through the speakers
+        Surgically nice with any verbal device, trife
+        Breathing life into mics, my insight's beyond the twilight
+        So die or fight, no surrender, no retreat
+        Techniques speak, I'm rather unique
+        <span class="chorus two"><b>Unique</b></span>
+      </p>
+      <p class="verse three">
+        So it's gonna take more than your astrologist to knowledge this
+        A physiologist couldn't even figure out the exoticness
+        Raps demolishing certified the way I style it
+        My wordplay blaze with the rays of ultraviolet
+        My culture's smiling, getting more in depth with each breath
+        Autobiography follows the footsteps of Malcolm X
+        Money and sex, Gore-Tex, Donna Karan and Guess
+        Finesse, success through the life stress, mics I bless
+        Puffing trees to get me high as trapeze, looking Japanese
+        At ease when I'm stacking G's, so let's discuss, plus degrees
+        How the rhyme forces the source for thoughts that's lost
+        So don't cross cause it'll cost
+        The ghetto savior, smooth, the real playa with flavor
+        Moves be major, with un-explainable behavior
+        The word's on the street so keep your ears to the concrete
+        <span class="chorus three"><b>Unique</b></span>
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
-        from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
-        on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+      <%= link_to("AZ", "http://en.wikipedia.org/wiki/AZ_(rapper)") %>
+      <cite>from <%= link_to("Rather Unique", "http://itunes.apple.com/gb/album/rather-unique/id29509434?i=29509367&uo=6") %> on the album <%= link_to("Doe or Die", "http://itunes.apple.com/gb/album/rather-unique/id29509434?i=29509367&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

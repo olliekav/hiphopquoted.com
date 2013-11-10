@@ -1,0 +1,197 @@
+// Tribe called quest - Oh my god -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #000000;
+$secondary-color: #CF1111;
+$background-color: #ffffff;
+
+body {
+  background-color: $background-color;
+  color:$primary-color;
+  font:125%/1.5 "freight-sans-pro", sans-serif;
+  font-weight: 500;
+  //font:125%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+}
+b {
+  font-weight: 500;
+}
+a, label {
+  color:$secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:$primary-color;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  #logo {
+    @include transition(fill 0.1s linear);
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $secondary-color;
+    }
+  }
+}
+article {
+  margin: 0 auto 3em;
+  //max-width: 1000px;
+  position: relative;
+  width: 1000px;
+  h1 {
+    display: inline-block;
+    font-weight:500;
+    line-height:0.8;
+    margin-left: 3em;
+  }
+  span,b {
+    display: inline-block;
+    font-family: "Hoefler Text", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+    font-style: italic;
+    font-weight:500;
+    position: relative;
+  }
+  span,b {
+    color: rgba($primary-color, 0.8);
+    line-height: 0.5;
+    text-transform: lowercase;
+    &:before, &:after {
+      position: absolute;
+    }
+    &:before {
+      color: rgba(#E8E50B, 0.8);
+      left: -5px;
+      top: 0;
+    }
+    &:after {
+      color: rgba($secondary-color, 0.8);
+      left: 0;
+      top: 5px;
+    }
+  }
+  b:after {
+    content: "";
+  }
+  b.word1 {
+    font-size: 25em;
+    &:before {
+      color: rgba(#1159CF, 0.8);
+      content: "az";
+      left: 0;
+      top: 10px;
+    }
+    > span {
+      &:before, &:after {
+        content: "az";
+      }
+    }
+  }
+  b.word3 {
+    display: block;
+    font-size: 15em;
+    letter-spacing: -5px;
+    margin: 30px 0 0 120px;
+    &:before {
+      color: rgba(#1159CF, 0.8);
+      content: "rather";
+      left: 0;
+      top: 10px;
+    }
+    > span {
+      &:before, &:after {
+        content: "rather";
+      }
+    }
+  }
+  b.word4, .chorus>b {
+    display: block;
+    font-size: 10em;
+    letter-spacing: -5px;
+    margin: 30px 0 0 -50px;
+    &:before {
+      color: rgba(#1159CF, 0.8);
+      content: "unique";
+      left: 0;
+      top: 10px;
+    }
+    > span {
+      &:before, &:after {
+        content: "unique";
+      }
+    }
+  }
+  .word2 {
+    display: none;
+  }
+  .verse {
+    position: relative;
+    &.one {
+      left: 540px;
+      top: -90px;
+      width: 40%;
+    }
+    &.two {
+      left: 3%;
+      text-align: right;
+      margin-top: -610px;
+      top: 0;
+      width: 40%;
+    }
+    &.three {
+      left: 540px;
+      margin-top: -80px;
+      width: 40%;
+    }
+  }
+  figure {
+    margin:0 auto;
+    position:relative;
+    width: 100%;
+  }
+  figcaption {
+    clear: both;
+    width: 100%;
+  }
+  cite {
+    display: block;
+    font-style: normal;
+    //max-width: 700px;
+    text-align: justify;
+    width: 100%;
+    a {
+      display: block;
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
+}

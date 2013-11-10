@@ -1,5 +1,8 @@
 Encoding.default_external = Encoding::UTF_8
 
+# Typekit domains
+# 0.0.0.0, *.hiphopquoted.dev, *.hiphopquoted.com
+
 ###
 # Compass
 ###
@@ -38,8 +41,10 @@ end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :directory_indexes
+
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do

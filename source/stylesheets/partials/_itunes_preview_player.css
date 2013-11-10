@@ -1,3 +1,5 @@
+@import "partials/common";
+
 .iTunesPreviewPlayer {
   float: left;
   cursor: pointer;
@@ -8,6 +10,7 @@
   border-radius: 20px;
   width: 40px;
   height: 40px;
+  @include transition(background-color 0.1s linear);
 }
 .iTunesPreviewPlayer:after {
   content: "Play preview";
