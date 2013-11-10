@@ -1,0 +1,160 @@
+// Tribe called quest - Oh my god -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #CB5B10;
+$secondary-color: #423A34;
+
+body {
+  background-color: $primary-color;
+  color:lighten($primary-color, 20%);
+  font:100%/1.5 "helvetica", Arial, sans-serif;
+  font-weight: 500;
+}
+b {
+  font-weight: 500;
+}
+a, label {
+  color:$secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:lighten($primary-color, 20%);
+  }
+}
+#navigation {
+  background-color: $secondary-color;
+  li {
+    border-color: lighten($secondary-color, 8%);
+    a:hover {
+      background-color: lighten($secondary-color, 10%);
+    }
+  }
+}
+#header {
+  #logo {
+    @include transition(fill 0.1s linear);
+    path {
+      fill: $secondary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: lighten($primary-color, 20%);
+    }
+  }
+}
+article {
+  margin: 0 auto 3em;
+  //max-width: 1000px;
+  position: relative;
+  width: 960px;
+  h1 {
+    color: $secondary-color;
+    display: inline-block;
+    font-family: "tungsten", impact, sans-serif;
+    font-weight:700;
+    font-size: 13.75em;
+    left: 26%;
+    line-height: 0.9;
+    position: absolute;
+    text-transform: uppercase;
+    top: 125px;
+    > .word1, .word2 {
+      display: none;
+    }
+    > .word4 {
+      display: block;
+      font-size: 1.45em;
+      margin:-25px 0 0 49%;
+    }
+  }
+  figure {
+    margin:0 auto;
+    position:relative;
+    width: 100%;
+  }
+  blockquote {
+    overflow: hidden;
+  }
+  .verse {
+    float: left;
+    margin-left: 2%;
+    position: relative;
+    text-align: justify;
+    width: 24%;
+    @include css-hyphens(auto);
+    &:first-child {
+      margin-left: 0;
+    }
+    &:first-letter,
+    &.one:before {
+      font-family: "tungsten", impact, sans-serif;
+      font-size: 13.75em;
+      font-weight:700;
+      line-height: 0.9;
+    }
+    &:first-letter {
+      float: left;
+      margin: -5px 10px -25px 0;
+    }
+    &.one {
+      padding-top: 130px;
+      position: relative;
+      &:before {
+        color: $secondary-color;
+        content: '“';
+        font-size: 20em;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+    &.two {
+      margin-top: 310px;
+    }
+    &.three {
+      margin-top: 560px;
+      &:after {
+        color: $secondary-color;
+        content: '”';
+        font-family: "tungsten", impact, sans-serif;
+        font-size: 37.5em;
+        font-weight:700;
+        line-height: 0.1;
+        right: -210px;
+        position: absolute;
+        bottom: -80px;
+      }
+    }
+  }
+  figcaption {
+    font-family: "tungsten", impact, sans-serif;
+    font-size: 2.125em;
+    font-weight:700;
+    line-height: 1.2;
+    left: 26.5%;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+  &:hover {
+    background-color: lighten($primary-color, 20%);
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
+}

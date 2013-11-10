@@ -88,6 +88,15 @@
   column-gap:           $gap;
 }
 
+// Hyphenation
+@mixin css-hyphens($val) {
+  -webkit-hyphens: $val; 
+  -moz-hyphens: $val;
+  -ms-hyphens: $val;
+  -o-hyphens: $val;
+  hyphens: $val;
+}
+
 // Custom functions ------------------------------------------------------------------------
 
 @function tint($color, $percent){
