@@ -7,7 +7,7 @@ $primary-color: #000000;
 body {
   background: url("../images/big-l/linedpaper.png");
   color: $primary-color;
-  font:112.5%/1.56 "minion-pro", Georgia, serif;
+  font:1.25em/1.25 "minion-pro", Georgia, serif;
   font-weight: 500;
 }
 b {
@@ -43,98 +43,42 @@ a, label {
   }
 }
 article {
-  margin: 0 auto 3em;
-  //max-width: 1000px;
+  margin: 0.1em 0 3em;
+  max-width: 1000px;
+  padding-left: 280px;
   position: relative;
-  width: 960px;
   h1 {
-    color: $primary-color;
-    display: inline-block;
-    font-family: "tungsten", impact, sans-serif;
-    font-weight:700;
-    font-size: 13.75em;
-    left: 26%;
+    font-size: 3.7em;
+    font-weight:500;
+    font-variant: small-caps;
     line-height: 0.9;
-    position: absolute;
+    margin-bottom: 0.38em;
     text-transform: uppercase;
-    top: 125px;
-    > .word1, .word2 {
-      display: none;
-    }
-    > .word4 {
+    > span {
       display: block;
-      font-size: 1.45em;
-      margin:-25px 0 0 49%;
+      font-size: 0.3em;
     }
   }
   figure {
+    display: block;
     margin:0 auto;
     position:relative;
-    width: 100%;
   }
-  blockquote {
-    overflow: hidden;
-  }
-  .verse {
-    float: left;
-    margin-left: 2%;
+  p {
     position: relative;
-    text-align: justify;
-    width: 24%;
-    @include css-hyphens(auto);
-    &:first-child {
-      margin-left: 0;
-    }
-    &:first-letter,
-    &.one:before {
-      font-family: "tungsten", impact, sans-serif;
-      font-size: 13.75em;
-      font-weight:700;
-      line-height: 0.9;
-    }
-    &:first-letter {
-      float: left;
-      margin: -5px 10px -25px 0;
-    }
-    &.one {
-      padding-top: 130px;
-      position: relative;
-      &:before {
-        color: $primary-color;
-        content: '“';
-        font-size: 20em;
-        left: 0;
-        position: absolute;
-        top: 0;
-      }
-    }
-    &.two {
-      margin-top: 310px;
-    }
-    &.three {
-      margin-top: 560px;
-      &:after {
-        color: $primary-color;
-        content: '”';
-        font-family: "tungsten", impact, sans-serif;
-        font-size: 37.5em;
-        font-weight:700;
-        line-height: 0.1;
-        right: -210px;
-        position: absolute;
-        bottom: -80px;
-      }
+    > .chorus {
+      font-size: 0.7em;
+      font-variant: small-caps;
+      line-height: 1.75;
+      left: -280px;
+      position: absolute;
+      text-align: right;
+      top: 0.38em;
+      width: 240px;
     }
   }
   figcaption {
-    font-family: "tungsten", impact, sans-serif;
-    font-size: 2.125em;
-    font-weight:700;
     line-height: 1.2;
-    left: 26.5%;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
   }
 }
 

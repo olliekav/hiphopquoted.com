@@ -48,7 +48,7 @@ activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
-#   def some_helper
+#   def list_pages
 #     "Helping"
 #   end
 # end
