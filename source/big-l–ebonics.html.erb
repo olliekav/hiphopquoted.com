@@ -1,6 +1,5 @@
-<%# -- encoding : utf-8 -- %>
 ---
-title: Big L – Ebonics
+title: "Big L - Ebonics"
 player_color: ffffff
 track: big l ebonics
 ---
@@ -10,14 +9,10 @@ track: big l ebonics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("jquery.lettering-0.6.1.min.js") %>
   <script>
     $(function(){
       WebFont.load({
-        typekit: { id: 'lnv1nzw' },
-        active: function() {
-          $("h1").lettering('words');
-        }
+        typekit: { id: 'lnv1nzw' }
       });
     });
   </script>
@@ -25,80 +20,94 @@ track: big l ebonics
 
 <article>
   <header>
-    <h1><%= current_page.data.title %></h1>
+    <h1>Pay attention. <span>And listen real closely how I break this slang shit down</span></h1>
   </header>
+  <figure>
+    <blockquote>
+      <p class="verse">
+        Check it, my weed smoke is my lye<br>
+        A ki of coke is a pie<br>
+        When I'm lifted, I'm high<br>
+        With new clothes on, I'm fly<br>
+        Cars is whips and sneakers is kicks<br>
+        Money is chips, movies is flicks<br>
+        Also, cribs is homes, jacks is pay phones<br>
+        Cocaine is nose candy, cigarettes is bones<br>
+        A radio is a box, a razor blade is a ox<br>
+        Fat diamonds is rocks and jakes is cops<br>
+        And if you got robbed, you got stuck<br>
+        If you got shot, you got bucked<br>
+        And if you got double-crossed, you got fucked<br>
+        Your bankroll is your poke, a choke hold is a yoke<br>
+        A kite is a note, a con is a okey doke<br>
+        And if you got punched that mean you got snuffed<br>
+        To clean is to buff, a bull scare is a strong bluff<br>
+        I know you like the way I'm freaking it<br>
+        I talk with slang and I'mma never stop speaking it
+        <span class="chorus">
+          Speak with criminal slang<br>
+          That’s just the way that I talk, yo<br>
+          Vocabulary spills, I’m ill<br>
+        </span>
+      </p>
+      <p class="verse">
+        Yo yo, A burglary is a jook, a wolf's a crook<br>
+        Mobb Deep already explained the meanin' of shook<br>
+        If you caught a felony, you caught a F<br>
+        If you got killed, you got left<br>
+        If you got the dragon, you got bad breath<br>
+        If you 730, that mean you crazy<br>
+        Hit me on the hip means page me<br>
+        Angel dust is sherm, if you got AIDS, you got the germ<br>
+        If a chick gave you a disease, then you got burned<br>
+        Max mean to relax, guns and pistols is gats<br>
+        Condoms is hats, critters is cracks<br>
+        The food you eat is your grub<br>
+        A victim's a mark<br>
+        A sweat box is a small club, a ticker's your heart<br>
+        Your apartment is your pad<br>
+        Your old man is your dad<br>
+        The studio is the lab and heated is mad<br>
+        I know you like the way I'm freaking it<br>
+        I talk with slang and I'mma never stop speaking it
+        <span class="chorus">
+          Speak with criminal slang<br>
+          That’s just the way that I talk, yo<br>
+          Vocabulary spills, I’m ill<br>
+        </span>
+      </p>
+      <p class="verse">
+        The iron horse is the train and champagne is bubbly<br>
+        A deuce is a honey that's ugly<br>
+        If your girl is fine, she's a dime<br>
+        A suit is a vine, jewelry is shine<br>
+        If you in love, that mean you blind<br>
+        Genuine is real, a face card is a hundred dollar bill<br>
+        A very hard, long stare is a grill<br>
+        If you sneaking to go see a girl, that mean you creeping<br>
+        Smiling is cheesing, bleeding is leaking<br>
+        Beggin' is bumming, if you nuttin you cummin<br>
+        Taking orders is sonnin', an ounce of coke is a onion<br>
+        A hotel's a telly, a cell phone's a celly<br>
+        Jealous is jelly, your food box is your belly<br>
+        To guerrilla mean to use physical force<br>
+        You took an L, you took a loss<br>
+        To show off mean floss, uh<br>
+        I know you like the way I'm freaking it<br>
+        I talk with slang and I'mma never stop speaking it
+        <span class="chorus">
+          Speak with criminal slang<br>
+          That’s just the way that I talk, yo<br>
+          Vocabulary spills, I’m ill<br>
+        </span>
+      </p>
+    </blockquote>
+    <figcaption>
+      Quote by <%= link_to("Big L", "http://en.wikipedia.org/wiki/Big_L") %>
+      <cite>
+        from <%= link_to("Ebonics", "http://itunes.apple.com/gb/album/ebonics-explicit/id21394711?i=21394734&uo=6") %>
+        on the album <%= link_to("The Big Picture", "http://itunes.apple.com/gb/album/deadly-combination-explicit/id21394711?i=21394745&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
 </article>
-<figure>
-  <blockquote>
-    <p class="intro">Pay attention. <span>And listen real closely how I break this slang shit down</span></p>
-    <p class="verse">
-      Check it, my weed smoke is my lye
-      A ki of coke is a pie
-      When I'm lifted, I'm high
-      With new clothes on, I'm fly
-      Cars is whips and sneakers is kicks
-      Money is chips, movies is flicks
-      Also, cribs is homes, jacks is pay phones
-      Cocaine is nose candy, cigarettes is bones
-      A radio is a box, a razor blade is a ox
-      Fat diamonds is rocks and jakes is cops
-      And if you got robbed, you got stuck
-      If you got shot, you got bucked
-      And if you got double-crossed, you got fucked
-      Your bankroll is your poke, a choke hold is a yoke
-      A kite is a note, a con is a okey doke
-      And if you got punched that mean you got snuffed
-      To clean is to buff, a bull scare is a strong bluff
-      I know you like the way I'm freaking it
-      I talk with slang and I'mma never stop speaking it
-    </p>
-    <p class="verse">
-      Yo yo, A burglary is a jook, a wolf's a crook
-      Mobb Deep already explained the meanin' of shook
-      If you caught a felony, you caught a F
-      If you got killed, you got left
-      If you got the dragon, you got bad breath
-      If you 730, that mean you crazy
-      Hit me on the hip means page me
-      Angel dust is sherm, if you got AIDS, you got the germ
-      If a chick gave you a disease, then you got burned
-      Max mean to relax, guns and pistols is gats
-      Condoms is hats, critters is cracks
-      The food you eat is your grub
-      A victim's a mark
-      A sweat box is a small club, a ticker's your heart
-      Your apartment is your pad
-      Your old man is your dad
-      The studio is the lab and heated is mad
-      I know you like the way I'm freaking it
-      I talk with slang and I'mma never stop speaking it
-    </p>
-    <p class="verse">
-      The iron horse is the train and champagne is bubbly
-      A deuce is a honey that's ugly
-      If your girl is fine, she's a dime
-      A suit is a vine, jewelry is shine
-      If you in love, that mean you blind
-      Genuine is real, a face card is a hundred dollar bill
-      A very hard, long stare is a grill
-      If you sneaking to go see a girl, that mean you creeping
-      Smiling is cheesing, bleeding is leaking
-      Beggin' is bumming, if you nuttin you cummin
-      Taking orders is sonnin', an ounce of coke is a onion
-      A hotel's a telly, a cell phone's a celly
-      Jealous is jelly, your food box is your belly
-      To guerrilla mean to use physical force
-      You took an L, you took a loss
-      To show off mean floss, uh
-      I know you like the way I'm freaking it
-      I talk with slang and I'mma never stop speaking it
-    </p>
-  </blockquote>
-  <figcaption>
-    Quote by <%= link_to("Big L", "http://en.wikipedia.org/wiki/Big_L") %>
-    <cite>
-      from <%= link_to("Ebonics", "http://itunes.apple.com/gb/album/ebonics-explicit/id21394711?i=21394734&uo=6") %>
-      on the album <%= link_to("The Big Picture", "http://itunes.apple.com/gb/album/deadly-combination-explicit/id21394711?i=21394745&uo=6") %>
-    </cite>
-  </figcaption>
-</figure>

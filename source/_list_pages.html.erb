@@ -1,0 +1,10 @@
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)} %>
+<ul>
+  <% pages.each do |p| %>
+    <% if(p.data.title) %>
+      <li>
+        <%= link_to p.data.title, p.url.force_encoding(Encoding::UTF_8) %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
