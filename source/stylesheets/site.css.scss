@@ -27,15 +27,18 @@ body {
   @include transition(all 0.3s ease);
 }
 #header {
-  padding:20px 0 40px;
-  right: 0;
-  width: 100%;
-  @include transition(width 0.3s ease);
+  margin-bottom: 2em; 
+  padding:1em 1.5em;
+  position: relative;
+  left: 0;
+  //width: 100%;
+  //@include box-sizing(border-box);
+  @include transition(left 0.3s ease);
   .toggle-menu {
     font-size: 28px;
     position: absolute;
-    right: 30px;
-    top: 26px;
+    right: 1.5em;
+    top: 1.2em;
   }
   #logo {
     display: inline-block;
@@ -59,6 +62,7 @@ body {
 a {
   color: #232323;
   text-decoration: none;
+  @include transition(color 0.1s linear)
 }
 cite {
   font-style: normal;
@@ -100,30 +104,30 @@ cite {
     }
   }
 }
-#main-nav-check:checked ~ #navigation {
-  margin-right: 0;
-}
-#main-nav-check:checked ~ #main {
-  margin-left: -300px;
-}
+#main-nav-check:checked {
+  ~ #main,
+  ~ #header,
+  ~ #footer {
+    left: -300px;
+  }
+  ~ #navigation {
+    margin-right: 0;
+  }
+} 
 #footer {
-  padding:3em 1.5em 0;
+  overflow: hidden;
+  padding:3em 1.5em;
   position:relative;
   > ul {
-    bottom:1.5em;
-    margin:0;
-    position:absolute;
-    right:0;
+    float: right;
     > li {
       display:inline;
       margin-left:20px;
     }
   }
   #audio-clip {
-    bottom:1em;
-    left:0;
-    overflow: hidden;
-    position: absolute;
+    float: left;
+    margin-top: -5px;
     width: 200px;
   }
 }

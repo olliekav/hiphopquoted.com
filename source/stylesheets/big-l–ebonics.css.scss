@@ -51,12 +51,12 @@ article {
     font-size: 3.7em;
     font-weight:500;
     font-variant: small-caps;
-    line-height: 0.9;
-    margin-bottom: 0.38em;
+    line-height: 0.94;
+    margin-bottom: 0.39em;
     text-transform: uppercase;
     > span {
       display: block;
-      font-size: 0.3em;
+      font-size: 0.23em;
     }
   }
   figure {
@@ -65,16 +65,25 @@ article {
     position:relative;
   }
   p {
+    margin-bottom: 2.5em;
     position: relative;
     > .chorus {
       font-size: 0.7em;
       font-variant: small-caps;
-      line-height: 1.75;
+      line-height: 1.79;
       left: -280px;
+      padding-top: 5.3em;
       position: absolute;
       text-align: right;
-      top: 0.38em;
+      top: 0.2em;
       width: 240px;
+      &:before {
+        content: '“';
+        font-size: 23em;
+        line-height: 0.7;
+        position: absolute;
+        top: 0;
+      }
     }
   }
   figcaption {
