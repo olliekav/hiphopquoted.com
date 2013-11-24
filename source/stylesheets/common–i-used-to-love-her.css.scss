@@ -1,0 +1,149 @@
+// Common – I Used to Love H.E.R. -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #CE4F4F;
+$secondary-color: #E8E8D2;
+
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font:112.5%/1.25 Georgia, serif;
+  font-weight: 500;
+}
+b {
+  font-weight: 500;
+}
+a {
+  color: $primary-color;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+label {
+  color: #fff;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  background-color: $primary-color;
+  #logo {
+    @include transition(fill 0.1s linear);
+    path {
+      fill: #fff;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: darken(#fff, 20%);
+    }
+  }
+}
+#footer {
+  background-color: $primary-color;
+  a {
+    color: #fff;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+article {
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  h1 {
+    display: none;
+  }
+  figure {
+    display: block;
+    margin-left: -30px;
+    position:relative;
+  }
+  ol {
+    letter-spacing: -4px;
+    list-style: none;
+    counter-reset: alphabet-counter;
+    margin: 0 auto 3em;
+    word-spacing: -4px;
+    width: 1040px;
+    li {
+      border-top: 1px solid $secondary-color;
+      color: #858585;
+      display: inline-block;
+      letter-spacing: 0;
+      margin-left: 30px;
+      padding: 3em 0 1em;
+      width: 176px;
+      word-spacing: 0;
+      vertical-align: top;
+      &:before {
+        border-bottom: 2px solid $primary-color;
+        color: $primary-color;
+        content: counter(alphabet-counter, upper-alpha);
+        counter-increment: alphabet-counter;
+        display: block;
+        font-size: 8.889em;
+        line-height: 1;
+        margin-bottom: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &:nth-child(-n+5) {
+        border-top: 0;
+        padding-top: 0;
+      }
+      &:last-child {
+        text-align: center;
+        width: 784px;
+        > span {
+          font-size: 4.444em;
+        }
+        &:before {
+          content: "Good..."
+        }
+      }
+    }
+  }
+  figcaption {
+    border-top: 1px solid $secondary-color;
+    color: $secondary-color;
+    margin-left: 30px;
+    font-style: italic;
+    padding: 2em 0;
+    text-align: center;
+    width: 980px;
+    cite {
+      font-style: italic;
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: #fff;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: $primary-color;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: $primary-color;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: $primary-color;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: $primary-color;
+}

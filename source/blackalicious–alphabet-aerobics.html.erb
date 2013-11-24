@@ -1,116 +1,148 @@
 ---
-title: Blackalicious – Alphabet Aerobics
+title: "Blackalicious – Alphabet Aerobics"
+player_color: 858585
+track: big l ebonics
 ---
 
-- content_for :head do
-  %title Blackalicious – Alphabet Aerobics
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("blackalicious–alphabet-aerobics.css") %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/blackalicious–alphabet-aerobics.css"
+<% content_for :javascript do %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'nvn6tmc' }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/blackalicious–alphabet-aerobics.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris–mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Alphabet Aerobics
-
-%figure
-  %blockquote
-    %p
-      Artificial amateurs, aren't at all amazing
-      Analytically, I assault, animate things
-    %p
-      Broken barriers bounded by the bomb beat
-      Buildings are broken, basically I'm bombarding
-    %p
-      Casually create catastrophes, casualties
-      Canceling cats, got their canopies collapsing
-    %p
-      Detonate a dime of dank daily doin' dough
-      Demonstrations, Don Dada on the down low
-    %p
-      Eating other editors with each and every energetic epileptic episode
-      Elevated etiquette
-    %p
-      Furious, fat, fabulous, fantastic
-      Flurries of funk fell, feeding the fanatics
-    %p
-      Gift got great, global goods gone glorious
-      Gettin godly in this game with the goriest
-    %p
-      Hit em high, hella height, historical
-      Hey holocaust hints, hear 'em holler at your homeboy
-    %p
-      Imitators idolize, I intimidate
-      In an instant, I'll rise in an irate state
-    %p
-      Juiced on my jams like Jheri curls jocking joints
-      Justly, it's just me, writing my journals
-    %p
-      Kindly I'm kindling all kinds of King Kong
-      Karate kick uptight Brits in my kingdom
-    %p
-      Let me live a long life, lyrically lessons is
-      Learned lame louses just lose to my livery
-    %p
-      My mind makes marvelous movies, masses
-      Marvel and move, many mock what I've mastered
-    %p
-      Niggas nap knowing I'm nice, naturally
-      Knack, never lack, make noise nationally
-    %p
-      Operation, opposition, off, not optional
-      Out of sight, out of mind, wide beaming opticals
-    %p
-      Perfected poem, powerful punchlines
-      Pummeling petty powder puffs in my prime
-    %p
-      Quite quaint quotes keep quiet it's Quannum
-      Quarrelers ain't got a quarter of what we got, uh
-    %p
-      Really raw raps, risin up rapidly
-      Riding the rushing radioactivity
-    %p
-      Super scientifical sound search sought
-      Silencing super fire saps that are soft
-    %p
-      Tales ten times talented, too tough
-      Take that, challengers, get a tune up
-    %p
-      Universal, unique, untouched
-      Unadulterated, the raw uncut
-    %p
-      Verb vice lord victorious valid
-      Violate vibes that are vain make em vanish
-    %p
-      Why in my world would a wise wordsmith just
-      Weaving up words, weed it up, I'm a wordsmith
-    %p
-      Xerox my X-radiation holes extra large
-      X-height letters and xylophone tones
-    %p
-      Yellow-back, yak mouth, young ones' yaws
-      Yesterday's lawn yardsale, I yawn
-    %p
-      Zig-Zag zombies, zooming to the zenith
-      Zero in, zen thoughts, overzealous rhyme ZEA-LOTS!....
-
-  %figcaption
+<article>
+  <header>
+    <h1>Alphabet Aerobics</h1>
+  </header>
+  <figure>
+    <blockquote>
+      <ol>
+        <li>
+          Artificial amateurs, aren't at all amazing
+          Analytically, I assault, animate things
+        </li>
+        <li>
+          Broken barriers bounded by the bomb beat
+          Buildings are broken, basically I'm bombarding
+        </li>
+        <li>
+          Casually create catastrophes, casualties
+          Canceling cats, got their canopies collapsing
+        </li>
+        <li>
+          Detonate a dime of dank daily doin' dough
+          Demonstrations, Don Dada on the down low
+        </li>
+        <li>
+          Eating other editors with each and every energetic epileptic episode
+          Elevated etiquette
+        </li>
+        <li>
+          Furious, fat, fabulous, fantastic
+          Flurries of funk fell, feeding the fanatics
+        </li>
+        <li>
+          Gift got great, global goods gone glorious
+          Gettin godly in this game with the goriest
+        </li>
+        <li>
+          Hit em high, hella height, historical
+          Hey holocaust hints, hear 'em holler at your homeboy
+        </li>
+        <li>
+          Imitators idolize, I intimidate
+          In an instant, I'll rise in an irate state
+        </li>
+        <li>
+          Juiced on my jams like Jheri curls jocking joints
+          Justly, it's just me, writing my journals
+        </li>
+        <li>
+          Kindly I'm kindling all kinds of King Kong
+          Karate kick uptight Brits in my kingdom
+        </li>
+        <li>
+          Let me live a long life, lyrically lessons is
+          Learned lame louses just lose to my livery
+        </li>
+        <li>
+          My mind makes marvelous movies, masses
+          Marvel and move, many mock what I've mastered
+        </li>
+        <li>
+          Niggas nap knowing I'm nice, naturally
+          Knack, never lack, make noise nationally
+        </li>
+        <li>
+          Operation, opposition, off, not optional
+          Out of sight, out of mind, wide beaming opticals
+        </li>
+        <li>
+          Perfected poem, powerful punchlines
+          Pummeling petty powder puffs in my prime
+        </li>
+        <li>
+          Quite quaint quotes keep quiet it's Quannum
+          Quarrelers ain't got a quarter of what we got, uh
+        </li>
+        <li>
+          Really raw raps, risin up rapidly
+          Riding the rushing radioactivity
+        </li>
+        <li>
+          Super scientifical sound search sought
+          Silencing super fire saps that are soft
+        </li>
+        <li>
+          Tales ten times talented, too tough
+          Take that, challengers, get a tune up
+        </li>
+        <li>
+          Universal, unique, untouched
+          Unadulterated, the raw uncut
+        </li>
+        <li>
+          Verb vice lord victorious valid
+          Violate vibes that are vain make em vanish
+        </li>
+        <li>
+          Why in my world would a wise wordsmith just
+          Weaving up words, weed it up, I'm a wordsmith
+        </li>
+        <li>
+          Xerox my X-radiation holes extra large
+          X-height letters and xylophone tones
+        </li>
+        <li>
+          Yellow-back, yak mouth, young ones' yaws
+          Yesterday's lawn yardsale, I yawn
+        </li>
+        <li>
+          Zig-Zag zombies, zooming to the zenith
+          Zero in, zen thoughts, overzealous rhyme ZEA-LOTS!....
+        </li>
+        <li>
+          <span>can you say it faster?</span>
+        </li>
+      </ul>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Blackalicious", "http://en.wikipedia.org/wiki/Blackalicious") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("Alphabet Aerobics", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=36631700&id=36631709&s=143441&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("A to G EP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=36631700&id=36631709&s=143441&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

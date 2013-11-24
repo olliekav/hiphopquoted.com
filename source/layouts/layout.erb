@@ -19,11 +19,11 @@
   </head>
   <body class="page-<%= page_classes %>" id="hiphopquoted">
     <%= partial "navigation" unless (current_page.path == "index.html") %>
+    <%= partial "header" %>
     <main id="main" role="main">
-      <%= partial "header" %>
       <%= yield %>
-      <%= partial "footer" %>
     </main>
+    <%= partial "footer" %>
     <script>
       var _gaq = [['_setAccount', 'UA-10920756-1'], ['_trackPageview']];
       (function(d, t) {
