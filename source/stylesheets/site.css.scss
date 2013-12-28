@@ -12,6 +12,7 @@ body {
   height:100%;
   position: relative;
   width:100%;
+  @include box-sizing(border-box);
   > div {
     display: none !important;
   }
@@ -116,7 +117,7 @@ cite {
 } 
 #footer {
   overflow: hidden;
-  padding:3em 1.5em;
+  padding:3em 1.5em 1.6em;
   position:relative;
   > ul {
     float: right;
@@ -147,7 +148,6 @@ cite {
   }
   #header {
     text-align: center;
-    width: 100%;
     #logo {
       height: auto;
       margin-top: 4em;

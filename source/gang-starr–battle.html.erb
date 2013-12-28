@@ -2,71 +2,68 @@
 title: Gang Starr – Battle
 ---
 
-- content_for :head do
-  %title Gang Starr – Battle
+<% content_for :head do %>
+  <title>Gang Starr – Battle</title>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/gang-starr–battle.css"
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "gang-starr–battle.css" %>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/gang-starr–battle.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris–mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
+<article>
+  <header>
+    <h1>
       Battle
-
-%figure
-  %blockquote
-    %p
-      I used to guzzle 40's, and own a beat up Caddy
-      Since the hood still love me, I'll turn the heat up daddy
-      I went from mackin fly honies on the train
-      To straight relaxin on the beach, countin money gettin brain
-      Soon as you rappers get a chance you wanna floss a lot
-      You buy a iced out watch because it cost a lot
-      Then you in the club, stylin with dough
-      Profilin with hoes that we boned, a while ago
-      You rookies haven't done enough laps around the track
-      You had one hot single, but then your album sounds wack
-      Son you bore me with your war stories
-      You ain't even do that shit, so that's just more stories
-      How you expect us to take you seriously?
-      The look in my eye punk, has got you scared of me
-      I'm blastin your sons, I'm snatchin your funds
-      You catch a royal ass-whoopin, you've been askin for one
-    %p
-      Bitch you don't even know, the half about me
-      I bring it straight to your chest, ask your staff about me
-      I'm just a little bit older, plus a whole lot wiser
-      I might advise ya, or I might pulverize ya
-      I can visit any city, get respect in the street
-      While you alone in your room, shook to death of the streets
-      I'll take a second to speak, I keep my weapon in reach
-      I ain't talkin romance but you'll get swept off your feet
-      I keeps a ghetto chick, that loves to blast and she peddle shit
-      Groupies fake moves, I get her to settle shit
-      You can't compare to the status right here
-      Legendary worldwide, we can battle right here
-      Listen junior, I'mma tear back your wig
-      This ain't TV but I'll show you what a "Fear Factor" is
-      Stop grillin me, and all that frontin is killin me
-      You leave me no choice but to hurt your feelings G
-
-  %figcaption
+    </h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        I used to guzzle 40's, and own a beat up Caddy
+        Since the hood still love me, I'll turn the heat up daddy
+        I went from mackin fly honies on the train
+        To straight relaxin on the beach, countin money gettin brain
+        Soon as you rappers get a chance you wanna floss a lot
+        You buy a iced out watch because it cost a lot
+        Then you in the club, stylin with dough
+        Profilin with hoes that we boned, a while ago
+        You rookies haven't done enough laps around the track
+        You had one hot single, but then your album sounds wack
+        Son you bore me with your war stories
+        You ain't even do that shit, so that's just more stories
+        How you expect us to take you seriously?
+        The look in my eye punk, has got you scared of me
+        I'm blastin your sons, I'm snatchin your funds
+        You catch a royal ass-whoopin, you've been askin for one
+      </p>
+      <p>
+        Bitch you don't even know, the half about me
+        I bring it straight to your chest, ask your staff about me
+        I'm just a little bit older, plus a whole lot wiser
+        I might advise ya, or I might pulverize ya
+        I can visit any city, get respect in the street
+        While you alone in your room, shook to death of the streets
+        I'll take a second to speak, I keep my weapon in reach
+        I ain't talkin romance but you'll get swept off your feet
+        I keeps a ghetto chick, that loves to blast and she peddle shit
+        Groupies fake moves, I get her to settle shit
+        You can't compare to the status right here
+        Legendary worldwide, we can battle right here
+        Listen junior, I'mma tear back your wig
+        This ain't TV but I'll show you what a "Fear Factor" is
+        Stop grillin me, and all that frontin is killin me
+        You leave me no choice but to hurt your feelings G
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

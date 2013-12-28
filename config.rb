@@ -1,4 +1,6 @@
-Encoding.default_external = Encoding::UTF_8
+# Test Encoding
+# Encoding.default_external = Encoding::UTF_8
+# I18n.enforce_available_locales = false
 
 # Typekit domains
 # 0.0.0.0, *.hiphopquoted.dev, *.hiphopquoted.com
@@ -8,10 +10,10 @@ Encoding.default_external = Encoding::UTF_8
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  config.output_style = :compact
-  config.line_comments = false
-end
+# compass_config do |config|
+#   config.output_style = :compact
+#   config.line_comments = false
+# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -48,7 +50,7 @@ activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
-#   def list_pages
+#   def some_helper
 #     "Helping"
 #   end
 # end

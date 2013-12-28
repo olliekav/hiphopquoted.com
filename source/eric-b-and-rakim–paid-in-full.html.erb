@@ -1,0 +1,45 @@
+---
+title: "Eric B &amp; Rakim – Paid in Full"
+player_color: ffffff
+track: rakim paid in full
+---
+
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("eric-b-and-rakim–paid-in-full.css") %>
+<% end %>
+
+<% content_for :javascript do %>
+  <%= javascript_include_tag("jquery.lettering.js") %>
+  <script>
+    $(function(){
+      $("h1").lettering('words');
+    });
+  </script>
+<% end %>
+
+<article>
+  <header>
+    <h1>Paid in Full</h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>Thinking of a master plan<br>
+        Cause ain’t nothing but sweat inside my hand<br>
+        So I dig into my pocket, all my money spent<br>
+        So I dig deeper but still coming up with lint<br>
+        So I start my mission, leave my residence<br>
+        Thinking how could I get some dead presidents</p>
+    </blockquote>
+    <figcaption>
+      Quote by 
+      <%= link_to("Rakim", "http://en.wikipedia.org/wiki/Rakim") %>
+      <cite>
+        from
+        <%= link_to("Paid in full", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=57547395&id=57547365&s=143441&uo=6") %>
+        on the album 
+        <%= link_to("Paid in full", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=57547395&id=57547365&s=143441&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>
+<p class="copyright">Photo copyright <%= link_to("angrycitizen.org", "http://angrycitizen.org") %></p>
