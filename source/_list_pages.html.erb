@@ -1,4 +1,4 @@
-<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)} %>
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.sort_by {|p| p.url} %>
 <ul>
   <% pages.each do |p| %>
     <% if(p.data.title) %>

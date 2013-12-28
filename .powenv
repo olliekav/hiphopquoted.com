@@ -1,12 +1,6 @@
-export PATH ; PATH="/Users/olliekav/.rvm/gems/ruby-2.0.0-p247@hiphopquoted/bin:/Users/olliekav/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/olliekav/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/olliekav/.rvm/bin:$PATH"
-export rvm_env_string ; rvm_env_string='ruby-2.0.0-p247@hiphopquoted'
-export rvm_path ; rvm_path='/Users/olliekav/.rvm'
-export rvm_ruby_string ; rvm_ruby_string='ruby-2.0.0-p247'
-export rvm_gemset_name ; rvm_gemset_name='hiphopquoted'
-export RUBY_VERSION ; RUBY_VERSION='ruby-2.0.0-p247'
-export GEM_HOME ; GEM_HOME='/Users/olliekav/.rvm/gems/ruby-2.0.0-p247@hiphopquoted'
-export GEM_PATH ; GEM_PATH='/Users/olliekav/.rvm/gems/ruby-2.0.0-p247@hiphopquoted:/Users/olliekav/.rvm/gems/ruby-2.0.0-p247@global'
-export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/olliekav/.rvm/rubies/ruby-2.0.0-p247'
-export IRBRC ; IRBRC='/Users/olliekav/.rvm/rubies/ruby-2.0.0-p247/.irbrc'
+export PATH="/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com/bin:/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/olliekav/.rvm/rubies/ruby-2.0.0-p353/bin:$PATH"
+export GEM_HOME='/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com'
+export GEM_PATH='/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com:/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@global'
+export IRBRC='/Users/olliekav/.rvm/rubies/ruby-2.0.0-p353/.irbrc'
 unset MAGLEV_HOME
 unset RBXOPT

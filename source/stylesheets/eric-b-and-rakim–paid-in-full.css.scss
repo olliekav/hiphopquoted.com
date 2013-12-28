@@ -1,0 +1,120 @@
+// Eric B & Rakim – Paid in Full -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #000000;
+$secondary-color: #F1E300;
+
+@font-face {
+  font-family: 'blackoutmidnight';
+  src: url('/fonts/blackout-midnight-webfont.eot');
+  src: url('/fonts/blackout-midnight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/blackout-midnight-webfont.woff') format('woff'),
+       url('/fonts/blackout-midnight-webfont.ttf') format('truetype'),
+       url('/fonts/blackout-midnight-webfont.svg#blackoutmidnight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font: 100%/1.25 blackoutmidnight, sans serif;
+  font-weight: 500;
+  padding: 2em;
+}
+b {
+  font-weight: 500;
+}
+a {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 20%);
+  }
+}
+label {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 20%);
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  background-color: transparent;
+  #logo {
+    @include transition(fill 0.1s linear);
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: darken($primary-color, 20%);
+    }
+  }
+}
+article {
+  background: url("../images/rakim_background.jpg");
+  background-size: cover;
+  border: 10px solid #fff;
+  color: #fff;
+  font-size: 1.875em;
+  line-height: 0.8;
+  position: relative;
+  h1 {
+    font-size: 7.5em;
+    overflow: hidden;
+    > .word2 {
+      margin-left: -80px;
+    }
+    > .word3 {
+      float: right;
+      margin: -20px -20px 0 0;
+    }
+  }
+  figure {
+    display: block;
+    position:relative;
+  }
+  blockquote {
+    overflow: hidden;
+    p {
+      float: right;
+      text-align: right;
+      width: 60%;
+    }
+  }
+  figcaption {
+    cite {
+      font-style: italic;
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 20%);
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #fff;
+}
