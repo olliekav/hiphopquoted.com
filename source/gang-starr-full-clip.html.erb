@@ -8,85 +8,89 @@ track: gang starr full clip
   <%= stylesheet_link_tag "/stylesheets/gang-starr-full-clip.css" %>
 <% end %>
 
+<% content_for :javascript do %>
+  <%= javascript_include_tag("bigtext.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'xnz0gsv' },
+        active: function() {
+          $('.chorus, figcaption, cite>a, figcaption>a').bigtext();
+        }
+      });
+    });
+  </script>
+<% end %>
+
 <article>
   <header>
     <h1>Full Clip</h1>
   </header>
+  <%= image_tag("gang_starr_full_clip.jpg", :alt => "In memory of Keith Elam Guru • 1961-2010") %>
   <figure>
     <blockquote>
+      <p class="chorus"><span>Full</span> <span>clip</span> <span>do you wanna mess</span> <span>with this</span> <span>Gang</span> <span>starr</span> <span>one of the</span> <span>best yet</span> <span>I'm nice</span> <span>like that</span> <span>It's all good</span> <span>in this business</span> <span>of rap</span></p>
       <p>
-        Fresh out the gate again, time to raise the stakes again
-        Fatten my plate again, y'all cats know we always play to win
-        G-A-N-G to the Starr son
-        Haters took this shit too far son
-        So that's all for you, I'm wiping out your whole team
-        I'll splatter your dreams with lyrics to shatter your schemes
-        The badder you seem, the more lies you tell
-        The more lies you sell, and by surprise you fell
-        Into my deathtrap, right into my clutches
-        Stupid, you know the God must bless every single mic he touches
-        I've suffered, just so I could return harder
-        Wanna be the shit starter, fuck around, make you a martyr
-        I make ya famous, turn around and make ya nameless
-        Cause you never understood how vital to me this rap game is
-        Save it and hold that, you catch a hot one
-        Rhymes chase a fake nigga down soon as I spot one
+        Fresh out the gate again, time to raise the stakes again.
+        Fatten my plate again, y'all cats know we always play to win.
+        G-A-N-G to the Starr son.
+        Haters took this shit too far son.
+        So that's all for you, I'm wiping out your whole team.
+        I'll splatter your dreams with lyrics to shatter your schemes.
+        The badder you seem, the more lies you tell.
+        The more lies you sell, and by surprise you fell.
+        Into my deathtrap, right into my clutches.
+        Stupid, you know the God must bless every single mic he touches.
+        I've suffered, just so I could return harder.
+        Wanna be the shit starter, fuck around, make you a martyr.
+        I make ya famous, turn around and make ya nameless.
+        Cause you never understood how vital to me this rap game is.
+        Save it and hold that, you catch a hot one.
+        Rhymes chase a fake nigga down soon as I spot one.
       </p>
       <p>
-        So if you stand in my way, I'm gonna have to spray
-        Learn that if you come against me son you're gonna have to pray
-        Since back in the day I held the weight and kept my head up
-        They wanna see the God catch an L it's all a set up
-        I give no man or thing power over me
+        So if you stand in my way, I'm gonna have to spray.
+        Learn that if you come against me son you're gonna have to pray.
+        Since back in the day I held the weight and kept my head up.
+        They wanna see the God catch an L it's all a set up.
+        I give no man or thing power over me.
         Why these niggas so jealous and looking sour, over me?
-        I'm bolder G, I'm like impossible to stop
-        I'm like that nigga in the ring with you, impossible to drop
-        I'm like two magazines fully loaded to your one
-        Plus I ain't gonna quit spitting til you're done
-        Plus, more than ever I got my whole shit together
-        More than a decade of hits that'll live forever
-        Catching rep off my name, you're bound to fry
-        Know how many niggas that I know is down to die
-        We never fail, and we ain't never been frail
-        You niggas talk crime, but you scared of jail
+        I'm bolder G, I'm like impossible to stop.
+        I'm like that nigga in the ring with you, impossible to drop.
+        I'm like two magazines fully loaded to your one.
+        Plus I ain't gonna quit spitting til you're done.
+        Plus, more than ever I got my whole shit together.
+        More than a decade of hits that'll live forever.
+        Catching rep off my name, you're bound to fry.
+        Know how many niggas that I know is down to die.
+        We never fail, and we ain't never been frail.
+        You niggas talk crime, but you scared of jail.
       </p>
       <p>
-        Attacking like a slick Apache, lyrics are trigger happy
-        Blowing back your wig piece just for the way you're looking at me
-        Cock back, blaow, I hit you up right now
-        I don't know why so many of y'all wanna be thugs anyhow
-        Face the consequence of your childish nonsense
-        I could make your head explode just by my lyrical content
-        Get you in my scope and metaphorically snipe ya
-        I never liked ya, I gas that ass and then ignite ya
-        The flame thrower, make your peeps afraid to know ya
-        How many times I told ya, play your position small soldier
-        My heart is colder, makes me wanna resort to violence
-        Stop beating me in the head son, nah, I'm not buying it
-        I'm ready to blast, ready to surpass and harass
-        I'm ready to flip, yeah I'm ready to dip with all the cash
-        I hold my chrome steady, with a tight grip
-        So watch your dome already cause this one might hit
-      </p>
-      <p class="chorus">
-        Full clip, do you wanna mess with this
-        Gang starr, one of the best yet
-        I'm nice like that
-        It's all good, in this business of rap
-        Full clip, do you wanna mess with this
-        Gang starr, one of the best yet
-        I'm nice like that
-        It's all good, so I suggest you take a rest
+        Attacking like a slick Apache, lyrics are trigger happy.
+        Blowing back your wig piece just for the way you're looking at me.
+        Cock back, blaow, I hit you up right now.
+        I don't know why so many of y'all wanna be thugs anyhow.
+        Face the consequence of your childish nonsense.
+        I could make your head explode just by my lyrical content.
+        Get you in my scope and metaphorically snipe ya.
+        I never liked ya, I gas that ass and then ignite ya.
+        The flame thrower, make your peeps afraid to know ya.
+        How many times I told ya, play your position small soldier.
+        My heart is colder, makes me wanna resort to violence.
+        Stop beating me in the head son, nah, I'm not buying it.
+        I'm ready to blast, ready to surpass and harass.
+        I'm ready to flip, yeah I'm ready to dip with all the cash.
+        I hold my chrome steady, with a tight grip.
+        So watch your dome already cause this one might hit.
       </p>
     </blockquote>
     <figcaption>
-      Quote by 
-      <%= link_to("Gang Starr", "http://en.wikipedia.org/wiki/Gang_Starr") %>
+      <span>Quote by</span> 
+      <%= link_to("<span>Gang</span> <span>Starr</span>".html_safe, "http://en.wikipedia.org/wiki/Gang_Starr") %>
+      <span>from</span>
       <cite>
-        from
-        <%= link_to("Full Clip", "http://itunes.apple.com/gb/album/full-clip-street-version/id16008599?i=16008481&uo=6") %>
-        on the album 
-        <%= link_to("Full Clip: A Decade of Gang Starr", "http://itunes.apple.com/gb/album/full-clip-street-version/id16008599?i=16008481&uo=6") %>
+        <%= link_to("Full Clip".html_safe, "http://itunes.apple.com/gb/album/full-clip-street-version/id16008599?i=16008481&uo=6") %>
       </cite>
     </figcaption>
   </figure>

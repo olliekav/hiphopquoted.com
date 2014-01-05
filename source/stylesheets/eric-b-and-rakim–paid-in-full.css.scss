@@ -14,7 +14,6 @@ $secondary-color: #F1E300;
        url('/fonts/blackout-midnight-webfont.svg#blackoutmidnight') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 body {
@@ -22,14 +21,18 @@ body {
   color: $primary-color;
   font: 100%/1.25 blackoutmidnight, sans serif;
   font-weight: 500;
-  padding: 2em;
+  @media only screen and (max-width:375px) {
+    font-size: 87.5%;
+  }
 }
 b {
   font-weight: 500;
 }
 a {
+  border-bottom: 1px solid $primary-color;
   color: $primary-color;
   &:hover {
+    border: none;
     color: darken($primary-color, 20%);
   }
 }
@@ -68,10 +71,38 @@ article {
   color: #fff;
   font-size: 1.875em;
   line-height: 0.8;
+  margin: 0 auto 0.5em;
+  max-width: 1000px;
   position: relative;
+  width: 100%;
+  @include box-sizing(border-box);
+  @media only screen and (max-width:550px) {
+    background-position: -200px 0;
+  }
+  @media only screen and (max-width:450px) {
+    background-position: -400px 0;
+  }
+  &:before {
+    background-color: rgba($primary-color, 0.2);
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  a {
+    border-color: #fff;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
   h1 {
     font-size: 7.5em;
+    position: relative;
     overflow: hidden;
+    z-index: 1;
     > .word2 {
       margin-left: -80px;
     }
@@ -79,24 +110,83 @@ article {
       float: right;
       margin: -20px -20px 0 0;
     }
+    @media only screen and (max-width:814px) {
+      font-size: 6.4em;
+      > .word3 {
+        margin: -10px -20px 0 0;
+      }
+    }
+    @media only screen and (max-width:656px) {
+      font-size: 6em;
+      > .word2 {
+        margin-left: 0;
+      }
+      > .word3 {
+        float: none;
+        margin: -40px;
+      }
+    }
+    @media only screen and (max-width:615px) {
+      font-size: 5em;
+      > .word1 {
+        display: block;
+      }
+    }
+    @media only screen and (max-width:530px) {
+      > .word1, > .word2, > .word3 {
+        display: block;
+        margin: -5px 0 0;
+      }
+    }
   }
   figure {
     display: block;
     position:relative;
+    z-index: 1;
   }
   blockquote {
+    margin: 3em -3px 0 0;
     overflow: hidden;
     p {
       float: right;
       text-align: right;
       width: 60%;
     }
-  }
-  figcaption {
-    cite {
-      font-style: italic;
+    span {
+      display: block;
+      font-size: 3em;
+      margin-right: -5px;
+      &:last-child {
+        font-size: 1.8em;
+      }
+    }
+    @media only screen and (max-width:630px) {
+      p {
+        width: 80%;
+      }
+    }
+    @media only screen and (max-width:510px) {
+      p {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width:375px) {
+      span {
+        font-size: 2em;
+      }
+      br {
+        display: none;
+      }
     }
   }
+  figcaption {
+    margin: 1.5em 0 1em;
+  }
+}
+.copyright {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
 }
 
 // Audio player
