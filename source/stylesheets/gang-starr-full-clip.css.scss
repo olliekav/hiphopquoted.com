@@ -1,14 +1,14 @@
-// Bahamadia – Rugged Ruff -----------------------------------------------------------------
+// Gang Starr - Full Clip -----------------------------------------------------------------
 
 @import "partials/common";
 
-$primary-color: #CB5B10;
-$secondary-color: #423A34;
+$primary-color: #000000;
+$secondary-color: #e1d2cc;
 
 body {
-  background-color: $primary-color;
-  color:lighten($primary-color, 20%);
-  font:100%/1.5 "helvetica", Arial, sans-serif;
+  background-color: #fff;
+  color:$primary-color;
+  font:100%/1.5 "kepler-std", Georgia, serif;
   font-weight: 500;
 }
 b {
@@ -23,11 +23,11 @@ a, label {
   }
 }
 #navigation {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   li {
-    border-color: lighten($secondary-color, 8%);
+    border-color: lighten($primary-color, 8%);
     a:hover {
-      background-color: lighten($secondary-color, 10%);
+      background-color: lighten($primary-color, 10%);
     }
   }
 }
@@ -44,98 +44,100 @@ a, label {
   }
 }
 article {
-  margin: 0 auto 3em;
-  //max-width: 1000px;
+  margin: 0 auto;
+  max-width: 610px;
   position: relative;
-  width: 960px;
-  h1 {
-    color: $secondary-color;
-    display: inline-block;
-    font-family: "tungsten", impact, sans-serif;
-    font-weight:700;
-    font-size: 13.75em;
-    left: 26%;
-    line-height: 0.9;
-    position: absolute;
-    text-transform: uppercase;
-    top: 125px;
-    > .word1, .word2 {
-      display: none;
-    }
-    > .word4 {
-      display: block;
-      font-size: 1.45em;
-      margin:-25px 0 0 49%;
-    }
+  width: 100%;
+  header {
+    display: none;
+  }
+  img {
+    width: 100%;
   }
   figure {
     margin:0 auto;
+    padding: 0 8% 0 50%;
     position:relative;
     width: 100%;
-  }
-  blockquote {
-    overflow: hidden;
-  }
-  .verse {
-    float: left;
-    margin-left: 2%;
-    position: relative;
-    text-align: justify;
-    width: 24%;
-    @include css-hyphens(auto);
-    &:first-child {
-      margin-left: 0;
-    }
-    &:first-letter,
-    &.one:before {
-      font-family: "tungsten", impact, sans-serif;
-      font-size: 13.75em;
-      font-weight:700;
-      line-height: 0.9;
-    }
-    &:first-letter {
-      float: left;
-      margin: -5px 10px -25px 0;
-    }
-    &.one {
-      padding-top: 130px;
-      position: relative;
-      &:before {
-        color: $secondary-color;
-        content: '“';
-        font-size: 20em;
-        left: 0;
+    @include box-sizing(border-box);
+    p {
+      margin-bottom: 1.5em;
+      width: 100%;
+      &.chorus {
+        left: 40px;
         position: absolute;
         top: 0;
+        width: 40%;
+      }
+      &:not(.chorus):first-letter {
+        float: left;
+        font-size: 5.6em;
+        line-height: 0.9;
+        margin-bottom: -20px;
+        width: 60px;
       }
     }
-    &.two {
-      margin-top: 310px;
-    }
-    &.three {
-      margin-top: 560px;
-      &:after {
-        color: $secondary-color;
-        content: '”';
-        font-family: "tungsten", impact, sans-serif;
-        font-size: 37.5em;
-        font-weight:700;
-        line-height: 0.1;
-        right: -210px;
-        position: absolute;
-        bottom: -80px;
+    .chorus, figcaption {
+      color: $secondary-color;
+      font-family: "superclarendon";
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -2;
+      text-transform: uppercase;
+      span {
+        display: block;
       }
     }
-  }
-  figcaption {
-    font-family: "tungsten", impact, sans-serif;
-    font-size: 2.125em;
-    font-weight:700;
-    line-height: 1.2;
-    left: 26.5%;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
+    @media only screen and (max-width:550px) {
+      padding: 0 10%;
+      p.chorus {
+        position: static;
+        width: 100%;
+      }
+    }
+    .chorus {
+      span {
+        &:nth-child(1) {
+          line-height: 1;
+        }
+        &:nth-child(2) {
+          line-height: 0.8;
+        }
+        &:nth-child(3) {
+          line-height: 1.8;
+        }
+        &:nth-child(4) {
+          line-height: 0.8;
+        }
+        &:nth-child(5) {
+          line-height: 1;
+        }
+        &:nth-child(6) {
+          line-height: 0.8;
+        }
+        &:nth-child(7) {
+          line-height: 1.4;
+        }
+        &:nth-child(8) {
+          line-height: 0.7;
+        }
+        &:nth-child(9) {
+          line-height: 1.3;
+        }
+        &:nth-child(10) {
+          line-height: 0.7;
+        }
+        &:nth-child(11) {
+          line-height: 1.6;
+        }
+        &:nth-child(12) {
+          line-height: 0.6;
+        }
+        &:nth-child(13) {
+          line-height: 1.2;
+        }
+      }
+    }
   }
 }
 

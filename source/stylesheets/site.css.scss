@@ -32,13 +32,11 @@ body {
   padding:1em 1.5em;
   position: relative;
   left: 0;
-  //width: 100%;
-  //@include box-sizing(border-box);
   @include transition(left 0.3s ease);
   .toggle-menu {
     font-size: 28px;
     position: absolute;
-    right: 1.5em;
+    right: 1em;
     top: 1.2em;
   }
   #logo {
