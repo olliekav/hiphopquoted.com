@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require "rubygems"
 require "middleman-core/load_paths"
 
