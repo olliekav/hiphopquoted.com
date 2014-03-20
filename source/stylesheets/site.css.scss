@@ -19,13 +19,14 @@ body {
 }
 #main {
   display: block;
+  left: 0;
   margin:0 auto;
   padding:0 30px;
   position: relative;
   width: 100%;
   z-index: 10;
   @include box-sizing(border-box);
-  @include transition(all 0.3s ease);
+  @include transition(left 0.3s ease);
 }
 #header {
   margin-bottom: 2em; 
