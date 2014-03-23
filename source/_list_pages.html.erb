@@ -3,7 +3,7 @@
   <% pages.each do |p| %>
     <% if(p.data.title) %>
       <li>
-        <%= link_to p.data.title, p.url.force_encoding(Encoding::UTF_8) %>
+        <%= link_to p.data.title, p.url %>
       </li>
     <% end %>
   <% end %>

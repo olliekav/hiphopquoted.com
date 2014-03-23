@@ -2,18 +2,26 @@
 
 @import "partials/common";
 
-$primary-color: #e70000;
-$secondary-color: #000000;
-$background-color: #ffffff;
+$primary-color: #4e4e4e;
+$secondary-color: #ffffff;
+$background-color: #000000;
 
 body {
-  background-color: $background-color;
+  background: $background-color url("../images/gravediggaz/six_feet_background.jpg") top center fixed;
   color:$primary-color;
-  font:1.125em/1.5 "Hoefler Text", Georgia, Times New Roman, Times, serif;
+  font:1.375em/1.5 "jaf-lapture", Georgia, Times New Roman, Times, serif;
   font-weight: 400;
 }
-a, label {
-  color:$primary-color;
+a {
+  color:$secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $primary-color;
+  }
+}
+label {
+  color: $primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
@@ -21,17 +29,17 @@ a, label {
   }
 }
 #navigation {
-  background-color: $primary-color;
+  background-color: $background-color;
   li {
-    border-color: darken($primary-color, 2%);
+    border-color: darken($background-color, 2%);
     a:hover {
-      background-color: darken($primary-color, 4%);
+      background-color: darken($background-color, 4%);
     }
   }
 }
 #header {
   #logo {
-    @include transition(fill 0.1s linear);
+    opacity: 0.8;
     path {
       fill: $primary-color;
       pointer-events: all;
@@ -43,59 +51,42 @@ a, label {
 }
 article {
   margin: 0 auto 3em;
-  max-width: 1200px;
+  opacity: 0.6;
   position: relative;
   text-align: center;
   width: 100%;
-  img {
-    max-width: 100%;
-    width: 100%;
-  }
   h1 {
-    font-size: 4.111em;
+    font-size: 5.909em;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1;
     letter-spacing: -1px;
     margin: 0;
-    padding: 0 100px;
-    quotes: "\201C""\201D""\2018""\2019";
-    &:before,
-    &:after {
-      display: inline-block;
-      font-size: 3em;
-      line-height: 0.1;
-      margin: 0;
-      height: 0;
-      opacity: 0.4;
-      position: relative;
-      vertical-align: bottom;
-    }
-    &:before {
-      content: open-quote;
-      margin-left: -120px;
-    }
-    &:after {
-      content: close-quote;
-      margin: 0 -90px 0 0;
-      top: 0.1em;
-    }
+    text-transform: uppercase;
+    text-shadow: -1px -1px 1px $background-color;
   }
   figure {
     margin:0 auto;
     position:relative;
-    width: 60%;
+    text-shadow: -1px -1px 1px $background-color;
+    width: 100%;
   }
-  blockquote {
-    overflow: hidden;
-  }
-  figcaption {
-    
+  p {
+    &:after,
+    &:first-child:before {
+      background: url("../images/gravediggaz/break_small.png") no-repeat top left;
+      content: "";
+      display: block;
+      height: 42px;
+      margin: 2em auto;
+      width: 136px;
+    }
   }
 }
 
 // Audio player
 .iTunesPreviewPlayer {
-  background-color: $secondary-color;
+  background-color: $primary-color;
+  opacity: 0.6;
   &:hover {
     background-color: lighten($primary-color, 20%);
   }
