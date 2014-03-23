@@ -1,84 +1,91 @@
 ---
-title: Gravediggaz - 6 Feet Deep
+title: Gravediggaz - Six Feet Deep
+player_color: e70000
+track: gravediggaz six feet deep
 ---
 
-- content_for :head do
-  %title Gravediggaz - 6 Feet Deep
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("gravediggaz-six-feet-deep.css") %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/gravediggaz-six-feet-deep.css"
+<% content_for :javascript do %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'msv7fur' }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/gravediggaz-six-feet-deep.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris-mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
+<article>
+  <header>
+    <h1>
       6 Feet Deep
-
-%figure
-  %blockquote
-    %p
-      I floss my teeth on a gospel track
-      I'm not an apostle, but I bring the axe to ya back
-      I chew and attack
-      Like Crest on plaque
-      After that, your world is black
-      You drop into a hole
-      Your mold separates from your soul
-      Behold, the Gravediggaz told you 'Beware'
-      But you didn't listen
-      So now we appear eardrums glisten, ha ha
-    %p
-      When I wreck I commence to detect
-      Ready to dissect so come step alive and die
-      Next murder is mayhem
-      Diggin graves is a regular
-      Treach-orous mangler
-      Tha Boston Strangler
-      Heated and trapped in a fury of hate
-      Daredevil, the rhyme rebel my art terminates
-      Subduin and pul-ver-i-zin ya head
-      You bled, fell dead, and your tombstone read
-      Rza-to-the-recta, Grym-to-the-reap
-      Unda-to-the-taker, Gate-to-the-keep
-      Creepin thru tha ghettos and the slums and streets
-      Gravedigga, nigga, 6 feet
-    %p
-      Darkness shall fall upon y'all
-      Who slept on the styles
-      That crept thru tha door
-      The grave behave we come to save
-      So don't be afraid of the dark
-      We spark like light in night
-      Excite, excite is right, is right
-      Come follow the light
-      And see what I see and be what I be
-      Tha G-to-the-R-to-the-A-to-the-V...E
-    %p
-      In the mind I come with the sparks from the attic
-      Yet psychopathic brain tracks is tragic
-      Twist lifting wrist like riff of a Taurus
-      Deep in tha forest, I slay for tha porridge
-      Yet it's cold, ya die slow like a tortoise
-      Deep in my chorus, ya result Diggamortis
-      Let me see I'm castin disease
-      Contrary, yet some fairy cause ya bleed
-
-  %figcaption
+    </h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        I floss my teeth on a gospel track<br>
+        I'm not an apostle, but I bring the axe to ya back<br>
+        I chew and attack<br>
+        Like Crest on plaque<br>
+        After that, your world is black<br>
+        You drop into a hole<br>
+        Your mold separates from your soul<br>
+        Behold, the Gravediggaz told you 'Beware'<br>
+        But you didn't listen<br>
+        So now we appear eardrums glisten, ha ha
+      </p>
+      <p>
+        When I wreck I commence to detect<br>
+        Ready to dissect so come step alive and die<br>
+        Next murder is mayhem<br>
+        Diggin graves is a regular<br>
+        Treach-orous mangler<br>
+        Tha Boston Strangler<br>
+        Heated and trapped in a fury of hate<br>
+        Daredevil, the rhyme rebel my art terminates<br>
+        Subduin and pul-ver-i-zin ya head<br>
+        You bled, fell dead, and your tombstone read<br>
+        Rza-to-the-recta, Grym-to-the-reap<br>
+        Unda-to-the-taker, Gate-to-the-keep<br>
+        Creepin thru tha ghettos and the slums and streets<br>
+        Gravedigga, nigga, 6 feet
+      </p>
+      <p>
+        Darkness shall fall upon y'all<br>
+        Who slept on the styles<br>
+        That crept thru tha door<br>
+        The grave behave we come to save<br>
+        So don't be afraid of the dark<br>
+        We spark like light in night<br>
+        Excite, excite is right, is right<br>
+        Come follow the light<br>
+        And see what I see and be what I be<br>
+        Tha G-to-the-R-to-the-A-to-the-V...E
+      </p>
+      <p>
+        In the mind I come with the sparks from the attic<br>
+        Yet psychopathic brain tracks is tragic<br>
+        Twist lifting wrist like riff of a Taurus<br>
+        Deep in tha forest, I slay for tha porridge<br>
+        Yet it's cold, ya die slow like a tortoise<br>
+        Deep in my chorus, ya result Diggamortis<br>
+        Let me see I'm castin disease<br>
+        Contrary, yet some fairy cause ya bleed
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Gravediggaz", "http://en.wikipedia.org/wiki/Gravediggaz") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("Six Feet Deep", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=305648104&id=305647794&s=143441&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("Six Feet Deep", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=305648049&id=305647794&s=143441&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

@@ -1,7 +1,3 @@
-# encoding: utf-8
-# Encoding.default_external = Encoding::UTF_8
-# Encoding.default_internal = Encoding::UTF_8
-
 # Typekit domains
 # 0.0.0.0, *.hiphopquoted.dev, *.hiphopquoted.com
 
@@ -46,7 +42,7 @@
 activate :directory_indexes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
