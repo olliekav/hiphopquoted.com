@@ -31,7 +31,6 @@ a, label {
 }
 #header {
   #logo {
-    @include transition(fill 0.1s linear);
     path {
       fill: $primary-color;
       pointer-events: all;
