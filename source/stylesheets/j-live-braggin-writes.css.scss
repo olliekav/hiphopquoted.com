@@ -1,0 +1,94 @@
+// J-Live - Braggin' Writes -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #6DCFF6;
+$secondary-color: #252525;
+$secondary-color-light: lighten($secondary-color, 20%);
+
+body {
+  background-color: $secondary-color;
+  color:$secondary-color-light;
+  font:100%/1.5 "pragmatica-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+a, label {
+  color:$primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color-light;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  position: relative;
+  z-index: 1;
+  #logo {
+    path {
+      fill: $secondary-color-light;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $primary-color;
+    }
+  }
+}
+article {
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  z-index: 2;
+  header {
+    font-family: "corpulent-web";
+    float: right;
+    width: 75%;
+  }
+  figure {
+    background-color: darken($secondary-color, 5%);
+    float: left;
+    height: 100%;
+    left: 0;
+    margin:0 auto;
+    padding: 5em 1.5em 1.5em;
+    top: 0;
+    width: 25%;
+    @include box-sizing(border-box);
+    p {
+      margin-bottom: 1.5em;
+      width: 100%;
+    }
+    @media only screen and (max-width:550px) {
+
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  &:hover {
+    background-color: $secondary-color-light;
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
+}
