@@ -32,12 +32,12 @@ body {
   .toggle-menu {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-weight: bold;
-    font-size: 0.813em;
+    font-size: 16px !important;
     position: absolute;
     right: 1.5em;
     text-transform: uppercase;
     top: 1.2em;
-    z-index: 1001;
+    z-index: 1;
   }
   #logo {
     display: inline-block;
@@ -63,6 +63,9 @@ a {
   text-decoration: none;
   @include transition(color 0.1s linear)
 }
+h1,h1,h3,h4 {
+  font-weight: normal;
+}
 cite {
   font-style: normal;
 }
@@ -74,41 +77,42 @@ cite {
 }
 #navigation {
   background-color: rgba(#232323, 0.7);
-  font:0.8em/1.5 "ff-meta-serif-web-pro", 'Georgia', serif;
+  bottom: 0;
+  font:16px/1.5 "ff-meta-serif-web-pro", 'Georgia', serif !important;
   left: 0;
-  min-height: 100%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
   opacity: 0;
   overflow-y: scroll;
+  padding: 3em 8em;
+  position: fixed;
+  pointer-events: none;
+  right: 0;
+  text-align: left;
+  top: 0;
   z-index: -1;
+  @include box-sizing(border-box);
   @include transition(opacity 0.5s ease);
   > ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  li {
-    border-bottom: 1px solid #323232;
-    > a {
-      color: #fff;
-      display: block;
-      padding: 0.6em 1em;
-      @include transition(background-color 0.25s slide);
-      &:hover {
-        background-color: #2f2f2f;
-      }
+    @include columns(2, 40);
+    li {
+      margin-bottom: 0.5em;
     }
   }
-}
-#main-nav-check:checked {
-  ~ #navigation {
-    //display: block;
-    opacity: 1;
-    z-index: 1000;
+  a {
+    color: #fff;
+  }
+  > h2 {
+    color: #fff;
+    font-size: 120px;
+    font-weight: 400;
+  }
+  &:target {
+    opacity: 0.99;
+    pointer-events: auto;
     transition-delay: 0.2s;
+    z-index: 1000;
   }
 } 
 #footer {

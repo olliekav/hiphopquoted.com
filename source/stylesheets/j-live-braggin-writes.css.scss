@@ -12,6 +12,7 @@ body {
   font:100%/1.5 "pragmatica-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   position: relative;
+  width: 100%;
   &:after {
     background-color: darken($secondary-color, 5%);
     content: "";
@@ -19,7 +20,7 @@ body {
     left: 0;
     position: absolute;
     top: 0;
-    width: 300px;
+    width: 35%;
   }
 }
 a, label {
@@ -55,6 +56,9 @@ a, label {
 #main {
   padding: 0;
 }
+#footer {
+  z-index: 100;
+}
 article {
   overflow: hidden;
   text-align: left;
@@ -62,7 +66,7 @@ article {
   z-index: 2;
   header {
     float: right;
-    width: 70%;
+    width: 60%;
     > h1 {
       color: $primary-color;
       font-family: "corpulent-web";
@@ -74,10 +78,10 @@ article {
   }
   figure {
     float: left;
-    margin:0 auto;
+    margin:0 5% 0 0;
     padding: 0 2em 2em;
     position: relative;
-    width: 300px;
+    width: 35%;
     @include box-sizing(border-box);
     p {
       margin-bottom: 1.5em;
