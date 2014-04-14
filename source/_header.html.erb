@@ -2,8 +2,8 @@
   
   <%= partial "logo" %>
 
-  <% unless (current_page.path == "index.html") %>
-    <label for="main-nav-check" class="toggle-menu">☰ index</label>
-  <% end %>
+  <%= link_to("☰ menu", "#navigation", :class => "toggle-menu") unless (current_page.path == "index.html")  %>
+
+  <%= partial "navigation" unless (current_page.path == "index.html") %>
 
 </header>
