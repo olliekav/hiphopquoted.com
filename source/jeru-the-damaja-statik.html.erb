@@ -1,0 +1,99 @@
+---
+title: Jeru the Damaja - Statik
+player_color: ffffff
+player_country: gb
+track: jeru the damaja statik
+---
+
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("jeru-the-damaja-statik.css") %>
+<% end %>
+
+<% content_for :javascript do %>
+  <%= javascript_include_tag("jquery.lettering.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'czk5tul' },
+        active: function() {
+          $("h1").lettering('words');
+        }
+      });
+    });
+  </script>
+<% end %>
+
+
+<article>
+  <header>
+    <h1>
+      And I can rock a rhyme in just statik.
+    </h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        Electromagnetic beam, I get charged
+        Rhymes I run right thru em like a big box of Trojan large
+        Mc's tried to hang but its a Brooklyn thang
+        Poison slang, poison fang
+        Poison pen let me begin
+        Tryin to rhyme up in my cipher is gambilin
+        Freestylin me g, I be buckwilin
+        You can't even challenge a nigga in my position
+        Technician, renditions more freaky than Rick James
+        Fly like airplanes thru all it remain the same
+        My cuts like Freddy Krueger
+        Dont need a German Luger
+        But shoot more shit than Sturm-Ruger
+        Dirty rottens comin thru punks cling to their guns
+        Dont start none, there won't be none
+        Cuz ahh...fuck around and it'll be tragic
+      </p>
+      <p>
+        Devastating, I gotcha heart pulsating
+        Kool-Aid, you need aid, ejaculating
+        Rhymes like semen, Mc's is scheming
+        Tryin to bag me baby black you must be beemin...
+        Feenin, I dont know who gased ya head up
+        Im straight up, for less niggas have got wet up
+        Im on a mission, scrambling my enemies transmission
+        When he least expect it, run up in his h-q
+        Hi I.Q., every verse is e-q ued
+        Slither like a snake, still you can't elude
+        The neba, but not caneza
+        Its the toucha, no gun or God can protect ya
+        Neither the scripture, choke like a boa constrictor
+        This is my house and I'll evict ya
+        Big respect is automatic...black
+      </p>
+      <p>
+        I'll snatch up your girlfriend, her friend and their friends
+        I got the game &amp; fame she got the condoms
+        She's a victim, you shouldn't have that mouth dirty rotten
+        And for the longest we knew you were plottin'
+        On the down fall, who stands tall, lick the balls
+        Im not like that, so I smash out pussy walls
+        On the low, oh no, on the high
+        I get high, praise to the most high
+        Tried to battle me, step up &amp; die
+        Like the arc of the covenant I electrify
+        Petrify, intelligence I glorify
+        So devils are horrified
+        Sprayin like pesticide, come commit suicide
+        Step into my realm and be fried
+        By the statik.........
+      </p>
+    </blockquote>
+    <figcaption>
+      Quote by 
+      <%= link_to("Jeru the Damaja", "http://en.wikipedia.org/wiki/Jeru_the_Damaja") %>
+      <cite>
+        from
+        <%= link_to("Statik", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
+        on the album 
+        <%= link_to("The Sun Rises in the East", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>
