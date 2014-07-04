@@ -4,7 +4,8 @@
       <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
       <script>
         var track = "<%= data.page.track %>";
-        var playerColor = "#<%= data.page.player_color %>";
+        var playerCountry = "<%= data.page.player_country %>";
+        var playerColor = "<%= data.page.player_color %>";
         var player = new iTunesPreviewPlayer(track);
         document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>

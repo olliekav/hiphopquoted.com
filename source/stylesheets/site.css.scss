@@ -32,11 +32,11 @@ body {
   .toggle-menu {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-weight: bold;
-    font-size: 16px !important;
+    font-size: 32px !important;
     position: absolute;
     right: 1.5em;
     text-transform: uppercase;
-    top: 1.2em;
+    top: 0.8em;
     z-index: 1;
   }
   #logo {
@@ -124,6 +124,9 @@ cite {
     > li {
       display:inline;
       margin-left:20px;
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
   #audio-clip {

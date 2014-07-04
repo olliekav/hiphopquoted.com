@@ -1,0 +1,151 @@
+// J-Live - Braggin' Writes -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #A01414;
+$secondary-color: #ffffff;
+$primary-color-dark: darken($primary-color, 10%);
+
+html {
+  height: auto;
+}
+body {
+  background: $primary-color url("../images/jay_z/skyline.png") bottom center repeat-x;
+  color:$primary-color-dark;
+  font:100%/1.5 "ff-meta-serif-web-pro", Georgia, Times new roman, serif;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+}
+a, label {
+  color:$primary-color-dark;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  position: relative;
+  z-index: 1;
+  #logo {
+    path {
+      fill: $primary-color-dark;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $secondary-color;
+    }
+  }
+}
+#main {
+  padding: 0 2em;
+  @extend %clearfix;
+}
+#footer {
+  color: $primary-color;
+  z-index: 100;
+  a {
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+article {
+  color: $secondary-color;
+  text-align: left;
+  margin: 6em auto 14em;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 200px;
+  z-index: 2;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    float: left;
+    margin: 300px 0 0 -200px;
+    text-align: left;
+    width: 200px;
+    @include transform(rotate(-90deg));
+    > h1 {
+      color: $primary-color-dark;
+      font-family: "cabazon";
+      font-size: 14.375em;
+      font-weight: 400;
+      line-height: 0.8;
+      white-space: wrap;
+    }
+  }
+  figure {
+    float: left;
+    position: relative;
+    width: 100%;
+    @extend %clearfix;
+    @include box-sizing(border-box);
+    p {
+      float: left;
+      margin: 0 5% 3em 0;
+      width: 30%;
+      &:last-child {
+        margin-right: 0;
+      }
+      > span {
+        font: 2em/1.1 "league-gothic", "impact", sans-serif;
+        display: block;
+        margin-bottom: 0.2em;
+        padding-right: 0.5em;
+        position: relative;
+        text-transform: uppercase;
+        &:before {
+          background-color: #000;
+          border-radius: 75px;
+          color: $primary-color;
+          content: '“';
+          font-size: 2em;
+          height: 100px;
+          padding-right: 30px;
+          position: absolute;
+          right: 0;
+          text-align: right;
+          top: -0.8em;
+          width: 100px;
+          z-index: -1;
+          @include box-sizing(border-box);
+        }
+      }
+    }
+    > figcaption {
+      clear: both;
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  &:hover {
+    background-color: #000;
+  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #FFF;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #FFF;
+}

@@ -56,6 +56,13 @@
   transition: $transition;
 }
 
+// Transforms
+@mixin transform($transform...) {
+  transform: $transform;
+  -ms-transform: $transform; 
+  -webkit-transform: $transform; 
+}
+
 // Box sizing
 @mixin box-sizing($sizing-type) {
   -moz-box-sizing:$sizing-type;
@@ -95,6 +102,16 @@
   -ms-hyphens: $val;
   -o-hyphens: $val;
   hyphens: $val;
+}
+
+// @extend %clearfix;
+%clearfix {
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    clear: both;
+  }
 }
 
 // Custom functions ------------------------------------------------------------------------
