@@ -1,93 +1,101 @@
 ---
 title: The Pharcyde - Drop
+player_color: 
+track: the pharcyde drop
 ---
 
-- content_for :head do
-  %title The Pharcyde - Drop
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "/stylesheets/pharcyde-drop.css" %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/pharcyde-drop.css"
+<% content_for :javascript do %>
+  <%= javascript_include_tag("bigtext.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'suv7urw' },
+        active: function() {
+          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
+        }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/pharcyde-drop.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris-mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Drop
-
-%figure
-  %blockquote
-    %p
-      Let me freak the funk
-      Obsolete is the punk that talk more junk than Sanford sells
-      I jet propel at a rate that complicate their mental state
-      As I invade their masquerade
-      They couldn't fade with a clipper blade
-      10 years in the trade is not enough, you can't cut it
-      I let you take a swing, and you bunted
-      For an easy out, I leave emcees with doubt
-      Of exceeding, my name is Bootie Brown and I'm proceeding, leading
-      They try to follow but they're shallow and hollow
-      I can see right through them like an empty 40 bottle, of O.E
-      They have no key, or no clue
-      To the game at all, now they washed up
-      Hung out to dry
-      Standing looking stupid, wondering why
-      (why man?)
-      It was the fame, that they tried to get
-      Now they walking around talkin about represent
-      And keep it real, but I got to appeal
-      Cause they existing in a fantasy when holding the steel
-    %p
-      Rock a bye baby
-      Listen to your heartbeat pumping to a fine ravine
-      Of all things it's a vain of a shrine
-      All missions impossible are possible, cause I'm
-      Heading for a new sector 365 days from now, I'll
-      Wipe the sweat from my eye
-      And each and every true will stick, or fall from the sky of my cloud nine
-      From homies all the way to chicks, no matter how fine
-      Controlling is a swollen way to wreck a proud mind
-      You hold it in your hands and watch a man start crying
-      Tear after tear in the puppet man's hands
-      Every time you take a stance you do the puppet man's dance
-      And the worlds at a stand-still
-      Deep in broken mansville, trapped in the moat with an anvil, still
-      Killing yourself, and dogging ya health
-      You ain't amphibious, so grab a hold of yourself
-    %p
-      Shit is-shit is ill, my flow still will spill
-      Toxic slick to shock you sick like electrocute
-      When I execute, acutely over the rhythm
-      On those that pollute, extra dosages is what I gotta give em
-      Got em mad and tremblin
-      Cause I been up in my lab assemblin
-      Missiles, to bomb the enemy
-      Because they envy me, and the making of my mad currency
-      Currently I think we're in a state of an emergency
-      Cause niggas done sold their souls, and now their souls is hollow
-      And I think they can't follow
-      They can't swallow, the truth because it hurts
-      This is how I put it down, this is my earth, my turf
-      The worth of my birth is a billion, and you know what time it is
-      I'm going to make a million
-      (You know what time is it? Never)
-
-  %figcaption
+<article>
+  <header>
+    <h1>Drop</h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        Let me freak the funk
+        Obsolete is the punk that talk more junk than Sanford sells
+        I jet propel at a rate that complicate their mental state
+        As I invade their masquerade
+        They couldn't fade with a clipper blade
+        10 years in the trade is not enough, you can't cut it
+        I let you take a swing, and you bunted
+        For an easy out, I leave emcees with doubt
+        Of exceeding, my name is Bootie Brown and I'm proceeding, leading
+        They try to follow but they're shallow and hollow
+        I can see right through them like an empty 40 bottle, of O.E
+        They have no key, or no clue
+        To the game at all, now they washed up
+        Hung out to dry
+        Standing looking stupid, wondering why
+        (why man?)
+        It was the fame, that they tried to get
+        Now they walking around talkin about represent
+        And keep it real, but I got to appeal
+        Cause they existing in a fantasy when holding the steel
+      </p>
+      <p>
+        Rock a bye baby
+        Listen to your heartbeat pumping to a fine ravine
+        Of all things it's a vain of a shrine
+        All missions impossible are possible, cause I'm
+        Heading for a new sector 365 days from now, I'll
+        Wipe the sweat from my eye
+        And each and every true will stick, or fall from the sky of my cloud nine
+        From homies all the way to chicks, no matter how fine
+        Controlling is a swollen way to wreck a proud mind
+        You hold it in your hands and watch a man start crying
+        Tear after tear in the puppet man's hands
+        Every time you take a stance you do the puppet man's dance
+        And the worlds at a stand-still
+        Deep in broken mansville, trapped in the moat with an anvil, still
+        Killing yourself, and dogging ya health
+        You ain't amphibious, so grab a hold of yourself
+      </p>
+      <p>
+        Shit is-shit is ill, my flow still will spill
+        Toxic slick to shock you sick like electrocute
+        When I execute, acutely over the rhythm
+        On those that pollute, extra dosages is what I gotta give em
+        Got em mad and tremblin
+        Cause I been up in my lab assemblin
+        Missiles, to bomb the enemy
+        Because they envy me, and the making of my mad currency
+        Currently I think we're in a state of an emergency
+        Cause niggas done sold their souls, and now their souls is hollow
+        And I think they can't follow
+        They can't swallow, the truth because it hurts
+        This is how I put it down, this is my earth, my turf
+        The worth of my birth is a billion, and you know what time it is
+        I'm going to make a million
+        (You know what time is it? Never)
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

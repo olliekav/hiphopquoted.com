@@ -2,21 +2,8 @@
 
 @import "partials/common";
 
-$primary-color: #000000;
-$secondary-color: #e7d030;
-
-// @extend %block-color;
-%block-color {
-  background-color: $primary-color;
-  display: inline-block;
-  color: #fff;
-  a {
-    color: $secondary-color;
-    &:hover {
-      color: #fff;
-    }
-  }
-}
+$primary-color: #ffffff;
+$secondary-color: #000000;
 
 html {
   height: auto;
@@ -24,7 +11,7 @@ html {
 body {
   background: #d5d3d4 url("../images/jeru/static.jpg");
   color: $secondary-color;
-  font:100%/1.5 "nimbus-sans", Helvetica, Arial, sans-serif;
+  font:100%/1.5 "runda", Helvetica, Arial, sans-serif;
   font-weight: 400;
   position: relative;
   width: 100%;
@@ -34,7 +21,7 @@ a, label {
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color: $secondary-color;
+    color:$secondary-color;
   }
 }
 #navigation {
@@ -66,79 +53,80 @@ a, label {
 #footer {
   color: $primary-color;
   z-index: 100;
-  a {
-    color: $primary-color;
-    &:hover {
-      color: #000;
-    }
-  }
   ul {
-    margin-right: -2em;
     padding: 0.5em 1em;
-    @extend %block-color;
   }
 }
 article {
   color: $primary-color;
   text-align: left;
-  margin: 6em 3em;
-  max-width: 1000px;
+  margin: 6em auto;
+  max-width: 800px;
   width: 100%;
   z-index: 2;
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
     > h1 {
-      color: rgba($secondary-color, 0.7);
-      font-size: 17em;
-      font-weight: 900;
-      letter-spacing: -0.07em;
-      line-height: 0.8;
-      position: absolute;
-      > .word3 {
+      float: left;
+      font: 9em/0.9 "league-gothic", impact, sans-serif;
+      color: rgba($primary-color, 0.7);
+      font-weight: 400;
+      margin-right: 0.2em;
+      text-transform: uppercase;
+      text-align: right;
+      text-shadow: 0 0 2px rgba($primary-color, 0.4);
+      width: 300px;
+      > span {
         display: block;
-        margin-left: -0.3em;
+        &.word1, &.word2, &.word4, &.word5 {
+          display: inline;
+        }
+        &.word9 {
+          color: rgba($secondary-color, 0.7);
+          text-shadow: 0 0 2px rgba($secondary-color, 0.4);
+        }
       }
     }
   }
   figure {
+    float: left;
     position: relative;
-    width: 80%;
-    @extend %clearfix;
+    width: 400px;
     @include box-sizing(border-box);
     p {
-      float: left;
-      margin: 0 4% 3em 0;
-      width: 48%;
-      &:last-child {
-        margin-right: 0;
-        padding-top: 12%;
+      margin: 0 0 6em 0;
+      &:before {
+        content: '“';
+        display: block;
+        height: 0.02em;
+        font: 12em/0.1 "league-gothic", impact, sans-serif;
+        color: rgba($secondary-color, 0.7);
+        text-shadow: 0 0 2px rgba($secondary-color, 0.4);
       }
     }
     > figcaption {
-      margin-left: -5em;
-      padding: 0.5em 1em 0.5em 5em;
-      @extend %block-color;
     }
   }
 }
 
 // Audio player
 .iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover {
-    background-color: $secondary-color;
+  background-color: rgba($primary-color, 0.8);
+  box-shadow: 0 0 2px rgba($primary-color, 0.8);
+  &:hover:after {
+    text-decoration: line-through;
   }
 }
 .iTunesPreviewPlayer::before {
-  border-left-color: #fff;
+  border-left-color: $secondary-color;
 }
 .iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
+  border-left-color: $secondary-color;
 }
 .iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
+  border-color: $secondary-color;
 }
 .iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
+  border-color: $secondary-color;
 }

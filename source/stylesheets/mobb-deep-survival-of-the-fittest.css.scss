@@ -1,0 +1,142 @@
+// Jeru - Static -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #E13742;
+$secondary-color: #D4E6DD;
+$tertiary-color: #332E25;
+
+body {
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  font: 125.0%/1.5 "adelle", georgia, Times New Roman, serif;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+}
+a, label {
+  color: $tertiary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: #fff;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  #logo {
+    path {
+      fill: $tertiary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: #fff;
+    }
+  }
+}
+#main {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  @extend %clearfix;
+}
+#footer {
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+}
+article {
+  text-align: left;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    background-color: $primary-color;
+    color: #fff;
+    overflow: hidden;
+    h1 {
+      height: 0;
+      top: -3em;
+      left: -2.5em;
+      right: -2.5em;
+      padding-top: 40%;
+      position: relative;
+    }
+    svg {
+      height: 125%;
+      left: 0;
+      position: absolute;
+      text-transform: uppercase;
+      top: 0;
+      width: 125%;
+    }
+  }
+  figure {
+    margin: 0 auto;
+    position: relative;
+    @include box-sizing(border-box);
+    > blockquote {
+      p {
+        padding: 2em 2em 2em 30%;
+        width: 40%;
+        &:last-child {
+          background-color: $tertiary-color;
+          border-bottom: 5px solid $primary-color;
+          color: #fff;
+        }
+        &:first-letter {
+          background-color: $primary-color;
+          color: #fff;
+          float: left;
+          font-size: 5em;
+          font-weight: 700;
+          line-height: 1.2;
+          margin: 0.05em 0.2em 0.2em 0;
+          padding: 0 0.2em;
+        }
+      }
+    }
+    figcaption {
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 2em;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-left: 30%;
+      padding: 0.2em 0.5em 0.5em;
+      width: 40%;
+    }
+  }
+}
+
+// Audio player
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: #fff;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: #fff;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: #fff;
+}

@@ -1,39 +1,34 @@
 ---
 title: Nas - I gave you power
+player_color: 
+track: nas i gave you power
 ---
 
-- content_for :head do
-  %title Nas - I gave you power
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "/stylesheets/nas-i-gave-you-power.css" %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/nas-i-gave-you-power.css"
+<% content_for :javascript do %>
+  <%= javascript_include_tag("bigtext.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'suv7urw' },
+        active: function() {
+          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
+        }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/nas-i-gave-you-power.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris-mvp")
-
-- content_for :javascript do
-  %script{ :src => '/javascripts/fittext.js' }
-  %script
-    window.fitText( document.getElementById("title") );
-
-%article
-  %header
-    %h1#title
-      %b
-        I gave you 
-      power
-
-  %figure
-    %blockquote
-      %p 
+<article>
+  <header>
+    <h1>I gave you power</h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
         I seen some cold nights and bloody days <br/>
         They grab and me bullets spray <br/>
         They use me wrong so I sing this song 'til this day <br/>
@@ -53,16 +48,16 @@ title: Nas - I gave you power
         A broken safety, niggaz place me in shelves <br/>
         under beds, so I beg for my next owner to be a thoroughbred <br/>
         Keep me full up with hollow heads <br/>
-
-      %p.chorus  
+      </p>
+      <p class="chorus">
         How you like me now? I go blaow <br/>
         It's that shit that moves crowds makin every ghetto foul <br/>
         I might have took your first child <br/>
         Scarred your life, crippled your style <br/>
         I gave you power <br/>
         I made you buck wild <br/>
-
-      %p 
+      </p>
+      <p>
         Always I'm in some shit, my abdomen is the clip <br/>
         The barrel is my dick, uncircumcised <br/>
         Pull my skin back and cock me, I bust off when they unlock me <br/>
@@ -79,16 +74,16 @@ title: Nas - I gave you power
         Tired of murderin, made him wanna be a plain gun <br/>
         But yo I had some other plans, like the next time the beef is on <br/>
         I make myself jam right in my owner's hand <br/>
-
-      %p.chorus  
+      </p>
+      <p class="chorus">
         How you like me now? I go blaow <br/>
         It's that shit that moves crowds makin every ghetto foul <br/>
         I might have took your first child <br/>
         Scarred your life, crippled your style <br/>
         I gave you power <br/>
         I made you buck wild <br/>
-
-      %p 
+      </p>
+      <p>
         Yo, weeks went by and I'm surprised <br/>
         Still stuck in the shelf with all the things that an outlaw hides <br/>
         Besides me it's bullets, two vests and then a nine <br/>
@@ -116,11 +111,17 @@ title: Nas - I gave you power
         Heard mad niggaz screamin, niggaz runnin, cops is comin <br/>
         Now I'm happy, until I felt somebody else grab me <br/>
         Damn!
-    %figcaption
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Nas", "http://en.wikipedia.org/wiki/Nas")
-      %cite
+      <%= link_to("Nas", "http://en.wikipedia.org/wiki/Nas") %>
+      <cite>
         from
-        = link_to("I gave your power", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
+        <%= link_to("I gave your power", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6") %>
         on the album 
-        = link_to("It was written", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6")
+        <%= link_to("It was written", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

@@ -8,8 +8,8 @@ $secondary-color: #000000;
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font: 150%/1.5 "refrigerator-deluxe", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font: 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   position: relative;
   width: 100%;
 }
@@ -44,9 +44,7 @@ a, label {
   }
 }
 #main {
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
+  padding: 0 2em;
   @extend %clearfix;
 }
 #footer {
@@ -57,27 +55,70 @@ a, label {
 }
 article {
   text-align: left;
+  margin: 6em auto;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
     margin: 0 auto;
     position: relative;
     text-align: justify;
+    width: 70%;
     > h1 {
-      font-size: 14em;
-      font-weight: 900;
+      font-size: 8em;
+      font-family: "alternate-gothic-no-1-d";
       line-height: 0.8;
       margin: 0 auto;
       text-transform: uppercase;
+      width: 40%;
     }
   }
   figure {
     margin: 0 auto;
     position: relative;
-    text-align: justify;
+    width: 70%;
     @include box-sizing(border-box);
+    &:before {
+      content: " ";
+      float: left;
+      height: 200px;
+      width: 30%;
+    }
     > blockquote {
-    
+      > p {
+        display: block;
+        margin: 0;
+        text-align: justify;
+        // &:first-child, &:last-child {
+        //   margin: 0 auto -1.5em;
+        //   width: 40%;
+        // }
+        // &:after {
+        //   content: "";  
+        //   display: inline-block;  
+        //   width: 100%;
+        // }
+        > .left {
+          content: " ";
+          float: left;
+          padding-bottom: 1000px;
+          width: 30%;
+        }
+        > .right {
+          content: " ";
+          float: right;
+          padding-bottom: 1000px;
+          width: 30%;
+        }
+      }
+      &:before {
+        content: " ";
+        float: right;
+        height: 200px;
+        width: 30%;
+      }
     }
     figcaption {
       font-family: "alternate-gothic-no-1-d";
@@ -85,6 +126,30 @@ article {
       margin: 0.8em auto;
       text-transform: uppercase;
       width: 40%;
+      span, a {
+        display: block;
+        margin: 0 auto;
+      }
+      .bigtext-line0 {
+        line-height: 0.8;
+      }
+      .bigtext-line1 {
+        line-height: 1;
+      }
+      #bigtext-id3 {
+        .bigtext-line0 {
+          line-height: 0.9;
+        }
+        .bigtext-line1 {
+          line-height: 0.2;
+        }
+        .bigtext-line2 {
+          line-height: 1.6;
+        }
+        .bigtext-line3 {
+          line-height: 0;
+        }
+      }
     }
   }
 }
