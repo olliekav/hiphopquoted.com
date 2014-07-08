@@ -1,94 +1,104 @@
 ---
-title: Smif-n-Wessun - Bucktown
+title: Smif-n-Wessun - BucktownSmif-n-Wessun - Bucktown
+player_color: 
+track: smif n wessun bucktown
 ---
 
-- content_for :head do
-  %title Smif-n-Wessun - Bucktown
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "/stylesheets/smif-n-wessun-bucktown.css" %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/smif-n-wessun-bucktown.css"
+<% content_for :javascript do %>
+  <%= javascript_include_tag("bigtext.js") %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'suv7urw' },
+        active: function() {
+          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
+        }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/smif-n-wessun-bucktown.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris-mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Bucktown
-
-%figure
-  %blockquote
-    %p
-      I walk around town with the pound strapped down to my side
-      No fronting just in case I gotta smoke something
-      Round here heads don't act their age
-      You might be another dead bwoy pon rage
-      Enter the cipher with your lighter
-      L's are ready, prepare for another all nighter
-      But keep a watch for the cops cos they rock Glocks
-      Coming on the block trying to rock knots
-      Pigs be acting like they bigger than us niggas from the streets
-      Cos we stalk mad deep and dem walk beats
-      I guess dem hold a grudge cos I won't budge
-      Playing tough, staring down the judge with my hands cuffed
-      Standing there with my nappy hair and my dirty gear
-      Awww yeah now I'm up outta here
-      Pigs look me up and down with a frown
-      Is it cos I'm brown or is it because I'm from Bucktown?
-    %p
-      Got five MC that wanna contest we
-      Got your nooses ready hanging over the trees
-      Bring on your sounds and get drowned by my massive
-      Kill you batty boy and hold your lover for hostage
-      Knock knock niggy-knock that's four shots empty
-      On a violator that was sent out to get me
-      I'm tore up from the floor up and everything's black
-      But still I'm on point ready to buck, ain't nothing sweet, jack
-      Bucktown, I represent it on the love love
-      Deeply rooted from my Timbs to my dick above
-      Don't sweat the bulge coming from my hip
-      Grip what you get hit when I let my tool click
-      Nowhere to run, ambush lurks in the dark
-      Heltah Skeltah smirks while you're getting torn apart
-      Here come the rude bwoys with the ganja plants
-      Smif-N-Wessun generals of the Boot Camp
-    %p
-      Another murderer, just another prankster
-      Rude bwoy dead cause him thought him was a gangster
-      Tried to live the life of a hood from the streets
-      Test the wrong dread, now the man returns to sleep
-      Mr Ripper I lurk in the Stuy
-      Twist up the ganja when I want to get high
-      With my bredren, a buddah session, learn your lesson
-      Or get blasted by Mr Smif or Mr Wessun
-    %p
-      Bucktown's everywhere I swear
-      It's clear to me, you feel the weed, now I really see
-      Nightfall round the way
-      Original heads come out to play
-      Puff herb, break day
-      It's just a regular, everyday state of being I
-      Mind holds the weight, rhymes free the mind in time
-      I find reality follows me where I roam
-      360 degrees back home in...
-    %p
-      Bucktown!
-      Home of the original gun clappers
-
-  %figcaption
+<article>
+  <header>
+    <h1>Bucktown</h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        I walk around town with the pound strapped down to my side
+        No fronting just in case I gotta smoke something
+        Round here heads don't act their age
+        You might be another dead bwoy pon rage
+        Enter the cipher with your lighter
+        L's are ready, prepare for another all nighter
+        But keep a watch for the cops cos they rock Glocks
+        Coming on the block trying to rock knots
+        Pigs be acting like they bigger than us niggas from the streets
+        Cos we stalk mad deep and dem walk beats
+        I guess dem hold a grudge cos I won't budge
+        Playing tough, staring down the judge with my hands cuffed
+        Standing there with my nappy hair and my dirty gear
+        Awww yeah now I'm up outta here
+        Pigs look me up and down with a frown
+        Is it cos I'm brown or is it because I'm from Bucktown?
+      </p>
+      <p>
+        Got five MC that wanna contest we
+        Got your nooses ready hanging over the trees
+        Bring on your sounds and get drowned by my massive
+        Kill you batty boy and hold your lover for hostage
+        Knock knock niggy-knock that's four shots empty
+        On a violator that was sent out to get me
+        I'm tore up from the floor up and everything's black
+        But still I'm on point ready to buck, ain't nothing sweet, jack
+        Bucktown, I represent it on the love love
+        Deeply rooted from my Timbs to my dick above
+        Don't sweat the bulge coming from my hip
+        Grip what you get hit when I let my tool click
+        Nowhere to run, ambush lurks in the dark
+        Heltah Skeltah smirks while you're getting torn apart
+        Here come the rude bwoys with the ganja plants
+        Smif-N-Wessun generals of the Boot Camp
+      </p>
+      <p>
+        Another murderer, just another prankster
+        Rude bwoy dead cause him thought him was a gangster
+        Tried to live the life of a hood from the streets
+        Test the wrong dread, now the man returns to sleep
+        Mr Ripper I lurk in the Stuy
+        Twist up the ganja when I want to get high
+        With my bredren, a buddah session, learn your lesson
+        Or get blasted by Mr Smif or Mr Wessun
+      </p>
+      <p>
+        Bucktown's everywhere I swear
+        It's clear to me, you feel the weed, now I really see
+        Nightfall round the way
+        Original heads come out to play
+        Puff herb, break day
+        It's just a regular, everyday state of being I
+        Mind holds the weight, rhymes free the mind in time
+        I find reality follows me where I roam
+        360 degrees back home in...
+      </p>
+      <p>
+        Bucktown!
+        Home of the original gun clappers
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>

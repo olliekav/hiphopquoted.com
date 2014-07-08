@@ -1,102 +1,107 @@
 ---
 title: Mobb Deep - Survival of the Fittest
+player_color: 332E25
+track:  mobb deep survival of the fittest
 ---
 
-- content_for :head do
-  %title Mobb Deep - Survival of the Fittest
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "/stylesheets/mobb-deep-survival-of-the-fittest.css" %>
+<% end %>
 
-- content_for :stylesheet do
-  = stylesheet_link_tag "/stylesheets/mobb-deep-survival-of-the-fittest.css"
+<% content_for :javascript do %>
+  <script>
+    $(function(){
+      WebFont.load({
+        typekit: { id: 'fhy8nrm' }
+      });
+    });
+  </script>
+<% end %>
 
-- content_for :typekit do
-  %script{ :src => '//use.typekit.com/cbs4rag.js' }
-
-- content_for :audio do
-  <audio src="/audio/mobb-deep-survival-of-the-fittest.mp3" preload="auto" />
-
-- content_for :posts_navigation do
-  %nav
-    %ul
-      %li=link_to("Next", "/ludacris-mvp")
-      %li=link_to("Prev", "/nas-i-gave-you-power")
-
-%article
-  %header
-    %h1 
-      Survival of the Fittest
-
-%figure
-  %blockquote
-    %p
-      There's a war going on outside, no man is safe from
-      You could run but you can't hide forever
-      From these, streets, that we done took
-      You walking with your head down scared to look
-      You shook, cause ain't no such things as halfway crooks
-      They never around when the beef cooks in my part of town
-      It's similar to Vietnam
-      Now we all grown up and old, and beyond the cop's control
-      They better have the riot gear ready
-      Tryin to bag me and get rocked steady
-      By the mac one-double, I touch you
-      And leave you with not much to go home with
-      My skin is thick, cause I be up in the mix of action
-      If I'm not at home, puffing lye relaxin
-      New York got a nigga depressed
-      So I wear a slug-proof underneath my Guess
-      God bless my soul, before I put my foot down and begin to stroll
-      And to the drama I built, and all unfinished beef
-      You will soon be killed, put us together
-      It's like mixing vodka and milk
-      I'm goin out blasting, taking my enemies with me
-      And if not, they scarred, so they will never forget me
-      Lord forgive me the Hennesey got me not knowing how to act
-      I'm falling and I can't turn back
-      Or maybe it's the words from my man Killer Black
-      That I can't say so it's left a untold fact, until my death
-      My goal's to stay alive
-      Survival of the fit only the strong survive
-    %p
-      I'm trapped, in between two worlds, trying to get dough y'know
-      When the dough get low the jewels go, but never that
-      As long as fiends smoke crack
-      I'll be on the block hustling counting my stacks
-      No doubt, watchin my back and proceed with caution
-      Five-oh lurking, no time to get lost in -- the system
-      Niggas using fake names to get out quick
-      My brother did it and got bagged with two ounces
-      Illegal world where squads hit the block hard
-      Ask my man Twin when he got bagged, that fucked me up God
-      But shit happens for a reason
-      You find out who's your true peoples when you're upstate bleeding
-      You can't find a shorty to troop your bid with you
-      Hit with a 2 to 4 it's difficult
-      Wild on the streets I try to maintain
-      Tight with my loot, cause hoes like to run game
-      Some niggas like to trick but I ain't with that tricking shit
-      I'm like a Jew, saving dough so I can big whip
-      Pushing a Lex, now I'm set, ready to jet
-      No matter how much loot I get I'm staying in the projects, forever
-      Jakes on the blocks we out-clever
-      If beef, we never separate and pull together
-      When worse comes to worst, my peoples come first
-      Try to react and get them motherfucking feelings hurt
-      My crew's all about loot
-      Fuck lookin cute, I'm strictly Timb boots and Army certified suits
-      Puffin L's, laid back, enjoying the smell
-      In the Bridge getting down it ain't hard to tell
-      You better realize
-    %p
-      Look in the eyes and get wise
-      Look alive, in ninety-five, word up
-      Hypnotic thug life, get that ass paralyzed
-      Knahmsayin? Mobb Deep and all that
-
-  %figcaption
+<article>
+  <header>
+    <h1>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1462.6 567.1" enable-background="new 0 0 1462.6 567.1" xml:space="preserve">
+        <text transform="matrix(1 0 0 1 0 224.2247)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="283.6427" letter-spacing="-7">S</tspan><tspan x="161.1" y="0" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="283.6427">urvi</tspan><tspan x="901.7" y="0" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="283.6427" letter-spacing="-7">v</tspan><tspan x="1103.1" y="0" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="283.6427">al </tspan></text>
+        <text transform="matrix(1 0 0 1 373.9998 546.9238)" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="236.8894" letter-spacing="-5">fittest</text>
+        <text transform="matrix(1 0 0 1 122 447.0113)" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="195.227" letter-spacing="-4">of</text>
+        <text transform="matrix(1 0 0 1 388.9998 351.2245)" fill="#FFFFFF" font-family="'Adelle-Bold'" font-size="135.1489" letter-spacing="-3">THE</text>
+      </svg>
+    </h1>
+  </header>
+  <figure>
+    <blockquote>
+      <p>
+        There's a war going on outside, no man is safe from
+        You could run but you can't hide forever
+        From these, streets, that we done took
+        You walking with your head down scared to look
+        You shook, cause ain't no such things as halfway crooks
+        They never around when the beef cooks in my part of town
+        It's similar to Vietnam
+        Now we all grown up and old, and beyond the cop's control
+        They better have the riot gear ready
+        Tryin to bag me and get rocked steady
+        By the mac one-double, I touch you
+        And leave you with not much to go home with
+        My skin is thick, cause I be up in the mix of action
+        If I'm not at home, puffing lye relaxin
+        New York got a nigga depressed
+        So I wear a slug-proof underneath my Guess
+        God bless my soul, before I put my foot down and begin to stroll
+        And to the drama I built, and all unfinished beef
+        You will soon be killed, put us together
+        It's like mixing vodka and milk
+        I'm goin out blasting, taking my enemies with me
+        And if not, they scarred, so they will never forget me
+        Lord forgive me the Hennesey got me not knowing how to act
+        I'm falling and I can't turn back
+        Or maybe it's the words from my man Killer Black
+        That I can't say so it's left a untold fact, until my death
+        My goal's to stay alive
+        Survival of the fit only the strong survive.
+      </p>
+      <p>
+        I 'm trapped, in between two worlds, trying to get dough y'know
+        When the dough get low the jewels go, but never that
+        As long as fiends smoke crack
+        I'll be on the block hustling counting my stacks
+        No doubt, watchin my back and proceed with caution
+        Five-oh lurking, no time to get lost in -- the system
+        Niggas using fake names to get out quick
+        My brother did it and got bagged with two ounces
+        Illegal world where squads hit the block hard
+        Ask my man Twin when he got bagged, that fucked me up God
+        But shit happens for a reason
+        You find out who's your true peoples when you're upstate bleeding
+        You can't find a shorty to troop your bid with you
+        Hit with a 2 to 4 it's difficult
+        Wild on the streets I try to maintain
+        Tight with my loot, cause hoes like to run game
+        Some niggas like to trick but I ain't with that tricking shit
+        I'm like a Jew, saving dough so I can big whip
+        Pushing a Lex, now I'm set, ready to jet
+        No matter how much loot I get I'm staying in the projects, forever
+        Jakes on the blocks we out-clever
+        If beef, we never separate and pull together
+        When worse comes to worst, my peoples come first
+        Try to react and get them motherfucking feelings hurt
+        My crew's all about loot
+        Fuck lookin cute, I'm strictly Timb boots and Army certified suits
+        Puffin L's, laid back, enjoying the smell
+        In the Bridge getting down it ain't hard to tell
+        You better realize
+      </p>
+    </blockquote>
+    <figcaption>
       Quote by 
-      = link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris")
-      %cite
+      <%= link_to("Mobb Deep", "http://en.wikipedia.org/wiki/Mobb_Deep") %>
+      <cite>
         from
-        = link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6")
+        <%= link_to("Survival of the Fittest", "http://itunes.apple.com/gb/album/survival-of-the-fittest/id255342338?i=255342460&uo=6") %>
         on the album 
-        = link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6")
+        <%= link_to("The Infamous", "http://itunes.apple.com/gb/album/survival-of-the-fittest/id255342338?i=255342460&uo=6") %>
+      </cite>
+    </figcaption>
+  </figure>
+</article>
