@@ -1,0 +1,119 @@
+// Raekwon ft Ghostface Killah &amp; Nas - Verbal Intercourse -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #141414;
+$secondary-color: #0018ff;
+
+body {
+  background-color: #fff;
+  color: $primary-color;
+  font: 112.5%/1.5 "quatro-slab", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    text-decoration: underline;
+  }
+  &.toggle-nav:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+#header {
+  #logo {
+    path {
+      fill: $secondary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $primary-color;
+    }
+  }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: lighten($primary-color, 40%);
+  a {
+    color: lighten($primary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($primary-color, 40%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($primary-color, 40%);
+}
+article {
+  color: $primary-color;
+  text-align: left;
+  margin: 3em auto;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
+  @include box-sizing(border-box);
+  header {
+    border-top: 1px solid $primary-color;
+    padding-bottom: 5em;
+    position: relative;
+    width: 100%;
+    > h1 {
+      font-size: 8em;
+      font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+  figure {
+    position: relative;
+    @extend %clearfix;
+    p {
+      float: left;
+      margin-right: 2%;
+      width: 32%;
+      > span {
+        display: block;
+        font-size: 2em;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 0.8em;
+      }
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+      &:last-child {
+        float: left;
+        font-size: 1.8em;
+        padding-left: 10%;
+        position: relative;
+        top: -14.5em;
+        width: 50%;
+      }
+      > img {
+        display: block;
+        margin-bottom: 1.2em;
+        width: 100%;
+      }
+    }
+    > figcaption {
+      border-top: 1px solid $primary-color;
+      border-bottom: 1px solid $primary-color;
+      clear: both;
+      left: 0;
+      margin-top: -5em;
+      padding: 1em 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

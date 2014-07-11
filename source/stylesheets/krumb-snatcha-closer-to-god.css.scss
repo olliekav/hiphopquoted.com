@@ -21,15 +21,6 @@ a, label {
     color:$secondary-color;
   }
 }
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
-  }
-}
 #header {
   position: relative;
   z-index: 1;
@@ -43,15 +34,25 @@ a, label {
     }
   }
 }
+.overlay-nav {
+  background-color: rgba($secondary-color, 0.98)
+}
+#footer {
+  background-color: $secondary-color;
+  color: lighten($secondary-color, 40%);
+  a {
+    color: lighten($secondary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($secondary-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($secondary-color, 40%);
+}
 #main {
   padding: 0 2em;
   @extend %clearfix;
-}
-#footer {
-  z-index: 100;
-  ul {
-    padding: 0.5em 1em;
-  }
 }
 article {
   text-align: left;
@@ -91,15 +92,6 @@ article {
         display: block;
         margin: 0;
         text-align: justify;
-        // &:first-child, &:last-child {
-        //   margin: 0 auto -1.5em;
-        //   width: 40%;
-        // }
-        // &:after {
-        //   content: "";  
-        //   display: inline-block;  
-        //   width: 100%;
-        // }
         > .left {
           content: " ";
           float: left;
@@ -152,21 +144,4 @@ article {
       }
     }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: rgba($secondary-color, 0.8);
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: $primary-color;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: $primary-color;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: $primary-color;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: $primary-color;
 }

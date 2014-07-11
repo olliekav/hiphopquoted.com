@@ -24,15 +24,6 @@ a, label {
     color:$primary-color;
   }
 }
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
-  }
-}
 #header {
   #logo {
     path {
@@ -43,6 +34,22 @@ a, label {
       fill: $secondary-color;
     }
   }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: lighten($primary-color, 40%);
+  a {
+    color: lighten($primary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($primary-color, 40%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($primary-color, 40%);
 }
 article {
   margin: 0 auto 3em;
@@ -173,24 +180,4 @@ article {
       display: block;
     }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover {
-    background-color: $secondary-color;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
 }

@@ -1,8 +1,6 @@
-/*! BigText - v0.1.5 - 2013-08-24
-* https://github.com/zachleat/BigText
-* Copyright (c) 2013 @zachleat; Licensed MIT */
+(function(window, $) {
+  "use strict";
 
-;(function(window, $) {
   var counter = 0,
     $headCache = $('head'),
     oldBigText = window.BigText,
@@ -87,15 +85,15 @@
       jQueryMethod: function(options)
       {
         BigText.init();
-    
+
         options = $.extend({
-              minfontsize: BigText.DEFAULT_MIN_FONT_SIZE_PX,
-              maxfontsize: BigText.DEFAULT_MAX_FONT_SIZE_PX,
-              childSelector: '', 
-              resize: true
-            }, options || {});
-      
-        return this.each(function()
+          minfontsize: BigText.DEFAULT_MIN_FONT_SIZE_PX,
+          maxfontsize: BigText.DEFAULT_MAX_FONT_SIZE_PX,
+          childSelector: '',
+          resize: true
+        }, options || {});
+
+        this.each(function()
         {
           var $t = $(this).addClass('bigtext'),
             maxWidth = $t.width(),
@@ -106,7 +104,7 @@
             id = 'bigtext-id' + (counter++);
             $t.attr('id', id);
           }
-    
+
           if(options.resize) {
             BigText.bindResize('resize.bigtext-event-' + id, function()
             {
@@ -114,26 +112,28 @@
               BigText.jQueryMethod.call($('#' + id), options);
             });
           }
-    
+
           BigText.clearCss(id);
-    
+
           $children.addClass(function(lineNumber, className)
           {
             // remove existing line classes.
             return [className.replace(new RegExp('\\b' + BigText.LINE_CLASS_PREFIX + '\\d+\\b'), ''),
                 BigText.LINE_CLASS_PREFIX + lineNumber].join(' ');
           });
-    
+
           var sizes = calculateSizes($t, $children, maxWidth, options.maxfontsize, options.minfontsize);
           $headCache.append(BigText.generateCss(id, sizes.fontSizes, sizes.wordSpacings, sizes.minFontSizes));
         });
+
+        return this.trigger('bigtext:complete');
       }
     };
 
   function testLineDimensions($line, maxWidth, property, size, interval, units, previousWidth)
   {
     var width;
-    previousWidth = typeof previousWidth == 'number' ? previousWidth : 0;
+    previousWidth = typeof previousWidth === 'number' ? previousWidth : 0;
     $line.css(property, size + units);
 
     width = $line.width();
@@ -142,7 +142,7 @@
 // console.log(width, ' previous: ' + previousWidth, property + ' at ' + interval, 'prior: ' + (parseFloat(size) - interval), 'new:' + parseFloat(size));
       $line.css(property, '');
 
-      if(width == maxWidth) {
+      if(width === maxWidth) {
         return {
           match: 'exact',
           size: parseFloat((parseFloat(size) - 0.1).toFixed(3))
@@ -167,16 +167,17 @@
   function calculateSizes($t, $children, maxWidth, maxFontSize, minFontSize)
   {
     var $c = $t.clone(true)
-          .addClass('bigtext-cloned')
-          .css({
-            fontFamily: $t.css('font-family'),
-            textTransform: $t.css('text-transform'),
-            wordSpacing: $t.css('word-spacing'),
-            letterSpacing: $t.css('letter-spacing'),
-            position: 'absolute',
-            left: BigText.DEBUG_MODE ? 0 : -9999,
-            top: BigText.DEBUG_MODE ? 0 : -9999
-          }).appendTo(document.body);
+      .addClass('bigtext-cloned')
+      .css({
+        fontFamily: $t.css('font-family'),
+        textTransform: $t.css('text-transform'),
+        wordSpacing: $t.css('word-spacing'),
+        letterSpacing: $t.css('letter-spacing'),
+        position: 'absolute',
+        left: BigText.DEBUG_MODE ? 0 : -9999,
+        top: BigText.DEBUG_MODE ? 0 : -9999
+      })
+      .appendTo(document.body);
 
     // font-size isn't the only thing we can modify, we can also mess with:
     // word-spacing and letter-spacing. WebKit does not respect subpixel
@@ -187,11 +188,12 @@
       minFontSizes = [],
       ratios = [];
 
-    $children.css('float', 'left').each(function(lineNumber) {
+    $children.css('float', 'left').each(function() {
       var $line = $(this),
         // TODO replace 8, 4 with a proportional size to the calculated font-size.
         intervals = BigText.test.noFractionalFontSize ? [8, 4, 1] : [8, 4, 1, 0.1],
-        lineMax;
+        lineMax,
+        newFontSize;
 
       if($line.hasClass(BigText.EXEMPT_CLASS)) {
         fontSizes.push(null);
@@ -218,7 +220,7 @@
           if(typeof lineMax !== 'number') {
             newFontSize = lineMax.size;
 
-            if(lineMax.match == 'exact') {
+            if(lineMax.match === 'exact') {
               break outer;
             }
             break inner;

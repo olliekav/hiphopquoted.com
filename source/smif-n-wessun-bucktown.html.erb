@@ -1,6 +1,6 @@
 ---
-title: Smif-n-Wessun - BucktownSmif-n-Wessun - Bucktown
-player_color: 
+title: Smif-n-Wessun - Bucktown
+player_color: ffffff
 track: smif n wessun bucktown
 ---
 
@@ -13,7 +13,7 @@ track: smif n wessun bucktown
   <script>
     $(function(){
       WebFont.load({
-        typekit: { id: 'suv7urw' },
+        typekit: { id: 'qsx1olo' },
         active: function() {
           $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
         }
@@ -24,7 +24,7 @@ track: smif n wessun bucktown
 
 <article>
   <header>
-    <h1>Bucktown</h1>
+    <h1><span>Smif</span>-n-<span>Wessun</span> <span>Bucktown</span></h1>
   </header>
   <figure>
     <blockquote>
@@ -64,6 +64,7 @@ track: smif n wessun bucktown
         Here come the rude bwoys with the ganja plants
         Smif-N-Wessun generals of the Boot Camp
       </p>
+      <hr>
       <p>
         Another murderer, just another prankster
         Rude bwoy dead cause him thought him was a gangster
@@ -85,19 +86,15 @@ track: smif n wessun bucktown
         I find reality follows me where I roam
         360 degrees back home in...
       </p>
-      <p>
-        Bucktown!
-        Home of the original gun clappers
-      </p>
     </blockquote>
     <figcaption>
-      Quote by 
-      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
+      <span>Quote by</span> 
+      <%= link_to("Smif-n-Wessun", "ttp://en.wikipedia.org/wiki/Smif-n-Wessun") %>
       <cite>
-        from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
+        <span>from</span>
+        <%= link_to("Bucktown", "#{current_page.data.buy_link}", :target => "itunes_store") %>
+        <span>on the album</span> 
+        <%= link_to("Dah Shinin", "https://itunes.apple.com/us/album/dah-shinin/id14141262?uo=4") %>
       </cite>
     </figcaption>
   </figure>

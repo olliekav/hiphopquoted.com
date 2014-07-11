@@ -35,15 +35,6 @@ a, label {
 #main {
   background-color: $background-color;
 }
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: darken($primary-color, 3%);
-    a:hover {
-      background-color: darken($primary-color, 4%);
-    }
-  }
-}
 #header {
   #logo {
     path {
@@ -54,6 +45,22 @@ a, label {
     fill: $secondary-color;
     }
   }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: darken($primary-color, 20%);
+  a {
+    color: darken($primary-color, 20%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: darken($primary-color, 10%);
+}
+.iTunesPreviewPlayer:after {
+  color: darken($primary-color, 20%);
 }
 article {
   margin: 0 auto 3em;
@@ -106,24 +113,3 @@ article {
     @include columns(1, 0);
   }
 } 
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  @include transition(background-color 0.1s linear);
-  &:hover {
-    background-color: $secondary-color;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
-}

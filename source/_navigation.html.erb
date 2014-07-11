@@ -1,5 +1,7 @@
-<nav class="main-nav" id="navigation" role="navigation">
+<div class="overlay-nav">
   <h2>Contents</h2>
-  <%= partial "list_pages" %>
-  <%= link_to("Close" "#") %>
-</nav>
+  <nav class="main-nav" id="navigation" role="navigation">
+    <%= partial "list_pages" %>
+  </nav>
+  <%= link_to("Close", "#", :class => "close-nav") %>
+</div>

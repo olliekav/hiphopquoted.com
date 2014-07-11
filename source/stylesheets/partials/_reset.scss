@@ -12,9 +12,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 article, aside, figure, footer, header, hgroup, nav, section {
   display: block;
 }
-html { 
-  overflow-y: scroll;
-}
 blockquote, q { 
   quotes: none;
 }
@@ -35,26 +32,6 @@ del {
 abbr[title], dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-th { 
-  font-weight: bold;
-  vertical-align: bottom;
-}
-td {
-  font-weight: normal;
-  vertical-align: top;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
 }
 input, select {
   vertical-align: middle;
