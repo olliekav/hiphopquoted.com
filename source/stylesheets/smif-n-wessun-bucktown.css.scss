@@ -1,0 +1,129 @@
+// Smif-n-Wessun - Bucktown -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #000000;
+$secondary-color: #ccaa7a;
+
+body {
+  background: #413527 url("../images/smif-n-wessun/bucktown-background.jpg") fixed;
+  color: $primary-color;
+  font: 112.5%/1.5 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &.toggle-nav:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+#header {
+  #logo {
+    path {
+      fill: $secondary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $primary-color;
+    }
+  }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: lighten($primary-color, 40%);
+  a {
+    color: lighten($primary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($primary-color, 40%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($primary-color, 40%);
+}
+article {
+  background: #413527 url("../images/smif-n-wessun/bucktown-note.jpg");
+  box-shadow: 0 0 10px #000;
+  color: $primary-color;
+  text-align: left;
+  margin: 3em auto;
+  max-width: 960px;
+  padding: 0.5em 2em 2em;
+  width: 100%;
+  z-index: 2;
+  @include box-sizing(border-box);
+  header {
+    position: relative;
+    text-transform: uppercase;
+    > h1 {
+      font-family: "stud";
+      font-size: 6em;
+      font-weight: 900;
+      line-height: 0.9;
+      text-align: center;
+      > span:last-child {
+        border-top: 10px solid #000;
+        border-bottom: 10px solid #000;
+        margin-top: 0.2em;
+        line-height: 1.2;
+      }
+    }
+  }
+  figure {
+    position: relative;
+    @extend %clearfix;
+    p {
+      float: left;
+      margin: 1em 4% 1.5em 0;
+      width: 48%;
+      &:first-letter {
+        font-family: "stud";
+        font-size: 3em;
+        float: left;
+        line-height: 0.6;
+        margin: 0 0.2em 0.2em 0;
+        padding-top: 0.2em;
+      }
+      &:nth-child(2), &:last-child {
+        margin-right: 0;
+      }
+    }
+    hr {
+      background-color: $primary-color;
+      color: $primary-color;
+      border: none;
+      clear: both;
+      height: 10px;
+      width: 100%;
+    }
+    > figcaption {
+      border-top: 10px solid $primary-color;
+      border-bottom: 10px solid $primary-color;
+      clear:both;
+      font-family: "stud";
+      font-size: 3em;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: uppercase;
+      span,a {
+        display: block;
+      }
+      a {
+        color: darken($secondary-color, 50%);
+      }
+      > cite {
+        span:first-child {
+          line-height: 0.9;
+        }
+      }
+    }
+  }
+}

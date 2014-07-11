@@ -2,7 +2,7 @@
   
   <%= partial "logo" %>
 
-  <%= link_to("☰", "#navigation", :class => "toggle-menu") unless (current_page.path == "index.html")  %>
+  <%= link_to("☰", "#navigation", :class => "toggle-nav") unless (current_page.path == "index.html")  %>
 
   <%= partial "navigation" unless (current_page.path == "index.html") %>
 

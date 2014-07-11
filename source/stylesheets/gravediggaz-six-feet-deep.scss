@@ -8,32 +8,19 @@ $background-color: #000000;
 
 body {
   background: $background-color url("../images/gravediggaz/six_feet_background.jpg") top center fixed;
-  color:$primary-color;
+  color: $primary-color;
   font:1.375em/1.5 "jaf-lapture", Georgia, Times New Roman, Times, serif;
   font-weight: 400;
 }
 a {
   color:$secondary-color;
-  text-decoration: none;
-  @include transition(color 0.1s linear);
   &:hover {
     color: $primary-color;
   }
-}
-label {
-  color: $primary-color;
-  text-decoration: none;
-  @include transition(color 0.1s linear);
-  &:hover {
-    color: $secondary-color;
-  }
-}
-#navigation {
-  background-color: $background-color;
-  li {
-    border-color: darken($background-color, 2%);
-    a:hover {
-      background-color: darken($background-color, 4%);
+  &.toggle-nav {
+    color: $primary-color;
+    &:hover {
+      color:$secondary-color;
     }
   }
 }
@@ -48,6 +35,22 @@ label {
       fill: $secondary-color;
     }
   }
+}
+.overlay-nav {
+  background-color: rgba($background-color, 0.98)
+}
+#footer {
+  background-color: $background-color;
+  color: lighten($background-color, 40%);
+  a {
+    color: lighten($background-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($background-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($background-color, 40%);
 }
 article {
   margin: 0 auto 3em;

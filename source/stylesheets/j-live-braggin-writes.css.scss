@@ -21,6 +21,7 @@ body {
     position: absolute;
     top: 0;
     width: 35%;
+    z-index: -1;
   }
 }
 a, label {
@@ -29,15 +30,6 @@ a, label {
   @include transition(color 0.1s linear);
   &:hover {
     color: $secondary-color-light;
-  }
-}
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
   }
 }
 #header {
@@ -53,11 +45,24 @@ a, label {
     }
   }
 }
-#main {
-  padding: 0;
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
 }
 #footer {
-  z-index: 100;
+  background-color: $primary-color;
+  color: darken($primary-color, 30%);
+  a {
+    color: darken($primary-color, 30%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: darken($primary-color, 10%);
+}
+.iTunesPreviewPlayer:after {
+  color: darken($primary-color, 30%);
+}
+#main {
+  padding: 0;
 }
 article {
   overflow: hidden;
@@ -76,7 +81,7 @@ article {
       white-space: wrap;
     }
   }
-  figure {
+  figure {    
     float: left;
     margin:0 5% 0 0;
     padding: 0 2em 2em;
@@ -87,28 +92,5 @@ article {
       margin-bottom: 1.5em;
       width: 100%;
     }
-    @media only screen and (max-width:550px) {
-
-    }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover {
-    background-color: $secondary-color-light;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
 }

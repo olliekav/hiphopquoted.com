@@ -17,10 +17,6 @@ $secondary-color: #e7d030;
     }
   }
 }
-
-html {
-  height: auto;
-}
 body {
   background: #d5d3d4 url("../images/jehst/city-of-industry-background.jpg") top center fixed;
   background-size: cover;
@@ -38,15 +34,6 @@ a, label {
     color: $secondary-color;
   }
 }
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
-  }
-}
 #header {
   position: relative;
   z-index: 1;
@@ -60,24 +47,25 @@ a, label {
     }
   }
 }
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: lighten($primary-color, 40%);
+  a {
+    color: lighten($primary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($primary-color, 40%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($primary-color, 40%);
+}
 #main {
   padding: 0 2em;
   @extend %clearfix;
-}
-#footer {
-  color: $primary-color;
-  z-index: 100;
-  a {
-    color: $primary-color;
-    &:hover {
-      color: #000;
-    }
-  }
-  ul {
-    margin-right: -2em;
-    padding: 0.5em 1em;
-    @extend %block-color;
-  }
 }
 article {
   color: $primary-color;

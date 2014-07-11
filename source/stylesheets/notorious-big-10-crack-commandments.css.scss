@@ -2,110 +2,118 @@
 
 @import "partials/common";
 
-body {
-  background:#000 url(../images/notorious_big/body_background.jpg) no-repeat top center;
-  color:#fff;
-  font:112.5%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
-  *font-size:small;
-  font-weight:400;
+$primary-color: #ffffff;
+$secondary-color: #000000;
+
+html {
+  height: auto;
 }
-h1,h2,h3 {
-  font-weight:400;
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font:137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+}
+a, label {
+  color:$primary-color;
+  text-decoration: none;
+  @include transition(opacity 0.1s linear);
+  &:hover {
+    opacity: 0.5;
+  }
+}
+#navigation {
+  background-color: $primary-color;
+  li {
+    border-color: lighten($primary-color, 8%);
+    a:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
 }
 #header {
-  #logo path {
-    fill: #fff;
-  }
-  > nav a {
-    background-color:#fff;
-    color:#000;
-    font-size:0.611em;
-    &:hover {
-      background-color:tint(#fff, 40%);
-      color:#fff;
+  position: relative;
+  z-index: 1;
+  #logo {
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $secondary-color;
     }
   }
 }
-#footer {
-  a {
-    color:#000;
-    &:hover {
-      text-decoration:underline;
-    }
-  }
+#main {
+  padding: 0 2em;
+  @extend %clearfix;
 }
 article {
-  margin:0 auto 100px;
-  position:relative;
-  width:990px;
-  > header {
-    > h1 {
-      color:rgba(#AD8030, 0.2);
-      font-weight:400;
-      font-size:21.111em;
-      font-style:italic;
-      line-height:0.9;
-      left:30px;
-      margin:0 auto 80px;
-      position:absolute;
-      top:60px;
-      z-index:1;
-    }
+  color: $primary-color;
+  text-align: left;
+  margin: 6em auto;
+  max-width: 800px;
+  width: 100%;
+  z-index: 2;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    display: none;
   }
-  > blockquote {
-    color:#000;
-    padding:100px 50px 50px;
-    position:relative;
-    z-index:2;
-    > p {
-      font-style:italic;
-      margin-bottom:1.5em;
-      &:first-of-type {
-        &:first-letter {
-          float:left;
-          font-size:2.8em;
-          line-height:0.8;
-          padding:10px 0 0 0;
-          margin:0 10px -10px 0;
-          text-transform: uppercase;
-        }
-      }
-      > cite {
-        font-size:0.889em;
-        > a {
-          color:#000;
-          &:hover {
-            text-decoration:none;
-          }
+  figure {
+    h3 {
+      font-weight: 800;
+      font-size: 1.2em;
+    }
+    ol {
+      list-style-type: none;
+      counter-reset: counter;
+      li {
+        margin: 4em 0;
+        padding-left: 100px;
+        position: relative;
+        width: 60%;
+        &:before {
+          content: counter(counter);
+          counter-increment: counter;
+          font-weight: 800;
+          font-size: 10em;
+          line-height: 0.7;
+          letter-spacing: -2px;
+          left: 0;
+          opacity: 0.2;
+          top: 0;
+          position: absolute;
+          z-index: -1;
         }
       }
     }
-    &:after {
-      display: table;
-      content: "";
-      zoom: 1;
-      clear: both;
+    p {
+      margin: 0 0 6em 0;
+    }
+    > figcaption {
     }
   }
 }
 
 // Audio player
-
-.audiojs {
-  background-color:#AD8030;
-  .time {
-    color:#000;
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+  &:hover:after {
+    opacity: 0.7;
   }
-  .loaded {
-    background-color:#000;
-  }
-  .play {
-    border-left-color:#000;
-  }
-  .progress {
-    background-color:shade(#AD8030, 20%);
-  }
-  .pause {
-    border-color:#000;
-  }
+}
+.iTunesPreviewPlayer::before {
+  border-left-color: $secondary-color;
+}
+.iTunesPreviewPlayer:not(.error).loaded:active::before {
+  border-left-color: $secondary-color;
+}
+.iTunesPreviewPlayer.playing::before {
+  border-color: $secondary-color;
+}
+.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
+  border-color: $secondary-color;
 }

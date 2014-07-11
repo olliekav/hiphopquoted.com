@@ -29,7 +29,6 @@ b {
   font-weight: 500;
 }
 a {
-  border-bottom: 1px solid $primary-color;
   color: $primary-color;
   &:hover {
     border: none;
@@ -40,15 +39,6 @@ label {
   color: $primary-color;
   &:hover {
     color: darken($primary-color, 20%);
-  }
-}
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
   }
 }
 #header {
@@ -62,6 +52,22 @@ label {
       fill: darken($primary-color, 20%);
     }
   }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: lighten($primary-color, 40%);
+  a {
+    color: lighten($primary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($primary-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($primary-color, 40%);
 }
 article {
   background: url("../images/rakim_background.jpg");
@@ -186,24 +192,4 @@ article {
   margin: 0 auto;
   max-width: 1000px;
   width: 100%;
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover {
-    background-color: darken($primary-color, 20%);
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #fff;
 }

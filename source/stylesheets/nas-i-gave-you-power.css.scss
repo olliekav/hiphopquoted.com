@@ -2,28 +2,44 @@
 
 @import "partials/common";
 
-$red:#e13131;
+$primary-color: #e13131;
+$secondary-color: #ffffff;
 
 body {
-  background-color:#e13131;
+  background-color: $primary-color;
   color:#fff;
   font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
   *font-size:small;
-  font-weight:300;
+  font-weight:400;
 }
 #header {
   #logo path {
-    fill: #fff;
+    fill: $secondary-color;
   }
 }
-#footer {
-  color:shade($red, 40%);
-  a {
-    color:#fff;
-    &:hover {
-      text-decoration:underline;
-    }
+a, label {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:lighten($primary-color, 20%);
   }
+}
+.overlay-nav {
+  background-color: $primary-color;
+}
+#footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+  a {
+    color: $primary-color;
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
 }
 article {
   margin:0 auto;
@@ -32,27 +48,26 @@ article {
   > header {
     background:url(../images/gun.svg) no-repeat bottom left;
     background-size: 91% auto;
-    padding-bottom:471px;
+    padding-bottom: 58%;
     > h1 {
-      border-bottom:15px solid #fff;
-      font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
-      font-weight:400;
-      font-size:18em;
-      line-height:0.8;
-      text-align: justify;
-      margin:0 auto 30px;
-      width:80%;
-      > b {
-        border-bottom:15px solid #fff;
-        display:block;
+      border-bottom: 15px solid #fff;
+      font-family: "bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
+      font-weight: 400;
+      font-size: 18em;
+      line-height: 0.7;
+      margin: 0 auto 30px;
+      padding-bottom: 0.1em;
+      width: 80%;
+      > span:first-child {
+        border-bottom: 15px solid #fff;
+        display: block;
         font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
-        font-size:0.375em;
-        font-weight:300;
-        margin-bottom:30px;
-        padding-bottom:20px;
-        text-align:justify;
-        text-transform:uppercase;
-        width: 80%;
+        font-size: 0.375em;
+        font-weight: 300;
+        margin-bottom: 30px;
+        padding-bottom: 0.2em;
+        text-transform: uppercase;
+        width: 100%;
       }
     }
   }
@@ -60,10 +75,10 @@ article {
     font-weight: 400;
     margin:0 auto;
     position:relative;
-    top:-130px;
+    top:-180px;
     right:-180px;
     width:60%;
-    > p {
+    p {
       margin-bottom:1.5em;
       &.chorus {
         border-left:15px solid #fff;
@@ -92,26 +107,5 @@ article {
         }
       }
     }
-  }
-}
-
-// Audio player
-
-.audiojs {
-  background-color:#fff;
-  .time {
-    color:$red;
-  }
-  .loaded {
-    background-color:$red;
-  }
-  .play {
-    border-left-color:$red;
-  }
-  .progress {
-    background-color:shade($red, 20%);
-  }
-  .pause {
-    border-color:$red;
   }
 }

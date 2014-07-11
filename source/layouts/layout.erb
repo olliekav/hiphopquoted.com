@@ -9,9 +9,6 @@
     <link href="/images/favicon.ico" rel="shortcut icon"></link>
     <%= stylesheet_link_tag "site.css" %>
     <%= yield_content :stylesheet %>
-    <%= javascript_include_tag("jquery-1.10.2.min.js") %>
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-    <%= yield_content :javascript %>
     <!--[if lt IE 9]>
       <%= javascript_include_tag("html5shiv.js") %>
     <![endif]-->
@@ -22,6 +19,10 @@
       <%= yield %>
     </main>
     <%= partial "footer" %>
+    <%= javascript_include_tag("jquery-1.10.2.min.js") %>
+    <%= javascript_include_tag("application.js") %>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
+    <%= yield_content :javascript %>
     <script>
       var _gaq = [['_setAccount', 'UA-10920756-1'], ['_trackPageview']];
       (function(d, t) {

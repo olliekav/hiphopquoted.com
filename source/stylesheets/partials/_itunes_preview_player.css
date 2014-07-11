@@ -5,42 +5,45 @@
   cursor: pointer;
   position: relative;
   display: block;
-  margin-right: 10px;
-  background: rgb(204, 204, 204);
+  margin-right: 0;
   border-radius: 20px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   @include transition(background-color 0.1s linear);
 }
 .iTunesPreviewPlayer:after {
+  color: #fff;
   content: "Play preview";
   position: absolute;
-  left: 50px;
-  top: 6px;
-  width: 200px;
+  left: 40px;
+  top: 4px;
+  width: 140px;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #fff;
 }
 .iTunesPreviewPlayer.error,
 .iTunesPreviewPlayer:not(.loaded) {
   opacity: 0.2;
 }
 .iTunesPreviewPlayer:not(.error).loaded:active {
-  background: #000;
+  background: #fff;
 }
 .iTunesPreviewPlayer::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 16px;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 10px solid #000;
+  top: 10px;
+  left: 12px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #fff;
 }
 .iTunesPreviewPlayer:not(.error).loaded:active::before {
   border-left-color: #FFF;
 }
 .iTunesPreviewPlayer.playing::before {
-  top: 14px;
-  left: 16px;
+  top: 9px;
+  left: 11px;
   width: 2px;
   height: 11px;
   border:10px solid #fff;
