@@ -10,10 +10,10 @@ body {
   background:url("../images/atcq/book_background.jpg") no-repeat top center fixed;
   background-size: cover;
   color:$primary-color;
-  font:125%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+  font:150%/1.5 "adobe-garamond-pro", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
   *font-size:small;
 }
-a, label {
+a {
   color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -21,18 +21,8 @@ a, label {
     color:$primary-color;
   }
 }
-#navigation {
-  background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
-    }
-  }
-}
 #header {
   #logo {
-    opacity: 0.2;
     path {
       fill: $primary-color;
       pointer-events: all;
@@ -42,61 +32,64 @@ a, label {
     }
   }
 }
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $secondary-color;
+}
 article {
   margin: 0 auto 3em;
   max-width: 600px;
   position: relative;
   width: 100%;
   header {
-    max-width: 600px;
-    opacity: 0.1;
+    max-width: 700px;
+    opacity: 0.2;
     position: fixed;
+    top: -100px;
     width: 100%;
-  }
-  blockquote {
-    left: 0;
-    top: 0;
-  }
-  h1 {
-    display: block;
-    font-weight:400;
-    font-size:16em;
-    line-height:0.8;
+    z-index: -1;
+    > h1 {
+      color: $secondary-color;
+      display: block;
+      font-weight:400;
+      font-size:16em;
+      font-style: italic;
+      line-height:0.8;
+    }
   }
   > figure {
     margin:0 auto;
     position:relative;
+    text-shadow: 0 0 2px rgba($primary-color, 0.6);
     width: 100%;
-  }
-  cite {
-    display: block;
-    font-style: normal;
-    max-width: 700px;
-    text-align: justify;
-    width: 100%;
-    a {
-      display: block;
+    p {
+      margin-bottom: 3em;
+      @include columns(2, 6%);
+    }
+    > figcaption {
+      font-size: 0.8em;
+      font-style: italic;
+      > cite {
+        font-style: italic;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $secondary-color;
-  @include transition(background-color 0.1s linear);
-  &:hover {
-    background-color: $primary-color;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
 }

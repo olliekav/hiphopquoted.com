@@ -2,6 +2,7 @@
 title: Ludicris - MVP
 player_color: 000000
 track: ludicris mvp
+buy_link: https://itunes.apple.com/us/album/mvp/id296999928?i=296999953&uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -78,12 +79,13 @@ track: ludicris mvp
         and I'll be goin' down in rap as the MVP.
       </p>
     </blockquote>
+    <%= partial 'figcaption', :locals => { :data => current_page.data } %>
     <figcaption>
       Quote by 
       <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
       <cite>
         from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
+        <%= link_to("MVP", "#{current_page.data.buy_link}", :target => "itunes_store") %>
         on the album 
         <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
       </cite>

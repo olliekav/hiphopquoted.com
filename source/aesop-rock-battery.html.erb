@@ -2,7 +2,12 @@
 title: Aesop Rock - Battery
 player_color: ffffff
 track: aesop rock battery
-buy_link: https://itunes.apple.com/album/battery/id313373386?i=313373618&uo=4
+artist: Aesop Rock
+song: Battery
+album: Labour Days
+wiki_link: http://en.wikipedia.org/wiki/Aesop_Rock
+song_link: https://itunes.apple.com/album/battery/id313373386?i=313373618&uo=4
+album_link: https://itunes.apple.com/album/labor-days/id313373386?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -18,7 +23,7 @@ buy_link: https://itunes.apple.com/album/battery/id313373386?i=313373618&uo=4
           families: ['veneerlowresregular']
         },
         active: function() {
-          $('h1, .chorus, figcaption>div, cite').bigtext();
+          $('h1, .chorus, figcaption, figcaption>a, figcaption>cite').bigtext();
         }
       });
     });
@@ -125,17 +130,6 @@ buy_link: https://itunes.apple.com/album/battery/id313373386?i=313373618&uo=4
         Then sit up on his crate as I witness the beauty born like this.
       </p>
     </blockquote>
-    <figcaption>
-      <div>
-        <span>Quote by</span>
-        <span><%= link_to("Aesop Rock", "http://en.wikipedia.org/wiki/Aesop_Rock") %></span>
-      </div>
-      <cite>
-        <span>from</span>
-        <span><%= link_to("Battery", "https://itunes.apple.com/album/battery/id313373386?i=313373618&uo=4") %></span>
-        <span>on the album</span>
-        <span><%= link_to("Labour days", "https://itunes.apple.com/album/labor-days/id313373386?uo=4") %></span>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
   </figure>
 </article>

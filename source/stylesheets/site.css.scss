@@ -123,7 +123,7 @@ cite {
   background-color: rgba(#000, 1);
   bottom: 0;
   color: #fff;
-  font-size: 15px !important;
+  font: bold 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   left: 0;
   overflow: hidden;
   padding: 1.2em 1.5em 0.5em;
@@ -198,8 +198,11 @@ cite {
     }
   }
   #footer {
+    background-color: transparent;
+    position: static;
     text-align: center;
     ul {
+      float: none;
       padding-bottom: 3em 0;
       position: static;
     }
@@ -223,17 +226,12 @@ cite {
 
 // Typekit loading elements --------------------------------------------------------------------
 
-.wf-loading h1, 
-.wf-loading h2, 
-.wf-loading h3, 
-.wf-loading p,
-.wf-loading nav {
+.wf-loading main,
+.wf-loading #header {
   opacity: 0;
 }
-.wf-active h1, 
-.wf-active h2, 
-.wf-active h3, 
-.wf-active p {
+.wf-active main,
+.wf-active #header  {
   opacity: 1;
   visibility: visible;
   @include transition(opacity 0.24s ease-in-out);
