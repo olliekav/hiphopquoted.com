@@ -2,6 +2,12 @@
 title: Big L - Ebonics
 player_color: ffffff
 track: big l ebonics
+artist: Big L
+song: Ebonics
+album: Kollage
+wiki_link: http://en.wikipedia.org/wiki/Big_L
+song_link: https://itunes.apple.com/album/ebonics/id19679757?i=19679767&uo=4
+album_link: https://itunes.apple.com/album/the-big-picture/id19679757?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -102,12 +108,6 @@ track: big l ebonics
         </span>
       </p>
     </blockquote>
-    <figcaption>
-      Quote by <%= link_to("Big L", "http://en.wikipedia.org/wiki/Big_L") %>
-      <cite>
-        from <%= link_to("Ebonics", "http://itunes.apple.com/gb/album/ebonics-explicit/id21394711?i=21394734&uo=6") %>
-        on the album <%= link_to("The Big Picture", "http://itunes.apple.com/gb/album/deadly-combination-explicit/id21394711?i=21394745&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

@@ -2,6 +2,12 @@
 title: "Common - I used to love H.E.R."
 player_color: ffffff
 track: common i used to lover her
+artist: Common
+song: I used to love H.E.R.
+album: Resurrection
+wiki_link: http://en.wikipedia.org/wiki/Common_(rapper)
+song_link: https://itunes.apple.com/album/i-used-to-love-h.e.r./id267707382?i=267707438&uo=4
+album_link: https://itunes.apple.com/album/resurrection/id267707382?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -92,15 +98,6 @@ track: common i used to lover her
         Cause who I'm talking bout y'all is hip-hop.
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Common", "http://en.wikipedia.org/wiki/Common_(entertainer)") %>
-      <cite>
-        from
-        <%= link_to("I used to love H.E.R", "http://itunes.apple.com/us/album/i-used-to-love-h-e-r/id267707382?i=267707438&uo=6") %>
-        on the album 
-        <%= link_to("Resurrection", "http://itunes.apple.com/us/album/i-used-to-love-h-e-r/id267707382?i=267707438&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

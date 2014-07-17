@@ -2,6 +2,12 @@
 title: Jay-Z - D'Evils
 player_color: ffffff
 track: jay z d evils
+artist: Jay-Z
+song: D'Evils
+album: Reasonable Doubt
+wiki_link: http://en.wikipedia.org/wiki/Jay-z
+song_link: https://itunes.apple.com/album/devils/id268633751?i=268634251&uo=4
+album_link: https://itunes.apple.com/album/reasonable-doubt/id268633751?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -79,15 +85,6 @@ track: jay z d evils
         And even if Jehovah witness, bet he'll never testify, D'evils.
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Jay Z", "http://en.wikipedia.org/wiki/Jay-Z") %>
-      <cite>
-        from
-        <%= link_to("D'Evils", "http://itunes.apple.com/gb/album/devils/id268633751?i=268634251&uo=6") %>
-        on the album 
-        <%= link_to("Reasonable Doubt", "http://itunes.apple.com/gb/album/devils/id268633751?i=268634251&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

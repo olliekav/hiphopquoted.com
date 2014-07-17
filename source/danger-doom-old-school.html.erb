@@ -2,6 +2,12 @@
 title: Danger Doom - Old School
 player_color: 692d29
 track: danger doom old school
+artist: Danger Doom
+song: Old School Rules
+album: The Mouse and the Mask
+wiki_link: http://en.wikipedia.org/wiki/Danger_Doom
+song_link: https://itunes.apple.com/album/old-school-rules-feat.-talib/id808199174?i=808199303&uo=4
+album_link: https://itunes.apple.com/album/mouse-mask-bonus-version/id808199174?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -20,7 +26,7 @@ track: danger doom old school
 
 <article>
   <header>
-    <h1>Old School</h1>
+    <h1>Old School Rules</h1>
   </header>
   <figure>
     <blockquote>
@@ -76,15 +82,6 @@ track: danger doom old school
         Whoever willin to ride, provide raw chronic
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
-      <cite>
-        from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

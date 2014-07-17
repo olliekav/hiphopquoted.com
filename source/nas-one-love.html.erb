@@ -1,7 +1,13 @@
 ---
 title: Nas - One Love
-player_color: 
+player_color: ffffff
 track: nas one love
+artist: Nas
+song: One Love
+album: Illmatic
+wiki_link: http://en.wikipedia.org/wiki/Nas
+song_link: https://itunes.apple.com/album/one-love/id662324135?i=662324544&uo=4
+album_link: https://itunes.apple.com/album/illmatic/id662324135?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -115,15 +121,6 @@ track: nas one love
         Keep an eye out for Jake, Shorty Wop, one love
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
-      <cite>
-        from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

@@ -2,6 +2,12 @@
 title: Mobb Deep - Survival of the Fittest
 player_color: 332E25
 track:  mobb deep survival of the fittest
+artist: Mobb Deep
+song: Survival of the Fittest
+album: The Infamous
+wiki_link: http://en.wikipedia.org/wiki/Mobb_Deep
+song_link: https://itunes.apple.com/album/survival-of-the-fittest/id255342338?i=255342460&uo=4
+album_link: https://itunes.apple.com/album/the-infamous/id255342338?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -93,15 +99,6 @@ track:  mobb deep survival of the fittest
         You better realize
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Mobb Deep", "http://en.wikipedia.org/wiki/Mobb_Deep") %>
-      <cite>
-        from
-        <%= link_to("Survival of the Fittest", "http://itunes.apple.com/gb/album/survival-of-the-fittest/id255342338?i=255342460&uo=6") %>
-        on the album 
-        <%= link_to("The Infamous", "http://itunes.apple.com/gb/album/survival-of-the-fittest/id255342338?i=255342460&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

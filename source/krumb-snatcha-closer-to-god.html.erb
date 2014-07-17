@@ -3,6 +3,12 @@ title: Krumb Snatcha - Closer to God
 player_color: 000000
 player_country: ca
 track: krumb snatcha closer to god
+artist: Krumb Snatcha
+song: Closer to God
+album: Snatcha Season Pt. 1
+wiki_link: http://en.wikipedia.org/wiki/Gang_Starr_Foundation
+song_link: https://itunes.apple.com/album/closer-to-god/id266865950?i=266866745&uo=4
+album_link: https://itunes.apple.com/album/snatcha-season-pt.-1/id266865950?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -110,14 +116,6 @@ track: krumb snatcha closer to god
         Damn..
       </p>
     </blockquote>
-    <figcaption>
-      <span>Quote by</span> <%= link_to("Krumb Snatcha".html_safe, "http://www.discogs.com/artist/Krumb+Snatcha") %>
-      <cite>
-        <span>from</span>
-        <%= link_to("Closer to God", "http://itunes.apple.com/gb/album/gettin-closer-to-god/id120696887?i=120696779&uo=6") %>
-        <span>on the album</span> 
-        <%= link_to("Snatcha Season Pt 1", "http://itunes.apple.com/gb/album/closer-to-god/id266865950?i=266866745&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
   </figure>
 </article>

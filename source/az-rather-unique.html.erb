@@ -2,6 +2,12 @@
 title: AZ - Rather Unique
 player_color: 000000
 track: az rather unique
+artist: AZ
+song: Rather Unique
+album: Doe or Die
+wiki_link: http://en.wikipedia.org/wiki/AZ_(rapper)
+song_link: https://itunes.apple.com/album/rather-unique/id724052211?i=724052390&uo=4
+album_link: https://itunes.apple.com/album/doe-or-die-15th-anniversary/id406358607?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -85,11 +91,6 @@ track: az rather unique
         <span class="chorus three"><b>Unique</b></span>
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("AZ", "http://en.wikipedia.org/wiki/AZ_(rapper)") %>
-      <cite>from <%= link_to("Rather Unique", "http://itunes.apple.com/gb/album/rather-unique/id29509434?i=29509367&uo=6") %> on the album <%= link_to("Doe or Die", "http://itunes.apple.com/gb/album/rather-unique/id29509434?i=29509367&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
   </figure>
 </article>

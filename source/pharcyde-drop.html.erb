@@ -1,7 +1,13 @@
 ---
 title: The Pharcyde - Drop
-player_color: 
+player_color: ffffff
 track: the pharcyde drop
+artist: The Pharcyde
+song: Drop
+album: Labcabincalifornia
+wiki_link: http://en.wikipedia.org/wiki/Pharcyde
+song_link: https://itunes.apple.com/album/drop/id271849688?i=271849711&uo=4
+album_link: https://itunes.apple.com/album/labcabincalifornia/id271849688?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -87,15 +93,6 @@ track: the pharcyde drop
         (You know what time is it? Never)
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
-      <cite>
-        from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

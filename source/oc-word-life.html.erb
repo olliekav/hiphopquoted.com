@@ -1,7 +1,13 @@
 ---
 title: O.C. - Word...Life
-player_color: 
+player_color: 000000
 track: oc word...life
+artist: O.C.
+song: Word...Life
+album: Word...Life
+wiki_link: http://en.wikipedia.org/wiki/O.C.
+song_link: https://itunes.apple.com/album/word...life/id711930741?i=711930770&uo=4
+album_link: https://itunes.apple.com/album/word...life/id711930741?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -101,15 +107,6 @@ track: oc word...life
         Be sure bout what you got 
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("OC", "http://en.wikipedia.org/wiki/O.C._(rapper)") %>
-      <cite>
-        from
-        <%= link_to("Word...Life", "http://itunes.apple.com/us/album/word-life/id278233150?i=278233166&uo=6") %>
-        on the album 
-        <%= link_to("Word...Life", "http://itunes.apple.com/us/album/word-life/id252476432?i=252476455&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

@@ -2,6 +2,12 @@
 title: Gang Starr - Full Clip
 player_color: 000000
 track: gang starr full clip
+artist: Gang Starr
+song: Full Clip
+album: 8 Mile
+wiki_link: http://en.wikipedia.org/wiki/Gang_Starr
+song_link: https://itunes.apple.com/album/full-clip/id724829211?i=724829348&uo=4
+album_link: https://itunes.apple.com/album/full-clip-decade-gang-starr/id724829211?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -85,13 +91,6 @@ track: gang starr full clip
         So watch your dome already cause this one might hit.
       </p>
     </blockquote>
-    <figcaption>
-      <span>Quote by</span> 
-      <%= link_to("<span>Gang</span> <span>Starr</span>".html_safe, "http://en.wikipedia.org/wiki/Gang_Starr") %>
-      <span>from</span>
-      <cite>
-        <%= link_to("Full Clip".html_safe, "http://itunes.apple.com/gb/album/full-clip-street-version/id16008599?i=16008481&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
   </figure>
 </article>

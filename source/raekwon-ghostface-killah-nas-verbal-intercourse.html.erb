@@ -2,7 +2,12 @@
 title: Raekwon ft Ghostface Killah &amp; Nas - Verbal Intercourse
 player_color: 0018ff
 track: raekwon verbal intercourse
-buy_link: http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=258637096&id=258634938&s=143444&uo=6
+artist: Raekwon ft Ghostface Killah &amp; Nas
+song: Verbal Intercourse
+album: Dah Shinin'
+wiki_link: http://en.wikipedia.org/wiki/Raekwon
+song_link: https://itunes.apple.com/album/verbal-intercourse/id258634938?i=258637096&uo=4
+album_link: https://itunes.apple.com/album/only-built-4-cuban-linx/id258634938?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -109,17 +114,6 @@ buy_link: http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=25863709
         Floatin on in nine-five in the basement.
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Raekwon", "http://en.wikipedia.org/wiki/Raekwon") %> ft
-      <%= link_to("Ghostface Killah", "http://en.wikipedia.org/wiki/Ghostface_Killah") %> &amp;
-      <%= link_to("Nas", "http://en.wikipedia.org/wiki/Nas") %>
-      <cite>
-        from
-        <%= link_to("Verbal Intercourse", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=258637096&id=258634938&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Only Built 4 Cuban Linx", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=258636412&id=258634938&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>
