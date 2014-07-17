@@ -2,6 +2,12 @@
 title: Jehst - City Of Industry
 player_color: FFFFFF
 track: jehst city of industry
+artist: Jehst
+song: City Of Industry
+album: High Plains Drifter
+wiki_link: http://en.wikipedia.org/wiki/Jehst
+song_link: https://itunes.apple.com/album/city-of-industry/id72571994?i=72571734&uo=4
+album_link: https://itunes.apple.com/album/the-return-of-the-drifter/id474722134?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -97,15 +103,6 @@ track: jehst city of industry
         It’s the last twilight before the silence of death
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Jehst", "http://en.wikipedia.org/wiki/Jehst") %>
-      <cite>
-        from
-        <%= link_to("City of Industry", "http://itunes.apple.com/us/album/city-industry/id72571994?i=72571734&uo=6") %>
-        on the album 
-        <%= link_to("High Plains Drifter", "http://itunes.apple.com/us/album/the-trilogy/id72571994?i=72571944&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

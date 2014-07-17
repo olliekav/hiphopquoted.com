@@ -3,6 +3,12 @@ title: Jeru the Damaja - Statik
 player_color: 000000
 player_country: gb
 track: jeru the damaja statik
+artist: Jeru the Damaja
+song: Statik
+album: The Sun Rises In the East
+wiki_link: http://en.wikipedia.org/wiki/Jeru_the_Damaja
+song_link: https://itunes.apple.com/gb/album/statik/id369141643?i=369141709&uo=4
+album_link: https://itunes.apple.com/gb/album/the-sun-rises-in-the-east/id369141643?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -82,15 +88,6 @@ track: jeru the damaja statik
         By the statik.........
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Jeru the Damaja", "http://en.wikipedia.org/wiki/Jeru_the_Damaja") %>
-      <cite>
-        from
-        <%= link_to("Statik", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("The Sun Rises in the East", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

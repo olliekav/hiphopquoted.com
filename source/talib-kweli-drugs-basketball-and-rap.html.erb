@@ -1,7 +1,13 @@
 ---
 title: Talib Kweli - Drugs, Basketball, &amp; Rap
-player_color: 
+player_color: 000000
 track: talib kweli drugs basketball rap
+artist: Talib Kweli
+song: Drugs, Basketball, &amp; Rap
+album: Right About Now
+wiki_link: http://en.wikipedia.org/wiki/Talib_Kweli
+song_link: https://itunes.apple.com/album/drugs-basketball-rap-feat./id279485218?i=279485222&uo=4
+album_link: https://itunes.apple.com/album/right-about-now-official-sucka/id279485218?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -91,15 +97,6 @@ track: talib kweli drugs basketball rap
         Let's go
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Ludacris", "http://en.wikipedia.org/wiki/Ludacris") %>
-      <cite>
-        from
-        <%= link_to("MVP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408778&id=296408163&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("Theatre of the Mind", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=296408762&id=296408163&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

@@ -2,7 +2,12 @@
 title: Bahamadia - Rugged Ruff
 player_color: 423A34
 track: bahamadia rugged ruff
-buy_link: https://itunes.apple.com/album/rugged-ruff/id724462403?i=724462461&uo=4
+artist: Bahamadia
+song: Rugged Ruff
+album: Kollage
+wiki_link: http://en.wikipedia.org/wiki/Bahamadia
+song_link: https://itunes.apple.com/album/rugged-ruff/id724462403?i=724462461&uo=4
+album_link: https://itunes.apple.com/album/kollage/id724462403?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -55,12 +60,6 @@ buy_link: https://itunes.apple.com/album/rugged-ruff/id724462403?i=724462461&uo=
         Like salots in Hinduism - It's like dat...
       </p>
     </blockquote>
-    <figcaption>
-      Quote by <%= link_to("Bahamadia", "http://en.wikipedia.org/wiki/Bahamadia") %><br>
-      <cite>
-        from <%= link_to("Rugged Ruff", "#{current_page.data.buy_link}", :target => "itunes_store") %><br>
-        on the album <%= link_to("Kollage", "https://itunes.apple.com/album/kollage/id724462403?uo=4", :target => "itunes_store") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

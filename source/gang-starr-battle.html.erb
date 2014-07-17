@@ -2,6 +2,12 @@
 title: Gang Starr - Battle
 player_color: e70000
 track: gang starr battle
+artist: Gang Starr
+song: Battle
+album: 8 Mile
+wiki_link: http://en.wikipedia.org/wiki/Gang_Starr
+song_link: https://itunes.apple.com/album/battle/id1018049?i=1018027&uo=4
+album_link: https://itunes.apple.com/album/8-mile-music-from-inspired/id112116?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -64,15 +70,6 @@ track: gang starr battle
         You leave me no choice but to hurt your feelings G
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Gang Starr", "http://en.wikipedia.org/wiki/Gang_Starr") %>
-      <cite>
-        from
-        <%= link_to("Battle", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=1018027&id=1018049&s=143441&uo=6") %>
-        on the album 
-        <%= link_to("8 Mile", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=1018027&id=1018049&s=143441&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

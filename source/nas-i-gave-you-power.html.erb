@@ -2,6 +2,12 @@
 title: Nas - I gave you power
 player_color: 
 track: nas i gave you power
+artist: Nas
+song: I gave you power
+album: It Was Written
+wiki_link: http://en.wikipedia.org/wiki/Nas
+song_link: https://itunes.apple.com/album/i-gave-you-power/id211507540?i=211508448&uo=4
+album_link: https://itunes.apple.com/album/it-was-written/id211507540?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -113,15 +119,6 @@ track: nas i gave you power
         Damn!
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Nas", "http://en.wikipedia.org/wiki/Nas") %>
-      <cite>
-        from
-        <%= link_to("I gave your power", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6") %>
-        on the album 
-        <%= link_to("It was written", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=211508448&id=211507540&s=143444&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

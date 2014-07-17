@@ -45,11 +45,15 @@ activate :directory_indexes
 activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def wrap_text(text, include_span)
+    if include_span == true
+      '<span>' + text + '</span>'
+    else
+      text
+    end
+  end
+end
 
 set :css_dir, 'stylesheets'
 

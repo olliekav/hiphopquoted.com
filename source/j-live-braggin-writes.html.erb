@@ -2,6 +2,12 @@
 title: J-Live - Braggin' Writes
 player_color: 6DCFF6
 track: j live braggin writes
+artist: J-Live
+song: Braggin' Writes
+album: The Early Works of J-Live
+wiki_link: http://en.wikipedia.org/wiki/J-Live
+song_link: https://itunes.apple.com/album/braggin-writes/id312157363?i=312157416&uo=4
+album_link: https://itunes.apple.com/album/the-early-works-of-j-live/id312157363?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -98,13 +104,6 @@ track: j live braggin writes
         But you best belive I gets the last laugh
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("J-Live", "http://en.wikipedia.org/wiki/J-Live") %>
-      <cite>
-        from
-        <%= link_to("braggin Writes", "http://itunes.apple.com/gb/album/braggin-writes/id314357971?i=314358027&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

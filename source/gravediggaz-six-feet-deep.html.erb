@@ -2,6 +2,12 @@
 title: Gravediggaz - Six Feet Deep
 player_color: e70000
 track: gravediggaz six feet deep
+artist: Gravediggaz
+song: 6 Feet Deep
+album: 6 Feet Deep
+wiki_link: http://en.wikipedia.org/wiki/Gravediggaz
+song_link: https://itunes.apple.com/album/6-feet-deep/id305647794?i=305648104&uo=4
+album_link: https://itunes.apple.com/album/6-feet-deep/id305647794?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -77,15 +83,6 @@ track: gravediggaz six feet deep
         Contrary, yet some fairy cause ya bleed
       </p>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Gravediggaz", "http://en.wikipedia.org/wiki/Gravediggaz") %>
-      <cite>
-        from
-        <%= link_to("Six Feet Deep", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=305648104&id=305647794&s=143441&uo=6") %>
-        on the album 
-        <%= link_to("Six Feet Deep", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=305648049&id=305647794&s=143441&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

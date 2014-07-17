@@ -1,7 +1,13 @@
 ---
 title: "Blackalicious - Alphabet Aerobics"
 player_color: 858585
-track: big l ebonics
+track: blackalicious alphabet aerobics
+artist: Blackalicious
+song: Alphabet Aerobics
+album: A2G EP
+wiki_link: http://en.wikipedia.org/wiki/Blackalicious
+song_link: https://itunes.apple.com/album/alphabet-aerobics-cut-chemist/id36631709?i=36631700&uo=4
+album_link: https://itunes.apple.com/album/a2g-ep/id36631709?uo=4
 ---
 
 <% content_for :stylesheet do %>
@@ -134,15 +140,6 @@ track: big l ebonics
         </li>
       </ul>
     </blockquote>
-    <figcaption>
-      Quote by 
-      <%= link_to("Blackalicious", "http://en.wikipedia.org/wiki/Blackalicious") %>
-      <cite>
-        from
-        <%= link_to("Alphabet Aerobics", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=36631700&id=36631709&s=143441&uo=6") %>
-        on the album 
-        <%= link_to("A to G EP", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?i=36631700&id=36631709&s=143441&uo=6") %>
-      </cite>
-    </figcaption>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
   </figure>
 </article>

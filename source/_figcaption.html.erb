@@ -1,11 +1,11 @@
 <% include_span ||= false  %>
 <figcaption>
-  <%= '<span>' if include_span %>Quote by<%= '</span>' if include_span %>
+  <%= wrap_text('Quote by', include_span) %>
   <%= link_to("#{data.artist}", "#{data.wiki_link}") %>
   <cite>
-    <%= '<span>' if include_span %>from<%= '</span>' if include_span %>
+    <%= wrap_text('from', include_span) %>
     <%= link_to("#{data.song}", "#{data.song_link}", :target => "itunes_store") %>
-    <%= '<span>' if include_span %>on the album<%= '</span>' if include_span %>
+    <%= wrap_text('on the album', include_span) %>
     <%= link_to("#{data.album}", "#{data.album_link}", :target => "itunes_store") %>
   </cite>
 </figcaption>
