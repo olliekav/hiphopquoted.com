@@ -26,6 +26,7 @@ body {
   padding:0 1.5em 6em;
   position: relative;
   width: 100%;
+  z-index: 2;
   @include box-sizing(border-box);
 }
 #header {
@@ -34,7 +35,7 @@ body {
   .toggle-nav {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-weight: bold;
-    font-size: 32px !important;
+    font-size: 32px;
     position: absolute;
     right: 1.5em;
     text-transform: uppercase;
@@ -123,7 +124,7 @@ cite {
   background-color: rgba(#000, 1);
   bottom: 0;
   color: #fff;
-  font: bold 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font: 400 15px/1.5 "Georgia", Times New Roman, serif;
   left: 0;
   overflow: hidden;
   padding: 1.2em 1.5em 0.5em;
@@ -185,15 +186,6 @@ cite {
       width: 50%;
       > svg path {
         fill: #fff;
-      }
-    }
-  }
-  #navigation {
-    background-color: darken(#36D7B7, 5%);
-    li {
-      border-color: #36D7B7;
-      a:hover {
-        background-color: darken(#36D7B7, 10%);
       }
     }
   }

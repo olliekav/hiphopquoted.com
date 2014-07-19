@@ -10,11 +10,11 @@
         document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>
     </div>
-    <%= link_to "Buy track", "#{current_page.data.buy_link}", :class => "buy-track", :target => "itunes_store"  %>
+    <%= link_to "Buy track", "#{current_page.data.song_link}", :class => "buy-track", :target => "itunes_store"  %>
   <% end %>
   <ul>
-    <li>Made by <%= link_to("olliekav", "http://olliekav.com") %></li>
+    <li>Made by <%= link_to("olliekav", "http://olliekav.com", :target => "_blank") %></li>
     <li><%= link_to("About", "/about") %></li>
-    <li><%= link_to("Store", "http://shop.hiphopquoted.com") %></li>
+    <%= content_tag(:li, link_to("Store", "http://shop.hiphopquoted.com", :target => "_blank")) if store_link? %>
   </ul>
 </footer>

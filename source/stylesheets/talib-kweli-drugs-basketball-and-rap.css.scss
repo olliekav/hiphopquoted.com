@@ -1,0 +1,193 @@
+// Talib Kweli - Drugs, Basketball, &amp; Rap -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffffff;
+$secondary-color: #000000;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font: 115%/1.5 "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+}
+a, label {
+  color:$secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color:$secondary-color;
+  }
+}
+#header {
+  position: relative;
+  z-index: 1;
+  #logo {
+    path {
+      fill: $secondary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      opacity: 0.8;
+    }
+  }
+}
+.overlay-nav {
+  background-color: rgba($secondary-color, 0.98)
+}
+#footer {
+  background-color: $secondary-color;
+  color: lighten($secondary-color, 40%);
+  a {
+    color: lighten($secondary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($secondary-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($secondary-color, 40%);
+}
+#main {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  @extend %clearfix;
+}
+article {
+  text-align: left;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    margin-bottom: 1.5em;
+    overflow: hidden;
+    position: relative;
+    > h1 {
+      float: left;
+      font: 900 14em/0.8 "ff-good-headline-web-pro-con";
+      margin: 0 auto;
+      text-transform: uppercase;
+      width: 48.5%;
+      > span:last-child {
+        line-height: 0.65;
+      }
+      &:after {
+        background: #000 url("../images/talib-kweli/ball-one.jpg") center top;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 48.5%;
+      }
+    }
+  }
+  figure {
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+    @include box-sizing(border-box);
+    > blockquote {
+      > div {
+        margin-bottom: 1.5em;
+        position: relative;
+        @extend %clearfix;
+        h2 {
+          font: 900 18em/0.6 "ff-good-headline-web-pro-con";
+          letter-spacing: -2px;
+          margin-bottom: 0.15em;
+          text-transform: uppercase;
+          width: 100%;
+        }
+        &:first-child {
+          padding-left: 25.75%;
+          > p {
+            @include columns(3, 1.6em);
+            &:before {
+              background: #000 url("../images/talib-kweli/ball-one.jpg") center bottom;
+              bottom: 0;
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 22.75%;
+            }
+          }
+        }
+        &:nth-child(2) {
+          > h2 {
+            background-color: #fff;
+            float: left;
+            padding-bottom: 0.25em;
+            width: 74.25%;
+          }
+          > p {
+            float: right;
+            width: 22.75%;
+            &:before {
+              background: #000 url("../images/talib-kweli/ball-one.jpg");
+              content: "";
+              display: block;
+              height: 200px;
+              margin-bottom: 1.5em;
+              width: 100%;
+            }
+            &:after {
+              background: #000 url("../images/talib-kweli/ball-one.jpg") center;
+              background-size: cover;
+              bottom: 0;
+              content: "";
+              left: 0;
+              height: 100%;
+              position: absolute;
+              width: 74.25%;
+              z-index: -1;
+            }
+          }
+        }
+        &:last-child {
+          float: right;
+          padding-right: 25.75%;
+          width: 74.25%;
+          @include box-sizing(border-box);
+          > h2 {
+            font-size: 22em;
+            margin-bottom: 0.12em;
+            width: 100%;
+          }
+          > p {
+            @include columns(2, 1.6em);
+            &:after {
+              background: #000 url("../images/talib-kweli/ball-one.jpg") right bottom;
+              top: 0;
+              content: "";
+              margin-right: 0;
+              height: 100%;
+              position: absolute;
+              right: 0;
+              width: 30.75%;
+            }
+          }
+        }
+      }
+    }
+    figcaption {
+      font: 900 6em/1 "ff-good-headline-web-pro-con";
+      float: left;
+      text-transform: uppercase;
+      width: 22.75%;
+      a {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      cite > span:first-child {
+        line-height: 0.8;
+        margin-bottom: 0.1em;
+      }
+    }
+  }
+}
