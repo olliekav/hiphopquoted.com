@@ -53,6 +53,9 @@ helpers do
       text
     end
   end
+  def store_link?
+    false
+  end
 end
 
 set :css_dir, 'stylesheets'

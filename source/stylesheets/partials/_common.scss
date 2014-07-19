@@ -86,7 +86,7 @@
 }
 
 // Columns
-@mixin columns($count: 3, $gap: 10) {
+@mixin columns($count, $gap) {
   -webkit-column-count: $count;
   -moz-column-count:    $count;
   column-count:         $count;
