@@ -1,6 +1,6 @@
 ---
 title: The Perceptionists - Memorial Day
-player_color: 
+player_color: ffffff
 track: the perceptionists memorial day
 artist: The Perceptionists
 song: Memorial Day
@@ -15,14 +15,14 @@ album_link: https://itunes.apple.com/album/black-dialogue/id317265087?uo=4
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
+  <%#= javascript_include_tag("bigtext.js") %>
   <script>
     $(function(){
       WebFont.load({
-        typekit: { id: 'suv7urw' },
-        active: function() {
-          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
-        }
+        typekit: { id: 'ycx2adh' }
+        // active: function() {
+        //   $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
+        // }
       });
     });
   </script>
@@ -30,58 +30,61 @@ album_link: https://itunes.apple.com/album/black-dialogue/id317265087?uo=4
 
 <article>
   <header>
-    <h1>Memorial Day</h1>
+    <%= image_tag("perceptionists/helmet.jpg", :alt => "") %>
+    <h1>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 960 575" enable-background="new 0 0 960 575" xml:space="preserve">
+      <rect x="279.3" y="464.3" fill="none" width="680.7" height="110.7"/>
+      <text transform="matrix(1 0 0 1 289.4362 485.278)"><tspan x="12" y="0" fill="#352C23" font-family="stencil-std" font-size="27">please mr.president, tell us something</tspan><tspan x="50.4" y="34" fill="#352C23" font-family="stencil-std" font-size="36">we knew from the beginning</tspan><tspan x="71.6" y="68" fill="#988867" font-family="stencil-std" font-size="36">that your ass was bluffing</tspan></text>
+      <rect y="8" fill="none" width="604" height="628.7"/>
+      <text transform="matrix(1 0 0 1 -3.356934e-04 91.0298)"><tspan x="0" y="0" fill="#352C23" font-family="stencil-std" font-size="111">Where</tspan><tspan x="0" y="73" fill="#352C23" font-family="stencil-std" font-size="85">are the</tspan><tspan x="0" y="137" fill="#352C23" font-family="stencil-std" font-size="72">weapons</tspan><tspan x="0" y="207" fill="#352C23" font-family="stencil-std" font-size="80">of mass</tspan><tspan x="0" y="255" fill="#352C23" font-family="stencil-std" font-size="53">desruction</tspan><tspan x="0" y="279" fill="#988867" font-family="stencil-std" font-size="20">we’ve been looking for months</tspan><tspan x="0" y="307" fill="#988867" font-family="stencil-std" font-size="25">and we ain’t found</tspan><tspan x="0" y="352" fill="#988867" font-family="stencil-std" font-size="47">nuthin!</tspan></text>
+      </svg>
+    </h1>
   </header>
   <figure>
     <blockquote>
       <p>
-        Where are the weapons of mass destruction?
-        We been lookin' for months and we ain't found nothin'
-        Please Mr. President, tell us something
-        We knew from the beginning that your ass was bluffing!
-      </p>
-      <p>
-        How unfortunate, it wasn't what you thought it kid, in basic training
+        How unfortunate, it wasn't what you thought it kid, in basic training,
         They taught you how to slay man as a start-up kit
-        and you showed up with a gun to load up
-        Hopin' a college education's waitin', maybe a steady occupation
-        Now you're weighing many lives against yours
-        President orders, got you on course, with holocaust, Sargent is lost
-        General's boss, plans cross, now you in the crosshair
-        of a sniper's shaky scared, shot of your ear
-        All fucked up now! one round just hit him in his from some young yet expendable citizen
-        He's from the other side of the line, fightin' for time
-        Time to see his kids walk, time to talk with his pops
-        Time to have a rational thought without the thought of bein' shot
-        (Damn) his gun jammed now you gotta bombart
-        It's a soldier's suicide slide - know you tried hard to stay alive
-        When you're catching fire from both sides
-        and we miss you at home, its time the government truly left you alone
-        Dropped you off and popped one in your dome
-        Now we've seen it in Iraq and the Congo - America's motto
-        "Kill their leader then we build a stronghold!!"
+        and you showed up with a gun to load up,
+        Hopin' a college education's waitin', maybe a steady occupation.
+        Now you're weighing many lives against yours,
+        President orders, got you on course, with holocaust, Sargent is lost.
+        General's boss, plans cross, now you in the crosshair,
+        of a sniper's shaky scared, shot of your ear.
+        All fucked up now! one round just hit him in his from some young yet expendable citizen,
+        He's from the other side of the line, fightin' for time.
+        Time to see his kids walk, time to talk with his pops,
+        Time to have a rational thought without the thought of bein' shot.
+        (Damn) his gun jammed now you gotta bombart,
+        It's a soldier's suicide slide - know you tried hard to stay alive.
+        When you're catching fire from both sides,
+        and we miss you at home, its time the government truly left you alone.
+        Dropped you off and popped one in your dome,
+        Now we've seen it in Iraq and the Congo - America's motto,
+        <span>Kill their leader then we build a stronghold!!</span>
       </p>
       <p>
-        I never thought of this the day that I enlisted
-        That I'd be dodging bullets, seekin weapons that never even existed
-        For someone else's personal beef, I risk myself
-        While the Commander-in-Chief, would never come to fight himself
-        I feel I'm bein' tricked even worse that the civilians
+        I never thought of this the day that I enlisted,
+        That I'd be dodging bullets, seekin weapons that never even existed.
+        For someone else's personal beef, I risk myself,
+        While the Commander-in-Chief, would never come to fight himself.
+        I feel I'm bein' tricked even worse that the civilians,
         Nobody ever told me that we would be killin' children!!
-        Feelin like the ones that sent me here are the psychotics
-        but if I say that out loud -- I'm "unpatriotic"
+        Feelin like the ones that sent me here are the psychotics,
+        but if I say that out loud -- I'm "unpatriotic".
         but would Donald Rumsfeld back me up with the chrome?
         Would Tom Ridge fight or would he stay secure back home?
         and would Condoleeza Rice cover grenades in a fox hole?
-        I'm startin to believe what I was told is not so
+        I'm startin to believe what I was told is not so.
         What's the reason for the war?
-        I'm shootin at these people that I got not animosity for
-        I wonder if I'm just a pawn in someone else's struggle
-        or a here even though I'm just a small piece of the puzzle
-        I know that when I finally return where I reside
-        I'll make up for the months my wife and moms cried
-        and carry on for all my fallen brothers that died
-        but you can't take my pride -- cuz I'm a fuckin' SOLDIER
+        I'm shootin at these people that I got not animosity for,
+        I wonder if I'm just a pawn in someone else's struggle.
+        or a here even though I'm just a small piece of the puzzle.
+        I know that when I finally return where I reside,
+        I'll make up for the months my wife and moms cried.
+        and carry on for all my fallen brothers that died,
+        <span>but you can't take my pride, cuz I'm a fuckin' SOLDIER</span>
       </p>
     </blockquote>
     <%= partial 'figcaption', locals: { data: current_page.data } %>

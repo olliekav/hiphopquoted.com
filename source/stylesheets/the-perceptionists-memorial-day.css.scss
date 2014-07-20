@@ -1,0 +1,121 @@
+// The Perceptionists - Memorial Day -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #726241;
+$secondary-color: #352c23;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font: 115%/1.5 "georgia", Times New Roman, serif;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: #988867;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: #ffffff;
+  }
+}
+#header {
+  position: relative;
+  z-index: 1;
+  #logo {
+    path {
+      fill: #988867;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: #ffffff;
+    }
+  }
+}
+.overlay-nav {
+  background-color: rgba($secondary-color, 0.98)
+}
+#footer {
+  background-color: $secondary-color;
+  color: lighten($secondary-color, 40%);
+  a {
+    color: lighten($secondary-color, 40%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten($secondary-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: lighten($secondary-color, 40%);
+}
+#main {
+  margin: 0 auto;
+  max-width: 970px;
+  width: 100%;
+  @extend %clearfix;
+}
+article {
+  text-align: left;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    margin-bottom: 1em;
+    position: relative;
+    > img {
+      width: 100%;
+    }
+    > h1 {
+      > svg {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+  figure {
+    margin: 0 auto;
+    position: relative;
+    padding-left: 37.5%;
+    @include box-sizing(border-box);
+    p {
+      border-bottom: 2px dotted $secondary-color;
+      margin-bottom: 1.5em;
+      padding-bottom: 1.5em;
+      position: relative;
+      &:first-child {
+        border-top: 2px dotted $secondary-color;
+        padding-top: 1.5em;
+      }
+      > span {
+        bottom: 0.8em;
+        display: block;
+        font: 400 2em/1 "stencil-std";
+        position: absolute;
+        right: 105%;
+        text-transform: uppercase;
+        text-align: right;
+        width: 50%;
+        &:before {
+          color: #988867;
+          content: '“';
+          display: block;
+          font: 400 3em/0.2 "stencil-std";
+        }
+      }
+    }
+    figcaption {
+      border-bottom: 2px dotted $secondary-color;
+      font: 400 2em/1 "stencil-std";
+      padding-bottom: 0.75em;
+      text-transform: uppercase;
+      cite > span:first-child {
+        line-height: 0.8;
+        margin-bottom: 0.1em;
+      }
+    }
+  }
+}
