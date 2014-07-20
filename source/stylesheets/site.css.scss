@@ -74,7 +74,9 @@ cite {
 }
 
 // Responsive nav 
-
+.nav-on #header {
+  z-index: 10000;
+}
 .overlay-nav {
   background-color: rgba(#000000, 0.9);
   bottom: 0;
@@ -90,7 +92,7 @@ cite {
   @include transition(opacity 0.2s ease);
   &.on {
     opacity: 1;
-    z-index: 1000;
+    z-index: 10000;
   }
   .close-nav {
     position: absolute;
