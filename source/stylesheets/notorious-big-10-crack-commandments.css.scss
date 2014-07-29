@@ -11,27 +11,38 @@ html {
 body {
   background-color: $secondary-color;
   color: $primary-color;
-  font:137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
-a, label {
-  color:$primary-color;
+a {
+  color: $primary-color;
   text-decoration: none;
   @include transition(opacity 0.1s linear);
   &:hover {
-    opacity: 0.5;
+    color: rgba($primary-color, 0.5);
   }
 }
-#navigation {
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
   background-color: $primary-color;
-  li {
-    border-color: lighten($primary-color, 8%);
-    a:hover {
-      background-color: lighten($primary-color, 10%);
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: rgba($secondary-color, 0.5);
     }
   }
+}
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $secondary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: rgba($secondary-color, 0.5);
 }
 #header {
   position: relative;
@@ -42,11 +53,12 @@ a, label {
       pointer-events: all;
     }
     &:hover path {
-      fill: $secondary-color;
+      fill: rgba($primary-color, 0.5);
     }
   }
 }
 #main {
+  font: 400 137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;
   padding: 0 2em;
   @extend %clearfix;
 }
@@ -67,53 +79,157 @@ article {
       font-weight: 800;
       font-size: 1.2em;
     }
+    blockquote > h3,
+    blockquote > p {
+      text-align: center;
+    }
+    blockquote > h3 {
+      font-size: 3em;
+      line-height: 1;
+      margin-bottom: 0.5em;
+    }
     ol {
-      list-style-type: none;
       counter-reset: counter;
+      list-style-type: none;
       li {
-        margin: 4em 0;
-        padding-left: 100px;
+        margin: 3em 0;
+        padding-left: 2.5em;
         position: relative;
-        width: 60%;
-        &:before {
+        vertical-align: middle;
+        width: 100%;
+        @include box-sizing(border-box);
+        &:first-child {
+          margin-top: 0;
+        }
+        > h3 {
+          line-height: 1.2;
+        }
+        &:after {
           content: counter(counter);
           counter-increment: counter;
           font-weight: 800;
           font-size: 10em;
           line-height: 0.7;
           letter-spacing: -2px;
-          left: 0;
-          opacity: 0.2;
+          left: -.05em;
+          opacity: 0.15;
           top: 0;
           position: absolute;
           z-index: -1;
         }
+        &:nth-child(1) {
+          &:before {
+            background: url('../images/notorious-big/coke-one.jpg') no-repeat;
+            background-size: 105%;
+            content: '';
+            float: right;
+            height: 400px;
+            margin: 10% 0 20% 5%;
+            width: 60%;
+            z-index: -1;
+          }
+        }
+        &:nth-child(2) {
+          &:after{
+            left: 40%;
+            z-index: 10;
+          }
+        }
+        &:nth-child(3) {
+          margin-left: 12.5%;
+          width: 85%;
+        }
+        &:nth-child(4) {
+          text-align: right;
+          &:after{
+            left: auto;
+            right: -5%;
+          }
+          &:before {
+            background: url('../images/notorious-big/coke-two.jpg') no-repeat;
+            background-size: 100%;
+            content: '';
+            float: left;
+            height: 500px;
+            margin: 3% -10% -20% -10%;
+            position: relative;
+            width: 70%;
+            z-index: -1;
+          }
+        }
+        &:nth-child(5) {
+          clear: right;
+          float: right;
+          text-align: right;
+          width: 40%;
+          &:after{
+            left: 0;
+          }
+        }
+        &:nth-child(6) {
+          clear: right;
+          padding-top: 1em;
+          &:before {
+            content: url('../images/notorious-big/coke-three.jpg');
+            float: right;
+            margin: 0 0 -5% 10%;
+            position: relative;
+            width: 50%;
+            z-index: -1;
+          }
+        }
+        &:nth-child(7) {
+          width: 50%;
+          &:after{
+            left: 60%;
+          }
+        }
+        &:nth-child(8) {
+          text-align: right;
+          &:before {
+            background: url('../images/notorious-big/coke-four.jpg') no-repeat;
+            background-size: 100%;
+            content: '';
+            float: left;
+            height: 500px;
+            margin: 0 -10% -20% -10%;
+            position: relative;
+            width: 50%;
+            z-index: -1;
+          }
+          &:after{
+            left: auto;
+            right: -10%;
+            top: -15%;
+          }
+        }
+        &:nth-child(9) {
+          float: right;
+          text-align: right;
+          width: 48%;
+        }
+        &:nth-child(10) {
+          clear: right;
+          margin-top: 0;
+          position: relative;
+          top: -2em;
+          width: 60%;
+        }
       }
     }
     p {
-      margin: 0 0 6em 0;
+      margin: 0 0 3em 0;
     }
     > figcaption {
+      font-weight: 800;
+      font-size: 1.2em;
+      text-align: center;
+      a {
+        color: rgba($primary-color, 0.5);
+        &:hover {
+          color:$primary-color;
+        }
+      }
     }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover:after {
-    opacity: 0.7;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: $secondary-color;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: $secondary-color;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: $secondary-color;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: $secondary-color;
 }

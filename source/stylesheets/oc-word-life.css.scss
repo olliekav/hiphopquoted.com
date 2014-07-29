@@ -11,12 +11,10 @@ html {
 body {
   background-color: #f2f2f2;
   color: $secondary-color;
-  font:125%/1.5 "freight-sans-pro", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
-a, label {
+a {
   color:$secondary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -47,6 +45,7 @@ a, label {
   }
 }
 #main {
+  font: 400 125%/1.5 "freight-sans-pro", Helvetica, Arial, sans-serif;
   padding: 0 2em;
   @extend %clearfix;
 }

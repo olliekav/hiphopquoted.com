@@ -8,13 +8,11 @@ $secondary-color: #423A34;
 body {
   background-color: $primary-color;
   color:lighten($primary-color, 20%);
-  font:100%/1.5 'Whitney SSm A', 'Whitney SSm B', "helvetica", Arial, sans-serif;
-  font-weight: 400;
 }
 b {
   font-weight: 500;
 }
-a, label {
+a {
   color:$secondary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -48,6 +46,9 @@ a, label {
 }
 .iTunesPreviewPlayer:after {
   color: lighten($secondary-color, 40%);
+}
+#main {
+  font: 400 100%/1.5 'Whitney SSm A', 'Whitney SSm B', "helvetica", Arial, sans-serif;
 }
 article {
   margin: 0 auto 3em;

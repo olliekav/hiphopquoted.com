@@ -8,8 +8,6 @@ $secondary-color: #ccaa7a;
 body {
   background: #413527 url("../images/smif-n-wessun/bucktown-background.jpg") fixed;
   color: $primary-color;
-  font: 112.5%/1.5 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
@@ -48,6 +46,9 @@ a {
 }
 .iTunesPreviewPlayer:after {
   color: $secondary-color;
+}
+#main {
+  font: 400 112.5%/1.5 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
 }
 article {
   background: #413527 url("../images/smif-n-wessun/bucktown-note.jpg");

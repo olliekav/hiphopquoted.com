@@ -8,12 +8,10 @@ $secondary-color: #ffffff;
 body {
   background: url("../images/danger-doom/old-school-background.jpg");
   color: $primary-color;
-  font: 125%/1.5 "felt-tip-roman", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
-a, label {
+a {
   color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -51,6 +49,7 @@ a, label {
   color: lighten(#6f3132, 40%);
 }
 #main {
+  font: 400 125%/1.5 "felt-tip-roman", Helvetica, Arial, sans-serif;
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;

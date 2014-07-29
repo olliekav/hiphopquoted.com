@@ -80,17 +80,22 @@ cite {
 .overlay-nav {
   background-color: rgba(#000000, 0.9);
   bottom: 0;
-  left: 0;
+  display: none;
+  font-size: 1em;
+  font-family: georgia;
   overflow-y: scroll;
+  left: 0;
   opacity: 0;
-  padding: 3em 8em;
+  padding: 5% 8em;
   position: fixed;
   right: 0;
+  text-transform: capitalize;
   top: 0;
   z-index: -1;
   @include box-sizing(border-box);
   @include transition(opacity 0.2s ease);
   &.on {
+    display: block;
     opacity: 1;
     z-index: 10000;
   }
@@ -101,8 +106,9 @@ cite {
   }
   h2 {
     color: #fff;
-    font-size: 7em;
+    font-size: 6em;
     font-weight: 400;
+    margin-bottom: 0.4em;
   }
   a {
     color: #fff;
@@ -116,7 +122,7 @@ cite {
     list-style: none;
     margin: 0;
     padding: 0;
-    @include columns(2, 40);
+    @include columns(2, 10);
     li {
       margin-bottom: 0.5em;
     }
