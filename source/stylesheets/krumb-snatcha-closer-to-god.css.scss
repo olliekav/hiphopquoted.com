@@ -8,12 +8,11 @@ $secondary-color: #000000;
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font: 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
   position: relative;
   width: 100%;
 }
-a, label {
+a {
   color:$secondary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -51,6 +50,7 @@ a, label {
   color: lighten($secondary-color, 40%);
 }
 #main {
+  font: 400 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
   padding: 0 2em;
   @extend %clearfix;
 }

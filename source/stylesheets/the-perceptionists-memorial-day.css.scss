@@ -8,8 +8,6 @@ $secondary-color: #352c23;
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font: 115%/1.5 "georgia", Times New Roman, serif;
-  font-weight: 300;
   position: relative;
   width: 100%;
 }
@@ -51,6 +49,7 @@ a {
   color: lighten($secondary-color, 40%);
 }
 #main {
+  font: 300 115%/1.5 "georgia", Times New Roman, serif;
   margin: 0 auto;
   max-width: 970px;
   width: 100%;

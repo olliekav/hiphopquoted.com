@@ -11,8 +11,6 @@ html {
 body {
   background: #d5d3d4 url("../images/jeru/static.jpg");
   color: $secondary-color;
-  font:100%/1.5 "runda", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
@@ -54,6 +52,7 @@ a, label {
   color: lighten($secondary-color, 40%);
 }
 #main {
+  font: 400 100%/1.5 "runda", Helvetica, Arial, sans-serif;
   padding: 0 2em;
   @extend %clearfix;
 }

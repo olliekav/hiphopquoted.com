@@ -9,8 +9,6 @@ $tertiary-color: #332E25;
 body {
   background-color: $secondary-color;
   color: $tertiary-color;
-  font: 125.0%/1.5 "adelle", georgia, Times New Roman, serif;
-  font-weight: 300;
   position: relative;
   width: 100%;
 }
@@ -55,6 +53,7 @@ a, label {
   color: lighten($tertiary-color, 40%);
 }
 #main {
+  font: 300 125.0%/1.5 "adelle", georgia, Times New Roman, serif;
   margin: 0 auto;
   padding: 0 0 6em;
   width: 100%;

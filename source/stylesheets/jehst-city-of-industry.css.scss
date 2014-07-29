@@ -21,12 +21,10 @@ body {
   background: #d5d3d4 url("../images/jehst/city-of-industry-background.jpg") top center fixed;
   background-size: cover;
   color: $secondary-color;
-  font:100%/1.5 "nimbus-sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
-a, label {
+a {
   color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -66,6 +64,9 @@ a, label {
 #main {
   padding: 0 2em;
   @extend %clearfix;
+}
+#main {
+  font: 400 100%/1.5 "nimbus-sans", Helvetica, Arial, sans-serif;
 }
 article {
   color: $primary-color;

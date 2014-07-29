@@ -20,11 +20,8 @@ $background-color: #ddd4b7;
 body {
   background-color:$background-color;
   color:$primary-color;
-  font:112.5%/1.5 georgia, serif;
-  *font-size:small;
-  font-weight:300;
 }
-a, label {
+a {
   color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -34,6 +31,7 @@ a, label {
 }
 #main {
   background-color: $background-color;
+  font: 300 112.5%/1.5 georgia, serif;
 }
 #header {
   #logo {

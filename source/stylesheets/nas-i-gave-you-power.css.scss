@@ -8,9 +8,6 @@ $secondary-color: #ffffff;
 body {
   background-color: $primary-color;
   color:#fff;
-  font:112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
-  *font-size:small;
-  font-weight:400;
 }
 #header {
   #logo path {
@@ -40,6 +37,9 @@ a, label {
 }
 .iTunesPreviewPlayer:after {
   color: $primary-color;
+}
+#main {
+  font: 400 112.5%/1.5 "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
 }
 article {
   margin:0 auto;

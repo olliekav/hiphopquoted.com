@@ -10,8 +10,6 @@ body {
   background:url("../images/atcq/book_background.jpg") no-repeat top center fixed;
   background-size: cover;
   color:$primary-color;
-  font: 400 150%/1.5 "skolar", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
-  *font-size:small;
 }
 a {
   color:$primary-color;
@@ -47,6 +45,9 @@ a {
 }
 .iTunesPreviewPlayer:after {
   color: $secondary-color;
+}
+#main {
+  font: 400 150%/1.5 "skolar", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
 }
 article {
   margin: 0 auto 3em;

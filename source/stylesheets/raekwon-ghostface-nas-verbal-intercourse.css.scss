@@ -8,8 +8,6 @@ $secondary-color: #0018ff;
 body {
   background-color: #fff;
   color: $primary-color;
-  font: 112.5%/1.5 "quatro-slab", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
 }
@@ -51,6 +49,9 @@ a {
 }
 .iTunesPreviewPlayer:after {
   color: lighten($primary-color, 40%);
+}
+#main {
+  font: 400 112.5%/1.5 "quatro-slab", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
 }
 article {
   color: $primary-color;

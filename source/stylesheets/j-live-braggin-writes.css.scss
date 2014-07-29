@@ -9,8 +9,6 @@ $secondary-color-light: lighten($secondary-color, 20%);
 body {
   background-color: $secondary-color;
   color:$secondary-color-light;
-  font:100%/1.5 "pragmatica-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   position: relative;
   width: 100%;
   &:after {
@@ -24,7 +22,7 @@ body {
     z-index: -1;
   }
 }
-a, label {
+a {
   color:$primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -62,6 +60,7 @@ a, label {
   color: darken($primary-color, 30%);
 }
 #main {
+  font: 400 100%/1.5 "pragmatica-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0;
 }
 article {

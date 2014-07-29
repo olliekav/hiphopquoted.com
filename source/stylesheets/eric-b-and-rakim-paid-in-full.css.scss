@@ -19,14 +19,6 @@ $secondary-color: #F1E300;
 body {
   background-color: $secondary-color;
   color: $primary-color;
-  font: 100%/1.25 blackoutmidnight, sans serif;
-  font-weight: 500;
-  @media only screen and (max-width:375px) {
-    font-size: 87.5%;
-  }
-}
-b {
-  font-weight: 500;
 }
 a {
   color: $primary-color;
@@ -68,6 +60,12 @@ label {
 }
 .iTunesPreviewPlayer:after {
   color: lighten($primary-color, 40%);
+}
+#main {
+  font: 500 100%/1.25 "blackoutmidnight", sans serif;
+  @media only screen and (max-width:375px) {
+    font-size: 87.5%;
+  }
 }
 article {
   background: url("../images/rakim_background.jpg");

@@ -8,17 +8,15 @@ $secondary-color: #000000;
 body {
   background-color: $primary-color;
   color: $secondary-color;
-  font: 150%/1.5 "refrigerator-deluxe", Helvetica, Arial, sans-serif;
-  font-weight: 300;
   position: relative;
   width: 100%;
 }
-a, label {
-  color:$secondary-color;
+a {
+  color: $secondary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color:$secondary-color;
+    color: rgba($secondary-color, 0.4);
   }
 }
 #header {
@@ -30,7 +28,7 @@ a, label {
       pointer-events: all;
     }
     &:hover path {
-      opacity: 0.8;
+      fill: rgba($secondary-color, 0.4);
     }
   }
 }
@@ -38,21 +36,22 @@ a, label {
   background-color: rgba($secondary-color, 0.98)
 }
 #footer {
-  background-color: $secondary-color;
-  color: lighten($secondary-color, 40%);
+  background-color: lighten($secondary-color, 20%);
+  color: lighten($secondary-color, 60%);
   a {
-    color: lighten($secondary-color, 40%);
+    color: lighten($secondary-color, 60%);
   }
 }
 .iTunesPreviewPlayer {
-  background-color: lighten($secondary-color, 20%);
+  background-color: lighten($secondary-color, 40%);
 }
 .iTunesPreviewPlayer:after {
   color: lighten($secondary-color, 40%);
 }
 #main {
+  font: 300 150%/1.5 "refrigerator-deluxe", Helvetica, Arial, sans-serif;
   margin: 0 auto;
-  max-width: 1200px;
+  padding: 0;
   width: 100%;
   @extend %clearfix;
 }
@@ -62,6 +61,8 @@ article {
   @include box-sizing(border-box);
   header {
     margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2em;
     position: relative;
     text-align: justify;
     > h1 {
@@ -73,19 +74,50 @@ article {
     }
   }
   figure {
-    margin: 0 auto;
+    background: $secondary-color url("../images/ludacris/microphone.jpg") no-repeat center top;
+    background-size: 100%;
+    color: $primary-color;
+    margin: -3em auto 0;
     position: relative;
-    text-align: justify;
     @include box-sizing(border-box);
     > blockquote {
-    
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 5em 2em;
+      @extend %clearfix;
+      > p {
+        margin-bottom: 4em;
+        &:first-child {
+          float: left;
+          width: 32%;
+        }
+        + p {
+          float: right;
+          text-align: right;
+          width: 32%;
+        }
+      }
+      > h3 {
+        clear: both;
+        font-size: 2em;
+        font-weight: 900;
+        line-height: 0.8;
+        text-transform: uppercase;
+        text-align: center;
+      }
     }
     figcaption {
-      font-family: "alternate-gothic-no-1-d";
-      line-height: 0.9;
-      margin: 0.8em auto;
-      text-transform: uppercase;
-      width: 40%;
+      color: $primary-color;
+      margin: 0 auto;
+      padding-bottom: 6em;
+      text-align: center;
+      width: 50%;
+      a {
+        color: rgba($primary-color, 0.5);
+        &:hover {
+          color: $primary-color;
+        }
+      }
     }
   }
 }
