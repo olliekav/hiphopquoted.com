@@ -56,6 +56,13 @@ helpers do
   def store_link?
     false
   end
+  def page_title
+    if current_page.data.title
+      "#{current_page.data.title} - Hip Hop Quoted"
+    else
+      "Hip Hop Quoted - Hip Hop Quotes brought to life with Typography"
+    end
+  end
 end
 
 set :css_dir, 'stylesheets'

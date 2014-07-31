@@ -19,7 +19,7 @@ album_link: https://itunes.apple.com/album/labcabincalifornia/id271849688?uo=4
   <script>
     $(function(){
       WebFont.load({
-        typekit: { id: 'suv7urw' },
+        typekit: { id: 'tri7njl' },
         active: function() {
           $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
         }
@@ -30,7 +30,7 @@ album_link: https://itunes.apple.com/album/labcabincalifornia/id271849688?uo=4
 
 <article>
   <header>
-    <h1>Drop</h1>
+    <h1><span>Drop</span></h1>
   </header>
   <figure>
     <blockquote>
@@ -93,6 +93,8 @@ album_link: https://itunes.apple.com/album/labcabincalifornia/id271849688?uo=4
         (You know what time is it? Never)
       </p>
     </blockquote>
-    <%= partial 'figcaption', locals: { data: current_page.data } %>
+    <div>
+      <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
+    </div>
   </figure>
 </article>

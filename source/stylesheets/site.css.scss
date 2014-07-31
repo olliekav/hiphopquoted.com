@@ -175,9 +175,20 @@ cite {
 // Homepage ------------------------------------------------------------------------------------
 
 .page-index {
-  background-color: #36D7B7;
+  background: url("../images/home-background.jpg") no-repeat fixed top center;
+  background-size: cover;
   color: darken(#36D7B7, 20%);
   font:112.5%/1.5 "ff-meta-serif-web-pro", 'Georgia', serif;
+  position: relative;
+  &:before {
+    background-color: rgba(#000, 0.8);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   a,.toggle-menu {
     color: #fff;
     @include transition(all 0.3s ease);
@@ -186,12 +197,13 @@ cite {
     }
   }
   #header {
+    margin-bottom: 0;
     text-align: center;
     #logo {
       height: auto;
       margin-top: 4em;
-      padding-bottom: 20%;
-      width: 50%;
+      padding-bottom: 25%;
+      width: 60%;
       > svg path {
         fill: #fff;
       }

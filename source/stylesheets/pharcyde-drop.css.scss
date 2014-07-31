@@ -1,0 +1,178 @@
+// The Pharcyde - Drop -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #3188EA;
+$secondary-color: #ffffff;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: darken($primary-color, 20%);
+  }
+}
+#header {
+  position: relative;
+  z-index: 20;
+  #logo {
+    path {
+      fill: $secondary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: darken($primary-color, 20%);
+    }
+  }
+}
+.overlay-nav {
+  background-color: rgba($primary-color, 0.98)
+}
+#footer {
+  background-color: darken($primary-color, 10%);
+  color: darken($primary-color, 30%);
+  a {
+    color: darken($primary-color, 30%);
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: darken($primary-color, 20%);
+}
+.iTunesPreviewPlayer:after {
+  color: darken($primary-color, 30%);
+}
+#main {
+  font: 500 115%/1.5 "ff-meta-serif-web-pro", Georgia, Times New Roman, serif;
+  padding: 0;
+  @extend %clearfix;
+}
+article {
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  @extend %clearfix;
+  header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2em;
+    width: 100%;
+    @include box-sizing(border-box);
+    h1 {
+      font-family: "alternate-gothic-no-1-d";
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 0 10px 0 darken($primary-color, 10%);
+      width: 100%;
+    }
+  }
+  figure {
+    background-color: darken($primary-color, 10%);
+    margin: 0 auto;
+    padding-top: 400px;
+    position: relative;
+    overflow-x: hidden;
+    &:before {
+      border-style: solid;
+      border-width: 300px 600px 0 600px;
+      border-color: $primary-color transparent transparent transparent;
+      content: "";
+      display: block;
+      height: 0;
+      left: 50%;
+      margin-left: -600px;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+    blockquote {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2em 6em;
+      position: relative;
+      z-index: 2;
+      @extend %clearfix;
+      @include box-sizing(border-box);
+      > p {
+        float: left;
+        margin: 0 4% 3em 0;
+        width: 48%;
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+        &:last-child {
+          clear: both;
+          float: none;
+          margin: 0 auto;
+          width: 48%;
+        }
+        &:first-letter {
+          font-family: "alternate-gothic-no-1-d";
+          float: left;
+          font-size: 7em;
+          line-height: 0.6;
+          margin: 0.18em 0.1em 0 0;
+          text-transform: upercase;
+        }
+      }
+    }
+    > div {
+      background-color: darken($primary-color, 20%);
+      position: relative;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+    figcaption {
+      font-family: "alternate-gothic-no-1-d";
+      font-size: 2em;
+      font-weight: 400;
+      line-height: 0.8;
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 400px 2em 200px;
+      text-align: center;
+      text-shadow: 0 10px 0 darken($primary-color, 31%);
+      width: 100%;
+      text-transform: uppercase;
+      @include box-sizing(border-box);
+      &:before {
+        border-style: solid;
+        border-width: 300px 600px 0 600px;
+        border-color: darken($primary-color, 10%) transparent transparent transparent;
+        content: "";
+        display: block;
+        height: 0;
+        left: 50%;
+        margin-left: -600px;
+        position: absolute;
+        top: 0;
+        width: 0;
+      }
+      span, cite {
+        display: block;
+      }
+      cite > a:last-child {
+        line-height: 1;
+      }
+      cite > span {
+        &:first-child {
+          line-height: 0.87;
+        }
+        + a {
+          line-height: 0.7;
+        }
+      }
+      a:hover {
+        color: darken($primary-color, 30%);
+      }
+    }
+  }
+}
