@@ -41,6 +41,12 @@
 
 activate :directory_indexes
 
+# activate :pagination do
+#   pageable_resource :quotes do |page|
+#     page.data.title.present?
+#   end
+# end
+
 # Reload the browser automatically whenever files change
 activate :livereload
 

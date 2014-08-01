@@ -135,7 +135,7 @@ cite {
   font: 400 15px/1.5 "Georgia", Times New Roman, serif;
   left: 0;
   overflow: hidden;
-  padding: 1.2em 1.5em 0.5em;
+  padding: 0.5em 1em;
   position:fixed;
   width: 100%;
   z-index: 100;
@@ -148,13 +148,57 @@ cite {
     bottom: 0;
   }
   > ul {
-    float: right;
-    margin-top: -5px;
+    margin: 0;
+    @extend %clearfix;
     > li {
       display:inline;
-      margin-left:20px;
-      &:first-child {
+      float: left;
+      margin: -0.1em 0 0 1.5em;
+      padding-top: 0.25em;
+      vertical-align: middle;
+      &:nth-child(2) {
         margin-left: 0;
+      }
+      &.page-nav {
+        float: right;
+        margin-left: 0;
+        > a {
+          display: inline-block;
+          height: 16px;
+          margin-left: 1em;
+          padding-top: 0.3em;
+          position: relative;
+          width: 16px;
+          &:first-child {
+            &:after {
+              border-style: solid;
+              border-width: 8px 14px 8px 0;
+              border-color: transparent #ffffff transparent transparent;
+              content: "";
+              display: inline-block;
+              height: 0;
+              width: 0;
+            }
+          }
+          &:last-child {
+            &:after {
+              border-style: solid;
+              border-width: 8px 0 8px 14px;
+              border-color: transparent transparent transparent #ffffff;
+              content: "";
+              display: inline-block;
+              height: 0;
+              width: 0;
+            }
+          }
+          > span {
+            display: inline-block;
+            text-indent: -99999px;
+          }
+        }
+      }
+      &.audio {
+        padding-top: 0;
       }
     }
   }
@@ -162,13 +206,7 @@ cite {
     color: #fff;
   }
   #audio-clip {
-    float: left;
-    margin-top: -10px;
-    width: 160px;
-  }
-  .buy-track {
-    top: -6px;
-    position: relative;
+    width: 90px;
   }
 }
 
@@ -178,7 +216,7 @@ cite {
   background: url("../images/home-background.jpg") no-repeat fixed top center;
   background-size: cover;
   color: darken(#36D7B7, 20%);
-  font:112.5%/1.5 "ff-meta-serif-web-pro", 'Georgia', serif;
+  font: 400 200%/1.3 "skippy-sharp", 'Georgia', serif;
   position: relative;
   &:before {
     background-color: rgba(#000, 0.8);
@@ -188,22 +226,26 @@ cite {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
   }
-  a,.toggle-menu {
+  a {
     color: #fff;
     @include transition(all 0.3s ease);
     &:hover {
-      color: darken(#36D7B7, 20%);
+      color: #36D7B7;
     }
+  }
+  #main {
+    padding-bottom: 1em;
   }
   #header {
     margin-bottom: 0;
     text-align: center;
     #logo {
       height: auto;
-      margin-top: 4em;
-      padding-bottom: 25%;
-      width: 60%;
+      margin-top: 2em;
+      padding-bottom: 20%;
+      width: 50%;
       > svg path {
         fill: #fff;
       }
@@ -211,24 +253,29 @@ cite {
   }
   #footer {
     background-color: transparent;
+    color: #fff;
+    font: 400 100%/1 "skippy-sharp", 'Georgia', serif;
     position: static;
     text-align: center;
     ul {
       float: none;
-      padding-bottom: 3em 0;
+      padding-bottom: 3em;
       position: static;
+    }
+    a:hover {
+      color: #36D7B7;
     }
   }
   #home {
     text-align: center;
     h1 {
       color: #fff;
-      font-size: 1.8em;
+      font-size: 1.4em;
       font-weight: 400;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
     }
     nav {
-      margin-bottom: 3em;
+      margin-bottom: 0;
     }
     li {
       list-style: none;
