@@ -13,11 +13,11 @@
 }
 .iTunesPreviewPlayer:after {
   color: #fff;
-  content: "Play preview";
+  content: "Preview";
   position: absolute;
   left: 40px;
   top: 4px;
-  width: 140px;
+  width: 60px;
 }
 .iTunesPreviewPlayer:hover:after {
   color: #fff;
