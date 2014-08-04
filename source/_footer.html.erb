@@ -18,7 +18,7 @@
           <script>
             var track = "<%= data.page.track %>";
             var playerCountry = "<%= data.page.player_country %>";
-            var playerColor = "<%= data.page.player_color %>";
+            var playerColor = "#<%= data.page.player_color %>";
             var player = new iTunesPreviewPlayer(track);
             document.getElementById("audio-clip").appendChild(player.DOMElement());
           </script>

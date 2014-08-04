@@ -62,9 +62,8 @@ body {
   }
 }
 a {
-  color: #232323;
   text-decoration: none;
-  @include transition(color 0.1s linear)
+  @include transition(color 0.3s linear)
 }
 h1,h1,h3,h4 {
   font-weight: normal;
@@ -131,6 +130,7 @@ cite {
 #footer {
   background-color: rgba(#000, 1);
   bottom: 0;
+  box-shadow: -10px 0 5px rgba(#3e3e3e, 0.3);
   color: #fff;
   font: 400 15px/1.5 "Georgia", Times New Roman, serif;
   left: 0;
@@ -258,9 +258,15 @@ cite {
     position: static;
     text-align: center;
     ul {
-      float: none;
-      padding-bottom: 3em;
+      padding: 3em 0;
       position: static;
+      li {
+        float: none;
+        margin-left: 1.5em;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
     }
     a:hover {
       color: #36D7B7;

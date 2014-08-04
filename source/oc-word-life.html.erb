@@ -1,6 +1,6 @@
 ---
 title: O.C. - Word...Life
-player_color: 000000
+player_color: ffffff
 track: oc word...life
 artist: O.C.
 song: Word...Life
@@ -11,31 +11,18 @@ album_link: https://itunes.apple.com/album/word...life/id711930741?uo=4
 ---
 
 <% content_for :stylesheet do %>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/748124/css/fonts.css" />
   <%= stylesheet_link_tag "/stylesheets/oc-word-life.css" %>
-<% end %>
-
-<% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'qdf4teu' },
-        active: function() {
-          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
-        }
-      });
-    });
-  </script>
 <% end %>
 
 <article>
   <header>
-    <h1>Word...Life</h1>
+    <h1>Word<br>...Life</h1>
   </header>
   <figure>
     <blockquote>
       <p>
-        Let the chime be a part of your mind
+        <span>L</span>et the chime be a part of your mind
         Let the rhyme intertwine like a vine
         Work your mentally found intellect
         I raise eyes like the sight of a tech
@@ -61,7 +48,7 @@ album_link: https://itunes.apple.com/album/word...life/id711930741?uo=4
         Things I consider in my mind is deep thought
       </p>
       <p>
-        By the way, do me a favour
+        <span>B</span>y the way, do me a favour
         Give it a chance if a nigga has flavour
         Years have passed, now training is over
         I'm being intoxicated, now I'm kinda sober
@@ -85,7 +72,7 @@ album_link: https://itunes.apple.com/album/word...life/id711930741?uo=4
         You must go inside and exhale, divide it
       </p>
       <p>
-        Crushing competition, dusting oppositions
+        <span>C</span>rushing competition, dusting oppositions
         Down the toilet, gonna flush your composition
         Your scribes are weak, and for I can speak
         Myself against a man, with a true mystique
