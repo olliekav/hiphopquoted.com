@@ -1,0 +1,81 @@
+// Nas - One Love -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffffff;
+$secondary-color: #a10f0d;
+
+body {
+  background: #000 url("../images/nas/one-love-background.jpg") top center fixed;
+  background-size: cover;
+  color: $primary-color;
+}
+#header {
+  #logo {
+    path {
+      fill: $secondary-color;
+    }
+    &:hover path {
+      fill: $primary-color;
+    }
+  } 
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $primary-color;
+  }
+}
+.overlay-nav {
+  background-color: $secondary-color;
+}
+#footer {
+  background-color: $secondary-color;
+  color: darken($secondary-color, 20%);
+  a {
+    color: darken($secondary-color, 20%);
+  }
+  ul {
+    > .page-nav {
+      > a {
+        &:first-child:after {
+
+        }
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: darken($secondary-color, 10%);
+}
+.iTunesPreviewPlayer:after {
+  color: darken($secondary-color, 20%);
+}
+#main {
+  font: 500 250%/1.2 "reenie-beanie", Georgia, serif;
+}
+article {
+  background: $primary-color url("../images/nas/one-love-paper-background.jpg") top center;
+  box-shadow: 0 0 10px #000;
+  color: #000;
+  margin:0 auto;
+  padding: 1em;
+  max-width:800px;
+  width: 100%;
+  @include box-sizing(border-box);
+  > header {
+   h1 {
+    font-size: 4em;
+    line-height: 0.6;
+    margin-bottom: 0.2em;
+    text-align: center;
+   }
+  }
+  > figure {
+    p {
+      margin-bottom: 1.5em;
+    }
+  }
+}

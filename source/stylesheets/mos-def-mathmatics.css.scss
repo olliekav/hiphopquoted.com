@@ -9,7 +9,6 @@ body {
   background: #000 url("../images/mos-def/background-mathmatics.jpg") top center fixed;
   background-size: cover;
   color: $primary-color;
-  text-transform: uppercase;
   position: relative;
   width: 100%;
 }
@@ -52,6 +51,7 @@ a, label {
   font: 300 150.0%/1.5 'Tungsten A', 'Tungsten B', impact, sans-serif;
   margin: 0 auto;
   padding: 0;
+  text-transform: uppercase;
   width: 100%;
   @extend %clearfix;
 }
