@@ -85,6 +85,7 @@ article {
   }
   .verse {
     float: left;
+    letter-spacing: -0.5px;
     margin-left: 2%;
     position: relative;
     text-align: left;
@@ -143,5 +144,12 @@ article {
     position: absolute;
     text-transform: uppercase;
     top: 0;
+    > cite {
+      display: block;
+      > a:first-child:after {
+        content: "";
+        display: block;
+      }
+    }
   }
 }
