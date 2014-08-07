@@ -64,7 +64,7 @@ a {
 article {
   text-align: left;
   margin: 6em auto;
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   z-index: 2;
   @extend %clearfix;
@@ -79,7 +79,7 @@ article {
       line-height: 0.9;
       letter-spacing: -20px;
       position: absolute;
-      top: 45%;
+      top: 25%;
       &:first-letter {
         float: left;
         margin-right: -30px;
@@ -90,9 +90,9 @@ article {
     padding-left: 5%;
     p {
       float: left;
-      margin-right: 5%;
+      margin-right: 10%;
       position: relative;
-      width: 30%;
+      width: 40%;
       z-index: -1;
       > span {
         color: rgba($primary-color, 0.8);
@@ -106,13 +106,19 @@ article {
         top: -0.3em;
       }
       &:nth-child(2) {
-        margin-top: 16em;
+        margin: 18em 0 28em 0;
       }
       &:last-child {
-        margin: 6em 0 0 0;
+        clear: both;
+        float: none;
+        margin: 0 0 0 30%;
       }
     }
     > figcaption {
+      color: rgba($primary-color, 0.8);
+      font: 800 6em/0.9 'Gotham SSm A', 'Gotham SSm B'; 
+      letter-spacing: -5px;
+      margin: 1em 0 0 10%;
     }
   }
 }
