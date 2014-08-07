@@ -132,7 +132,7 @@ cite {
   bottom: 0;
   box-shadow: -10px 0 5px rgba(#3e3e3e, 0.3);
   color: #fff;
-  font: 400 15px/1.5 "Georgia", Times New Roman, serif;
+  font: 400 100%/1.5 'Georgia', serif;
   left: 0;
   overflow: hidden;
   padding: 0.5em 1em;
@@ -142,7 +142,7 @@ cite {
   @include transition(bottom 0.15s ease-in-out);
   @include box-sizing(border-box);
   &.footer-down {
-    bottom: -47px;
+    bottom: -60px;
   }
   &.footer-up {
     bottom: 0;
@@ -153,52 +153,18 @@ cite {
     > li {
       display:inline;
       float: left;
-      margin: -0.1em 0 0 1.5em;
+      margin: 0 0 0 1.5em;
       padding-top: 0.25em;
       vertical-align: middle;
       &:nth-child(2) {
         margin-left: 0;
       }
+      &.audio {
+        padding-top: 0;
+      }
       &.page-nav {
         float: right;
         margin-left: 0;
-        > a {
-          display: inline-block;
-          height: 16px;
-          margin-left: 1em;
-          padding-top: 0.3em;
-          position: relative;
-          width: 16px;
-          &:first-child {
-            &:after {
-              border-style: solid;
-              border-width: 8px 14px 8px 0;
-              border-color: transparent #ffffff transparent transparent;
-              content: "";
-              display: inline-block;
-              height: 0;
-              width: 0;
-            }
-          }
-          &:last-child {
-            &:after {
-              border-style: solid;
-              border-width: 8px 0 8px 14px;
-              border-color: transparent transparent transparent #ffffff;
-              content: "";
-              display: inline-block;
-              height: 0;
-              width: 0;
-            }
-          }
-          > span {
-            display: inline-block;
-            text-indent: -99999px;
-          }
-        }
-      }
-      &.audio {
-        padding-top: 0;
       }
     }
   }
@@ -207,6 +173,39 @@ cite {
   }
   #audio-clip {
     width: 90px;
+  }
+}
+.page-nav {
+  > a {
+    display: inline-block;
+    height: 16px;
+    margin-left: 0.5em;
+    padding-top: 0;
+    position: relative;
+    width: 16px;
+    &:after {
+      border-style: solid;
+      content: "";
+      display: inline-block;
+      height: 0;
+      width: 0;
+    }
+    &.prev {
+      &:after {
+        border-width: 9px 15px 9px 0;
+        border-color: transparent #ffffff transparent transparent;
+      }
+    }
+    &.next {
+      &:after {
+        border-width: 9px 0 9px 15px;
+        border-color: transparent transparent transparent #ffffff;
+      }
+    }
+    > span {
+      display: inline-block;
+      text-indent: -99999px;
+    }
   }
 }
 

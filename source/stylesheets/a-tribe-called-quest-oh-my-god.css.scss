@@ -78,6 +78,12 @@ article {
     p {
       margin-bottom: 3em;
       @include columns(2, 6%);
+      &:first-letter {
+        float: left;
+        font-size: 3em;
+        line-height: 0.6;
+        margin: 0.2em 0.2em 0.2em 0;
+      }
     }
     > figcaption {
       font-size: 0.8em;

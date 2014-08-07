@@ -6,8 +6,8 @@ $primary-color: #E7E9D3;
 $secondary-color: #ffffff;
 
 body {
-  background: url("../images/danger-doom/old-school-background.jpg");
-  color: $primary-color;
+  background: url("../images/danger-doom/old-school-background.jpg") top center fixed;
+  background-size: cover;
   position: relative;
   width: 100%;
 }
@@ -49,7 +49,7 @@ a {
   color: lighten(#6f3132, 40%);
 }
 #main {
-  font: 400 125%/1.5 "felt-tip-roman", Helvetica, Arial, sans-serif;
+  font: 400 150%/1.5 "felt-tip-roman", Helvetica, Arial, sans-serif;
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
@@ -60,27 +60,39 @@ article {
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
+    color: rgba($primary-color, 0.1);
     margin: 0 auto;
     text-align: justify;
     > h1 {
-      font-size: 14em;
+      font-size: 12em;
       font-weight: 900;
       line-height: 0.8;
       margin: 0 auto;
+      position: fixed;
       text-transform: uppercase;
+      width: 50%;
     }
   }
   figure {
+    color: $primary-color;
     margin: 0 auto;
+    max-width: 550px;
     position: relative;
-    text-align: justify;
+    text-align: center;
+    width: 100%;
     @include box-sizing(border-box);
+    p {
+      margin-bottom: 2em;
+      &:nth-child(2) {
+        font-size: 4em;
+        line-height: 0.8;
+        margin-bottom: 0.5em;
+      }
+    }
     figcaption {
-      font-family: "alternate-gothic-no-1-d";
-      line-height: 0.9;
-      margin: 0.8em auto;
-      text-transform: uppercase;
-      width: 40%;
+      font-size: 4em;
+      line-height: 0.8;
+      margin-bottom: 0.5em;
     }
   }
 }
