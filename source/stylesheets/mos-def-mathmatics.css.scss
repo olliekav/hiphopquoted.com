@@ -21,6 +21,14 @@ a, label {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: #fff;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -39,6 +47,24 @@ a, label {
   color: lighten(#000, 40%);
   a {
     color: lighten(#000, 40%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten(#000, 40%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten(#000, 40%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {

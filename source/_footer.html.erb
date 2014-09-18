@@ -14,18 +14,24 @@
       </li>
       <li class="audio">
         <div id="audio-clip">
+          <%= javascript_include_tag("/javascripts/classList.js") %>
           <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
           <script>
             var track = "<%= data.page.track %>";
             var playerCountry = "<%= data.page.player_country %>";
             var playerColor = "#<%= data.page.player_color %>";
             var player = new iTunesPreviewPlayer(track);
-            document.getElementById("audio-clip").appendChild(player.DOMElement());
+            var audio = document.getElementsByTagName('audio');
+            var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
+            var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+            if(!isFirefox && isMac) {
+              document.getElementById("audio-clip").appendChild(player.DOMElement());
+            }
           </script>
         </div>
       </li>
       <li>
-        <%= link_to "Buy track", "#{current_page.data.song_link}", :class => "buy-track", :target => "itunes_store"  %>
+        <%= link_to "Buy on iTunes", "#{current_page.data.song_link}", :class => "buy-track", :target => "itunes_store"  %>
       </li>
     <% end %>
     <% if(current_page.path == "index.html") %>

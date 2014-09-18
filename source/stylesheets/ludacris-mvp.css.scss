@@ -22,6 +22,14 @@ a {
 #header {
   position: relative;
   z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: rgba($secondary-color, 0.4);
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -41,15 +49,33 @@ a {
   a {
     color: lighten($secondary-color, 60%);
   }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($secondary-color, 60%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($secondary-color, 60%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
 }
 .iTunesPreviewPlayer {
   background-color: lighten($secondary-color, 40%);
 }
 .iTunesPreviewPlayer:after {
-  color: lighten($secondary-color, 40%);
+  color: lighten($secondary-color, 60%);
 }
 #main {
-  font: 300 150%/1.5 "refrigerator-deluxe", Helvetica, Arial, sans-serif;
+  font: 300 150%/1.5 "refrigerator-deluxe";
   margin: 0 auto;
   padding: 0;
   width: 100%;

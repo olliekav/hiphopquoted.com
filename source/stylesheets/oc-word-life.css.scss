@@ -24,6 +24,14 @@ a {
 #header {
   position: relative;
   z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: $primary-color;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -44,6 +52,24 @@ a {
     color: #fff;
     &:hover {
       color: $primary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: #fff;
+      }
+      &:hover:after {
+        border-right-color: $primary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: #fff;
+      }
+      &:hover:after {
+        border-left-color: $primary-color;
+      }
     }
   }
 }

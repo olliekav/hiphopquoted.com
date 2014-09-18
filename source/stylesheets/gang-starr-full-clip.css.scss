@@ -18,6 +18,14 @@ a {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: lighten($primary-color, 20%);
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -38,6 +46,24 @@ a {
     color: darken($secondary-color, 30%);
     &:hover {
       color: $primary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: darken($secondary-color, 30%);
+      }
+      &:hover:after {
+        border-right-color: $primary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: darken($secondary-color, 30%);
+      }
+      &:hover:after {
+        border-left-color: $primary-color;
+      }
     }
   }
 }

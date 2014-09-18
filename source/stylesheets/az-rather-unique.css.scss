@@ -22,6 +22,14 @@ a {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $primary-color;
+    }
+    &:hover rect {
+      fill: $secondary-color;
+    }
+  }
   #logo {
     path {
       fill: $primary-color;
@@ -40,6 +48,24 @@ a {
   color: lighten($primary-color, 40%);
   a {
     color: lighten($primary-color, 40%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {
@@ -64,9 +90,9 @@ article {
   }
   span,b {
     display: inline-block;
-    font-family: "Hoefler Text", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
+    font-family: "kepler-std", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
     font-style: italic;
-    font-weight:500;
+    font-weight:400;
     position: relative;
   }
   span,b {

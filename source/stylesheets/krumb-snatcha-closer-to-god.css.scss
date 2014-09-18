@@ -2,7 +2,7 @@
 
 @import "partials/common";
 
-$primary-color: #41D1C6;
+$primary-color: #f2450f;
 $secondary-color: #ffffff;
 
 body {
@@ -23,6 +23,14 @@ a {
 #header {
   position: relative;
   z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      opacity: 0.8;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -37,17 +45,35 @@ a {
   background-color: rgba($secondary-color, 0.98)
 }
 #footer {
-  background-color: $secondary-color;
-  color: lighten($secondary-color, 40%);
+  background-color: darken($primary-color, 15%);
+  color: $primary-color;
   a {
-    color: lighten($secondary-color, 40%);
+    color: $primary-color;
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {
-  background-color: lighten($secondary-color, 20%);
+  background-color: $primary-color;
 }
 .iTunesPreviewPlayer:after {
-  color: lighten($secondary-color, 40%);
+  color: $primary-color;
 }
 #main {
   font: 400 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;

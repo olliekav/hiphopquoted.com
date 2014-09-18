@@ -33,14 +33,16 @@ body {
   margin-bottom: 2em; 
   padding:1em 1.5em;
   .toggle-nav {
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 32px;
+    display: inline-block;
+    height: 21px;
     position: absolute;
     right: 1.5em;
-    text-transform: uppercase;
-    top: 0.8em;
-    z-index: 1;
+    top: 1.5em;
+    width: 25px;
+    rect {
+      fill: #000000;
+      @include transition(fill 0.1s ease);
+    }
   }
   #logo {
     display: inline-block;
@@ -56,7 +58,7 @@ body {
       left:0;
       width: 100%;
       path {
-        @include transition(fill 0.3s ease);
+        @include transition(fill 0.1s ease);
       }
     }
   }
@@ -153,18 +155,15 @@ cite {
     > li {
       display:inline;
       float: left;
-      margin: 0 0 0 1.5em;
+      margin: 0 1.5em 0 0;
       padding-top: 0.25em;
       vertical-align: middle;
-      &:nth-child(2) {
-        margin-left: 0;
-      }
       &.audio {
         padding-top: 0;
       }
       &.page-nav {
         float: right;
-        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -193,13 +192,21 @@ cite {
     &.prev {
       &:after {
         border-width: 9px 15px 9px 0;
-        border-color: transparent #ffffff transparent transparent;
+        border-color: transparent #000000 transparent transparent;
+        @include transition(border-color 0.1s ease);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
       }
     }
     &.next {
       &:after {
         border-width: 9px 0 9px 15px;
-        border-color: transparent transparent transparent #ffffff;
+        border-color: transparent transparent transparent #000000;
+        @include transition(border-color 0.1s ease);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
       }
     }
     > span {
@@ -297,6 +304,5 @@ cite {
 .wf-active main,
 .wf-active #header  {
   opacity: 1;
-  visibility: visible;
   @include transition(opacity 0.24s ease-in-out);
 }

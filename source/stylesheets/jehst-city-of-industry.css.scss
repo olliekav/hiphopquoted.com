@@ -35,13 +35,21 @@ a {
 #header {
   position: relative;
   z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $primary-color;
+    }
+    &:hover rect {
+      fill: #ffffff;
+    }
+  }
   #logo {
     path {
       fill: $primary-color;
       pointer-events: all;
     }
     &:hover path {
-      fill: $secondary-color;
+      fill: #ffffff;
     }
   }
 }
@@ -54,9 +62,27 @@ a {
   a {
     color: lighten($primary-color, 40%);
   }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
 }
 .iTunesPreviewPlayer {
-  background-color: lighten($primary-color, 40%);
+  background-color: lighten($primary-color, 20%);
 }
 .iTunesPreviewPlayer:after {
   color: lighten($primary-color, 40%);
@@ -111,24 +137,4 @@ article {
       @extend %block-color;
     }
   }
-}
-
-// Audio player
-.iTunesPreviewPlayer {
-  background-color: $primary-color;
-  &:hover {
-    background-color: $secondary-color;
-  }
-}
-.iTunesPreviewPlayer::before {
-  border-left-color: #fff;
-}
-.iTunesPreviewPlayer:not(.error).loaded:active::before {
-  border-left-color: #FFF;
-}
-.iTunesPreviewPlayer.playing::before {
-  border-color: #fff;
-}
-.iTunesPreviewPlayer.playing:not(.error).loaded:active::before {
-  border-color: #FFF;
 }

@@ -12,7 +12,7 @@ body {
   position: relative;
   width: 100%;
 }
-a, label {
+a {
   color: $tertiary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
@@ -26,6 +26,14 @@ a, label {
   left: 0;
   right: 0;
   z-index: 100;
+  .toggle-nav {
+    rect {
+      fill: $tertiary-color;
+    }
+    &:hover rect {
+      fill: #fff;
+    }
+  }
   #logo {
     path {
       fill: $tertiary-color;
@@ -44,6 +52,24 @@ a, label {
   color: lighten($tertiary-color, 40%);
   a {
     color: lighten($tertiary-color, 40%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($tertiary-color, 40%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($tertiary-color, 40%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {

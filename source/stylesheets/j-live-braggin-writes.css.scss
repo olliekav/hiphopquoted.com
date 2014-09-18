@@ -33,6 +33,14 @@ a {
 #header {
   position: relative;
   z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color-light;
+    }
+    &:hover rect {
+      fill: $primary-color;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color-light;
@@ -51,6 +59,24 @@ a {
   color: darken($primary-color, 30%);
   a {
     color: darken($primary-color, 30%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: darken($primary-color, 30%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: darken($primary-color, 30%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {

@@ -20,13 +20,21 @@ a {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $primary-color;
+    }
+    &:hover rect {
+      fill: $secondary-color;
+    }
+  }
   #logo {
     path {
       fill: $primary-color;
       pointer-events: all;
     }
-    &:hover {
-      opacity: 1;
+    &:hover path {
+      fill: $secondary-color;
     }
   }
 }
@@ -38,6 +46,24 @@ a {
   color: $secondary-color;
   a {
     color: $secondary-color;
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $secondary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $secondary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {
@@ -79,15 +105,18 @@ article {
       margin-bottom: 3em;
       @include columns(2, 6%);
       &:first-letter {
+        border: 4px solid $primary-color;
         float: left;
         font-size: 3em;
-        line-height: 0.6;
-        margin: 0.2em 0.2em 0.2em 0;
+        line-height: 1;
+        margin: 8px 20px 0 0;
+        padding: 5px 15px;
       }
     }
     > figcaption {
       font-size: 0.8em;
       font-style: italic;
+      width: 60%;
       > cite {
         font-style: italic;
       }
