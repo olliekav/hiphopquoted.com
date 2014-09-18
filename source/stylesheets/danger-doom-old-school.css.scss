@@ -12,7 +12,7 @@ body {
   width: 100%;
 }
 a {
-  color:$primary-color;
+  color: $primary-color;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
@@ -21,7 +21,15 @@ a {
 }
 #header {
   position: relative;
-  z-index: 1;
+  z-index: 3;
+  .toggle-nav {
+    rect {
+      fill: $primary-color;
+    }
+    &:hover rect {
+      opacity: 0.8;
+    }
+  }
   #logo {
     path {
       fill: $primary-color;
@@ -37,16 +45,34 @@ a {
 }
 #footer {
   background-color: #6f3132;
-  color: lighten(#6f3132, 40%);
+  color: lighten(#6f3132, 20%);
   a {
-    color: lighten(#6f3132, 40%);
+    color: lighten(#6f3132, 20%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten(#6f3132, 20%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten(#6f3132, 20%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {
-  background-color: lighten(#6f3132, 5%);
+  background-color: lighten(#6f3132, 10%);
 }
 .iTunesPreviewPlayer:after {
-  color: lighten(#6f3132, 40%);
+  color: lighten(#6f3132, 20%);
 }
 #main {
   font: 400 150%/1.5 "felt-tip-roman", Helvetica, Arial, sans-serif;

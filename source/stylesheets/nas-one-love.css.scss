@@ -11,6 +11,14 @@ body {
   color: $primary-color;
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: $primary-color;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -37,12 +45,21 @@ a {
   a {
     color: darken($secondary-color, 20%);
   }
-  ul {
-    > .page-nav {
-      > a {
-        &:first-child:after {
-
-        }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: darken($secondary-color, 20%);
+      }
+      &:hover:after {
+        border-right-color: #fff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: darken($secondary-color, 20%);
+      }
+      &:hover:after {
+        border-left-color: #fff;
       }
     }
   }

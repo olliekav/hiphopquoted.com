@@ -22,6 +22,27 @@ a {
     color: rgba($primary-color, 0.5);
   }
 }
+#header {
+  position: relative;
+  z-index: 1;
+  .toggle-nav {
+    rect {
+      fill: $primary-color;
+    }
+    &:hover rect {
+      fill: rgba($primary-color, 0.5);
+    }
+  }
+  #logo {
+    path {
+      fill: $primary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: rgba($primary-color, 0.5);
+    }
+  }
+}
 .overlay-nav {
   background-color: $secondary-color;
 }
@@ -34,6 +55,24 @@ a {
       color: rgba($secondary-color, 0.5);
     }
   }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $secondary-color;
+      }
+      &:hover:after {
+        border-right-color: rgba($secondary-color, 0.5);
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $secondary-color;
+      }
+      &:hover:after {
+        border-left-color: rgba($secondary-color, 0.5);
+      }
+    }
+  }
 }
 .iTunesPreviewPlayer {
   background-color: $secondary-color;
@@ -43,19 +82,6 @@ a {
 }
 .iTunesPreviewPlayer:hover:after {
   color: rgba($secondary-color, 0.5);
-}
-#header {
-  position: relative;
-  z-index: 1;
-  #logo {
-    path {
-      fill: $primary-color;
-      pointer-events: all;
-    }
-    &:hover path {
-      fill: rgba($primary-color, 0.5);
-    }
-  }
 }
 #main {
   font: 400 137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;

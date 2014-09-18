@@ -22,6 +22,14 @@ a {
 #header {
   position: relative;
   z-index: 20;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: darken($primary-color, 20%);
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -36,17 +44,41 @@ a {
   background-color: rgba($primary-color, 0.98)
 }
 #footer {
-  background-color: darken($primary-color, 10%);
-  color: darken($primary-color, 30%);
+  background-color: $secondary-color;
+  color: $primary-color;
   a {
-    color: darken($primary-color, 30%);
+    color: $primary-color;
+    &:hover {
+      color: darken($primary-color, 20%);
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: darken($primary-color, 20%);
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: darken($primary-color, 20%);
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {
-  background-color: darken($primary-color, 20%);
+  background-color: $primary-color;
 }
 .iTunesPreviewPlayer:after {
-  color: darken($primary-color, 30%);
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: darken($primary-color, 20%);
 }
 #main {
   font: 500 115%/1.5 "ff-meta-serif-web-pro", Georgia, Times New Roman, serif;

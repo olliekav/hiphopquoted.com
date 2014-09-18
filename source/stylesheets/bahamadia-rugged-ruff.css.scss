@@ -21,6 +21,14 @@ a {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: lighten($primary-color, 20%);
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -39,6 +47,24 @@ a {
   color: lighten($secondary-color, 40%);
   a {
     color: lighten($secondary-color, 40%);
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($secondary-color, 40%);
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($secondary-color, 40%);
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
   }
 }
 .iTunesPreviewPlayer {

@@ -129,9 +129,10 @@ var iTunesPreviewPlayer = function() {
     this._canvasCtx = this._canvasButton.getContext('2d');
 
     this._audioPlayerE = document.createElement('audio');
+    this._audioPlayerE.setAttribute('type', 'audio/mp4 m4a');
     this._audioPlayerE.preload = 'none';
     this._audioPlayerE.addEventListener('timeupdate', audioPlayerTimeUpdate.bind(this));
-
+    
     this._DOMElement.appendChild(this._canvasButton);
     this._DOMElement.appendChild(this._audioPlayerE);
 

@@ -24,6 +24,14 @@ a {
   }
 }
 #header {
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: $primary-color;
+    }
+  }
   #logo {
     path {
       fill: $secondary-color;
@@ -43,6 +51,24 @@ a {
   a {
     color: lighten($primary-color, 40%);
   }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-right-color: #fff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: lighten($primary-color, 40%);
+      }
+      &:hover:after {
+        border-left-color: #fff;
+      }
+    }
+  }
 }
 .iTunesPreviewPlayer {
   background-color: lighten($primary-color, 40%);
@@ -54,9 +80,10 @@ a {
   font: 400 112.5%/1.5 "quatro-slab", 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
 }
 article {
+  border-bottom: 1px solid $primary-color;
   color: $primary-color;
   text-align: left;
-  margin: 3em auto;
+  margin: 3em auto 0;
   max-width: 1200px;
   width: 100%;
   z-index: 2;
