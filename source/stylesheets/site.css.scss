@@ -182,6 +182,9 @@ cite {
     padding-top: 0;
     position: relative;
     width: 16px;
+    &:first-child {
+      margin-left: 0;
+    }
     &:after {
       border-style: solid;
       content: "";
@@ -222,7 +225,7 @@ cite {
   background: url("../images/home-background.jpg") no-repeat fixed top center;
   background-size: cover;
   color: darken(#36D7B7, 20%);
-  font: 400 200%/1.3 "skippy-sharp", 'Georgia', serif;
+  font: 400 100%/2 'Ideal Sans SSm A', 'Ideal Sans SSm B', sans-serif;
   position: relative;
   &:before {
     background-color: rgba(#000, 0.8);
@@ -260,7 +263,7 @@ cite {
   #footer {
     background-color: transparent;
     color: #fff;
-    font: 400 100%/1 "skippy-sharp", 'Georgia', serif;
+    font: 400 100%/2 'Ideal Sans SSm A', 'Ideal Sans SSm B', sans-serif;
     position: static;
     text-align: center;
     ul {
@@ -297,12 +300,10 @@ cite {
 
 // Typekit loading elements --------------------------------------------------------------------
 
-.wf-loading main,
-.wf-loading #header {
+.wf-loading main {
   opacity: 0;
 }
-.wf-active main,
-.wf-active #header  {
+.wf-active main  {
   opacity: 1;
   @include transition(opacity 0.24s ease-in-out);
 }

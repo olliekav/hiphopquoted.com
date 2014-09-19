@@ -10,6 +10,10 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
+  @media screen and (max-width: 500px) {
+    background: none;
+    background-color: lighten(#6f3132, 10%);
+  }
 }
 a {
   color: $primary-color;
@@ -86,8 +90,9 @@ article {
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
-    color: rgba($primary-color, 0.1);
+    color: $primary-color;
     margin: 0 auto;
+    opacity: 0.2;
     text-align: justify;
     > h1 {
       font-size: 12em;

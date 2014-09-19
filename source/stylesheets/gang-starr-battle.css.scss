@@ -92,6 +92,11 @@ article {
     margin: 0;
     padding: 0 100px;
     quotes: "\201C""\201D""\2018""\2019";
+    @media screen and (max-width: 500px) {
+      font-size: 2.5em;
+      margin-top: 2em;
+      padding: 0;
+    }
     &:before,
     &:after {
       display: inline-block;
@@ -102,26 +107,39 @@ article {
       opacity: 0.4;
       position: relative;
       vertical-align: bottom;
+      @media screen and (max-width: 500px) {
+        display: block;
+        height: auto;
+        line-height: 0.1;
+      }
     }
     &:before {
       content: open-quote;
       margin-left: -120px;
+      @media screen and (max-width: 500px) {
+        margin: 0;
+      }
     }
     &:after {
       content: close-quote;
       margin: 0 -90px 0 0;
       top: 0.1em;
+      @media screen and (max-width: 500px) {
+        margin: 0.6em 0 0;
+        top: 0;
+      }
     }
   }
   figure {
     margin:0 auto;
     position:relative;
     width: 60%;
+    @media screen and (max-width: 500px) {
+      font-size: 1.4em;
+      width: 100%;
+    }
   }
   blockquote {
     overflow: hidden;
-  }
-  figcaption {
-    
   }
 }

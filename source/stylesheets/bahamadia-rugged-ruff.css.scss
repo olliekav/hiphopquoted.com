@@ -78,9 +78,9 @@ a {
 }
 article {
   margin: 0 auto 3em;
-  //max-width: 1000px;
+  max-width: 1000px;
   position: relative;
-  width: 960px;
+  width: 100%;
   h1 {
     color: $secondary-color;
     display: inline-block;
