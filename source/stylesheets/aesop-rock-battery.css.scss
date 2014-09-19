@@ -105,11 +105,14 @@ article {
     width: 100%;
   }
   p {
-    text-align: justify;
+    text-align: left;
     @include columns(2, 6%);
     &.chorus {
       @include columns(1, 0);
-    } 
+    }
+    @media screen and (max-width: 500px) {
+      @include columns(1, 0);
+    }
   }
   cite {
     display: block;
@@ -122,8 +125,3 @@ article {
     }
   }
 }
-@media screen and (max-width: 500px) {
-  article p {
-    @include columns(1, 0);
-  }
-} 

@@ -28,10 +28,10 @@ label {
   background-color: $primary-color;
   .toggle-nav {
     rect {
-      fill: $primary-color;
+      fill: #fff;
     }
     &:hover rect {
-      fill: lighten($primary-color, 20%);
+      fill: darken(#fff, 20%);
     }
   }
   #logo {
@@ -91,12 +91,12 @@ article {
   margin: 0 auto;
   max-width: 1000px;
   position: relative;
+  width: 100%;
   h1 {
     display: none;
   }
   figure {
     display: block;
-    margin-left: -30px;
     position:relative;
   }
   ol {
@@ -105,15 +105,15 @@ article {
     counter-reset: alphabet-counter;
     margin: 0 auto 3em;
     word-spacing: -4px;
-    width: 1040px;
+    width: 100%;
     li {
       border-top: 1px solid $secondary-color;
       color: #858585;
       display: inline-block;
       letter-spacing: 0;
-      margin-left: 30px;
+      margin-right: 2%;
       padding: 3em 0 1em;
-      width: 176px;
+      width: 18.4%;
       word-spacing: 0;
       vertical-align: top;
       &:before {
@@ -128,13 +128,17 @@ article {
         text-align: center;
         text-transform: uppercase;
       }
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
       &:nth-child(-n+5) {
         border-top: 0;
         padding-top: 0;
       }
       &:last-child {
+        margin-right: 0;
         text-align: center;
-        width: 784px;
+        width: 79.6%;
         > span {
           font-size: 4.444em;
         }
@@ -147,11 +151,9 @@ article {
   figcaption {
     border-top: 1px solid $secondary-color;
     color: $secondary-color;
-    margin-left: 30px;
     font-style: italic;
     padding: 2em 0;
     text-align: center;
-    width: 980px;
     cite {
       font-style: italic;
     }

@@ -94,6 +94,9 @@ article {
     margin: 0;
     text-transform: uppercase;
     text-shadow: -1px -1px 1px $background-color;
+    @media screen and (max-width: 500px) {
+      font-size: 4em;
+    }
   }
   figure {
     margin:0 auto;

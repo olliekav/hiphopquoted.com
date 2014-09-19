@@ -79,9 +79,8 @@ a {
 }
 article {
   margin: 0 auto 3em;
-  //max-width: 1000px;
+  max-width: 1000px;
   position: relative;
-  width: 1000px;
   h1 {
     display: inline-block;
     font-weight:500;
@@ -168,10 +167,12 @@ article {
     display: none;
   }
   .verse {
+    @include box-sizing(border-box);
     position: relative;
     &.one {
-      left: 540px;
-      top: -90px;
+      left: 600px;
+      top: -70px;
+      padding-right: 5%;
       width: 40%;
     }
     &.two {

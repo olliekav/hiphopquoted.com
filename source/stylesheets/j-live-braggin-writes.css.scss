@@ -20,6 +20,10 @@ body {
     top: 0;
     width: 35%;
     z-index: -1;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      z-index: -1;
+    }
   }
 }
 a {
@@ -95,15 +99,17 @@ article {
   width: 100%;
   z-index: 2;
   header {
-    float: right;
-    width: 60%;
+    margin: 0 auto;
+    position: fixed;
+    left: 40%;
+    text-align: left;
+    width: 80%;
     > h1 {
       color: $primary-color;
       font-family: "corpulent-web";
       font-size: 14.375em;
       font-weight: 400;
-      line-height: 0.8;
-      white-space: wrap;
+      line-height: 0.9;
     }
   }
   figure {    
@@ -113,9 +119,16 @@ article {
     position: relative;
     width: 35%;
     @include box-sizing(border-box);
+    @media screen and (max-width: 500px) {
+      color: #fff;
+      width: 80%;
+    }
     p {
       margin-bottom: 1.5em;
       width: 100%;
+      &.chorus {
+        color: $primary-color;
+      }
     }
   }
 }

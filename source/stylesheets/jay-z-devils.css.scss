@@ -95,12 +95,23 @@ article {
   z-index: 2;
   @extend %clearfix;
   @include box-sizing(border-box);
+  @media screen and (max-width: 830px) {
+    margin-top: 2em;
+    padding-left: 0;
+  }
   header {
     float: left;
     margin: 300px 0 0 -200px;
     text-align: left;
     width: 200px;
     @include transform(rotate(-90deg));
+    @media screen and (max-width: 830px) {
+      float: none;
+      margin: 0 0 6em;
+      text-align: center;
+      width: auto;
+      @include transform(rotate(0deg));
+    }
     > h1 {
       color: $primary-color-dark;
       font-family: "cabazon";
@@ -108,10 +119,12 @@ article {
       font-weight: 400;
       line-height: 0.8;
       white-space: wrap;
+      @media screen and (max-width: 540px) {
+        font-size: 10em;
+      }
     }
   }
   figure {
-    float: left;
     position: relative;
     width: 100%;
     @extend %clearfix;
@@ -120,8 +133,16 @@ article {
       float: left;
       margin: 0 5% 3em 0;
       width: 30%;
+      @media screen and (max-width: 600px) {
+        float: none;
+        margin: 0 auto 6em;
+        width: 80%;
+      }
       &:last-child {
         margin-right: 0;
+        @media screen and (max-width: 600px) {
+          margin: 0 auto 6em;
+        }
       }
       > span {
         font: 2em/1.1 "league-gothic", "impact", sans-serif;
@@ -150,6 +171,7 @@ article {
     }
     > figcaption {
       clear: both;
+      text-align: center;
     }
   }
 }

@@ -7,9 +7,12 @@ $secondary-color: #AD8030;
 $background-color: #ffffff;
 
 body {
-  background:url("../images/atcq/book_background.jpg") no-repeat top center fixed;
+  background:url("../images/atcq/book_background.jpg") repeat-y top center fixed;
   background-size: cover;
   color:$primary-color;
+  @media screen and (max-width: 500px) {
+    background-size: 1300px;
+  }
 }
 a {
   color:$primary-color;
@@ -94,6 +97,9 @@ article {
       font-size:16em;
       font-style: italic;
       line-height:0.8;
+      @media screen and (max-width: 500px) {
+        font-size:12em;
+      }
     }
   }
   > figure {
@@ -104,6 +110,9 @@ article {
     p {
       margin-bottom: 3em;
       @include columns(2, 6%);
+      @media screen and (max-width: 600px) {
+        @include columns(1, 0);
+      } 
       &:first-letter {
         border: 4px solid $primary-color;
         float: left;
