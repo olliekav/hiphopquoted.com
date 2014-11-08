@@ -130,6 +130,11 @@ article {
         margin-right: 0;
         padding-top: 12%;
       }
+      @media screen and (max-width: 500px) {
+        float: none;
+        margin: 0 auto 3em;
+        width: 90%;
+      }
     }
     > figcaption {
       margin-left: -5em;

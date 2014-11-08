@@ -48,7 +48,7 @@ activate :directory_indexes
 # end
 
 # Reload the browser automatically whenever files change
-activate :livereload
+activate :livereload, :host => "hiphopquoted.dev"
 
 # Methods defined in the helpers block are available in templates
 helpers do
