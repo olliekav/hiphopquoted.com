@@ -101,14 +101,14 @@ article {
     letter-spacing: -4px;
     line-height: 1;
     margin-bottom: 0.5em;
-    padding-left: 200px;
+    padding-left: 22%;
     position: relative;
     &:first-letter {
       color: rgba($primary-color, 0.2);
       font-size: 2em;
       left: 0;
       float: left;
-      margin: 0 -3em 0 -200px;
+      margin: 0 -3em 0 -22%;
       position: absolute;
       z-index: -1;
     }
@@ -117,6 +117,45 @@ article {
     }
     > .word1 {
       margin-left: -80px;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 10em;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 9em;
+      padding-left: 22%;
+      &:first-letter {
+        margin: 0 -3em 0 -22%;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 8em;
+      > .word3, .word5 {
+        margin-left: -30px;
+      }
+      > .word1 {
+        margin-left: -60px;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 7em;
+      padding-left: 18%;
+      &:first-letter {
+        margin: 0 -3em 0 -18%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 6em;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 5em;
+      letter-spacing: 0;
+      &:first-letter {
+        margin: 0 -3em 0 -18%;
+      }
+      > .word4 {
+        margin-left: -20px;
+      }
     }
   }
   figure {
@@ -138,6 +177,17 @@ article {
         font-size: 5em;
         float: left;
         margin: 0 15px 0 0;
+      }
+      @media screen and (max-width: 650px) {
+        float: none;
+        margin: 0 auto 3em auto;
+        width: 80%;
+        &:first-child {
+          margin: 3em auto 3em auto;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        width: 100%;
       }
     }
   }

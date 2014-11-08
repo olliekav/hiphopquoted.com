@@ -80,6 +80,9 @@ article {
   margin: 0 auto 3em;
   max-width: 700px;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    padding: 0 3em;
+  }
   h1, p.chorus, figcaption {
     background-image: url("../images/aesop-rock/header_border.png"), url("../images/aesop-rock/header_border.png");
     background-position: top left, bottom right;

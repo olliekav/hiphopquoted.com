@@ -78,18 +78,27 @@ a {
 article {
   margin: -0.1em 0 3em;
   max-width: 1000px;
-  padding-left: 280px;
+  padding-left: 35%;
   position: relative;
+  @media screen and (max-width: 720px) {
+    padding-left: 0;
+  }
   h1 {
     font-size: 3.7em;
     font-weight:500;
     font-variant: small-caps;
-    line-height: 0.94;
-    margin-bottom: 0.39em;
+    line-height: 1;
+    margin: -0.07em 0 0.33em;
     text-transform: uppercase;
     > span {
       display: block;
       font-size: 0.23em;
+      line-height: 1.5;
+      margin-top: 1.1em;
+    }
+    @media screen and (max-width: 475px) {
+      word-break: break-all;
+      hyphens: auto;
     }
   }
   figure {
@@ -116,6 +125,18 @@ article {
         line-height: 0.7;
         position: absolute;
         top: 0;
+      }
+      @media screen and (max-width: 720px) {
+        display: block;
+        left: 0;
+        margin-top: 5.4em;
+        position: relative;
+        text-align: left;
+      }
+    }
+    @media screen and (max-width: 475px) {
+      br {
+        display: none;
       }
     }
   }
