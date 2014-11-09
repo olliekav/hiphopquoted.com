@@ -112,12 +112,16 @@ article {
           text-shadow: 0 0 2px rgba($secondary-color, 0.4);
         }
       }
+      @media screen and (max-width: 600px) {
+        margin-bottom: 1em;
+        text-align: left;
+      }
     }
   }
   figure {
     float: left;
     position: relative;
-    width: 400px;
+    width: 40%;
     @include box-sizing(border-box);
     p {
       margin: 0 0 6em 0;
@@ -130,7 +134,19 @@ article {
         text-shadow: 0 0 2px rgba($secondary-color, 0.4);
       }
     }
+    @media screen and (max-width: 600px) {
+      float: none;
+      width: 90%
+    }
     > figcaption {
+      font: 2em/1.2 "league-gothic", impact, sans-serif;
+      text-transform: uppercase;
+      a {
+        color: #000;
+        &:hover {
+          color: #fff;
+        }
+      }
     }
   }
 }

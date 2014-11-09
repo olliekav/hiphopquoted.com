@@ -80,6 +80,18 @@ a, label {
   text-transform: uppercase;
   width: 100%;
   @extend %clearfix;
+  @media screen and (max-width: 800px) {
+    font-size: 125%;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 115%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 105%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 85%;
+  }
 }
 article {
   text-align: left;
@@ -101,6 +113,9 @@ article {
     p {
       margin: 0;
       padding: 0 20% 1em;
+      @media screen and (max-width: 800px) {
+        padding: 0 10% 1em;
+      }
       > span {
         color: $secondary-color;
       }
