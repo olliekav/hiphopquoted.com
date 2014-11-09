@@ -86,31 +86,34 @@ a {
   @extend %clearfix;
 }
 article {
+  padding-top: 40%;
   text-align: left;
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
     background-color: $primary-color;
     color: #fff;
-    overflow: hidden;
-    h1 {
-      height: 0;
-      top: -3em;
-      left: -2.5em;
-      right: -2.5em;
-      padding-top: 40%;
-      position: relative;
+    position: fixed;
+    height: 50%;
+    left: -3em;
+    top: -3em;
+    right: -2em;
+    @media screen and (max-width: 700px) {
+      left: -3em;
+      right: -24em;
+      top: -5em;
     }
     svg {
-      height: 125%;
+      height: 110%;
       left: 0;
       position: absolute;
       text-transform: uppercase;
       top: 0;
-      width: 125%;
+      width: 115%;
     }
   }
   figure {
+    //background-color: $secondary-color;
     margin: 0 auto;
     position: relative;
     @include box-sizing(border-box);
@@ -118,6 +121,20 @@ article {
       p {
         padding: 2em 2em 2em 30%;
         width: 40%;
+        @media screen and (max-width: 700px)  {
+          width: 60%;
+          &:first-child {
+            padding-top: 8em;
+          }
+        }
+        @media screen and (max-width: 500px)  {
+          @include box-sizing(border-box);
+          padding: 2em;
+          width: 90%;
+          &:first-child {
+            padding-top: 10em;
+          }
+        }
         &:last-child {
           background-color: $tertiary-color;
           border-bottom: 5px solid $primary-color;
@@ -139,6 +156,7 @@ article {
     figcaption {
       background-color: $primary-color;
       box-shadow: 5px 5px 0 darken($primary-color, 20%);
+      @include box-sizing(border-box);
       color: #fff;
       font-size: 2em;
       font-weight: 700;
@@ -146,6 +164,13 @@ article {
       margin-left: 30%;
       padding: 0.2em 0.5em 0.5em;
       width: 40%;
+      @media screen and (max-width: 700px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 500px) {
+        margin-left: 0;
+        width: 80%;
+      }
     }
   }
 }

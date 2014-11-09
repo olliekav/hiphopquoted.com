@@ -77,7 +77,6 @@ a {
 }
 #main {
   font: 400 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
-  padding: 0 2em;
   @extend %clearfix;
 }
 article {
@@ -92,7 +91,7 @@ article {
     margin: 0 auto;
     position: relative;
     text-align: justify;
-    width: 70%;
+    width: 80%;
     > h1 {
       font-size: 8em;
       font-family: "alternate-gothic-no-1-d";
@@ -101,11 +100,17 @@ article {
       text-transform: uppercase;
       width: 40%;
     }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      > h1 {
+        width: 60%;
+      }
+    }
   }
   figure {
     margin: 0 auto;
     position: relative;
-    width: 70%;
+    width: 80%;
     @include box-sizing(border-box);
     &:before {
       content: " ";
@@ -148,6 +153,9 @@ article {
         display: block;
         margin: 0 auto;
       }
+      a:hover {
+        color: darken($primary-color, 15%);
+      }
       .bigtext-line0 {
         line-height: 0.8;
       }
@@ -166,6 +174,26 @@ article {
         }
         .bigtext-line3 {
           line-height: 0;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        width: 60%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      &:before {
+        width: 20%;
+      }
+      > blockquote {
+        > p {
+          > .left, .right {
+            padding-bottom: 1200px;
+            width: 20%;
+          }
+        }
+        &:before {
+          width: 20%;
         }
       }
     }

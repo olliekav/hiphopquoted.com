@@ -10,11 +10,11 @@ body {
   color:#fff;
 }
 a {
-  color: $secondary-color;
+  color: darken($primary-color, 20%);
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color:lighten($primary-color, 20%);
+    color: $secondary-color;
   }
 }
 #header {
@@ -28,11 +28,11 @@ a {
   }
   #logo {
     path {
-      fill: $secondary-color;
+      fill: darken($primary-color, 20%);
       pointer-events: all;
     }
     &:hover path {
-      fill: darken($primary-color, 20%);
+      fill: $secondary-color;
     }
   }
 }
@@ -100,50 +100,53 @@ article {
         border-bottom: 15px solid #fff;
         display: block;
         font-family: "brandon-grotesque", 'Helvetica Neue', Helvetica, arial, sans-serif;
-        font-size: 0.375em;
+        font-size: 0.46em;
         font-weight: 300;
         margin-bottom: 30px;
         padding-bottom: 0.2em;
         text-transform: uppercase;
-        width: 100%;
       }
     }
   }
   > figure {
+    @include box-sizing(border-box);
     font-weight: 400;
     margin:0 auto;
+    padding: 0 2em 0 40%;
     position:relative;
-    top:-180px;
-    right:-180px;
-    width:60%;
+    top:-140px;
+    @media screen and (max-width: 600px) {
+      top:-120px;
+    }
+    @media screen and (max-width: 500px) {
+      top:-100px;
+    }
+    @media screen and (max-width: 450px) {
+      top: 0;
+      margin-top: 2em;
+      padding: 0;
+      width: 80%;
+    }
     p {
       margin-bottom:1.5em;
       &.chorus {
-        border-left:15px solid #fff;
+        border:15px solid #fff;
         font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
         font-size:2.111em;
         font-weight:400;
         line-height:1.2;
-        margin:0 0 0.5em -100px;
-        padding-left:30px;
+        margin:2em 0 2em -100px;
+        padding: 2em;
       }
-      > cite {
-        top:-328px;
-        color:#e13131;
-        font-size:0.833em;
-        letter-spacing:2px;
-        left:-255px;
-        position:absolute;
-        font-style:normal;
-        text-transform:uppercase;
-        width:678px;
-        > a {
-          color:#e13131;
-          &:hover {
-            text-decoration:none;
-          }
-        }
-      }
+    }
+    figcaption {
+      border:15px solid #fff;
+      font-family:"bebas-neue", "Impact", "Arial Narrow Bold", Arial, sans-serif;
+      font-size:2.111em;
+      font-weight:400;
+      line-height:1.2;
+      margin:2em 0 2em -100px;
+      padding: 2em;
     }
   }
 }

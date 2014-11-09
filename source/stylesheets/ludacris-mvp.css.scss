@@ -100,10 +100,10 @@ article {
     }
   }
   figure {
-    background: $secondary-color url("../images/ludacris/microphone.jpg") no-repeat center top;
+    background: $secondary-color url("../images/ludacris/microphone.jpg") no-repeat 50% 300px fixed;
     background-size: 100%;
     color: $primary-color;
-    margin: -3em auto 0;
+    margin: -5% auto 0;
     position: relative;
     @include box-sizing(border-box);
     > blockquote {
@@ -111,16 +111,31 @@ article {
       margin: 0 auto;
       padding: 5em 2em;
       @extend %clearfix;
+      @media screen and (max-width: 600px) {
+        padding: 5em 1em;
+      }
       > p {
         margin-bottom: 4em;
         &:first-child {
           float: left;
           width: 32%;
+          @media screen and (max-width: 600px) {
+            float: none;
+            margin: 0 auto 4em;
+            text-align: center;
+            width: 80%;
+          }
         }
         + p {
           float: right;
           text-align: right;
           width: 32%;
+          @media screen and (max-width: 600px) {
+            float: none;
+            margin: 0 auto 4em;
+            text-align: center;
+            width: 80%;
+          }
         }
       }
       > h3 {
