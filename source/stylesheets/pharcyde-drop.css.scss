@@ -20,7 +20,7 @@ a {
   }
 }
 #header {
-  position: relative;
+  position: absolute;
   z-index: 20;
   .toggle-nav {
     rect {
@@ -93,7 +93,9 @@ article {
   header {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 2em;
+    overflow: hidden;
+    padding: 5em 2em 5em;
+    position: relative;
     width: 100%;
     @include box-sizing(border-box);
     h1 {
@@ -105,47 +107,49 @@ article {
       text-shadow: 0 10px 0 darken($primary-color, 10%);
       width: 100%;
     }
+    &:before {
+      background-color: lighten($primary-color, 5%);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
   }
   figure {
-    background-color: darken($primary-color, 10%);
-    margin: 0 auto;
-    padding-top: 400px;
+    margin: -200px auto 0;
+    padding-top: 300px;
     position: relative;
     overflow-x: hidden;
     &:before {
+      background-color: darken($primary-color, 10%);
       border-style: solid;
-      border-width: 300px 600px 0 600px;
-      border-color: $primary-color transparent transparent transparent;
+      border-width: 300px 450px 0 450px;
+      border-color: lighten($primary-color, 5%) transparent transparent transparent;
       content: "";
       display: block;
       height: 0;
       left: 50%;
-      margin-left: -600px;
+      margin-left: -450px;
       position: absolute;
       top: 0;
       width: 0;
+      z-index: -1;
     }
     blockquote {
+      background-color: darken($primary-color, 10%);
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 2em 6em;
+      padding: 4em 2em 6em;
       position: relative;
       z-index: 2;
       @extend %clearfix;
       @include box-sizing(border-box);
       > p {
-        float: left;
-        margin: 0 4% 3em 0;
-        width: 48%;
-        &:nth-child(2) {
-          margin-right: 0;
-        }
-        &:last-child {
-          clear: both;
-          float: none;
-          margin: 0 auto;
-          width: 48%;
-        }
+        margin: 0 auto 3em;
+        width: 50%;
         &:first-letter {
           font-family: "alternate-gothic-no-1-d";
           float: left;
@@ -154,10 +158,31 @@ article {
           margin: 0.18em 0.1em 0 0;
           text-transform: upercase;
         }
+        @media screen and (max-width: 670px) {
+          width: 70%;
+        }
+        @media screen and (max-width: 500px) {
+          width: 90%;
+        }
+      }
+      &:after {
+        background-color: darken($primary-color, 20%);
+        border-style: solid;
+        border-width: 300px 600px 0 600px;
+        border-color: darken($primary-color, 10%) transparent transparent transparent;
+        content: "";
+        display: block;
+        height: 0;
+        left: 50%;
+        margin-left: -600px;
+        position: absolute;
+        bottom: -100px;
+        width: 0;
       }
     }
     > div {
       background-color: darken($primary-color, 20%);
+      margin-top: -200px;
       position: relative;
       width: 100%;
       @include box-sizing(border-box);
@@ -175,19 +200,19 @@ article {
       width: 100%;
       text-transform: uppercase;
       @include box-sizing(border-box);
-      &:before {
-        border-style: solid;
-        border-width: 300px 600px 0 600px;
-        border-color: darken($primary-color, 10%) transparent transparent transparent;
-        content: "";
-        display: block;
-        height: 0;
-        left: 50%;
-        margin-left: -600px;
-        position: absolute;
-        top: 0;
-        width: 0;
-      }
+      // &:before {
+      //   border-style: solid;
+      //   border-width: 300px 600px 0 600px;
+      //   border-color: darken($primary-color, 10%) transparent transparent transparent;
+      //   content: "";
+      //   display: block;
+      //   height: 0;
+      //   left: 50%;
+      //   margin-left: -600px;
+      //   position: absolute;
+      //   top: 0;
+      //   width: 0;
+      // }
       span, cite {
         display: block;
       }
