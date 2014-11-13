@@ -122,6 +122,11 @@ article {
       &:nth-child(2), &:last-child {
         margin-right: 0;
       }
+      @media screen and (max-width: 500px) {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+      }
     }
     hr {
       background-color: $primary-color;
@@ -140,6 +145,8 @@ article {
       line-height: 1.1;
       text-align: center;
       text-transform: uppercase;
+      width: 100%;
+      word-break: break-all;
       span,a {
         display: block;
       }

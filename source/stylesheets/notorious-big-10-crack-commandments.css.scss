@@ -12,6 +12,7 @@ body {
   background-color: $secondary-color;
   color: $primary-color;
   position: relative;
+  overflow-z: hidden; 
   width: 100%;
 }
 a {
@@ -181,6 +182,9 @@ article {
             position: relative;
             width: 70%;
             z-index: -1;
+            @media screen and (max-width: 670px) {
+              margin-top: 18%;
+            }
           }
         }
         &:nth-child(5) {
@@ -219,20 +223,28 @@ article {
             float: left;
             height: 500px;
             margin: 0 -10% -20% -10%;
+            padding-left: 3em;
             position: relative;
             width: 50%;
             z-index: -1;
+            @media screen and (max-width: 670px) {
+              margin: 10% 0 0 -30%;
+              padding-left: 0;
+            }
           }
           &:after{
             left: auto;
-            right: -10%;
-            top: -15%;
+            right: 5%;
+            top: -50%;
           }
         }
         &:nth-child(9) {
           float: right;
           text-align: right;
           width: 48%;
+          @media screen and (max-width: 670px) {
+            width: 70%;
+          }
         }
         &:nth-child(10) {
           clear: right;
@@ -240,6 +252,10 @@ article {
           position: relative;
           top: -2em;
           width: 60%;
+          @media screen and (max-width: 670px)  {
+            top: 0;
+            width: 80%;
+          }
         }
       }
     }
