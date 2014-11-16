@@ -47,6 +47,22 @@ activate :directory_indexes
 #   end
 # end
 
+# Fix bug with build errors and typography fonts
+ignore 'fonts/*'
+
+after_build do |builder|
+  print "After_build fixes... "
+  # src = Dir.join(config[:source],"fonts/")
+  # dst = Dir.join(config[:build_dir],"fonts/")
+  # builder.source_paths << Dir.dirname(__Dir__)
+  # builder.copy_file(src,dst)
+  #system("copy #{} #{}")
+  # builder.copy_file(src,dst)
+  #FileUtils.cp_r src, dst
+  FileUtils.cp_r(Dir['source/fonts/'],'build/')
+  puts "done."
+end
+
 # Reload the browser automatically whenever files change
 activate :livereload, :host => "hiphopquoted.dev"
 
