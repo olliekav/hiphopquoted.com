@@ -39,11 +39,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: $secondary-color;
   a {
     color: $secondary-color;
@@ -77,7 +74,7 @@ a {
   font: 400 112.5%/1.5 'Georgia', 'Palatino Linotype', Times New Roman, Times, serif;
 }
 article {
-  background: #413527 url("../images/smif-n-wessun/bucktown-note.jpg");
+  background: #413527 url("../images/smif-n-wessun/bucktown-note-v1.jpg") center top;
   box-shadow: 0 0 10px #000;
   color: $primary-color;
   text-align: left;
@@ -87,6 +84,9 @@ article {
   width: 100%;
   z-index: 2;
   @include box-sizing(border-box);
+  @media screen and (max-width: 500px) {
+    padding: 1em;
+  }
   header {
     position: relative;
     text-transform: uppercase;
@@ -101,6 +101,9 @@ article {
         border-bottom: 10px solid #000;
         margin-top: 0.2em;
         line-height: 1.2;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 1em;
       }
     }
   }
@@ -119,10 +122,10 @@ article {
         margin: 0 0.2em 0.2em 0;
         padding-top: 0.2em;
       }
-      &:nth-child(2), &:last-child {
+      &.two, &:last-child {
         margin-right: 0;
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 600px) {
         float: none;
         margin-right: 0;
         width: 100%;
@@ -152,11 +155,22 @@ article {
       }
       a {
         color: darken($secondary-color, 50%);
+        &:hover {
+          color: #000;
+        }
       }
       > cite {
         span:first-child {
           line-height: 0.9;
         }
+      }
+      @media screen and (max-width: 600px) {
+        > a {
+          font-size: 0.42em;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 0.8em;
       }
     }
   }

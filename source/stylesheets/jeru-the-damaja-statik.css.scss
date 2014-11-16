@@ -43,11 +43,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($secondary-color, 0.98)
-}
 #footer {
-  background-color: rgba($secondary-color, 0.9);
+  background-color: rgba($secondary-color, 0.95);
   color: lighten($secondary-color, 40%);
   a {
     color: lighten($secondary-color, 40%);
@@ -113,6 +110,7 @@ article {
         }
       }
       @media screen and (max-width: 600px) {
+        font-size: 8em;
         margin-bottom: 1em;
         text-align: left;
       }

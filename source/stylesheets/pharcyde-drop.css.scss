@@ -40,11 +40,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: $primary-color;
   a {
     color: $primary-color;
@@ -94,7 +91,7 @@ article {
     max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 5em 2em 5em;
+    padding: 8em 2em 5em;
     position: relative;
     width: 100%;
     @include box-sizing(border-box);
@@ -154,8 +151,9 @@ article {
           font-family: "alternate-gothic-no-1-d";
           float: left;
           font-size: 7em;
-          line-height: 0.6;
-          margin: 0.18em 0.1em 0 0;
+          line-height: 0.8;
+          margin: 0 0.1em -10px 0;
+          padding-top: 0.1em;
           text-transform: upercase;
         }
         @media screen and (max-width: 670px) {

@@ -53,11 +53,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: lighten($primary-color, 40%);
   a {
     color: lighten($primary-color, 40%);
@@ -89,6 +86,7 @@ a {
 }
 #main {
   padding: 0 2em;
+  overflow: hidden;
   @extend %clearfix;
 }
 #main {
@@ -103,6 +101,9 @@ article {
   z-index: 2;
   @extend %clearfix;
   @include box-sizing(border-box);
+  @media screen and (max-width: 500px) {
+    margin: 6em 0;
+  }
   header {
     > h1 {
       color: rgba($secondary-color, 0.7);
@@ -130,10 +131,13 @@ article {
         margin-right: 0;
         padding-top: 12%;
       }
-      @media screen and (max-width: 500px) {
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      p {
         float: none;
         margin: 0 auto 3em;
-        width: 90%;
+        width: 100%;
       }
     }
     > figcaption {

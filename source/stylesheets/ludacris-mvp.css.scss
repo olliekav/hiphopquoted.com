@@ -40,11 +40,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($secondary-color, 0.98)
-}
 #footer {
-  background-color: lighten($secondary-color, 20%);
+  background-color: rgba(lighten($secondary-color, 20%), 0.95);
   color: lighten($secondary-color, 60%);
   a {
     color: lighten($secondary-color, 60%);
@@ -106,6 +103,10 @@ article {
     margin: -5% auto 0;
     position: relative;
     @include box-sizing(border-box);
+    @media screen and (max-width: 768px) {
+      background-position: 50% 0;
+      background-attachment: scroll;
+    }
     > blockquote {
       max-width: 1000px;
       margin: 0 auto;
@@ -142,9 +143,11 @@ article {
         clear: both;
         font-size: 2em;
         font-weight: 900;
-        line-height: 0.8;
+        line-height: 0.9;
+        margin: 0 auto;
         text-transform: uppercase;
         text-align: center;
+        width: 80%;
       }
     }
     figcaption {

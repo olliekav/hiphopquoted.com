@@ -36,11 +36,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: $primary-color;
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: $primary-color;
   a {
     color: $primary-color;
@@ -105,6 +102,15 @@ article {
         margin-bottom: 30px;
         padding-bottom: 0.2em;
         text-transform: uppercase;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      > h1 {
+        line-height: 0.3;
+        margin-bottom: 15px;
+        > span:first-child {
+          padding-bottom: 0.4em;
+        }
       }
     }
   }

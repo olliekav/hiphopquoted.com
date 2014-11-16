@@ -44,11 +44,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: $secondary-color;
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: $secondary-color;
   a {
     color: $secondary-color;
@@ -87,7 +84,11 @@ a {
 #main {
   font: 400 137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;
   padding: 0 2em;
+  overflow: hidden;
   @extend %clearfix;
+  @media screen and (max-width: 500px) {
+    font-size: 115%;
+  }
 }
 article {
   color: $primary-color;
@@ -98,6 +99,9 @@ article {
   z-index: 2;
   @extend %clearfix;
   @include box-sizing(border-box);
+  @media screen and (max-width: 500px) {
+    margin: 2em auto;
+  }
   header {
     display: none;
   }
@@ -255,6 +259,22 @@ article {
           @media screen and (max-width: 670px)  {
             top: 0;
             width: 80%;
+          }
+        }
+      }
+      @media screen and (max-width: 500px) {
+        li {
+          float: none !important;
+          margin: 0 0 3em !important;
+          padding: 0 !important;
+          text-align: left !important;
+          width: 100% !important;
+          &:after, &:before {
+            display: block !important;
+            float: none !important;
+            height: auto !important;
+            margin: 0 0 3em !important;
+            width: 100% !important;
           }
         }
       }

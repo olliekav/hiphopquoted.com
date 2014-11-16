@@ -50,11 +50,8 @@ label {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: lighten($primary-color, 40%);
   a {
     color: lighten($primary-color, 40%);
@@ -85,7 +82,7 @@ label {
   color: lighten($primary-color, 40%);
 }
 #main {
-  font: 500 112.5%/1.25 Georgia, serif;
+  font: 400 112.5%/1.25 Georgia, serif;
 }
 article {
   margin: 0 auto;
@@ -130,10 +127,10 @@ article {
         text-align: center;
         text-transform: uppercase;
       }
-      &:nth-child(5n) {
+      &:nth-of-type(5n) {
         margin-right: 0;
       }
-      &:nth-child(-n+5) {
+      &:nth-of-type(-n+5) {
         border-top: 0;
         padding-top: 0;
       }
@@ -151,18 +148,18 @@ article {
       @media screen and (max-width: 800px) {
         margin-right: 3.333333333%;
         width: 22.8%;
-        &:nth-child(-n+5) {
+        &:nth-of-type(-n+5) {
           border-top: 1px solid $secondary-color;
           padding-top: 3em;
         }
-        &:nth-child(5n) {
+        &:nth-of-type(5n) {
           margin-right: 3.333333333%;
         }
-        &:nth-child(-n+4) {
+        &:nth-of-type(-n+4) {
           border-top: 0;
           padding-top: 0;
         }
-        &:nth-child(4n) {
+        &:nth-of-type(4n) {
           margin-right: 0;
         }
         &:last-child {
@@ -173,18 +170,18 @@ article {
       @media screen and (max-width: 690px) {
         margin-right: 3.33333333%;
         width: 30%;
-        &:nth-child(-n+4) {
+        &:nth-of-type(-n+4) {
           border-top: 1px solid $secondary-color;
           padding-top: 3em;
         }
-        &:nth-child(4n) {
+        &:nth-of-type(4n) {
           margin-right: 3.33333333%;
         }
-        &:nth-child(-n+3) {
+        &:nth-of-type(-n+3) {
           border-top: 0;
           padding-top: 0;
         }
-        &:nth-child(3n) {
+        &:nth-of-type(3n) {
           margin-right: 0;
         }
         &:last-child {
@@ -201,18 +198,18 @@ article {
       @media screen and (max-width: 520px) {
         margin-right: 6%;
         width: 47%;
-        &:nth-child(-n+3) {
+        &:nth-of-type(-n+3) {
           border-top: 1px solid $secondary-color;
           padding-top: 3em;
         }
-        &:nth-child(3n) {
+        &:nth-of-type(3n) {
           margin-right: 6%;
         }
-        &:nth-child(-n+2) {
+        &:nth-of-type(-n+2) {
           border-top: 0;
           padding-top: 0;
         }
-        &:nth-child(2n) {
+        &:nth-of-type(2n) {
           margin-right: 0;
         }
         &:last-child {
@@ -229,14 +226,14 @@ article {
       @media screen and (max-width: 460px) {
         margin-right: 0;
         width: 80%;
-        &:nth-child(-n+2) {
+        &:nth-of-type(-n+2) {
           border-top: 1px solid $secondary-color;
           padding-top: 3em;
         }
-        &:nth-child(2n) {
+        &:nth-of-type(2n) {
           margin-right: 0;
         }
-        &:nth-child(1) {
+        &:nth-of-type(1) {
           border-top: 0;
           padding-top: 0;
         }
@@ -244,10 +241,10 @@ article {
           display: block;
           width: 100%;
           > span {
-            font-size: 2em;
+            font-size: 1.5em;
           }
           &:before {
-            font-size: 5em;
+            font-size: 4em;
           }
         }
       }

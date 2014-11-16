@@ -39,11 +39,8 @@ a, label {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba(#000, 0.98)
-}
 #footer {
-  background-color: #000;
+  background-color: rgba(#000, 0.95);
   color: lighten(#000, 40%);
   a {
     color: lighten(#000, 40%);
@@ -91,6 +88,9 @@ a, label {
   }
   @media screen and (max-width: 600px) {
     font-size: 85%;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 50%;
   }
 }
 article {

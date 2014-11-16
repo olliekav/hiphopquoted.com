@@ -39,11 +39,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: lighten($secondary-color, 40%);
   a {
     color: lighten($secondary-color, 40%);
@@ -132,6 +129,10 @@ article {
     @media screen and (max-width: 700px) {
       left: 0;
     }
+    @media screen and (max-width: 500px) {
+      font-size: 7.5em;
+      top: 0;
+    }
   }
   figure {
     margin:0 auto;
@@ -149,15 +150,23 @@ article {
     text-align: left;
     width: 24%;
     @include css-hyphens(auto);
+    @media screen and (max-width: 500px) {
+      float: none;
+      margin-left: 0;
+      width: 100%;
+    }
     &:first-child {
       margin-left: 0;
     }
     &:first-letter,
     &.one:before {
       font-family: 'Tungsten A', 'Tungsten B', impact, sans-serif;
-      font-size: 13.75em;
+      font-size: 12em;
       font-weight:700;
       line-height: 0.8;
+    }
+    &.one:before {
+      font-size: inherit;
     }
     &:first-letter {
       float: left;
@@ -244,6 +253,22 @@ article {
         margin: 0 0 0 34%;
       }
     }
+    @media screen and (max-width: 500px) {
+      margin: 0;
+      width: 100%;
+      &.one {
+        margin: 0 0 1.5em;
+        padding-top: 190px;
+        &:before {
+          font-size: 14em;
+          left: 20%;
+          top: 0.44em;
+        }
+      }
+      &.two, &.three {
+        margin: 0 0 1.5em;
+      }
+    }
   }
   figcaption {
     font-family: 'Tungsten A', 'Tungsten B', impact, sans-serif;
@@ -263,6 +288,9 @@ article {
     }
     @media screen and (max-width: 768px) {
       left: 34.5%;
+    }
+    @media screen and (max-width: 500px) {
+      position: static;
     }
   }
 }
