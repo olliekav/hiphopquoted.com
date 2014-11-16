@@ -1,5 +1,6 @@
 require "rubygems"
 require "middleman-core/load_paths"
+require 'lib/rack_typography'
 
 Middleman.setup_load_paths
 
@@ -16,6 +17,8 @@ end
 
 Middleman::PreviewServer.preview_in_rack
 run Middleman::PreviewServer.app.class.to_rack_app
+
+use Rack::Typography
 
 # require 'rubygems'
 # require 'middleman/rack'
