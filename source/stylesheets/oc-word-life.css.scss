@@ -42,11 +42,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: $secondary-color;
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: #fff;
   a {
     color: #fff;
@@ -84,7 +81,7 @@ a {
 }
 #main {
   font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', Helvetica, Arial, sans-serif;
-  padding: 0 2em;
+  overflow: hidden;
   @extend %clearfix;
 }
 article {
@@ -98,53 +95,61 @@ article {
   header {
     h1 {
       color: rgba($primary-color, 0.8);
-      font-size: 18em;
-      font-family: 'Gotham SSm A', 'Gotham SSm B'; 
-      font-weight: 800;
+      font: 800 18em/0.9 'Gotham SSm A', 'Gotham SSm B', sans-serif; 
       left: 0;
-      line-height: 0.9;
       letter-spacing: -20px;
-      position: absolute;
-      top: 25%;
+      position: fixed;
+      
+      white-space: nowrap;
       &:first-letter {
         float: left;
         margin-right: -30px;
       }
+      @media screen and (max-width: 700px) {
+        font-size: 12em;
+        letter-spacing: -10px;
+        top: 30%;
+        &:first-letter {
+          float: left;
+          margin-right: -20px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 8em;
+        letter-spacing: -5px;
+        &:first-letter {
+          float: left;
+          margin-right: -15px;
+        }
+      }
     }
   }
   figure {
-    padding-left: 5%;
     p {
-      float: left;
-      margin-right: 10%;
+      margin: 0 auto 4em;
       position: relative;
-      width: 40%;
+      width: 50%;
       z-index: -1;
-      > span {
-        color: rgba($primary-color, 0.8);
-        display: block;
-        font-size: 18em;
+      &:first-line {
         font-family: 'Gotham SSm A', 'Gotham SSm B'; 
-        font-weight: 800;
-        line-height: 0.9;
-        left: -0.2em;
-        position: absolute;
-        top: -0.3em;
+        font-size: 4em;
       }
-      &:nth-child(2) {
-        margin: 18em 0 28em 0;
+      @media screen and (max-width: 700px) {
+        width: 80%;
       }
-      &:last-child {
-        clear: both;
-        float: none;
-        margin: 0 0 0 30%;
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        &:first-line {
+          font-family: 'Gotham SSm A', 'Gotham SSm B'; 
+          font-size: 2em;
+        }
       }
     }
     > figcaption {
       color: rgba($primary-color, 0.8);
-      font: 800 6em/0.9 'Gotham SSm A', 'Gotham SSm B'; 
+      font: 800 4em/0.9 'Gotham SSm A', 'Gotham SSm B'; 
       letter-spacing: -5px;
-      margin: 1em 0 0 10%;
+      margin: 1em 10% 0 10%;
     }
   }
 }

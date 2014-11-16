@@ -40,11 +40,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: lighten($primary-color, 40%);
   a {
     color: lighten($primary-color, 40%);
@@ -75,7 +72,8 @@ a {
   color: lighten($primary-color, 40%);
 }
 #main {
-  font: 500 125%/1.5 "freight-sans-pro", sans-serif;
+  font: 500 125%/1.5 "freight-sans-pro", sans-serif; 
+  overflow: hidden;
 }
 article {
   margin: 0 auto 3em;
@@ -83,9 +81,10 @@ article {
   position: relative;
   h1 {
     display: inline-block;
+    font-size: 1.2em;
     font-weight:500;
     line-height:0.8;
-    margin-left: 3em;
+    margin-left: 1em;
   }
   span,b {
     display: inline-block;
@@ -166,26 +165,62 @@ article {
   .word2 {
     display: none;
   }
-  .verse {
-    @include box-sizing(border-box);
-    position: relative;
+  .chorus {
     &.one {
-      left: 600px;
-      top: -70px;
-      padding-right: 5%;
-      width: 40%;
+      font-size: 4em;
+      margin-left: 1em;
     }
     &.two {
-      left: 3%;
-      text-align: right;
-      margin-top: -610px;
-      top: 0;
-      width: 40%;
+      font-size: 3em;
+      margin-left: -650px;
+      @media screen and (max-width: 800px) {
+        margin-left: -900px;
+      }
+      @media screen and (max-width: 500px) {
+        margin-left: -1000px;
+      }
     }
     &.three {
-      left: 540px;
-      margin-top: -80px;
-      width: 40%;
+      font-size: 4em;
+    }
+  }
+  .verse {
+    @include box-sizing(border-box);
+    @include columns(2, 6%);
+    position: relative;
+    &.one {
+      left: 40%;
+      top: 3em;
+      width: 60%;
+    }
+    &.two {
+      left: 40%;
+      top: 3em;
+      margin-bottom: 3em;
+      width: 60%;
+    }
+    &.three {
+      left: 40%;
+      margin: 4em 0 1em;
+      width: 60%;
+    }
+    @media screen and (max-width: 800px) {
+      &.one, &.two, &.three {
+        left: 20%;
+        width: 80%;
+      }
+      &.one {
+        margin-top: 4em;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      @include columns(1, 0);
+    }
+    @media screen and (max-width: 500px) {
+      &.one, &.two, &.three {
+        left: 0;
+        width: 100%;
+      }
     }
   }
   figure {
@@ -195,16 +230,14 @@ article {
   }
   figcaption {
     clear: both;
-    width: 100%;
-  }
-  cite {
-    display: block;
-    font-style: normal;
-    //max-width: 700px;
-    text-align: justify;
-    width: 100%;
-    a {
-      display: block;
+    font-size: 1.4em;
+    left: 40%;
+    margin: 3em 0;
+    position: relative;
+    width: 40%;
+    @media screen and (max-width: 600px) {
+      left: 0;
+      width: 100%;
     }
   }
 }

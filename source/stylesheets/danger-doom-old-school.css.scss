@@ -8,6 +8,7 @@ $secondary-color: #ffffff;
 body {
   background: url("../images/danger-doom/old-school-background.jpg") top center fixed;
   background-size: cover;
+  height: 100%;
   position: relative;
   width: 100%;
   @media screen and (max-width: 500px) {
@@ -44,11 +45,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: #6f3132;
+  background-color: rgba(#6f3132, 0.95);
   color: lighten(#6f3132, 20%);
   a {
     color: lighten(#6f3132, 20%);

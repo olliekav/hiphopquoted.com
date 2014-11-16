@@ -36,11 +36,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: darken($secondary-color, 30%);
   a {
     color: darken($secondary-color, 30%);

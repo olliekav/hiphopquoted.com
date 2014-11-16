@@ -41,11 +41,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($secondary-color, 0.98)
-}
 #footer {
-  background-color: darken($primary-color, 15%);
+  background-color: rgba(darken($primary-color, 15%), 0.95);
   color: $primary-color;
   a {
     color: $primary-color;
@@ -128,6 +125,9 @@ article {
           float: left;
           padding-bottom: 1000px;
           width: 30%;
+          @media screen and (max-width: 500px) {
+            padding-bottom: 1200px;
+          }
         }
         > .right {
           content: " ";
@@ -194,6 +194,15 @@ article {
         }
         &:before {
           width: 20%;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      > blockquote {
+        > p {
+          > .left, .right {
+            padding-bottom: 1450px;
+          }
         }
       }
     }

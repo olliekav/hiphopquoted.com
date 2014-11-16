@@ -5,9 +5,9 @@
     <title><%= page_title %></title>
     <meta content="A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction. Brought to you by olliekav.com" name="description"/>
     <meta content="Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS3, HTML5, Art Direction, Typography, Fonts" name="keywords"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta content="width=device-width, maximum-scale=1.0" name="viewport"/> -->
-    <meta content="width=device-width" name="viewport"/>
+    <meta name="viewport" content="width=device-width, minimal-ui">
     <link href="/images/favicon.ico" rel="shortcut icon"></link>
     <%= stylesheet_link_tag "site.css" %>
     <%= yield_content :stylesheet %>
@@ -20,7 +20,7 @@
     <main id="main" role="main">
       <%= yield %>
     </main>
-    <%= partial "footer" %>
+    <%= partial "footer" unless current_page.path == "404.html" || current_page.path == "500.html" %>
     <%= javascript_include_tag("jquery-1.10.2.min.js") %>
     <%= javascript_include_tag("application.js") %>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
@@ -34,6 +34,11 @@
         g.src = '//www.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g, s);
       })(document, 'script');
+    </script>
+    <script>
+      setTimeout(function(){
+        window.scrollTo(0,0);
+      },1000)
     </script>
   </body>
 </html>

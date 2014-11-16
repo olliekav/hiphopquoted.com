@@ -9,6 +9,9 @@ body {
   background: #000 url("../images/nas/one-love-background.jpg") top center fixed;
   background-size: cover;
   color: $primary-color;
+  @media screen and (max-width: 768px) {
+    background-size: 100% auto;
+  }
 }
 #header {
   .toggle-nav {
@@ -36,11 +39,8 @@ a {
     color: $primary-color;
   }
 }
-.overlay-nav {
-  background-color: $secondary-color;
-}
 #footer {
-  background-color: $secondary-color;
+  background-color: rgba($secondary-color, 0.95);
   color: darken($secondary-color, 20%);
   a {
     color: darken($secondary-color, 20%);

@@ -41,11 +41,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: $secondary-color;
   a {
     color: $secondary-color;
@@ -115,11 +112,12 @@ article {
       } 
       &:first-letter {
         border: 4px solid $primary-color;
+        box-shadow: 0 0 2px rgba($primary-color, 0.6);
         float: left;
         font-size: 3em;
-        line-height: 1;
+        line-height: 0.7;
         margin: 8px 20px 0 0;
-        padding: 5px 15px;
+        padding: 15px;
       }
     }
     > figcaption {

@@ -33,25 +33,4 @@ $(function() {
     }
   }
 
-  // Show navigation on click
-  $('.toggle-nav').on('click', function(e){
-    e.preventDefault();
-    if(!$(this).hasClass('active')) {
-      $(this).addClass('active');
-      $('body').addClass('nav-on');
-      $('.overlay-nav').addClass('on');
-    } else {
-      $(this).removeClass('active');
-      $('body').removeClass('nav-on');
-      $('.overlay-nav').removeClass('on');
-    }
-  });
-
-  $('.close-nav').on('click', function(e){
-    e.preventDefault();
-    $('.toggle-nav').removeClass('active');
-    $('body').removeClass('nav-on');
-    $('.overlay-nav').removeClass('on');
-  });
-
 });

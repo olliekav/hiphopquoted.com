@@ -40,15 +40,12 @@ a {
       pointer-events: all;
     }
     &:hover path {
-      fill: #fff;
+      fill: $secondary-color;
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($tertiary-color, 0.98)
-}
 #footer {
-  background-color: $tertiary-color;
+  background-color: rgba($tertiary-color, 0.95);
   color: lighten($tertiary-color, 40%);
   a {
     color: lighten($tertiary-color, 40%);
@@ -103,6 +100,11 @@ article {
       right: -24em;
       top: -5em;
     }
+    @media screen and (max-width: 500px) {
+      left: -20em;
+      right: -24em;
+      top: -2em;
+    }
     svg {
       height: 110%;
       left: 0;
@@ -121,6 +123,12 @@ article {
       p {
         padding: 2em 2em 2em 30%;
         width: 40%;
+        @media screen and (max-width: 768px)  {
+          width: 60%;
+          &:first-child {
+            padding-top: 8em;
+          }
+        }
         @media screen and (max-width: 700px)  {
           width: 60%;
           &:first-child {
@@ -130,9 +138,9 @@ article {
         @media screen and (max-width: 500px)  {
           @include box-sizing(border-box);
           padding: 2em;
-          width: 90%;
+          width: 100%;
           &:first-child {
-            padding-top: 10em;
+            padding-top: 6em;
           }
         }
         &:last-child {
@@ -147,9 +155,9 @@ article {
           float: left;
           font-size: 5em;
           font-weight: 700;
-          line-height: 1.2;
-          margin: 0.05em 0.2em 0.2em 0;
-          padding: 0 0.2em;
+          line-height: 0.7;
+          margin: 0.05em 0.2em 0 0;
+          padding: 0.15em;
         }
       }
     }

@@ -42,11 +42,8 @@ a {
     }
   }
 }
-.overlay-nav {
-  background-color: rgba($primary-color, 0.98)
-}
 #footer {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, 0.95);
   color: darken($primary-color, 20%);
   a {
     color: darken($primary-color, 20%);
@@ -82,6 +79,9 @@ article {
   width: 100%;
   @media screen and (max-width: 768px) {
     padding: 0 3em;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 0;
   }
   h1, p.chorus, figcaption {
     background-image: url("../images/aesop-rock/header_border.png"), url("../images/aesop-rock/header_border.png");
