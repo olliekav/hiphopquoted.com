@@ -28,11 +28,11 @@ a {
   }
   #logo {
     path {
-      fill: darken($primary-color, 20%);
+      fill: $secondary-color;
       pointer-events: all;
     }
     &:hover path {
-      fill: $secondary-color;
+      fill: darken($primary-color, 20%);
     }
   }
 }
