@@ -17,3 +17,7 @@
 .DS_Store
 
 Rakefile
+
+.powenv
+.powrc
+tmp
