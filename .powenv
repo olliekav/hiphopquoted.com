@@ -1,6 +1,0 @@
-export PATH="/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com/bin:/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/olliekav/.rvm/rubies/ruby-2.0.0-p353/bin:$PATH"
-export GEM_HOME='/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com'
-export GEM_PATH='/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@hiphopquoted.com:/Users/olliekav/.rvm/gems/ruby-2.0.0-p353@global'
-export IRBRC='/Users/olliekav/.rvm/rubies/ruby-2.0.0-p353/.irbrc'
-unset MAGLEV_HOME
-unset RBXOPT
