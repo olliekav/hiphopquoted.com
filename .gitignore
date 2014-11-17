@@ -20,5 +20,6 @@ Rakefile
 
 .powenv
 .powrc
-tmp
+/tmp
 .cache
+/log
