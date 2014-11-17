@@ -40,52 +40,49 @@ a, label {
   }
 }
 #footer {
-  background-color: rgba(#000, 0.95);
-  color: lighten(#000, 40%);
+  background-color: rgba($secondary-color, 0.95);
+  color: #fff;
   a {
-    color: lighten(#000, 40%);
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
   }
   .page-nav {
     > a.prev {
       &:after {
-        border-right-color: lighten(#000, 40%);
+        border-right-color: #fff;
       }
       &:hover:after {
-        border-right-color: #ffffff;
+        border-right-color: #000;
       }
     }
     > a.next {
       &:after {
-        border-left-color: lighten(#000, 40%);
+        border-left-color: #fff;
       }
       &:hover:after {
-        border-left-color: #ffffff;
+        border-left-color: #000;
       }
     }
   }
 }
 .iTunesPreviewPlayer {
-  background-color: lighten(#000, 20%);
+  background-color: darken($secondary-color, 10%);
 }
 .iTunesPreviewPlayer:after {
-  color: lighten(#000, 40%);
+  color: #fff;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #000;
 }
 #main {
-  font: 300 150.0%/1.5 'Tungsten A', 'Tungsten B', impact, sans-serif;
+  font: 300 100%/1.5 'Tungsten A', 'Tungsten B', impact, sans-serif;
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
   width: 100%;
   @extend %clearfix;
-  @media screen and (max-width: 800px) {
-    font-size: 125%;
-  }
-  @media screen and (max-width: 700px) {
-    font-size: 115%;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 105%;
-  }
   @media screen and (max-width: 600px) {
     font-size: 85%;
   }
