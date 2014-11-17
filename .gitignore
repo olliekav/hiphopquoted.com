@@ -21,3 +21,4 @@ Rakefile
 .powenv
 .powrc
 tmp
+.cache
