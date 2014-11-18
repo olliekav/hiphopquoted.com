@@ -1,0 +1,114 @@
+// Nas - I gave you power -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffee00;
+$secondary-color: #ffffff;
+
+body {
+  background-color: $primary-color;
+  color:#fff;
+}
+a {
+  color: darken($primary-color, 20%);
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color;
+  }
+}
+#header {
+ margin-bottom: 0;
+  .toggle-nav {
+    rect {
+      fill: $secondary-color;
+    }
+    &:hover rect {
+      fill: darken($primary-color, 20%);
+    }
+  }
+  #logo {
+    path {
+      fill: #000;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: darken($primary-color, 20%);
+    }
+  }
+}
+#footer {
+  background-color: rgba(#000, 0.95);
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $secondary-color;
+      }
+      &:hover:after {
+        border-right-color: $primary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $secondary-color;
+      }
+      &:hover:after {
+        border-left-color: $primary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: lighten(#000,30%);
+}
+.iTunesPreviewPlayer:after {
+  color: $secondary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: $primary-color;
+}
+#main {
+  font: 400 112.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times-New-roman, sans-serif;
+}
+article {
+  margin:0 auto;
+  max-width:1200px;
+  position: relative;
+  width: 100%;
+  > header {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    h1 {
+      color: $secondary-color;
+      font: 400 20.9em/0.79 'Knockout 47 A', 'Knockout 47 B', helvetica neue, arial, sans-serif;
+      padding-top: 1.435em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  blockquote {
+    > p {
+      display: block;
+      overflow: hidden;
+      text-indent: 100%; 
+      white-space: nowrap;
+    }
+    > img {
+      display: block;
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}
