@@ -10,11 +10,11 @@ body {
   color:#fff;
 }
 a {
-  color: darken($primary-color, 20%);
+  color: #000;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color: $secondary-color;
+    color: #3e3e3e;
   }
 }
 #header {
@@ -95,6 +95,21 @@ article {
       padding-top: 1.435em;
       text-align: center;
       text-transform: uppercase;
+      @media screen and (max-width: 1175px) {
+        font-size: 18em;
+      }
+      @media screen and (max-width: 900px) {
+        font-size: 16em;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 15em;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 13em;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 9em;
+      }
     }
   }
   blockquote {
@@ -104,11 +119,19 @@ article {
       text-indent: 100%; 
       white-space: nowrap;
     }
-    > img {
+    > img, svg {
       display: block;
       margin: 0 auto;
       max-width: 500px;
       width: 100%;
     }
+  }
+  figcaption {
+    color: #000;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 0.3em;
+    text-align: center;
+    text-transform: uppercase;
   }
 }

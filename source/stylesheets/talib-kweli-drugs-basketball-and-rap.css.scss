@@ -258,8 +258,9 @@ article {
       }
     }
     figcaption {
-      font: 900 6em/1 "ff-good-headline-web-pro-con";
+      font: 900 2.4em/1 "ff-good-headline-web-pro-con";
       float: left;
+      text-align: right;
       text-transform: uppercase;
       width: 22.75%;
       a {
@@ -272,26 +273,20 @@ article {
         line-height: 0.8;
         margin-bottom: 0.1em;
       }
-      @media screen and (max-width: 980px) {
-        cite > a:first-of-type {
-          font-size:0.25em !important;
-        }
+      @media screen and (max-width: 900px) {
+        font-size: 2em;
       }
       @media screen and (max-width: 700px) {
         margin-top: -0.15em;
         width: 48%;
-        cite > a:first-of-type {
-          font-size:0.3em !important;
-        }
       }
       @media screen and (max-width: 500px) {
         font-size: 1.4em;
       }
       @media screen and (max-width: 500px) {
+        font-size: 3em;
+        text-align: left;
         width: 100%;
-        cite > a:first-of-type {
-          font-size:1.4em !important;
-        }
       }
     }
   }

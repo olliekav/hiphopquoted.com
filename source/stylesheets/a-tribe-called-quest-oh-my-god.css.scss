@@ -3,7 +3,7 @@
 @import "partials/common";
 
 $primary-color: #000000;
-$secondary-color: #AD8030;
+$secondary-color: #f7d7bd;
 $background-color: #ffffff;
 
 body {
@@ -67,7 +67,7 @@ a {
   }
 }
 .iTunesPreviewPlayer {
-  background-color: $secondary-color;
+  background-color: lighten(#000, 20%);
 }
 .iTunesPreviewPlayer:after {
   color: $secondary-color;

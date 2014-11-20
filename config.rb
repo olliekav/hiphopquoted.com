@@ -66,6 +66,9 @@ end
 # Reload the browser automatically whenever files change
 activate :livereload, :host => "hiphopquoted.dev"
 
+# Ignore the sitemap layout
+page "/sitemap.xml", :layout => false
+
 # Methods defined in the helpers block are available in templates
 helpers do
   def wrap_text(text, include_span)

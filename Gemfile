@@ -11,3 +11,5 @@ gem "middleman-livereload"
 # gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 gem 'middleman-pagination'
+
+gem 'builder', '~> 2.0' 
