@@ -42,6 +42,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url == '/robots.txt'
       throw :next_page if page.url == '/favicon.ico'
       throw :next_page if page.url == '/humans.txt'
+      throw :next_page if page.url == '/404.html'
 
       # Exclude drafts
       throw :next_page if defined?(page.data) && page.data['published'] == false
@@ -61,7 +62,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
       # Build xml of sitemap
       xml.url do
-        xml.loc 'http://www.your-domain.com' + page.url   # TODO: possibly remove .html
+        xml.loc 'http://www.hiphopquoted.com' + page.url   # TODO: possibly remove .html
 
         # As usual, it's hard to get any solid information on how the search engines are
         # using the information in the site map. lastmod (last modified) and changefreq

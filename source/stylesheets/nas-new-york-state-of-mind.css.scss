@@ -78,7 +78,7 @@ a {
   font: 400 112.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times-New-roman, sans-serif;
 }
 article {
-  margin:0 auto;
+  margin:0 auto 6em;
   max-width:1200px;
   position: relative;
   width: 100%;
@@ -92,7 +92,7 @@ article {
     h1 {
       color: $secondary-color;
       font: 400 20.9em/0.79 'Knockout 47 A', 'Knockout 47 B', helvetica neue, arial, sans-serif;
-      padding-top: 1.435em;
+      padding-top: 50%;
       text-align: center;
       text-transform: uppercase;
       @media screen and (max-width: 1175px) {
@@ -113,16 +113,16 @@ article {
     }
   }
   blockquote {
-    > p {
-      display: block;
-      overflow: hidden;
-      text-indent: 100%; 
-      white-space: nowrap;
-    }
-    > img, svg {
-      display: block;
-      margin: 0 auto;
-      max-width: 500px;
+    height: 0;
+    display: block;
+    margin: 0 auto;
+    padding-top: 227%;
+    position: relative;
+    width: 50%;
+    > svg {
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 100%;
     }
   }
