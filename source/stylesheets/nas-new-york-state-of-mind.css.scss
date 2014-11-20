@@ -33,7 +33,7 @@ a {
       pointer-events: all;
     }
     &:hover path {
-      fill: darken($primary-color, 20%);
+      fill: $secondary-color;
     }
   }
 }
