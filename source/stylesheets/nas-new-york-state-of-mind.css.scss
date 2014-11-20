@@ -117,7 +117,7 @@ article {
     display: block;
     margin: 0 auto;
     max-width: 700px;
-    padding-top: 227%;
+    padding-top: 221%;
     position: relative;
     width: 50%;
     > svg {
@@ -134,5 +134,8 @@ article {
     margin-top: 0.3em;
     text-align: center;
     text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      font-size: 0.9em;
+    }
   }
 }
