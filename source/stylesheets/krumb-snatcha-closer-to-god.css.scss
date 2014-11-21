@@ -85,23 +85,7 @@ article {
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
-    margin: 0 auto;
-    position: relative;
-    text-align: justify;
-    width: 80%;
-    > h1 {
-      font-size: 8em;
-      line-height: 0.8;
-      margin: 0 auto;
-      text-transform: uppercase;
-      width: 40%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-      > h1 {
-        width: 60%;
-      }
-    }
+    display: none;
   }
   figure {
     margin: 0 auto;
