@@ -22,7 +22,7 @@ album_link: https://itunes.apple.com/album/snatcha-season-pt.-1/id266865950?uo=4
       WebFont.load({
         typekit: { id: 'suv7urw' },
         active: function() {
-          $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
+          $('h1').bigtext();
         }
       });
     });
@@ -116,6 +116,6 @@ album_link: https://itunes.apple.com/album/snatcha-season-pt.-1/id266865950?uo=4
         Damn..
       </p>
     </blockquote>
-    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: false } %>
   </figure>
 </article>

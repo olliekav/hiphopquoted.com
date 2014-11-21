@@ -105,10 +105,10 @@ article {
         font-size: 14em;
       }
       @media screen and (max-width: 700px) {
-        font-size: 15em;
+        font-size: 12em;
       }
       @media screen and (max-width: 600px) {
-        font-size: 13em;
+        font-size: 10em;
       }
       @media screen and (max-width: 500px) {
         font-size: 9em;
@@ -120,14 +120,13 @@ article {
     display: block;
     margin: 0 auto;
     max-width: 700px;
-    padding-top: 221%;
+    padding-top: 225%;
     position: relative;
     width: 50%;
     > svg {
       left: 0;
       position: absolute;
       top: 0;
-      width: 100%;
     }
   }
   figcaption {

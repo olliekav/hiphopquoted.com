@@ -1,13 +1,13 @@
-// Jeru - Static -----------------------------------------------------------------
+// Krumb Snatcha - Closer to God -----------------------------------------------------------------
 
 @import "partials/common";
 
-$primary-color: #f2450f;
+$primary-color: #000000;
 $secondary-color: #ffffff;
 
 body {
-  background-color: $primary-color;
-  color: $secondary-color;
+  background: url("../images/krumbsnatcha/wood-background.jpg");
+  color: rgba($secondary-color, 0.4);
   font-weight: 400;
   position: relative;
   width: 100%;
@@ -33,52 +33,52 @@ a {
   }
   #logo {
     path {
-      fill: $secondary-color;
+      fill: rgba($secondary-color, 0.4);
       pointer-events: all;
     }
     &:hover path {
-      opacity: 0.8;
+      fill: $primary-color;
     }
   }
 }
 #footer {
-  background-color: rgba(darken($primary-color, 15%), 0.95);
-  color: $primary-color;
+  background-color: rgba(#000, 0.95);
+  color: $secondary-color;
   a {
-    color: $primary-color;
+    color: $secondary-color;
   }
   .page-nav {
     > a.prev {
       &:after {
-        border-right-color: $primary-color;
+        border-right-color: $secondary-color;
       }
       &:hover:after {
-        border-right-color: #ffffff;
+        border-right-color: lighten($primary-color, 30%);
       }
     }
     > a.next {
       &:after {
-        border-left-color: $primary-color;
+        border-left-color: $secondary-color;
       }
       &:hover:after {
-        border-left-color: #ffffff;
+        border-left-color: lighten($primary-color, 30%);
       }
     }
   }
 }
 .iTunesPreviewPlayer {
-  background-color: $primary-color;
+  background-color: lighten($primary-color, 30%);
 }
 .iTunesPreviewPlayer:after {
-  color: $primary-color;
+  color: $secondary-color;
 }
 #main {
-  font: 400 81.3%/1.5 "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
+  font: 400 81.3%/1.5 "adriane", Georgia, serif;
   @extend %clearfix;
 }
 article {
   text-align: left;
-  margin: 6em auto;
+  margin: 2em auto;
   max-width: 1200px;
   width: 100%;
   z-index: 2;
@@ -91,7 +91,6 @@ article {
     width: 80%;
     > h1 {
       font-size: 8em;
-      font-family: "alternate-gothic-no-1-d";
       line-height: 0.8;
       margin: 0 auto;
       text-transform: uppercase;
@@ -144,38 +143,33 @@ article {
       }
     }
     figcaption {
-      font-family: "alternate-gothic-no-1-d";
-      line-height: 0.9;
-      margin: 0.8em auto;
-      text-transform: uppercase;
-      width: 40%;
-      span, a {
-        display: block;
-        margin: 0 auto;
-      }
+      font-size: 2em;
+      margin: 3em auto;
+      text-align: center;
+      width: 100%;
       a:hover {
         color: darken($primary-color, 15%);
       }
-      .bigtext-line0 {
-        line-height: 0.8;
-      }
-      .bigtext-line1 {
-        line-height: 1;
-      }
-      #bigtext-id3 {
-        .bigtext-line0 {
-          line-height: 0.9;
-        }
-        .bigtext-line1 {
-          line-height: 0.2;
-        }
-        .bigtext-line2 {
-          line-height: 1.6;
-        }
-        .bigtext-line3 {
-          line-height: 0;
-        }
-      }
+      // .bigtext-line0 {
+      //   line-height: 0.8;
+      // }
+      // .bigtext-line1 {
+      //   line-height: 1;
+      // }
+      // #bigtext-id3 {
+      //   .bigtext-line0 {
+      //     line-height: 0.9;
+      //   }
+      //   .bigtext-line1 {
+      //     line-height: 0.2;
+      //   }
+      //   .bigtext-line2 {
+      //     line-height: 1.6;
+      //   }
+      //   .bigtext-line3 {
+      //     line-height: 0;
+      //   }
+      //}
       @media screen and (max-width: 600px) {
         width: 60%;
       }

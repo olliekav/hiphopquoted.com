@@ -101,7 +101,7 @@ article {
       line-height: 1;
       text-transform: uppercase;
       text-align: center;
-      text-shadow: 0 10px 0 darken($primary-color, 10%);
+      //text-shadow: 0 10px 0 darken($primary-color, 10%);
       width: 100%;
     }
     &:before {
@@ -187,42 +187,52 @@ article {
     }
     figcaption {
       font-family: "alternate-gothic-no-1-d";
-      font-size: 2em;
+      font-size: 10em;
       font-weight: 400;
       line-height: 0.8;
       margin: 0 auto;
-      max-width: 900px;
-      padding: 400px 2em 200px;
+      padding: 400px 0 200px;
       text-align: center;
-      text-shadow: 0 10px 0 darken($primary-color, 31%);
+      //text-shadow: 0 10px 0 darken($primary-color, 31%);
       width: 100%;
       text-transform: uppercase;
       @include box-sizing(border-box);
-      // &:before {
-      //   border-style: solid;
-      //   border-width: 300px 600px 0 600px;
-      //   border-color: darken($primary-color, 10%) transparent transparent transparent;
-      //   content: "";
-      //   display: block;
-      //   height: 0;
-      //   left: 50%;
-      //   margin-left: -600px;
-      //   position: absolute;
-      //   top: 0;
-      //   width: 0;
-      // }
-      span, cite {
+      @media screen and (max-width: 900px) {
+        font-size: 8em;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 6em;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 4em;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 3em;
+      }
+      > a {
+        background: url("../images/the-pharcyde/pharcyde-logo.svg") no-repeat 0 50%;
+        background-size: 100%;
         display: block;
+        margin-top: -50px;
+        padding-bottom: 50%;
+        text-indent: -9999px;
+        width: 100%;
       }
-      cite > a:last-child {
-        line-height: 1;
-      }
-      cite > span {
-        &:first-child {
-          line-height: 0.87;
+      > cite {
+        position: relative;
+        top: -20px;
+        > span {
+          display: block;
+          &:first-child {
+            line-height: 0.8;
+          }
         }
-        + a {
-          line-height: 0.7;
+        > a {
+          font-size: 3.5em;
+          line-height: 1.1;
+          &:last-child {
+            font-size: 0.8em;
+          }
         }
       }
       a:hover {
