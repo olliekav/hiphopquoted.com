@@ -17,6 +17,14 @@ a {
     color: #3e3e3e;
   }
 }
+.button {
+  border: 1px solid #000; 
+  color: #000;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
 #header {
  margin-bottom: 0;
   .toggle-nav {
@@ -120,7 +128,7 @@ article {
     display: block;
     margin: 0 auto;
     max-width: 700px;
-    padding-top: 225%;
+    padding-top: 224%;
     position: relative;
     width: 50%;
     > svg {
@@ -137,7 +145,7 @@ article {
     color: #000;
     font-size: 1em;
     font-weight: 700;
-    margin-top: 0.3em;
+    //margin-top: 0.3em;
     text-align: center;
     text-transform: uppercase;
     @media screen and (max-width: 768px) {

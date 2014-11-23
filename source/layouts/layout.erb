@@ -25,6 +25,22 @@
     <%= javascript_include_tag("application.js") %>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
     <%= yield_content :javascript %>
+    <% unless content_page? %>
+      <%= javascript_include_tag("/javascripts/classList.js") %>
+      <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
+      <script>
+        var track = "<%= data.page.track %>";
+        var playerCountry = "<%= data.page.player_country %>";
+        var playerColor = "#<%= data.page.player_color %>";
+        var player = new iTunesPreviewPlayer(track);
+        var audio = document.getElementsByTagName('audio');
+        var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
+        var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        if(!isFirefox && isMac) {
+          document.getElementById("audio-clip").appendChild(player.DOMElement());
+        }
+      </script>
+    <% end %>
     <script>
       var _gaq = [['_setAccount', 'UA-10920756-1'], ['_trackPageview']];
       (function(d, t) {

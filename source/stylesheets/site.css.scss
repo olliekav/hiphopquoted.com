@@ -11,6 +11,7 @@ html {
   width:100%;
 }
 body {
+  font-family: 'Georgia', sans-serif;
   min-height: 100%;
   position: relative;
   width:100%;
@@ -21,6 +22,27 @@ body {
   &.nav-on {
     overflow: hidden;
   }
+}
+a {
+  text-decoration: none;
+  @include transition(color 0.1s linear)
+}
+h1,h2,h3,h4 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+cite {
+  font-style: normal;
+}
+
+// Button styles
+.button {
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-align: center;
 }
 #main {
   display: block;
@@ -67,18 +89,15 @@ article {
       }
     }
   }
-}
-a {
-  text-decoration: none;
-  @include transition(color 0.1s linear)
-}
-h1,h2,h3,h4 {
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-cite {
-  font-style: normal;
+  .button {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    @media screen and (max-width: 500px) {
+      font-size: 0.8em;
+      top: 2.3em;
+    }
+  }
 }
 
 // Responsive nav 
@@ -391,10 +410,7 @@ cite {
         }
         &.button {
           background-color: #fff; 
-          border-radius: 10px;
           color: #000;
-          display: inline-block;
-          padding: 0.5em 2em;
           &:hover {
             background-color: $primary-color;
             color: #fff;
