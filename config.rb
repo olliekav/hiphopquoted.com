@@ -52,13 +52,6 @@ ignore 'fonts/*'
 
 after_build do |builder|
   print "After_build fixes... "
-  # src = Dir.join(config[:source],"fonts/")
-  # dst = Dir.join(config[:build_dir],"fonts/")
-  # builder.source_paths << Dir.dirname(__Dir__)
-  # builder.copy_file(src,dst)
-  #system("copy #{} #{}")
-  # builder.copy_file(src,dst)
-  #FileUtils.cp_r src, dst
   FileUtils.cp_r(Dir['source/fonts/'],'build/')
   puts "done."
 end
@@ -87,6 +80,9 @@ helpers do
     else
       "Hip Hop Quoted - Hip Hop Quotes brought to life with Typography"
     end
+  end
+  def content_page?
+    current_page.path == "index.html" || current_page.path == "about.html" || current_page.path == "store.html" || current_page.path == "404.html" || current_page.path == "500.html"
   end
 end
 

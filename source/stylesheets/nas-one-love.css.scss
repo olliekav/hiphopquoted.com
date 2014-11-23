@@ -39,7 +39,7 @@ a {
     color: $primary-color;
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($secondary-color, 0.95);
   color: darken($secondary-color, 20%);
   a {

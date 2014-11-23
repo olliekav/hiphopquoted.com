@@ -15,12 +15,12 @@
       <%= javascript_include_tag("html5shiv.js") %>
     <![endif]-->
   </head>
-  <body class="page-<%= page_classes %>" id="hiphopquoted">
+  <body class="page-<%= page_classes %> <%= 'content-page' if content_page? %>" id="hiphopquoted">
     <%= partial "header" %>
     <main id="main" role="main">
       <%= yield %>
     </main>
-    <%= partial "footer" unless current_page.path == "404.html" || current_page.path == "500.html" %>
+    <%= partial "footer" %>
     <%= javascript_include_tag("jquery-1.10.2.min.js") %>
     <%= javascript_include_tag("application.js") %>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>

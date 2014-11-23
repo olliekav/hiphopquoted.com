@@ -44,7 +44,7 @@ a {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($tertiary-color, 0.95);
   color: lighten($tertiary-color, 40%);
   a {

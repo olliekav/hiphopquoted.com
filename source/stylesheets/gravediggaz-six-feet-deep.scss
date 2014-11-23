@@ -43,7 +43,7 @@ a {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($background-color, 0.95);
   color: lighten($background-color, 40%);
   a {

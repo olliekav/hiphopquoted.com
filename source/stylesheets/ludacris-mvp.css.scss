@@ -40,7 +40,7 @@ a {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba(lighten($secondary-color, 20%), 0.95);
   color: lighten($secondary-color, 60%);
   a {

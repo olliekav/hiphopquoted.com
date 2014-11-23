@@ -1,11 +1,12 @@
 $(function() {
   
-  if(!$('body').hasClass('page-index')) {
+  if($('#footer').hasClass('sticky')) {
     // Hide Header on on scroll down
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
-    var footerHeight = $('#footer').outerHeight();
+    var didScroll,
+        lastScrollTop = 0,
+        delta = 5,
+        footer = $('#footer'),
+        footerHeight = footer.outerHeight();
 
     $(window).scroll(function(event){
       didScroll = true;
@@ -23,10 +24,10 @@ $(function() {
       if(Math.abs(lastScrollTop - st) <= delta)
           return;
       if (st > lastScrollTop && st > footerHeight -40){
-        $('#footer').removeClass('footer-up').addClass('footer-down');
+        footer.removeClass('footer-up').addClass('footer-down');
       } else {
         if(st + $(window).height() < $(document).height()) {
-            $('#footer').removeClass('footer-down').addClass('footer-up');
+          footer.removeClass('footer-down').addClass('footer-up');
         }
       }
       lastScrollTop = st;

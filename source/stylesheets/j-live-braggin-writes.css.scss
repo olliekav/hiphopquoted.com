@@ -55,7 +55,7 @@ a {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($primary-color, 0.95);
   color: darken($primary-color, 30%);
   a {

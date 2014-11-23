@@ -44,7 +44,7 @@ a, label {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($primary-color-dark, 0.95);
   color: darken($primary-color, 25%);
   a {

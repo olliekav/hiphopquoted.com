@@ -52,7 +52,7 @@ label {
     }
   }
 }
-#footer {
+#footer.sticky {
   background-color: rgba($primary-color, 0.95);
   color: lighten($primary-color, 30%);
   a {
