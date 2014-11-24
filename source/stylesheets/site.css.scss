@@ -16,9 +16,9 @@ body {
   position: relative;
   width:100%;
   @include box-sizing(border-box);
-  > div {
-    display: none !important;
-  }
+  // > div {
+  //   display: none !important;
+  // }
   &.nav-on {
     overflow: hidden;
   }
@@ -459,4 +459,11 @@ article {
 .wf-active main  {
   opacity: 1;
   @include transition(opacity 0.24s ease-in-out);
+}
+
+// iTunes affiliate banners
+#ibb-widget {
+  margin: 0 auto 3em;
+  max-width: 728px;
+  width: 100%;
 }

@@ -9,10 +9,10 @@
     <% else %>
       <li class="page-nav">
         <%#= TODO: Move this to helper method %>
-        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.sort_by {|p| p.url} %>
+        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) and not p.source_file.match(/\about/) }.sort_by {|p| p.url} %>
         <% pages.each_with_index do |p, index| %>
           <% if p.url == current_page.url %>
-            <% next_page = pages[index+1]  %>
+            <% next_page = pages[index+1] %>
             <% prev_page = pages[index-1] %>
             <%= link_to("<span>Prev</span>", prev_page.path, :class => "prev") unless index == 1 %>
             <%= link_to("<span>Next</span>", next_page.path, :class => "next") unless index == pages.size - 1 %>
@@ -23,7 +23,7 @@
         <div id="audio-clip"></div>
       </li>
       <li>
-        <%= link_to "Buy on iTunes", "#{current_page.data.song_link}", :class => "buy-track", :target => "itunes_store"  %>
+        <%= link_to "Buy on iTunes", "#{current_page.data.song_link}&at=11lPxd", :class => "buy-track", :target => "itunes_store"  %>
       </li>
     <% end %>
   </ul>

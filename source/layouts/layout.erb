@@ -52,11 +52,12 @@
       })(document, 'script');
     </script>
     <script>
-      if( screen.width <= 768 ) { 
+      if( $(window).width() <= 768 ) { 
         setTimeout(function(){
           window.scrollTo(0,0);
         },1000)
       }
     </script>
+    <%= partial "itunes_banners", locals: { data: current_page.data } if current_page.data.cat_id %>
   </body>
 </html>

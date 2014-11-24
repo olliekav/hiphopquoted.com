@@ -1,0 +1,25 @@
+<script>
+  var affId = <%= current_page.data.cat_id %>;
+  $('<div id="ibb-widget-root-' + affId +'" style="text-align:center;" class="ad-banner"></div>').insertAfter($("#main"));
+  if( $(window).width() <= 768 ) {
+    var bannerHeight = 50,
+        bannerWidth = 320;
+  } else {
+    var bannerHeight = 90,
+        bannerWidth = 728;
+  }
+  (function(t,e,i,d){
+    var o=t.getElementById(i),n=t.createElement(e);
+    o.style.height=bannerHeight;
+    o.style.width=bannerWidth;
+    o.style.display='block';
+    o.style.margin='0 auto';
+    n.id='ibb-widget',
+    n.setAttribute('src',('https:'===t.location.protocol?'https://':'http://')+d),
+    n.setAttribute('width',bannerWidth),
+    n.setAttribute('height',bannerHeight),
+    n.setAttribute('frameborder','0'),
+    n.setAttribute('scrolling','no'),
+    o.appendChild(n)})
+    (document,'iframe','ibb-widget-root-'+ affId,"banners.itunes.apple.com/banner.html?partnerId=&aId=11lPxd&bt=catalog&t=catalog_black&id=" + affId + "&l=en-GB&w="+ bannerWidth + "&h=" + bannerHeight);
+</script>
