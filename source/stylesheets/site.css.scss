@@ -462,11 +462,12 @@ article {
 }
 
 // iTunes affiliate banners
-#ibb-widget {
+.ad-banner {
   margin: 0 auto 6em;
   max-width: 728px;
   width: 100%;
   @media screen and (max-width: 500px) {
+    padding-bottom: 6em;
     width: 320px;
   }
 }

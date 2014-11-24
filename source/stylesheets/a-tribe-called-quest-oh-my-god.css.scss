@@ -88,7 +88,7 @@ article {
     width: 100%;
     z-index: -1;
     > h1 {
-      color: $secondary-color;
+      color: darken($secondary-color, 40%);
       display: block;
       font-weight:400;
       font-size:16em;
