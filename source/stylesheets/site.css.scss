@@ -466,4 +466,7 @@ article {
   margin: 0 auto 3em;
   max-width: 728px;
   width: 100%;
+  @media screen and (max-width: 500px) {
+    width: 320px;
+  }
 }
