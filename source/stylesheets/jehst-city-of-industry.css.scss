@@ -93,7 +93,7 @@ a {
   font: 400 100%/1.5 "nimbus-sans", Helvetica, Arial, sans-serif;
 }
 article {
-  color: $primary-color;
+  color: #fff;
   text-align: left;
   margin: 6em 3em;
   max-width: 1000px;
@@ -106,7 +106,7 @@ article {
   }
   header {
     > h1 {
-      color: rgba($secondary-color, 0.7);
+      color: rgba($secondary-color, 0.9);
       font-size: 17em;
       font-weight: 900;
       letter-spacing: -0.07em;
