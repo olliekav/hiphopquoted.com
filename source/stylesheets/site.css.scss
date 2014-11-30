@@ -467,6 +467,7 @@ article {
   max-width: 728px;
   padding-bottom: 6em;
   position: relative;
+  overflow: hidden;
   width: 100%;
   z-index: 10;
   @media screen and (max-width: 500px) {

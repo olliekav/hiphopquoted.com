@@ -1,0 +1,324 @@
+// The Roots - Concerto of the Desperado -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #e02828;
+$secondary-color: #000000;
+$tertiary-color: #ffffff;
+
+body {
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  .toggle-nav {
+    rect {
+      fill: $tertiary-color;
+    }
+    &:hover rect {
+      fill: $secondary-color;
+    }
+  }
+  #logo {
+    path {
+      fill: $tertiary-color;
+      pointer-events: all;
+    }
+    &:hover path {
+      fill: $secondary-color;
+    }
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $tertiary-color;
+  a {
+    color: $tertiary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $tertiary-color;
+      }
+      &:hover:after {
+        border-right-color: $primary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $tertiary-color;
+      }
+      &:hover:after {
+        border-left-color: $primary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $tertiary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: $primary-color;
+}
+#main {
+  font: 400 150%/1.5 "sketchnote-text", Georgia, Times New Roman, serif;
+  margin: 0 auto;
+  padding: 0 0 6em;
+  width: 100%;
+  @extend %clearfix;
+  @media screen and (max-width: 1000px)  {
+    font-size: 125%;
+  }
+  @media screen and (max-width: 800px)  {
+    font-size: 110%;
+  }
+  @media screen and (max-width: 700px)  {
+    font-size: 100%;
+  }
+}
+article {
+  text-align: left;
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  header {
+    display: none;
+  }
+  figure > p{
+    text-align: center;
+  }
+  blockquote {
+    overflow: hidden;
+    > div {
+      padding: 5em 1.5em;
+      h2 {
+        font-size: 2.667em;
+        line-height: 1.2;
+        &:before {
+          content: '“';
+          display: inline-block;
+          margin-left: -30px;
+        }
+        &:after {
+          content: '”';
+        }
+      }
+      .content {
+        margin: 0 auto;
+        max-width: 1000px;
+        position: relative;
+        width: 100%;
+        > p {
+          width: 45%;
+          @media screen and (max-width: 500px) {
+            margin: 0 auto;
+            width: 90%;
+          }
+        }
+        &:after {
+          clear: both;
+          content: "";
+          display: table;
+        }
+      }
+      &#section-one {
+        background: $primary-color url("../images/run-the-jewels/close-your-eyes/section-one-background.jpg") no-repeat 50% 100px;
+        background-size: 90%;
+        padding-top: 65%;
+        h2 {
+          bottom: 0;
+          position: absolute;
+          right: 0;
+          width: 45%;
+        }
+        @media screen and (max-width: 500px) {
+          h2 {
+            margin-bottom: 0.8em;
+            padding-left: 5%;
+            position: static;
+            width: 50%;
+          }
+        }
+        @media screen and (max-width: 400px) {
+          h2 {
+            margin: 0 auto 0.8em;
+            position: static;
+            width: 90%;
+          }
+        }
+      }
+      &#section-two {
+        background: $secondary-color url("../images/run-the-jewels/close-your-eyes/section-two-background.jpg") no-repeat bottom center;
+        background-size: 100%;
+        padding-bottom: 55%;
+        h2 {
+          margin-bottom: 0.8em;
+          text-align: center;
+        }
+        p {
+          @include columns(2, 1.6em);
+          width: 100%;
+        }
+        @media screen and (max-width: 500px) {
+          h2 {
+            margin: 0 auto 0.8em;
+            width: 80%;
+          }
+          p {
+            @include columns(1, 0);
+            width: 90%;
+          }
+        }
+      }
+      &#section-three {
+        background: $primary-color url("../images/run-the-jewels/close-your-eyes/section-three-background.jpg") no-repeat bottom right;
+        background-size: 100%;
+        padding-bottom: 65%;
+        h2 {
+          top: 0;
+          position: absolute;
+          right: 0;
+          width: 45%;
+        }
+        @media screen and (max-width: 500px) {
+          h2 {
+            margin-bottom: 0.8em;
+            position: static;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+      &#section-four {
+        background: $secondary-color;
+        h2 {
+          float: left;
+          padding-left: 5%;
+          width: 45%;
+        }
+        p {
+          float: right;
+        }
+        @media screen and (max-width: 500px) {
+          padding-bottom: 200px;
+          h2 {
+            float: none;
+            margin: 0 auto 0.8em;
+            padding: 0;
+            text-align: center;
+            width: 90%;
+          }
+          p {
+            float: none;
+          }
+        }
+      }
+      &#section-five {
+        background: $primary-color;
+        h2 {
+          bottom: 0;
+          left: 0;
+          padding-left: 5%;
+          position: absolute;
+          width: 50%;
+          @media screen and (max-width: 800px)  {
+            width: 45%;
+          }
+        }
+        p {
+          float: right;
+        }
+        @media screen and (max-width: 500px) {
+          padding-top: 500px;
+          h2 {
+            margin: 0 auto 0.8em;
+            padding-left: 0;
+            position: static;
+            text-align: center;
+            width: 90%;
+          }
+          p {
+            float: none;
+          }
+        }
+        .content:before {
+          background: url("../images/run-the-jewels/close-your-eyes/section-four-background.png") no-repeat top center;
+          background-size: 90%;
+          content: "";
+          padding-top: 100%;
+          position: absolute;
+          top: -360px;
+          left: 0;
+          // transform: scale(0.9);
+          // zoom: 0.9;
+          width: 45%;
+          @media screen and (max-width: 1000px) {
+            background-size: 80%;
+            top: -300px;
+          }
+          @media screen and (max-width: 800px)  {
+            background-size: 90%;
+            top: -260px;
+          }
+          @media screen and (max-width: 500px) {
+            margin: 0 auto;
+            padding-top: 180%;
+            top: -650px;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  figcaption {
+    background-color: $secondary-color;
+    padding: 3em;
+    text-align: center;
+    &:before {
+      content: url("../images/run-the-jewels/close-your-eyes/footer-background.jpg");
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      transform: scale(0.8);
+      zoom: 0.8;
+    }
+    @media screen and (max-width: 600px) {
+      &:before {
+        transform: scale(0.6);
+        zoom: 0.6;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      &:before {
+        transform: scale(0.5);
+        zoom: 0.5;
+      }
+    }
+    cite {
+      display: block;
+      a:first-child:after {
+        content: "";
+        display: block;
+      }
+    }
+  }
+}

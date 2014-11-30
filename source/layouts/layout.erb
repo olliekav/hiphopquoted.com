@@ -36,7 +36,7 @@
         var audio = document.getElementsByTagName('audio');
         var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
         var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-        if(!isFirefox && isMac) {
+        if(!(isFirefox && isMac)) {
           document.getElementById("audio-clip").appendChild(player.DOMElement());
         }
       </script>
