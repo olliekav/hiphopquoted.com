@@ -88,9 +88,8 @@ article {
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
-    color: $primary-color;
+    color: rgba($primary-color, 0.2);
     margin: 0 auto;
-    opacity: 0.2;
     text-align: justify;
     > h1 {
       font-size: 12em;

@@ -165,9 +165,6 @@ article {
       font-weight:700;
       line-height: 0.8;
     }
-    &.one:before {
-      font-size: inherit;
-    }
     &:first-letter {
       float: left;
       margin: -5px 10px -25px 0;
@@ -178,7 +175,7 @@ article {
       &:before {
         color: $secondary-color;
         content: '“';
-        font-size: 23em;
+        font-size: 360px;
         left: 0;
         position: absolute;
         top: -15px;

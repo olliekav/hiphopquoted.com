@@ -103,8 +103,16 @@ article {
   header {
     display: none;
   }
-  figure > p{
-    text-align: center;
+  figure {
+    > p {
+      text-align: center;
+    }
+    > img {
+      display: block;
+      margin: 6em auto 1em;
+      max-width: 300px;
+      width: 100%;
+    }
   }
   blockquote {
     overflow: hidden;
@@ -295,26 +303,6 @@ article {
     background-color: $secondary-color;
     padding: 3em;
     text-align: center;
-    &:before {
-      content: url("../images/run-the-jewels/close-your-eyes/footer-background.jpg");
-      display: block;
-      margin: 0 auto 1em;
-      text-align: center;
-      transform: scale(0.8);
-      zoom: 0.8;
-    }
-    @media screen and (max-width: 600px) {
-      &:before {
-        transform: scale(0.6);
-        zoom: 0.6;
-      }
-    }
-    @media screen and (max-width: 600px) {
-      &:before {
-        transform: scale(0.5);
-        zoom: 0.5;
-      }
-    }
     cite {
       display: block;
       a:first-child:after {
