@@ -81,7 +81,7 @@ a {
   color: $primary-color;
 }
 #main {
-  font: 400 150%/1.5 "sketchnote-text", Georgia, Times New Roman, serif;
+  font: 400 150%/1.5 "sketchnote-text", comic-sans, sans-serif;
   margin: 0 auto;
   padding: 0 0 6em;
   width: 100%;
@@ -111,12 +111,14 @@ article {
     > div {
       padding: 5em 1.5em;
       h2 {
-        font-size: 2.667em;
+        font-family: "flood-std";
+        font-size: 2.4em;
         line-height: 1.2;
         &:before {
           content: '“';
           display: inline-block;
-          margin-left: -30px;
+          position: relative;
+          left: -10px;
         }
         &:after {
           content: '”';
@@ -160,7 +162,7 @@ article {
         }
         @media screen and (max-width: 400px) {
           h2 {
-            margin: 0 auto 0.8em;
+            margin: 180px auto 0.8em;
             position: static;
             width: 90%;
           }
