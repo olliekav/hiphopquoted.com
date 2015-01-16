@@ -16,13 +16,7 @@ cat_id: 265670679
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'npk5zfs' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "npk5zfs", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

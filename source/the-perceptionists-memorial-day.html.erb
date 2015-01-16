@@ -16,17 +16,7 @@ cat_id: 317265119
 <% end %>
 
 <% content_for :javascript do %>
-  <%#= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'ycx2adh' }
-        // active: function() {
-        //   $('h1, figcaption, figcaption>a, figcaption>cite').bigtext();
-        // }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "ycx2adh", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

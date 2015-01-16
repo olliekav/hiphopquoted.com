@@ -16,13 +16,7 @@ cat_id: 1018027
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'rdw4xyq' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "rdw4xyq", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

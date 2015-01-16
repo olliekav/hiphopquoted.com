@@ -1,11 +1,5 @@
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'rtk2bgd' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "rtk2bgd", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <h1>Shit!</h1>

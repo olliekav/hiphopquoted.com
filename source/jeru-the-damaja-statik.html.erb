@@ -16,17 +16,7 @@ album_link: https://itunes.apple.com/gb/album/the-sun-rises-in-the-east/id369141
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("jquery.lettering.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'czk5tul' },
-        active: function() {
-          $("h1").lettering('words');
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "czk5tul", :include_big_text => false, :include_lettering => true, :script => "$('h1').lettering('words');" } %>
 <% end %>
 
 <article>

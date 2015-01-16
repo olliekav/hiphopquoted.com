@@ -16,6 +16,7 @@ cat_id: 313373618
 <% end %>
 
 <% content_for :javascript do %>
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js"></script>
   <%= javascript_include_tag("bigtext.js") %>
   <script>
     $(function(){
@@ -25,7 +26,6 @@ cat_id: 313373618
           //urls: ['/stylesheets/fonts/veneer.css']
         },
         active: function() {
-          //alert('help!');
           $('h1, .chorus, figcaption, figcaption>a, figcaption>cite').bigtext();
         }
       });

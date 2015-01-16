@@ -16,17 +16,7 @@ cat_id: 258637096
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'jan2ukx' },
-        active: function() {
-          $('article>header').bigtext();
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "jan2ukx", :include_big_text => true, :include_lettering => false, :script => "$('article>header').bigtext();" } %>
 <% end %>
 
 <article>

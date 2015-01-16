@@ -16,13 +16,7 @@ cat_id: 36631709
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'nvn6tmc' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "nvn6tmc", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

@@ -1,0 +1,14 @@
+<script type="text/javascript" src="//use.typekit.com/<%= font_id %>.js"></script>
+
+<%= javascript_include_tag("bigtext.js") if include_big_text %>
+<%= javascript_include_tag("jquery.lettering.js") if include_lettering %>
+
+<script type="text/javascript">
+  try {
+  Typekit.load({
+    active: function() {
+      <%= script if script %>
+    }
+  })
+  } catch(e) {}
+</script>

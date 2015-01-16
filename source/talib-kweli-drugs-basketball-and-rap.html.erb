@@ -16,17 +16,7 @@ cat_id: 279485222
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'bwu4rgz' },
-        active: function() {
-          $('h1, h2').bigtext();
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "bwu4rgz", :include_big_text => true, :include_lettering => false, :script => "$('h1, h2').bigtext();" } %>
 <% end %>
 
 <article>

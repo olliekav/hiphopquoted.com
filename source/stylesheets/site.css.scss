@@ -446,12 +446,16 @@ article {
 
 // Typekit loading elements --------------------------------------------------------------------
 
-.wf-loading main {
+.js main {
   opacity: 0;
+  @include transition(opacity 0.24s ease-in-out);
+}
+.wf-loading main {
+  visibility: hidden;
 }
 .wf-active main  {
   opacity: 1;
-  @include transition(opacity 0.24s ease-in-out);
+  visibility: visible;
 }
 
 // iTunes affiliate banners

@@ -16,17 +16,7 @@ cat_id: 724829348
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'xnz0gsv' },
-        active: function() {
-          $('.chorus, figcaption, figcaption>a, figcaption>cite').bigtext();
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "xnz0gsv", :include_big_text => true, :include_lettering => false, :script => "$('.chorus, figcaption, figcaption>a, figcaption>cite').bigtext();" } %>
 <% end %>
 
 <article>

@@ -16,13 +16,7 @@ cat_id: 19679767
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'lnv1nzw' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "lnv1nzw", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

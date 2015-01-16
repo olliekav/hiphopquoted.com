@@ -16,17 +16,7 @@ cat_id: 724052211
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("jquery.lettering.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'jsv0omn' },
-        active: function() {
-          $("h1>b, .chorus>b").lettering('words');
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "jsv0omn", :include_big_text => false, :include_lettering => true, :script => "$('h1>b, .chorus>b').lettering('words');" } %>
 <% end %>
 
 <article>

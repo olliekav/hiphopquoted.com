@@ -81,6 +81,7 @@ a {
 }
 #main {
   font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', Helvetica, Arial, sans-serif;
+  opacity: 1;
   overflow: hidden;
   @extend %clearfix;
 }

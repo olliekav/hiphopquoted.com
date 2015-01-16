@@ -15,17 +15,7 @@ album_link: https://itunes.apple.com/album/labcabincalifornia/id271849688?uo=4
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'tri7njl' },
-        active: function() {
-          $('h1').bigtext();
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "tri7njl", :include_big_text => true, :include_lettering => false, :script => "$('h1').bigtext();" } %>
 <% end %>
 
 <article>

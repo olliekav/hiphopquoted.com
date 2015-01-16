@@ -16,13 +16,7 @@ cat_id: 255342460
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'fhy8nrm' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "fhy8nrm", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>

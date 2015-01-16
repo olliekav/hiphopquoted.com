@@ -16,17 +16,7 @@ cat_id: 211508448
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("bigtext.js") %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'cbs4rag' },
-        active: function() {
-          $('h1').bigtext();
-        }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "cbs4rag", :include_big_text => true, :include_lettering => false, :script => "$('h1').bigtext();" } %>
 <% end %>
 
 <article>

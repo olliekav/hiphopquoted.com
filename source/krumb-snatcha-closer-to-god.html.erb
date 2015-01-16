@@ -17,13 +17,7 @@ cat_id: 266866745
 <% end %>
 
 <% content_for :javascript do %>
-  <script>
-    $(function(){
-      WebFont.load({
-        typekit: { id: 'suv7urw' }
-      });
-    });
-  </script>
+  <%= partial "font_javascripts", :locals => { :font_id => "suv7urw", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
 <article>
