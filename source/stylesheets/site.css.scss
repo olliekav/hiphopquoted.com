@@ -453,7 +453,7 @@ article {
 .wf-loading main {
   visibility: hidden;
 }
-.wf-active main  {
+.wf-active main, .wf-inactive main   {
   opacity: 1;
   visibility: visible;
 }
