@@ -100,14 +100,17 @@ p {
     top: 0;
   }
   @media screen and (max-width: 800px) {
-    background: $tertiary-color url('../images/d-and-d-all-stars/studio-pic.jpg') no-repeat center center;
-    background-size: cover;
+    background: $tertiary-color url('http://img.youtube.com/vi/6XB24E9HTqU/hqdefault.jpg') no-repeat center center;
+    background-size: 300%;
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
     > iframe {
       display: none;
+    }
+    @media screen and (max-width: 500px) {
+      background-size: 400%;
     }
   }
 }
@@ -248,9 +251,34 @@ article {
         left: -150px;
       }
     }
-  }
-  @media screen and (max-width: 768px) {
-    padding-top: 350px;
+    @media screen and (max-width: 750px) {
+      padding: 350px 0 0;
+      > span {
+        margin: -250px 0 1em;
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        left: 0;
+        margin: 0 0 3em;
+        width: 100%;
+        &:before {
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      > span {
+        font-size: 3em;
+      }
+      &::before {
+        width: 100%;
+      }
+    }
   }
 }
 figcaption {
