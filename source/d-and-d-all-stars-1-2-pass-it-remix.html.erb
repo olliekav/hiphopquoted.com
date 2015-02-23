@@ -18,7 +18,7 @@ cat_id: 281537105
   <%= partial "font_javascripts", :locals => { :font_id => "soo1mcm", :include_big_text => false, :include_lettering => false, :script => false } %>
   <script>
     var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api";
+    tag.src = "//www.youtube.com/iframe_api?version=3";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     var player;
