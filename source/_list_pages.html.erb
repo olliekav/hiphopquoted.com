@@ -1,9 +1,13 @@
-<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.sort_by {|p| p.data.order} %>
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/)}.sort_by {|p| p.data.order.to_i}.reverse! %>
+<% excluded_paths = ['404', 'about', '404', '500', 'store', '/'] %>
 <ul>
   <% pages.each_with_index do |p, index| %>
     <% unless(p.url == "/" || p.url == "/about/" || p.url == "/404/" || p.url == "/500/" || p.url == "/store/") %>
       <li>
-        <%= link_to p.data.title, p.url %>
+        <% link_to p.url do %>
+          <%= image_tag("screenshots/#{p.data.screenshot}", alt: "") %>
+          <h2><%= p.data.title %></h2>
+        <% end %>
       </li>
     <% end %>
   <% end %>

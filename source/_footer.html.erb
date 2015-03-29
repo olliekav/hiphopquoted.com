@@ -9,12 +9,12 @@
     <% else %>
       <li class="page-nav">
         <%#= TODO: Move this to helper method %>
-        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) and not p.source_file.match(/\about/) }.sort_by {|p| p.url} %>
+        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) and not p.source_file.match(/\about/) and not p.source_file.match(/\index/)}.sort_by {|p| p.data.order.to_i}.reverse!%>
         <% pages.each_with_index do |p, index| %>
           <% if p.url == current_page.url %>
             <% next_page = pages[index+1] %>
             <% prev_page = pages[index-1] %>
-            <%= link_to("<span>Prev</span>", prev_page.path, :class => "prev") unless index == 1 %>
+            <%= link_to("<span>Prev</span>", prev_page.path, :class => "prev") unless index == 0 %>
             <%= link_to("<span>Next</span>", next_page.path, :class => "next") unless index == pages.size - 1 %>
           <% end %>
         <% end %>

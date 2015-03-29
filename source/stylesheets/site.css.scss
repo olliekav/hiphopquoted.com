@@ -169,7 +169,7 @@ article {
     li {
       list-style: none;
       a:hover {
-        color: #36D7B7;
+        color: #666666;
       }
     }
   }
@@ -285,7 +285,7 @@ article {
     color: #fff;
     @include transition(all 0.3s ease);
     &:hover {
-      color: $primary-color;
+      color: #666666;
     }
   }
   #main {
@@ -308,7 +308,7 @@ article {
         fill: #fff;
       }
       &:hover svg path {
-        fill: $primary-color;
+        fill: #666666;
       }
       @media screen and (max-width: 800px) {
         padding-bottom: 30%;
@@ -331,7 +331,12 @@ article {
 }
 
 #home {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 3%;
   text-align: center;
+  width: 100%;
+  @include box-sizing(border-box);
   > h1 {
     color: #fff;
     font-size: 2em !important;
@@ -350,16 +355,23 @@ article {
     word-spacing: -4px;
   }
   li {
-    border-top: 1px solid #fff;
     display: inline-block;
     list-style: none;
     letter-spacing: 0;
-    margin-bottom: 0.5em;
+    margin: 0 5% 2% 0;
     position: relative;
-    padding: 2em 0 2em;
+    padding: 2em 0 0;
     word-spacing: 0;
     vertical-align: top;
-    width: 33.333333333%;
+    width: 30%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    img {
+      border: 10px solid #fff;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
   }
 }
 
