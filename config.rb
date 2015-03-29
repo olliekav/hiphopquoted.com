@@ -57,7 +57,10 @@ after_build do |builder|
 end
 
 # Reload the browser automatically whenever files change
-activate :livereload, :host => "hiphopquoted.dev"
+configure :development do
+  activate :livereload, :host => "hiphopquoted.dev", :apply_js_live => true, :apply_css_live => true
+  config[:file_watcher_ignore] += [ /^build\// ]
+end
 
 # Ignore the sitemap layout
 page "/sitemap.xml", :layout => false

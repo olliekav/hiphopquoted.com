@@ -16,11 +16,3 @@ end
 
 Middleman::PreviewServer.preview_in_rack
 run Middleman::PreviewServer.app.class.to_rack_app
-
-require "lib/rack_typography"
-use Rack::Typography
-
-# require 'rubygems'
-# require 'middleman/rack'
-
-# run Middleman.server
