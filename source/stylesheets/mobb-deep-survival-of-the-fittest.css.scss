@@ -83,35 +83,29 @@ a {
   @extend %clearfix;
 }
 article {
-  padding-top: 40%;
   text-align: left;
   @extend %clearfix;
   @include box-sizing(border-box);
   header {
     background-color: $primary-color;
     color: #fff;
-    position: fixed;
-    height: 50%;
-    left: -3em;
-    top: -3em;
-    right: -2em;
-    @media screen and (max-width: 700px) {
-      left: -3em;
-      right: -24em;
-      top: -5em;
-    }
-    @media screen and (max-width: 500px) {
-      left: -20em;
-      right: -24em;
-      top: -2em;
-    }
+    position: relative;
+    height: 20%;
+    // @media screen and (max-width: 700px) {
+    //   left: -3em;
+    //   right: -24em;
+    //   top: -5em;
+    // }
+    // @media screen and (max-width: 500px) {
+    //   left: -20em;
+    //   right: -24em;
+    //   top: -2em;
+    // }
     svg {
-      height: 110%;
-      left: 0;
-      position: absolute;
-      text-transform: uppercase;
-      top: 0;
-      width: 115%;
+      height: 100%;
+      position: relative;
+      margin: 6em 2em 2em;
+      //width: 100%;
     }
   }
   figure {
@@ -125,23 +119,23 @@ article {
         width: 40%;
         @media screen and (max-width: 768px)  {
           width: 60%;
-          &:first-child {
-            padding-top: 8em;
-          }
+          // &:first-child {
+          //   margin-top: 4em;
+          // }
         }
         @media screen and (max-width: 700px)  {
           width: 60%;
-          &:first-child {
-            padding-top: 8em;
-          }
+          // &:first-child {
+          //   padding-top: 8em;
+          // }
         }
         @media screen and (max-width: 500px)  {
           @include box-sizing(border-box);
           padding: 2em;
           width: 100%;
-          &:first-child {
-            padding-top: 6em;
-          }
+          // &:first-child {
+          //   padding-top: 6em;
+          // }
         }
         &:last-child {
           background-color: $tertiary-color;
