@@ -367,7 +367,7 @@ article {
     word-spacing: 0;
     vertical-align: top;
     width: 30%;
-    &:nth-child(3n) {
+    &:nth-child(3n), &:last-child {
       margin-right: 0;
     }
     img {
