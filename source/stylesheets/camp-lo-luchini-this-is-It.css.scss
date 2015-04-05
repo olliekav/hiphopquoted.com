@@ -102,10 +102,12 @@ article {
     font-size: 15vw;
     line-height: 1;
     margin: 0 auto;
+    overflow: hidden;
     padding: 0 0.1em 0 1em;
     position: relative;
     text-shadow: multiple-text-shadow(60, $shadow-primary);
     width: 100%;
+    @include box-sizing(border-box);
     @media screen and (max-width: 1000px) {
       text-shadow: multiple-text-shadow(40, $shadow-primary);
     }
@@ -275,8 +277,11 @@ figcaption {
   left: 0;
   line-height: 1.2;
   margin-bottom: -200px;
+  overflow: hidden;
   padding-left: 2em;
   text-shadow: multiple-text-shadow(30, $shadow-primary);
+  width: 100%;
+  @include box-sizing(border-box);
   @media screen and (max-width: 850px) {
     text-shadow: multiple-text-shadow(25, $shadow-primary);
     margin-bottom: 0;
@@ -284,6 +289,9 @@ figcaption {
   @media screen and (max-width: 700px) {
     text-shadow: multiple-text-shadow(15, $shadow-primary);
     margin-bottom: 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 0.3em 1em;
   }
   span {
     display: block;
