@@ -102,13 +102,13 @@ article {
     > .word4 {
       display: block;
       font-size: 1.6em;
-      margin:-25px 0 0 49%;
+      margin:-25px 0 0 0.73em;
     }
     @media screen and (max-width: 1000px) {
       font-size: 11em;
       top: 120px;
       > .word4 {
-        margin: -10px 0 0 51%;
+        margin: -10px 0 0 0.77em;
       }
     }
     @media screen and (max-width: 900px) {
@@ -116,7 +116,7 @@ article {
       left: 34%;
       > .word4 {
         font-size: 0.8em;
-        margin-top: 0;
+        margin: 0 0 0 1.45em;
       }
     }
     @media screen and (max-width: 768px) {
@@ -124,15 +124,21 @@ article {
       left: 34%;
       > .word4 {
         font-size: 0.8em;
-        margin-top: 0;
+        margin: 0 0 0 1.57em;
       }
     }
     @media screen and (max-width: 700px) {
       left: 0;
+      > .word4 {
+        margin: 0 0 0 1.4em;
+      }
     }
     @media screen and (max-width: 500px) {
       font-size: 7.5em;
       top: 0;
+      > .word4 {
+        margin: 0 0 0 1.5em;
+      }
     }
   }
   figure {
@@ -164,11 +170,11 @@ article {
       font-family: 'Tungsten A', 'Tungsten B', impact, sans-serif;
       font-size: 12em;
       font-weight:700;
-      line-height: 0.8;
+      line-height: 0.7;
     }
     &:first-letter {
       float: left;
-      margin: -5px 10px -25px 0;
+      margin: 5px 10px 0 0;
     }
     &.one {
       padding-top: 130px;

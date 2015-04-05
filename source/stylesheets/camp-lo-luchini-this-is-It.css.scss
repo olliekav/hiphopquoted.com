@@ -227,12 +227,15 @@ article {
     }
   }
   blockquote {
-    max-width: 900px;
+    max-width: 1500px;
     margin: -25% auto 0;
-    padding: 0 2em 0 20%;
+    padding: 0 2em 0 30%;
     position: relative;
     width: 100%;
     @include box-sizing(border-box);
+    @media screen and (max-width: 1100px) {
+      padding: 0 2em 0 40%;
+    }
     @media screen and (max-width: 950px) {
       padding: 2em;
     }
@@ -366,5 +369,23 @@ figcaption {
     left: 2em;
     top: -4.4em;
     z-index: 10;
+  }
+}
+
+// IE9 fixes 
+
+.ie9 {
+  article {
+    h1 {
+      font-size: 12vw;
+      padding-left: 0.5em;
+      zoom: 1;
+    }
+    blockquote {
+      margin-top: -40%;
+    }
+  }
+  figcaption {
+    font-size: 3vw;
   }
 }
