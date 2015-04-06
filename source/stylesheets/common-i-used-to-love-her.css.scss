@@ -57,6 +57,9 @@ label {
   color: lighten($primary-color, 30%);
   a {
     color: lighten($primary-color, 30%);
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {

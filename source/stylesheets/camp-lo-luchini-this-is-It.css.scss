@@ -15,12 +15,12 @@ $shadow-primary: darken($primary-color, 10%);
 
   @return unquote($value);
 }
-
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: #f5f3cf;
   color: #000;
-  height: 100%;
-  overflow-x: hidden;
   position: relative;
   width: 100%;
 }

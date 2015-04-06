@@ -50,6 +50,9 @@ a {
   color: lighten(#6f3132, 20%);
   a {
     color: lighten(#6f3132, 20%);
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {

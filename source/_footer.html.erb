@@ -22,9 +22,23 @@
       <li class="audio">
         <div id="audio-clip"></div>
       </li>
-      <li>
-        <%= link_to "Buy on iTunes", "#{current_page.data.song_link}&at=11lPxd", :class => "buy-track", :target => "itunes_store"  %>
-      </li>
+      <% if current_page.data.song_link %>
+        <li class="buy">
+          <%= link_to "<span>Buy</span>".html_safe, "#{current_page.data.song_link}&at=11lPxd", :class => "buy-track", :target => "itunes_store"  %>
+        </li>
+      <% end %>
+      <% if current_page.data.genius_code %>
+        <li>
+          <%= link_to "Genius", "#genius-popup", :class => "genius-popup"  %>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </footer>
+
+<% if current_page.data.genius_code %>
+  <div id="genius-popup" class="zoom-anim-dialog mfp-hide">
+    <div id='rg_embed_link_<%= current_page.data.genius_code %>' class='rg_embed_link'></div>
+    <script crossorigin src='//genius.com/songs/<%= current_page.data.genius_code %>/embed.js'></script>
+  </div>
+<% end %>

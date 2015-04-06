@@ -49,6 +49,9 @@ a, label {
   color: darken($primary-color, 25%);
   a {
     color: darken($primary-color, 25%);
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {

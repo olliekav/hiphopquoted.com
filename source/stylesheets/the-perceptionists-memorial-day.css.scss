@@ -45,6 +45,9 @@ a {
   color: lighten($secondary-color, 40%);
   a {
     color: lighten($secondary-color, 40%);
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {

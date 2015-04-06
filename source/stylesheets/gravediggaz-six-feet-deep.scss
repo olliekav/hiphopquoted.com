@@ -48,6 +48,9 @@ a {
   color: lighten($background-color, 40%);
   a {
     color: lighten($background-color, 40%);
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {
@@ -79,7 +82,7 @@ a {
 }
 article {
   margin: 0 auto 3em;
-  opacity: 0.7;
+  opacity: 0.8;
   position: relative;
   text-align: center;
   width: 100%;

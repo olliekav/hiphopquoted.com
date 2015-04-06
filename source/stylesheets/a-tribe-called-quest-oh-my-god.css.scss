@@ -46,6 +46,9 @@ a {
   color: $secondary-color;
   a {
     color: $secondary-color;
+    &:hover {
+      color: #fff;
+    }
   }
   .page-nav {
     > a.prev {

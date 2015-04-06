@@ -3,6 +3,7 @@
 @import "partials/common";
 @import "partials/reset";
 @import "partials/itunes_preview_player";
+@import "partials/magnific-popup";
 
 $primary-color: #ff004f;
 
@@ -199,6 +200,14 @@ article {
         }
         &.audio {
           padding-top: 0;
+        }
+        &.buy {
+          span:after {
+            content: " on iTunes";
+            @media screen and (max-width: 500px) {
+              content: "";
+            }
+          }
         }
       }
     }
@@ -501,5 +510,26 @@ article {
   @media screen and (max-width: 500px) {
     padding-bottom: 6em;
     width: 320px;
+  }
+}
+
+// Genuis.com embed 
+
+.rg_embed {
+  color: #3e3e3e;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 0 !important;
+  max-width: auto;
+  margin: 0 !important;
+  width: 100%;
+}
+.rg_embed_body {
+  padding: 0 2em !important;
+}
+.rg_embed a[data-id] {
+  background-color: rgba(#fffc64, 0.4) !important;
+  @include transition(background-color 0.24s ease-in-out);
+  &:hover {
+    background-color: rgba(#fffc64, 0.6) !important;
   }
 }

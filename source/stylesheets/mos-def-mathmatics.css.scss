@@ -77,11 +77,10 @@ a, label {
   color: #000;
 }
 #main {
-  font: 300 100%/1.5 'Tungsten A', 'Tungsten B', impact, sans-serif;
+  font: 400 150%/1.5 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', serif;
   margin: 0 auto;
   opacity: 1;
   padding: 0;
-  text-transform: uppercase;
   width: 100%;
   @extend %clearfix;
   @media screen and (max-width: 600px) {
@@ -99,30 +98,35 @@ article {
     display: none;
   } 
   figure {
-    font-weight:700;
-    font-size: 5em;
-    line-height: 1;
     margin: 0 auto;
     position: relative;
-    text-transform: uppercase;
     text-align: center;
     width: 100%;
     @include box-sizing(border-box);
     p {
-      margin: 0;
-      padding: 0 20% 1em;
+      margin: 0 0 3em;
+      padding: 0 20%;
       @media screen and (max-width: 800px) {
-        padding: 0 10% 1em;
+        padding: 0 10%;
       }
-      > span {
-        color: $secondary-color;
+      &.numbers {
+        font-family: 'Tungsten A', 'Tungsten B', impact, sans-serif;
+        font-weight: 300;
+        font-size: 3em;
+        line-height: 1;
+        margin-bottom: 1em;
+        text-transform: uppercase;
       }
-      &:last-child {
+      &.block {
         background-color: rgba($secondary-color, 0.8);
-        padding-top: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
         > span {
           color: #000;
         }
+      }
+      > span {
+        color: $secondary-color;
       }
     }
     figcaption {

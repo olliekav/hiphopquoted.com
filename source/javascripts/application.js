@@ -1,3 +1,6 @@
+//= require jquery-1.10.2.min
+//= require magnific-popup
+
 $(function() {
   
   if($('#footer').hasClass('sticky')) {
@@ -33,5 +36,11 @@ $(function() {
       lastScrollTop = st;
     }
   }
+
+  $('.genius-popup').magnificPopup({
+    type: 'inline',
+    closeOnContentClick: false,
+    midClick: true
+  });
 
 });
