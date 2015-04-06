@@ -231,14 +231,14 @@ article {
   blockquote {
     max-width: 1500px;
     margin: -25% auto 0;
-    padding: 0 2em 0 30%;
+    padding: 0 2em 0 40%;
     position: relative;
     width: 100%;
     @include box-sizing(border-box);
     @media screen and (max-width: 1100px) {
-      padding: 0 2em 0 40%;
+      max-width: 1000px;
     }
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 700px) {
       padding: 2em;
     }
     @media screen and (max-width: 500px) {
@@ -252,7 +252,7 @@ article {
       font-family: "soap";
       font-size: 3.6em;
       line-height: 1;
-      left: -2em;
+      left: -20%;
       margin: 0 0 0.5em;
       position: relative;
       text-shadow: multiple-text-shadow(16, $shadow-primary);
@@ -278,7 +278,7 @@ figcaption {
   line-height: 1.2;
   margin-bottom: -200px;
   overflow: hidden;
-  padding-left: 2em;
+  padding: 0.3em 2em 0;
   text-shadow: multiple-text-shadow(30, $shadow-primary);
   width: 100%;
   @include box-sizing(border-box);
@@ -333,11 +333,14 @@ figcaption {
   .word7 {
     font-size: 2em;
     left: 4.45em;
-    letter-spacing: -70px;
+    letter-spacing: -50px;
     top: -2.35em;
     z-index: 10;
+    @media screen and (max-width: 1000px) {
+      letter-spacing: -40px;
+    }
     @media screen and (max-width: 700px) {
-      letter-spacing: -15px;
+      letter-spacing: -25px;
     }
     &:first-letter {
       float: left;
