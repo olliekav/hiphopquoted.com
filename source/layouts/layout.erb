@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <title><%= page_title %></title>
     <meta content="A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction. Brought to you by olliekav.com" name="description"/>
     <meta content="Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS3, HTML5, Art Direction, Typography, Fonts" name="keywords"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta content="width=device-width, maximum-scale=1.0" name="viewport"/> -->
     <meta name="viewport" content="width=device-width, minimal-ui">
     <link href="/images/favicon.ico" rel="shortcut icon"></link>
     <%= stylesheet_link_tag "site.css" %>
@@ -20,17 +19,11 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-10920756-1', 'auto');
       ga('send', 'pageview');
     </script>
   </head>
   <body class="page-<%= page_classes %> <%= 'content-page' if content_page? %>" id="hiphopquoted">
-    <script>
-    (function(doc, classToAdd){
-       doc.className = (doc.className).replace("no-js", classToAdd);
-    })(document.documentElement, "js");
-    </script>
     <%= partial "header" %>
     <main id="main" role="main">
       <%= yield %>

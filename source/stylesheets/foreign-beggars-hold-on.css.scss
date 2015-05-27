@@ -1,0 +1,116 @@
+// Foreign Beggars - Hold On -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #eb6907;
+$secondary-color: #000000;
+$tertiary-color: #FFFFFF;
+
+body {
+  background: $primary-color url('../images/foreign-beggars/hold-on-background.svg') no-repeat bottom center;
+  background-size: 100% auto;
+  color: $tertiary-color;
+  position: relative;
+  width: 100%;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $tertiary-color;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $tertiary-color;
+  a {
+    color: $tertiary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $tertiary-color;
+      }
+      &:hover:after {
+        border-right-color: $primary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $tertiary-color;
+      }
+      &:hover:after {
+        border-left-color: $primary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $tertiary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: $primary-color;
+}
+#main {
+  color: $tertiary-color;
+  font: 400 150%/1.5 'Ideal Sans SSm A', 'Ideal Sans SSm B', helvetica neue, arial, sans-serif;
+  position: relative;
+  width: 100%;
+  @extend %clearfix;
+}
+article {
+  h1 {
+    color: $tertiary-color;
+    font: 800 18vw/0.8 'Quarto A', 'Quarto B', Georgia, serif;
+    margin-bottom: 0.4em;
+    text-align: center;
+    @media only screen and (min-width: 1300px) {
+      font-size: 10em;
+    }
+  }
+  figure {
+    width: 100%;
+    blockquote {
+      font-size: 0.6em;
+      margin: 0 auto 6em;
+      max-width: 700px;
+      text-align: justify;
+      @extend %clearfix;
+      p {
+        float: left;
+        width: 47.5%;
+        &:first-child {
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+}
+figcaption {
+  font: 800 1.4em/0.8 'Quarto A', 'Quarto B', Georgia, serif;
+  margin-bottom: 3em;
+  text-align: center;
+  text-transform: lowercase;
+  a {
+    font-style: italic;
+  }
+}
