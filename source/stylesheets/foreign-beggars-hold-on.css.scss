@@ -6,11 +6,24 @@ $primary-color: #eb6907;
 $secondary-color: #000000;
 $tertiary-color: #FFFFFF;
 
-body {
+html {
   background: $primary-color url('../images/foreign-beggars/hold-on-background.svg') no-repeat bottom center;
-  background-size: 100% auto;
+  background-size: 3000px auto;
+  height: auto;
+  @media only screen and (max-width: 1150px) {
+    background-size: 2680px auto;
+  }
+  @media only screen and (max-width: 800px) {
+    background-size: 2247px auto;
+  }
+  @media only screen and (max-width: 450px) {
+    background-position: 55% 100%;
+    background-size: 4500px auto;
+  }
+}
+
+body {
   color: $tertiary-color;
-  position: relative;
   width: 100%;
 }
 a {
@@ -23,6 +36,10 @@ a {
 }
 p {
   margin-bottom: 2em;
+}
+#header {
+  background-color: $primary-color;
+  margin: 0;
 }
 #logo {
   path {
@@ -73,25 +90,37 @@ p {
 #main {
   color: $tertiary-color;
   font: 400 150%/1.5 'Ideal Sans SSm A', 'Ideal Sans SSm B', helvetica neue, arial, sans-serif;
-  position: relative;
+  padding: 0;
   width: 100%;
   @extend %clearfix;
 }
 article {
+  // background: $primary-color url('../images/foreign-beggars/hold-on-background-v2.svg') no-repeat 50% 100.4%;
+  // background-size: 600px auto;
   h1 {
     color: $tertiary-color;
     font: 800 18vw/0.8 'Quarto A', 'Quarto B', Georgia, serif;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.2em;
+    position: relative;
     text-align: center;
+    z-index: 2;
     @media only screen and (min-width: 1300px) {
       font-size: 10em;
+    }
+    @media only screen and (max-width: 1150px) {
+      margin-bottom: 0.5em;
+    }
+    @media only screen and (max-width: 650px) {
+      margin-bottom: 0;
     }
   }
   figure {
     width: 100%;
     blockquote {
-      font-size: 0.6em;
-      margin: 0 auto 6em;
+      font-size: 0.56em;
+      line-height: 1.6;
+      margin: 0 auto 5.4em;
+      padding: 0 3em;
       max-width: 700px;
       text-align: justify;
       @extend %clearfix;
@@ -102,15 +131,48 @@ article {
           margin-right: 5%;
         }
       }
+      @-moz-document url-prefix() {
+        font-size: 0.542em;
+      }
+      @media only screen and (max-width: 1150px) {
+        margin-bottom: 3em;
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 0.4em;
+        padding: 0 14em;
+      }
+      @media only screen and (max-width: 650px) {
+        //font-size: 0.8em;
+        padding: 8em;
+        p {
+          float: none;
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 450px) {
+        font-size: 0.6em;
+        padding: 4em;
+      }
     }
   }
 }
 figcaption {
-  font: 800 1.4em/0.8 'Quarto A', 'Quarto B', Georgia, serif;
-  margin-bottom: 3em;
+  //background-color: #d1621b; 
+  //bottom: -2em;
+  font: 800 1.4em/1.2 'Quarto A', 'Quarto B', Georgia, serif;
+  padding: 0 3em;
+  margin-bottom: 3.6em;
+  position: relative;
   text-align: center;
   text-transform: lowercase;
+  z-index: 10;
   a {
     font-style: italic;
+  }
+  @media only screen and (max-width: 1150px) {
+    margin-bottom: 2em;
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 0 1em;
   }
 }
