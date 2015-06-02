@@ -95,11 +95,13 @@ p {
   @extend %clearfix;
 }
 article {
-  // background: $primary-color url('../images/foreign-beggars/hold-on-background-v2.svg') no-repeat 50% 100.4%;
-  // background-size: 600px auto;
   h1 {
     color: $tertiary-color;
-    font: 800 18vw/0.8 'Quarto A', 'Quarto B', Georgia, serif;
+    //font: 800 18vw/0.8 'Quarto A', 'Quarto B', Georgia, serif;
+    font-family: 'Quarto A', 'Quarto B', Georgia, serif;
+    font-weight: 800;
+    font-size: 18vw;
+    line-height: 0.8;
     margin-bottom: 0.2em;
     position: relative;
     text-align: center;
