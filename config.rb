@@ -84,6 +84,14 @@ helpers do
       "Hip Hop Quoted - Hip Hop Quotes brought to life with Typography"
     end
   end
+  # Set the page description
+  def page_description
+    if content_for?(:description)
+      "#{yield_content(:description)}"
+    else
+      "A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction."
+    end
+  end
   def content_page?
     current_page.path == "index.html" || current_page.path == "about.html" || current_page.path == "store.html" || current_page.path == "404.html" || current_page.path == "500.html"
   end

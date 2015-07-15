@@ -1,0 +1,301 @@
+// Blak Twang - Dettwork Southeast -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffffff;
+$secondary-color: #e2061b;
+$tertiary-color: #2c2d87;
+
+// @extend %station;
+%station {
+  background-color: $secondary-color;
+  border-radius: 20px;
+  content: "";
+  left: -47px;
+  height: 24px;
+  position: absolute;
+  top: 5px;
+  width: 24px;
+  z-index: 101;
+}
+
+html {
+  background-color: $primary-color;
+  height: auto;
+}
+body {
+  background-color: #fdc508;
+  color: $tertiary-color;
+  width: 100%;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+.button {
+  border: 1px solid $tertiary-color; 
+  color: $tertiary-color;
+  &:hover {
+    background-color: $tertiary-color;
+    color: #fff;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  background-color: $primary-color;
+  margin: 0;
+}
+#logo {
+  path {
+    fill: $tertiary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $secondary-color;
+  }
+}
+#footer.sticky {
+  background-color: rgba($tertiary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: $secondary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: $secondary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: $secondary-color;
+}
+#main {
+  background: url("../images/blak-twang/train.jpg") no-repeat top right;
+  background-size: cover;
+  color: $primary-color;
+  font: 400 93.8%/1.5 "aktiv-grotesk", helvetica neue, arial, sans-serif;
+  padding: 0 0 200px;
+  position: relative;
+  width: 100%;
+  @extend %clearfix;
+  @media screen and (max-width: 750px) {
+    font-size: 87.5%;
+  }
+  @media screen and (max-width: 550px) {
+    padding-bottom: 300px;
+  }
+}
+article {
+  margin: 0 auto;
+  @extend %clearfix;
+  header {
+    background-color: #d8d4d4;
+    margin-bottom: 4em;
+    padding: 0 2em;
+    h1 {
+      color: $tertiary-color;
+      font-weight: 700;
+      font-size: 3.533em;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.3em 0 0.3em 300px;
+      position: relative;
+      @include box-sizing(border-box);
+      @media screen and (max-width: 875px) {
+        font-size: 2.8em;
+        padding-left: 280px;
+      }
+      @media screen and (max-width: 750px) {
+        font-size: 2.2em;
+      }
+      @media screen and (max-width: 650px) {
+        padding-left: 190px;
+      }
+      @media screen and (max-width: 550px) {
+        padding-left: 110px;
+      }
+      span {
+        color: $tertiary-color;
+        @-moz-document url-prefix() {
+          color: #d8d4d4;
+          text-shadow: -1px -1px 0 $tertiary-color, 1px -1px 0 $tertiary-color, -1px 1px 0 $tertiary-color, 1px 1px 0 $tertiary-color;
+        }
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px $tertiary-color;
+      }
+      &:before {
+        background: url("../images/blak-twang/logo-train.svg") no-repeat;
+        background-size: cover;
+        content: "";
+        height: 100%;
+        left: -130px;
+        position: absolute;
+        top: 0;
+        width: 400px;
+        @media screen and (max-width: 650px) {
+          left: -230px;
+        }
+        @media screen and (max-width: 550px) {
+          left: -300px;
+        }
+      }
+    }
+  }
+  figure {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10%;
+    @media screen and (max-width: 650px) {
+      padding: 0 20%;
+    }
+    @media screen and (max-width: 475px) {
+    padding: 0 10% 0 15%;
+  }
+    blockquote {
+      float: left;
+      text-align: justify;
+      width: 45%;
+      position: relative;
+      @media screen and (max-width: 650px) {
+        float: none;
+        width: 100%;
+      }
+      &:after {
+        background-color: $secondary-color;
+        bottom: 0;
+        content: "";
+        height: 108%;
+        left: -40px;
+        position: absolute;
+        top: 1em;
+        width: 10px;
+        z-index: 100;
+      }
+      &:before {
+        @extend %station;
+        top: 108.5%;
+      }
+      p {
+        position: relative;
+        &:before {
+          color: $secondary-color;
+          display: block;
+          font-size: 1.6em;
+          font-weight: 700;
+          content: "";
+          text-transform: uppercase;
+        }
+        &:not(.chorus):after {
+          @extend %station;
+        }
+        &:nth-child(1) {
+          &:before {
+            content: "Verse One";
+          }
+        }
+        &:nth-child(2) {
+          &:before {
+            content: "Verse Two";
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            content: "Verse Three";
+          }
+        }
+        &.chorus {
+          color: $secondary-color;
+          font-weight: 700;
+          font-size: 3.533em;
+          line-height: 1.2;
+          margin-bottom: 0.2em;
+          position: absolute;
+          left: 110%;
+          top: 0.5em;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px $secondary-color;
+          text-align: left;
+          width: 110%;
+          @media screen and (max-width: 875px) {
+            font-size: 2.8em;
+          }
+          @media screen and (max-width: 750px) {
+            font-size: 2.2em;
+          }
+          @media screen and (max-width: 650px) {
+            position: static;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.fig-wrapper {
+  background-color: #fdc508; 
+  bottom: 0;
+  left: 0;
+  padding: 2em 0 4em;
+  position: absolute;
+  right: 0;
+}
+figcaption {
+  color: $tertiary-color;
+  clear: both;
+  font-size: 2.6em;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 10%;
+  position: relative;
+  @media screen and (max-width: 750px) {
+    font-size: 2.2em;
+  }
+  @media screen and (max-width: 650px) {
+    padding: 0 20%;
+  }
+  @media screen and (max-width: 475px) {
+    padding: 0 10% 0 15%;
+  }
+  // &:after {
+  //   @extend %station;
+  //   top: 20px;
+  // }
+  a {
+    color: $tertiary-color;
+    @-moz-document url-prefix() {
+      color: #fdc508;
+      text-shadow: -1px -1px 0 $tertiary-color, 1px -1px 0 $tertiary-color, -1px 1px 0 $tertiary-color, 1px 1px 0 $tertiary-color;
+    }
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px $tertiary-color;
+  }
+}

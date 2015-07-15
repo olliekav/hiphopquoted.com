@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title><%= page_title %></title>
-    <meta content="A typography experiment based on Hip-Hop Quotes using forward thinking web font experiments and art direction. Brought to you by olliekav.com" name="description"/>
+    <meta name="description" content="<%= page_description %>"/>
     <meta content="Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS3, HTML5, Art Direction, Typography, Fonts" name="keywords"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimal-ui">
@@ -23,7 +23,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="page-<%= page_classes %> <%= 'content-page' if content_page? %>" id="hiphopquoted">
+  <body id="hiphopquoted" class="page-<%= page_classes %> <%= 'content-page' if content_page? %>">
     <%= partial "header" %>
     <main id="main" role="main">
       <%= yield %>
@@ -38,13 +38,14 @@
         var track = "<%= data.page.track %>";
         var playerCountry = "<%= data.page.player_country %>";
         var playerColor = "#<%= data.page.player_color %>";
+        var playerAttribute = "<%= data.page.player_attribute %>";
         var player = new iTunesPreviewPlayer(track);
         var audio = document.getElementsByTagName('audio');
-        var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
-        var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-        if(!(isFirefox && isMac)) {
+        //var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
+        //var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        //if(!(isFirefox && isMac)) {
           document.getElementById("audio-clip").appendChild(player.DOMElement());
-        }
+        //}
       </script>
     <% end %>
     <script>

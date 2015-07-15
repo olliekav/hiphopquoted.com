@@ -34,6 +34,14 @@ a {
     color: $tertiary-color;
   }
 }
+.button {
+  border: 1px solid #000; 
+  color: #000;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
 p {
   margin-bottom: 2em;
 }
