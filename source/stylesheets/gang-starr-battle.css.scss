@@ -89,7 +89,7 @@ article {
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: -1px;
-    margin: 0;
+    margin: 2em 0 0;
     padding: 0 100px;
     quotes: "\201C""\201D""\2018""\2019";
     @media screen and (max-width: 700px) {
@@ -102,7 +102,7 @@ article {
     }
     &:before,
     &:after {
-      display: inline-block;
+      display: block;
       font-size: 3em;
       line-height: 0;
       margin: 0;
@@ -118,12 +118,13 @@ article {
     }
     &:before {
       content: open-quote;
-      margin-left: -90px;
+      //margin-left: -90px;
       @media screen and (max-width: 500px) {
         margin: 0;
       }
     }
     &:after {
+      display: none;
       content: close-quote;
       margin: 0;
       top: 0.2em;
