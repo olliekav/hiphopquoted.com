@@ -1,0 +1,386 @@
+// Sean Price Bar Barian -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffffff;
+$secondary-color: #a52e39;
+$tertiary-color: #73737d;
+
+// Grid
+
+.span-1 {
+  width: 22%;
+}
+.span-2 {
+  width: 48%;
+}
+.span-3 {
+  width: 74%;
+}
+.span-4 {
+  width: 100%;
+}
+
+html {
+  background: #272729;
+  height: auto;
+}
+body {
+  background: #272729 url("../images/sean-price/sp-header.jpg") no-repeat center top;
+  background-size: 100% auto;
+  color: $primary-color;
+  width: 100%;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 1000px) {
+    background-size: 115% auto;
+  }
+  @media screen and (max-width: 800px) {
+    background-size: 130% auto;
+  }
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  margin: 0;
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $tertiary-color;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: #272729;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: #272729;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: #272729;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: #272729;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #272729;
+}
+#main {
+  color: $primary-color;
+  font-size: 1.625em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  @extend %clearfix;
+  @media screen and (max-width: 1350px) {
+    font-size: 1.4em;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 1.2em;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 1em;
+  }
+}
+h1, h2 {
+  color: $primary-color;
+  font-family: "Tungsten A", "Tungsten B";
+  font-weight: 500;
+  font-size: 16vw;
+  letter-spacing: 30px;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  @include box-sizing(border-box);
+  span {
+    display: block;
+  }
+  span:last-child {
+    color: $secondary-color;
+  }
+}
+h1 {
+  margin: 0 auto 0.5em;
+  max-width: 1300px;
+  padding-top: 1.5em;
+  @media screen and (max-width: 700px) {
+    margin-bottom: 0.5em;
+  }
+  span:first-child {
+    margin-left: 26%;
+    @media screen and (max-width: 1250px) {
+      margin-left: 18%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-left: 12%;
+    }
+  }
+  span:last-child {
+    margin-left: 48%;
+    @media screen and (max-width: 1250px) {
+      margin-left: 40%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-left: 20%;
+    }
+  }
+  &:after, &:before {
+    font-size: 0.1em;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 65%;
+  }
+  &:after {
+    content: "08 / 08 / 15";
+    color: $tertiary-color;
+    left: 80%;
+    @media screen and (min-width: 1950px) {
+      left: 85%;
+    }
+    @media screen and (max-width: 1300px) {
+      left: 65%;
+    }
+  }
+  &:before {
+    content: "RIP";
+    color: $secondary-color;
+    left: 70%;
+    @media screen and (min-width: 1950px) {
+      left: 75%;
+    }
+    @media screen and (max-width: 1300px) {
+      left: 58%;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    &:after, &:before {
+      font-size: 0.12em;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    &:after, &:before {
+      font-size: 0.16em;
+      top: 63%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1em;
+    &:after, &:before {
+      top: 110%;
+    }
+  }
+}
+h2 {
+  background: url("../images/sean-price/sp-middle.jpg") center no-repeat;
+  background-size: 100% auto;
+  padding: 1em 4%;
+  span:first-child {
+    margin-left: 48%;
+    @media screen and (max-width: 1250px) {
+      margin-left: 40%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-left: 12%;
+    }
+  }
+  span:last-child {
+    margin-left: 26%;
+    @media screen and (max-width: 1250px) {
+      margin-left: 18%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-left: 20%;
+    }
+    @media screen and (max-width: 700px) {
+      margin-left: 4%;
+    }
+  }
+}
+article {
+  margin: 0 auto;
+  @extend %clearfix;
+  p {
+    font-family: "Sentinel SSm A", "Sentinel SSm B", georgia, arial, serif;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 4% 0 31%;
+    position: relative;
+    width: 64%;
+    @media screen and (max-width: 1250px) {
+      padding: 0 4% 0 19%;
+      width: 56%;
+    }
+    @media screen and (max-width: 700px) {
+      max-width: 400px;
+      padding: 0 8%;
+      width: 100%;
+    }
+    @include box-sizing(border-box);
+    span {
+      color: $secondary-color;
+      font-family: "Tungsten A", "Tungsten B";
+      font-weight: 500;
+      font-size: 5em;
+      font-style: normal;
+      letter-spacing: 10px;
+      line-height: 1.1;
+      left: 4%;
+      position: absolute;
+      text-transform: uppercase;
+      top: 25%;
+      width: 48%;
+      @media screen and (max-width: 1250px) {
+        left: -12%;
+      }
+      @media screen and (max-width: 1100px) {
+        left: -16%;
+      }
+      @media screen and (max-width: 875px) {
+        letter-spacing: 10px;
+      }
+      @media screen and (max-width: 700px) {
+        display: block;
+        margin: 1em 0;
+        position: static;
+      }
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
+      b {
+        display: block;
+        font-weight: normal;
+        left: 4%;
+        position: relative;
+        &:first-child {
+          color: $primary-color;
+          margin-left: -16%;
+        }
+        &:last-child {
+          color: $tertiary-color;
+          margin-left: -22%;
+        }
+        @media screen and (max-width: 700px) {
+          display: inline;
+          &:first-child,
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    &.artwork {
+      margin-bottom: 5em;
+    }
+  }
+}
+figcaption {
+  color: $primary-color;
+  font-family: "Tungsten A", "Tungsten B";
+  font-weight: 500;
+  font-size: 5em;
+  letter-spacing: 10px;
+  line-height: 1.1;
+  margin: 1.5em auto;
+  max-width: 1300px;
+  padding: 0 4%;
+  position: relative;
+  text-transform: uppercase;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 875px) {
+    letter-spacing: 15px;
+  }
+  @media screen and (max-width: 875px) {
+    font-size: 5em;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 8%;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 4em;
+  }
+  span {
+    display: block;
+    position: relative;
+    &:nth-child(1) {
+      padding-left: 26%;
+    }
+  }
+  a:nth-child(2) {
+    display: inline-block;
+    margin-left: 4%;
+  }
+  cite {
+    color: $tertiary-color;
+    position: relative;
+    padding-left: 16%;
+    span:nth-child(1) {
+      padding-left: 36%;
+    }
+    span:nth-child(3) {
+      color: $primary-color;
+      padding-left: 12%;
+    }
+    a:nth-child(2) {
+      display: inline-block;
+      margin-left: 16%;
+    }
+    a:nth-child(4) {
+      display: inline-block;
+      margin-left: 28%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    span:nth-child(1),
+    a:nth-child(2) {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    cite {
+      span:nth-child(1),
+      span:nth-child(3),
+      a:nth-child(2),
+      a:nth-child(4) {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}

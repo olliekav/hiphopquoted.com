@@ -12,11 +12,14 @@ buy_link: http://www.redbubble.com/people/hiphopquoted/works/15547665-blak-twang
 cat_id: 918090575
 order: 37
 screenshot: blak_twang_dettwork_southeast.jpg
-genius_code: 10801
+genius_link: http://genius.com/Blak-twang-dettwork-southeast-lyrics
 ---
 
 <% content_for :stylesheet do %>
   <%= stylesheet_link_tag "/stylesheets/blak-twang-dettwork-southeast.css" %>
+<% end %>
+
+<% content_for :javascript do %>
   <%= partial "font_javascripts", :locals => { :font_id => "joo1qle", :include_big_text => false, :include_lettering => false, :script => false } %>
 <% end %>
 
