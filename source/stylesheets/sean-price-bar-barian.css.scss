@@ -119,7 +119,7 @@ p {
 }
 h1, h2 {
   color: $primary-color;
-  font-family: "Tungsten A", "Tungsten B";
+  font-family: "Tungsten A", "Tungsten B", HelveticaNeue-CondensedBold, "Arial Narrow", sans-serif-condensed;
   font-weight: 500;
   font-size: 16vw;
   letter-spacing: 30px;
@@ -256,7 +256,7 @@ article {
     @include box-sizing(border-box);
     span {
       color: $secondary-color;
-      font-family: "Tungsten A", "Tungsten B";
+      font-family: "Tungsten A", "Tungsten B", "Futura-CondensedExtraBold", HelveticaNeue-CondensedBold, "Arial Narrow", sans-serif-condensed;
       font-weight: 500;
       font-size: 5em;
       font-style: normal;
