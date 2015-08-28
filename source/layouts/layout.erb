@@ -11,6 +11,10 @@
     <link href="/images/favicon.ico" rel="shortcut icon"></link>
     <%= stylesheet_link_tag "site.css" %>
     <%= yield_content :stylesheet %>
+    <%= yield_content :javascript %>
+    <% if content_page? %>
+      <%= partial "font_javascripts", :locals => { :font_id => "lsk1lvz", :include_big_text => false, :include_lettering => false, :script => false } %>
+    <% end %>
     <!--[if lt IE 9]>
       <%= javascript_include_tag("html5shiv.js") %>
     <![endif]-->
@@ -30,7 +34,6 @@
     </main>
     <%= partial "footer" %>
     <%= javascript_include_tag("application.js") %>
-    <%= yield_content :javascript %>
     <% unless content_page? %>
       <%= javascript_include_tag("/javascripts/classList.js") %>
       <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
@@ -41,11 +44,7 @@
         var playerAttribute = "<%= data.page.player_attribute %>";
         var player = new iTunesPreviewPlayer(track);
         var audio = document.getElementsByTagName('audio');
-        //var isMac = navigator.userAgent.toUpperCase().indexOf('MAC') >= 0;
-        //var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-        //if(!(isFirefox && isMac)) {
-          document.getElementById("audio-clip").appendChild(player.DOMElement());
-        //}
+        document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>
     <% end %>
     <script>

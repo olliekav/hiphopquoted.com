@@ -155,7 +155,6 @@ article {
 } 
 #footer {
   color: #fff;
-  font: 400 100%/2 "adobe-garamond-pro", 'Georgia', serif;
   overflow: hidden;
   padding: 0.5em 1em;
   text-align: center;
@@ -170,7 +169,7 @@ article {
     li {
       list-style: none;
       a:hover {
-        color: #666666;
+        color: #ffffff;
       }
     }
   }
@@ -274,11 +273,9 @@ article {
 // Content Pages ------------------------------------------------------------------------------------
 
 .content-page {
-  background: url("../images/home-background-v3.jpg") no-repeat fixed top center;
-  background-size: cover;
-  background-color: #000;
+  background-color: #202020;
   color: #fff;
-  font: 400 150%/1.5 "adobe-garamond-pro", 'Georgia', serif;
+  font: 500 150%/1.5 "ff-meta-serif-web-pro", Georgia, sans-serif;
   position: relative;
   // &:before {
   //   background-color: rgba(#000, 0.8);
@@ -291,19 +288,23 @@ article {
   //   z-index: -1;
   // }
   a {
-    color: #fff;
+    color: #666666;
     @include transition(all 0.3s ease);
     &:hover {
-      color: #666666;
+      color: #fff;
     }
   }
   #main {
     padding-bottom: 1em;
     h1 {
+      font-weight: 700;
       font-size: 3em;
       margin-bottom: 0.5em;
       text-align: center;
     }
+  }
+  p {
+    margin-bottom: 1.5em;
   }
   #header {
     margin-bottom: 0;
@@ -430,7 +431,7 @@ article {
 
 // Store
 
-#store {
+#prints {
   margin: 0 auto;
   max-width: 1000px;
   text-align: center;
@@ -461,10 +462,14 @@ article {
           background-color: #fff; 
           color: #000;
           &:hover {
-            background-color: $primary-color;
+            background-color: #666666;
             color: #fff;
           }
         }
+      }
+      > h2 {
+        margin-bottom: 0.5em;
+        font-weight: 700;
       }
       > p {
         font-size: 0.8em;

@@ -74,9 +74,6 @@ helpers do
       text
     end
   end
-  def store_link?
-    false
-  end
   def page_title
     if current_page.data.title
       "#{current_page.data.title} - Hip Hop Quoted"
@@ -93,7 +90,9 @@ helpers do
     end
   end
   def content_page?
-    current_page.path == "index.html" || current_page.path == "about.html" || current_page.path == "store.html" || current_page.path == "404.html" || current_page.path == "500.html"
+    content_pages = ["index.html", "about.html", "prints.html", "404.html", "500.html"]
+    content_pages.include?(current_page.path)
+    #current_page.path == "index.html" || current_page.path == "about.html" || current_page.path == "prints.html" || current_page.path == "404.html" || current_page.path == "500.html"
   end
 end
 
