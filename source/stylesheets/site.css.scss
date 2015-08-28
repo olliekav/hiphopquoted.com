@@ -509,9 +509,9 @@ article {
 //   @include transition(opacity 0.2s ease-in-out);
 // }
 .wf-loading main {
-  opacity: 0;
+  //opacity: 0;
   visibility: hidden;
-  @include transition(opacity 0.2s ease-in-out);
+  @include transition(visibility 0.2s ease-in-out);
 }
 .wf-active main, .wf-inactive main   {
   opacity: 1;
