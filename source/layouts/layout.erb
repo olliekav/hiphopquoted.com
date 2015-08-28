@@ -42,14 +42,16 @@
         var playerCountry = "<%= data.page.player_country %>";
         var playerColor = "#<%= data.page.player_color %>";
         var playerAttribute = "<%= data.page.player_attribute %>";
-        var player = new iTunesPreviewPlayer(track);
-        var audio = document.getElementsByTagName('audio');
-        document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>
     <% end %>
     <script>
       $(window).bind("load", function() {
         $('html').addClass('js-load');
+        <% unless content_page? %>
+          var player = new iTunesPreviewPlayer(track);
+          var audio = document.getElementsByTagName('audio');
+          document.getElementById("audio-clip").appendChild(player.DOMElement());
+        <% end %>
       });
       if( $(window).width() <= 768 ) { 
         setTimeout(function(){
