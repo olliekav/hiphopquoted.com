@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <title><%= page_title %></title>
@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimal-ui">
     <link href="/images/favicon.ico" rel="shortcut icon"></link>
+    <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
     <%= stylesheet_link_tag "site.css" %>
     <%= yield_content :stylesheet %>
     <!--[if lt IE 9]>
