@@ -504,13 +504,15 @@ article {
 
 // Typekit loading elements --------------------------------------------------------------------
 
-.js main {
+// .js main {
+//   opacity: 0;
+//   @include transition(opacity 0.2s ease-in-out);
+// }
+.wf-loading main {
   opacity: 0;
+  visibility: hidden;
   @include transition(opacity 0.2s ease-in-out);
 }
-// .wf-loading main {
-//   visibility: hidden;
-// }
 .wf-active main, .wf-inactive main   {
   opacity: 1;
   visibility: visible;
