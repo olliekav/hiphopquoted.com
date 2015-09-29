@@ -37,10 +37,4 @@ $(function() {
     }
   }
 
-  $('.genius-popup').magnificPopup({
-    type: 'inline',
-    closeOnContentClick: false,
-    midClick: true
-  });
-
 });

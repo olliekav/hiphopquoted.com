@@ -1,0 +1,365 @@
+// Wu-Tang Clan - CReam -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #fbc92c;
+$secondary-color: #000000;
+$tertiary-color: #ffffff;
+
+// Grid
+
+.span-1 {
+  width: 22%;
+}
+.span-2 {
+  width: 48%;
+}
+.span-3 {
+  width: 74%;
+}
+.span-4 {
+  width: 100%;
+}
+
+html {
+  background: $primary-color;
+  height: auto;
+}
+body {
+  background: $primary-color;
+  background-size: 100% auto;
+  color: $secondary-color;
+  width: 100%;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 1000px) {
+    background-size: 115% auto;
+  }
+  @media screen and (max-width: 800px) {
+    background-size: 130% auto;
+  }
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $tertiary-color;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: $tertiary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: $tertiary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: $tertiary-color;
+}
+#main {
+  font-family: "aktiv-grotesk", helvetica neue, helvetica, arial, serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 auto;
+  overflow-x: hidden; 
+  position: relative;
+  width: 100%;
+  @extend %clearfix;
+  @media screen and (max-width: 1200px) {
+    font-size: 87.5%;
+  }
+  @media screen and (max-width: 925px) {
+    font-size: 75%;
+  }
+}
+.bird {
+  height: 400px;
+  margin: 0 0 0 26%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  @media screen and (max-width: 925px) {
+    height: 325px;
+  }
+  @media screen and (max-width: 750px) {
+    margin-left: 0;
+  }
+  @media screen and (max-width: 550px) {
+    height: 300px;
+  }
+  @include box-sizing(border-box);
+  > div {
+    background-color: $secondary-color;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 22%;
+    vertical-align: bottom;
+    @media screen and (max-width: 750px) {
+      width: 30%;
+    }
+    &:before {
+      background-color: $primary-color;
+      content: "";
+      left: -50%;
+      height: 300px;
+      position: absolute;
+      width: 200%;
+    }
+    &:nth-child(1) {
+      margin-right: 4%;
+      &:before {
+        top: -220px;
+        @include transform(rotateZ(25deg));
+        @media screen and (max-width: 560px) {
+          top: -160px;
+          left: -10%;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        margin-right: 5%;
+      }
+    }
+    &:nth-child(2) {
+      margin: 0 4% 0 0;
+      @media screen and (max-width: 750px) {
+        margin-right: 5%;
+      }
+      &:before {
+        top: -70px;
+        @media screen and (max-width: 560px) {
+          top: -50px;
+          left: -120%;
+          width: 300%;
+        }
+        @include transform(rotateZ(-25deg));
+      }
+    }
+    &:nth-child(3) {
+      margin: 0;
+      &:before {
+        top: -160px;
+        @media screen and (max-width: 560px) {
+          top: -120px;
+          left: -90%;
+        }
+        @include transform(rotateZ(-25deg));
+      }
+    }
+  }
+}
+br {
+  display: none;
+  @media screen and (max-width: 1020px) {
+    display: block;
+  }
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+  @media screen and (max-width: 490px) {
+    display: block;
+  }
+}
+hr {
+  background-color: $secondary-color;
+  border: 0;
+  content: "";
+  clear: both;
+  display: block;
+  height: 20px;
+  margin: 0 0 6em 26%;
+  position: relative;
+  &:before {
+    background-color: $secondary-color;
+    content: "";
+    left: -35%;
+    height: 20px;
+    top: 0;
+    position: absolute;
+    width: 29%;
+  }
+  @media screen and (max-width: 750px) {
+    margin-left: 0;
+    &:before {
+      display: none;
+    }
+  }
+}
+h1 {
+  top: 0.7em;
+  color: $tertiary-color;
+  font-size: 48em;
+  font-weight: 700;
+  line-height: 1;
+  left: 26%;
+  letter-spacing: -10px;
+  margin-left: -37px;
+  position: absolute;
+  z-index: -1;
+}
+h2 {
+  color: $secondary-color;
+  font-weight: 700;
+  font-size: 3.6em;
+  float: left;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0 4% 0 0;
+  position: relative;
+  vertical-align: bottom;
+  width: 48%;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 1050px) {
+    font-size: 3.2em;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 3em;
+  }
+  @media screen and (max-width: 750px) {
+    margin-right: 5%;
+    width: 30%;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 2.4em;
+    margin-right: 0;
+    float: none;
+    width: 100%;
+  }
+  &:after {
+    border-bottom: 5px solid $secondary-color;
+    bottom: 0;
+    content: "";
+    left: 54%;
+    position: absolute;
+    width: 46%;
+    @media screen and (max-width: 750px) {
+      bottom: -1.7em;
+      left: 0;
+      width: 100%;
+    }
+    @media screen and (max-width: 550px) {
+      bottom: -1.8em;
+      left: 55%;
+      width: 45%;
+    }
+  }
+  &:before {
+    border-bottom: 5px solid $secondary-color;
+    float: left;
+    margin-right: 9%;
+    padding-bottom: 1.7em;
+    width: 45%;
+    white-space: pre-wrap;
+    vertical-align: bottom;
+    @media screen and (max-width: 750px) {
+      float: none;
+      display: block;
+      margin-bottom: 1.7em;
+      width: 100%;
+    }
+    @media screen and (max-width: 550px) {
+      float: left;
+      margin-right: 10%;
+      width: 45%;
+    }
+  }
+  &.verse-one:before {
+    content: "01. \A Verse";
+  }
+  &.verse-two:before {
+    content: "02. \A Verse";
+  }
+}
+.row {
+  @extend %clearfix;
+}
+article { 
+  margin: 0 auto;
+  max-width: 1600px; 
+  @extend %clearfix;
+  p {
+    float: left;
+    font-size: 1.2em;
+    margin: 0 0 6em;
+    -webkit-columns: 2 200px;
+     -moz-columns: 2 200px;
+          columns: 2 200px;
+    -webkit-column-gap: 4em;
+      -moz-column-gap: 4em;
+          column-gap: 4em;
+    width: 48%;
+    @media screen and (max-width: 750px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 550px) {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+figcaption {
+  clear:both;
+  font-weight: 700;
+  font-size: 3.6em;
+  line-height: 1.1;
+  margin: 0 0 6em 52%;
+  max-width: 1300px;
+  position: relative;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 1050px) {
+    font-size: 3.2em;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 3em;
+  }
+  @media screen and (max-width: 750px) {
+    margin: 0 0 6em 35%;
+  }
+  @media screen and (max-width: 550px) {
+    margin: 0 0 6em 0;
+  }
+  a:hover {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
