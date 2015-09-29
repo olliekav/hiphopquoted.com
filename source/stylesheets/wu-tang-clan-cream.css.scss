@@ -208,6 +208,7 @@ hr {
   display: block;
   height: 20px;
   margin: 0 0 6em 26%;
+  overflow:visible;
   position: relative;
   &:before {
     background-color: $secondary-color;
@@ -233,9 +234,15 @@ h1 {
   line-height: 1;
   left: 26%;
   letter-spacing: -10px;
-  margin-left: -37px;
+  margin-left: -44px;
   position: absolute;
   z-index: -1;
+  @media screen and (max-width: 1200px) {
+    margin-left: -39px;
+  }
+  @media screen and (max-width: 925px) {
+    margin-left: -33px;
+  }
 }
 h2 {
   color: $secondary-color;
