@@ -509,19 +509,19 @@ article {
   visibility: hidden;
   @include transition(all 0.2s ease-in-out);
 }
-.js body {
-  background-image: url("../images/loader.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 600px;
-  background-size: 50px;
-}
+// .js body {
+//   background-image: url("../images/loader.svg");
+//   background-repeat: no-repeat;
+//   background-position: 50% 600px;
+//   background-size: 50px;
+// }
 .js-load main {
   opacity: 1;
   visibility: visible;
 }
-.js-load body {
-  background-image: none;
-}
+// .js-load body {
+//   background-image: none;
+// }
 // .wf-loading main {
 //   visibility: hidden;
 // }
