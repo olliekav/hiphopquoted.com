@@ -6,7 +6,6 @@ gem "middleman"
 gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
 gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
-gem 'middleman-pagination', github: 'thisiscapra/middleman-pagination', branch: 'master'
 gem 'middleman-imageoptim'
 gem 'therubyracer'
 gem 'oj'
