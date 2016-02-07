@@ -14,7 +14,6 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-page "/404.html", layout: false
 
 # Methods defined in the helpers block are available in templates
 helpers do
