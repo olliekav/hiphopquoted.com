@@ -38,10 +38,10 @@
       <%= javascript_include_tag("/javascripts/classList.js") %>
       <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
       <script>
-        var track = "<%= data.page.track %>";
-        var playerCountry = "<%= data.page.player_country %>";
-        var playerColor = "#<%= data.page.player_color %>";
-        var playerAttribute = "<%= data.page.player_attribute %>";
+        var track = "<%= current_page.data.track %>";
+        var playerCountry = "<%= current_page.data.player_country %>";
+        var playerColor = "#<%= current_page.data.player_color %>";
+        var playerAttribute = "<%= current_page.data.player_attribute %>";
       </script>
     <% end %>
     <script>

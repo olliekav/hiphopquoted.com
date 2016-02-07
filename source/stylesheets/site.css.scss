@@ -3,7 +3,6 @@
 @import "partials/common";
 @import "partials/reset";
 @import "partials/itunes_preview_player";
-@import "partials/magnific-popup";
 
 $primary-color: #ff004f;
 
@@ -504,24 +503,25 @@ article {
 
 // Typekit loading elements --------------------------------------------------------------------
 
-.js main {
+html.js main {
   opacity: 0;
   visibility: hidden;
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.4s ease-in-out);
 }
-// .js body {
-//   background-image: url("../images/loader.svg");
-//   background-repeat: no-repeat;
-//   background-position: 50% 600px;
-//   background-size: 50px;
-// }
-
-
-.js-load main {
+html:before {
+  content: url("../images/loader.svg");
+  left: 50%;
+  margin-left: -25px;
+  top: 60%;
+  position: absolute;
+}
+html.js.js-load main {
   opacity: 1;
   visibility: visible;
 }
-
+html.js.js-load:before {
+  content: none;
+}
 
 // .js-load body {
 //   background-image: none;

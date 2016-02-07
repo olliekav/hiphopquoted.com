@@ -1,18 +1,14 @@
-require "rubygems"
-require "middleman-core/load_paths"
+require 'bundler/setup'
+require 'middleman-core/load_paths'
+::Middleman.setup_load_paths
 
-Middleman.setup_load_paths
+require 'middleman-core'
+require 'middleman-core/rack'
 
-require "middleman-core"
-require "middleman-core/preview_server"
+require 'fileutils'
+FileUtils.mkdir('log') unless File.exist?('log')
+::Middleman::Logger.singleton("log/#{ENV['RACK_ENV']}.log")
 
-module Middleman::PreviewServer
-  def self.preview_in_rack
-    @options = { latency: 0.25 }
-    @app = new_app
-    start_file_watcher
-  end
-end
+app = ::Middleman::Application.new
 
-Middleman::PreviewServer.preview_in_rack
-run Middleman::PreviewServer.app.class.to_rack_app
+run ::Middleman::Rack.new(app).to_app

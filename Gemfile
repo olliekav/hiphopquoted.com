@@ -2,18 +2,11 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~>3.3.6"
-
-# Live-reloading plugin
-gem "middleman-livereload"
-
-# For faster file watcher updates on Windows:
-# gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
-
-gem 'middleman-pagination'
-
-gem 'builder', '~> 2.0' 
-
-# gem "middleman-php"
-
+gem "middleman"
+gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
+gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
+gem 'middleman-livereload'
+gem 'middleman-pagination', github: 'thisiscapra/middleman-pagination', branch: 'master'
 gem 'middleman-imageoptim'
+gem 'therubyracer'
+gem 'oj'
