@@ -5,15 +5,6 @@
 # Helpers
 ###
 
-# Fix bug with build errors and typography fonts
-ignore 'fonts/*'
-
-after_build do |builder|
-  print "After_build fixes... "
-  FileUtils.cp_r(Dir['source/fonts/'],'build/')
-  puts "done."
-end
-
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload, host: "hiphopquoted.dev", apply_js_live: true, apply_css_live: true
@@ -78,6 +69,15 @@ configure :build do
   activate :relative_assets
 
   activate :gzip
+
+  # Fix bug with build errors and typography fonts
+  ignore 'fonts/*'
+
+  after_build do |builder|
+    print "After_build fixes... "
+    FileUtils.cp_r(Dir['source/fonts/'],'build/')
+    puts "done."
+  end
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
