@@ -10,7 +10,7 @@
     <% else %>
       <li class="page-nav">
         <%#= TODO: Move this to helper method %>
-        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) and not p.source_file.match(/\about/) and not p.source_file.match(/\index/)}.sort_by {|p| p.data.order.to_i}.reverse!%>
+        <% pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) and not p.source_file.match(/\about/) and not p.source_file.match(/\index/) and not p.source_file.match(/\prints/)}.sort_by {|p| p.data.order.to_i}.reverse!%>
         <% pages.each_with_index do |p, index| %>
           <% if p.url == current_page.url %>
             <% next_page = pages[index+1] %>

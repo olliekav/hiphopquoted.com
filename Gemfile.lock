@@ -15,14 +15,6 @@ GIT
     turbolinks (3.0.0)
       coffee-rails
 
-GIT
-  remote: git://github.com/thisiscapra/middleman-pagination.git
-  revision: 3208a34a4bf166eda6d784838f42453c108de358
-  branch: master
-  specs:
-    middleman-pagination (1.2.0)
-      middleman-core (>= 4.0.0.rc.2)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -205,7 +197,6 @@ DEPENDENCIES
   middleman
   middleman-imageoptim
   middleman-livereload
-  middleman-pagination!
   middleman-sprockets!
   oj
   therubyracer
