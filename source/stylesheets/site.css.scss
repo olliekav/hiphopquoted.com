@@ -508,19 +508,19 @@ html.js main {
   visibility: hidden;
   @include transition(all 0.4s ease-in-out);
 }
-html:after {
+body:after {
   content: url("../images/loader.svg");
   left: 50%;
   margin-left: -25px;
   top: 60%;
-  position: absolute;
+  position: fixed;
   z-index: 100;
 }
 html.js.js-load main {
   opacity: 1;
   visibility: visible;
 }
-html.js-load:after {
+html.js-load body:after {
   content: none;
   display: none;
 }
