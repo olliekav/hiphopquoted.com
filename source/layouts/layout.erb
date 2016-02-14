@@ -24,7 +24,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body id="hiphopquoted" class="page-<%= page_classes %> <%= 'content-page' if content_page? %>">
+  <body id="hiphopquoted" class="page-<%= page_classes %><%= ' content-page' if content_page? %>">
     <%= partial "header" %>
     <main id="main" role="main">
       <%= yield %>
