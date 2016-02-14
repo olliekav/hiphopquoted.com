@@ -534,10 +534,9 @@ html.js.js-load main {
 }
 .loader {
   font-size: 11px;
-  left: 50%;
-  margin: -2em 0 0 -0.5em;
+  margin: 2em auto;
+  position: relative;
   text-indent: -9999em;
-  position: fixed;
   top: 50%;
   @include transform(translateZ(0));
   -webkit-animation-delay: -0.16s;

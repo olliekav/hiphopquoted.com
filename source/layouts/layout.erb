@@ -26,6 +26,7 @@
   </head>
   <body id="hiphopquoted" class="page-<%= page_classes %><%= ' content-page' if content_page? %>">
     <%= partial "header" %>
+    <div class="loader">Loading...</div>
     <main id="main" role="main">
       <%= yield %>
     </main>
@@ -59,6 +60,5 @@
         },1000)
       }
     </script>
-    <div class="loader">Loading...</div>
   </body>
 </html>
