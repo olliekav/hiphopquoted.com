@@ -508,33 +508,71 @@ html.js main {
   visibility: hidden;
   @include transition(all 0.4s ease-in-out);
 }
-body:after {
-  content: url("../images/loader.svg");
-  left: 50%;
-  margin-left: -25px;
-  top: 60%;
-  position: fixed;
-  z-index: 100;
-}
 html.js.js-load main {
   opacity: 1;
   visibility: visible;
 }
-html.js-load body:after {
-  content: none;
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  height: 4em;
+  width: 1em;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader {
+  font-size: 11px;
+  left: 50%;
+  margin: -2em 0 0 -0.5em;
+  text-indent: -9999em;
+  position: fixed;
+  top: 50%;
+  @include transform(translateZ(0));
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #ffffff;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #ffffff;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+html.js-load .loader {
   display: none;
 }
-
-// .js-load body {
-//   background-image: none;
-// }
-// .wf-loading main {
-//   visibility: hidden;
-// }
-// .wf-active main, .wf-inactive main   {
-//   opacity: 1;
-//   visibility: visible;
-// }
 
 // iTunes affiliate banners
 .ad-banner {
