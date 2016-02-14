@@ -19,7 +19,7 @@ var iTunesPreviewPlayer = function() {
     }
     var country = '&country=' + playerCountry
     var attribute = '&attribute=' + playerAttribute
-    url = 'http://itunes.apple.com/search' + url + country + attribute;
+    url = 'https://itunes.apple.com/search' + url + country + attribute;
 
     var scriptE = document.createElement('script');
     scriptE.src = url;
