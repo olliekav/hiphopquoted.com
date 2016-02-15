@@ -26,11 +26,11 @@
   </head>
   <body id="hiphopquoted" class="page-<%= page_classes %><%= ' content-page' if content_page? %>">
     <%= partial "header" %>
-    <div class="loader">Loading...</div>
     <main id="main" role="main">
       <%= yield %>
     </main>
     <%= partial "footer" %>
+    <div class="loader">Loading...</div>
     <%= javascript_include_tag("application.js") %>
     <%= yield_content :javascript %>
     <% if content_page? %>

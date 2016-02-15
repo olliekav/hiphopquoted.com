@@ -5,6 +5,8 @@
 @import "partials/itunes_preview_player";
 
 $primary-color: #ff004f;
+$white: #fff;
+$black: #000;
 
 html {
   height:100%;
@@ -64,7 +66,7 @@ article {
     top: 1.5em;
     width: 25px;
     rect {
-      fill: #000000;
+      fill: $black;
       @include transition(fill 0.1s ease);
     }
   }
@@ -102,7 +104,7 @@ article {
   z-index: 10000;
 }
 .overlay-nav {
-  background-color: rgba(#000000, 0.9);
+  background-color: rgba($black, 0.9);
   bottom: 0;
   display: none;
   font-size: 1em;
@@ -515,17 +517,18 @@ html.js.js-load main {
 .loader,
 .loader:before,
 .loader:after {
-  background: #ffffff;
+  background: $white;
   height: 4em;
   width: 1em;
-  -webkit-animation: load1 1s infinite ease-in-out;
-  animation: load1 1s infinite ease-in-out;
+  -webkit-animation: loader 1s infinite ease-in-out;
+  animation: loader 1s infinite ease-in-out;
 }
 .loader:before,
 .loader:after {
+  content: '';
   position: absolute;
   top: 0;
-  content: '';
+  @include transform(translate3d(0,0,0));
 }
 .loader:before {
   left: -1.5em;
@@ -534,10 +537,11 @@ html.js.js-load main {
 }
 .loader {
   font-size: 11px;
-  margin: 2em auto;
-  position: relative;
+  left: 50%;
+  margin: -1.5em 0 0 -2em;
+  position: fixed;
   text-indent: -9999em;
-  top: 50%;
+  top: 55%;
   @include transform(translateZ(0));
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
@@ -545,27 +549,27 @@ html.js.js-load main {
 .loader:after {
   left: 1.5em;
 }
-@-webkit-keyframes load1 {
+@-webkit-keyframes loader {
   0%,
   80%,
   100% {
-    box-shadow: 0 0 #ffffff;
+    box-shadow: 0 0 $white;
     height: 4em;
   }
   40% {
-    box-shadow: 0 -2em #ffffff;
+    box-shadow: 0 -2em $white;
     height: 5em;
   }
 }
-@keyframes load1 {
+@keyframes loader {
   0%,
   80%,
   100% {
-    box-shadow: 0 0 #ffffff;
+    box-shadow: 0 0 $white;
     height: 4em;
   }
   40% {
-    box-shadow: 0 -2em #ffffff;
+    box-shadow: 0 -2em $white;
     height: 5em;
   }
 }
