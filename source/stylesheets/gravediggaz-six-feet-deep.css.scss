@@ -6,6 +6,8 @@ $primary-color: #4e4e4e;
 $secondary-color: #ffffff;
 $background-color: #000000;
 
+@include loader(lighten($background-color, 40%));
+
 body {
   background: $background-color url("../images/gravediggaz/six_feet_background.jpg") top center fixed;
   color: $primary-color;

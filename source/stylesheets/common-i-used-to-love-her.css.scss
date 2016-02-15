@@ -5,6 +5,8 @@
 $primary-color: #ce4f4f;
 $secondary-color: #E8E8D2;
 
+@include loader($primary-color);
+
 @font-face {
   font-family: 'plainblackwidenormal';
   src: url('/fonts/Plain_Black_Wide-webfont.eot');

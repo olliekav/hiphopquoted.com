@@ -6,6 +6,8 @@ $primary-color: #000000;
 $secondary-color: #f7d7bd;
 $background-color: #ffffff;
 
+@include loader($primary-color);
+
 body {
   background:url("../images/atcq/book_background.jpg") repeat-y top center fixed;
   background-size: cover;

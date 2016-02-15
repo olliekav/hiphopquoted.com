@@ -5,6 +5,8 @@
 $primary-color: #E7E9D3;
 $secondary-color: #ffffff;
 
+@include loader($primary-color);
+
 body {
   background: url("../images/danger-doom/old-school-background.jpg") top center fixed;
   background-size: cover;

@@ -5,6 +5,8 @@
 $primary-color: #000000;
 $secondary-color: #F1E300;
 
+@include loader($primary-color);
+
 @font-face {
   font-family: 'blackoutmidnight';
   src: url('/fonts/blackout-midnight-webfont.eot');

@@ -5,6 +5,8 @@
 $primary-color: #6e8fe5;
 $secondary-color: #000000;
 
+@include loader($primary-color);
+
 html {
   height: auto;
 }

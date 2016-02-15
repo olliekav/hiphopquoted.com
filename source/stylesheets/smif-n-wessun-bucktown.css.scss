@@ -5,6 +5,8 @@
 $primary-color: #000000;
 $secondary-color: #ccaa7a;
 
+@include loader($primary-color);
+
 body {
   background: #413527 url("../images/smif-n-wessun/bucktown-background.jpg") fixed;
   color: $primary-color;

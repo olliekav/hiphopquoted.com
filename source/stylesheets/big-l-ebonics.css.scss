@@ -4,6 +4,8 @@
 
 $primary-color: #000000;
 
+@include loader($primary-color);
+
 body {
   background: url("../images/big-l/linedpaper.png");
   color: $primary-color;

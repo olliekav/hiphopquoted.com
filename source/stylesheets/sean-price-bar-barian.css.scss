@@ -6,6 +6,8 @@ $primary-color: #ffffff;
 $secondary-color: #a52e39;
 $tertiary-color: #73737d;
 
+@include loader($secondary-color);
+
 // Grid
 
 .span-1 {

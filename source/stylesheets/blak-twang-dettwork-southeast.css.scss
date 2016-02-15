@@ -6,6 +6,8 @@ $primary-color: #ffffff;
 $secondary-color: #e2061b;
 $tertiary-color: #2c2d87;
 
+@include loader($secondary-color);
+
 // @extend %station;
 %station {
   background-color: $secondary-color;

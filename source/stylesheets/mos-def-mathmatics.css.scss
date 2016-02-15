@@ -5,6 +5,8 @@
 $primary-color: #ffffff;
 $secondary-color: #FF0090;
 
+@include loader($secondary-color);
+
 body {
   background: #000 url("../images/mos-def/background-mathmatics.jpg") top center fixed;
   background-size: cover;

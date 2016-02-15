@@ -17,6 +17,8 @@ $primary-color:#76251C;
 $secondary-color:#404e4f;
 $background-color: #ddd4b7; 
 
+@include loader($primary-color);
+
 body {
   background-color:$background-color;
   color:$primary-color;

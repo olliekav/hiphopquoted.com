@@ -5,6 +5,8 @@
 $primary-color: #CB5B10;
 $secondary-color: #423A34;
 
+@include loader($secondary-color);
+
 body {
   background-color: $primary-color;
   color:lighten($primary-color, 20%);

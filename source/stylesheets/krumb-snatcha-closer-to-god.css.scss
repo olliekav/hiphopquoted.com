@@ -5,6 +5,8 @@
 $primary-color: #000000;
 $secondary-color: #ffffff;
 
+@include loader($secondary-color);
+
 body {
   background: url("../images/krumbsnatcha/wood-background.jpg");
   color: rgba($secondary-color, 0.4);

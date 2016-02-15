@@ -6,6 +6,8 @@ $primary-color: #A01414;
 $secondary-color: #ffffff;
 $primary-color-dark: darken($primary-color, 10%);
 
+@include loader($secondary-color);
+
 html {
   height: auto;
 }

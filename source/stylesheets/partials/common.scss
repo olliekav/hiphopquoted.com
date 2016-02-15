@@ -132,3 +132,31 @@
 @function shade($color, $percent){
   @return mix(black, $color, $percent);
 }
+
+@mixin loader($color) {
+  .loader,
+  .loader:before,
+  .loader:after {
+    background-color: $color;
+  }
+  @-webkit-keyframes loader {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0 $color;
+    }
+    40% {
+      box-shadow: 0 -2em $color;
+    }
+  }
+  @keyframes loader {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0 $color;
+    }
+    40% {
+      box-shadow: 0 -2em $color;
+    }
+  }
+}

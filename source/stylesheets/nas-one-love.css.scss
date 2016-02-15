@@ -5,6 +5,8 @@
 $primary-color: #ffffff;
 $secondary-color: #a10f0d;
 
+@include loader($primary-color);
+
 body {
   background: #000 url("../images/nas/one-love-background.jpg") top center fixed;
   background-size: cover;

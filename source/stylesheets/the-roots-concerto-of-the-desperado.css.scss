@@ -5,6 +5,8 @@
 $primary-color: #2D312F;
 $secondary-color: #ffffff;
 
+@include loader($secondary-color);
+
 body {
   background-color: $primary-color;
   color: $secondary-color;

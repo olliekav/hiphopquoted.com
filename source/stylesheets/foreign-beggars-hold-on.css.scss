@@ -6,6 +6,8 @@ $primary-color: #eb6907;
 $secondary-color: #000000;
 $tertiary-color: #FFFFFF;
 
+@include loader($secondary-color);
+
 html {
   background: $primary-color url('../images/foreign-beggars/hold-on-background.svg') no-repeat bottom center;
   background-size: 3000px auto;
