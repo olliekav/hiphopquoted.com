@@ -7,8 +7,6 @@ $secondary-color: #000000;
 $tertiary-color: #FFFFFF;
 $shadow-primary: darken($primary-color, 10%);
 
-@include loader($primary-color);
-
 @function multiple-text-shadow($depth, $color) {
   $value: '1px 1px 0 #{$color}';
   @for $i from 2 through $depth {
@@ -17,6 +15,9 @@ $shadow-primary: darken($primary-color, 10%);
 
   @return unquote($value);
 }
+
+@include loader($primary-color);
+
 html {
   overflow-x: hidden;
 }
