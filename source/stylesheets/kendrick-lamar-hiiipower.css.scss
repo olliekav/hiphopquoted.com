@@ -316,7 +316,7 @@ article {
       height: 800px;
       margin-top: -900px;
       position: absolute;
-      right: $gutter;
+      right: 0;
       width: col-amount(3) + $gutter;
       z-index: -1;
     }
@@ -385,7 +385,12 @@ figcaption, .artwork {
     display: block;
   }
   a {
+    color: $primary-color;
     text-decoration: line-through;
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none;
+    }
   }
 }
 .artwork {
