@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/middleman/middleman-sprockets.git
-  revision: 9515bcee4c9e5622e602db4c882e521cbbd3b826
+  revision: ad57136ee05f135d830e643e32e066804c93804c
   branch: master
   specs:
     middleman-sprockets (4.0.0.rc.1)
@@ -68,17 +68,17 @@ GEM
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
-    middleman (4.1.3)
+    middleman (4.1.4)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-cli (= 4.1.3)
-      middleman-core (= 4.1.3)
+      middleman-cli (= 4.1.4)
+      middleman-core (= 4.1.4)
       sass (>= 3.4.0, < 4.0)
-    middleman-cli (4.1.3)
+    middleman-cli (4.1.4)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.1.3)
+    middleman-core (4.1.4)
       activesupport (~> 4.2)
       addressable (~> 2.3)
       backports (~> 3.6)

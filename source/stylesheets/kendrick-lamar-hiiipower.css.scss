@@ -161,18 +161,6 @@ article {
         height: 75%;
       }
     }
-    &:after {
-      height: 70vh;
-      left: col-amount(2);
-      max-height: 600px;
-      top: 60%;
-      width: col-amount(4);
-      @extend %color-block;
-      @media screen and (max-width: 600px) {
-        left: col-amount(1);
-        width: col-amount(6);
-      }
-    }
   }
   figure {
     overflow: hidden;
@@ -217,11 +205,17 @@ article {
         margin-left: 0;
       }
     }
+    &:before {
+      height: 600px;
+      right: 0;
+      width: col-amount(4) + $gutter;
+      @extend %color-block;
+    }
   }
   .verse-two {
     margin-left: col-amount(3);
     &:before {
-      height: 600px;
+      height: 500px;
       left: 0;
       width: col-amount(6) + $gutter/2;
       @extend %color-block;
@@ -258,7 +252,7 @@ article {
     &:before {
       height: 600px;
       right: 0;
-      width: col-amount(9) + $gutter/2;
+      width: col-amount(7) + $gutter/2;
       @extend %color-block;
     }
     &:after {
@@ -290,7 +284,6 @@ article {
     margin-left: col-amount(1);
     margin-bottom: 8em;
     span:nth-child(1) {
-      color: $primary-color;
       margin-left: col-amount(2);
     }
     @media screen and (max-width: 600px) {
@@ -298,6 +291,12 @@ article {
       span:nth-child(1) {
         margin-left: 0;
       }
+    }
+    &:before {
+      height: 600px;
+      left: 0;
+      width: col-amount(3) + $gutter;
+      @extend %color-block;
     }
   }
   .verse-five {
@@ -341,7 +340,7 @@ article {
     &:before {
       height: 600px;
       left: 0;
-      width: col-amount(7) + $gutter/2;
+      width: col-amount(6) + $gutter/2;
       @extend %color-block;
     }
     &:after {

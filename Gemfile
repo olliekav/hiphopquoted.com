@@ -4,7 +4,6 @@ source 'http://rubygems.org'
 
 gem "middleman"
 gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
-#gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
 gem 'middleman-imageoptim'
 gem 'therubyracer'

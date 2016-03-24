@@ -48,6 +48,8 @@ helpers do
   end
 end
 
+activate :sprockets
+sprockets.append_path File.join( root, 'source' )
 activate :directory_indexes
 
 # Build-specific configuration
