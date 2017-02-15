@@ -20,22 +20,6 @@ genius_link: https://genius.com/A-tribe-called-quest-the-donald-lyrics
 
 <% content_for :javascript do %>
   <%= partial "font_javascripts", :locals => { :font_id => "fkg5nsu", :include_big_text => false, :include_lettering => false, :script => false } %>
-  <script>
-  $(function() {
-    var target = $('h1');
-    var targetHeight = target.outerHeight();
-    $(window).on('scroll', function(){
-      console.log('scrolling');
-      var scroll = $(window).scrollTop();
-      var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
-      if(scrollPercent >= 0){
-        $('.animated').css({
-          'opacity': scrollPercent
-        });
-      }
-    });
-  });
-  </script>
 <% end %>
 
 <article>
