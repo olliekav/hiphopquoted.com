@@ -98,25 +98,23 @@ p {
 }
 h1 {
   color: $primary-color;
-  font-family: "flood-std", sans-serif;
-  font-size: 18vw;
+  font-family: "subway-new-york-std",sans-serif;
+  font-size: 20vw;
   left: 60%;
-  letter-spacing: -1.8rem;
+  letter-spacing: 0;
   line-height: 0.8;
   position: absolute;
   top: 3%;
 
   @media screen and (max-width: 900px) {
     left: 5%;
-    font-size: 26vw;
-    letter-spacing: -1.6rem;
+    font-size: 34vw;
     position: relative;
-    top: 20%;
+    top: 15%;
   }
 
   @media screen and (max-width: 600px) {
-    letter-spacing: -1rem;
-    top: 35%;
+    top: 30%;
   }
 
   span {
@@ -146,9 +144,11 @@ article {
     left: 0;
     position: fixed;
     width: 50%;
+    z-index: -1;
 
     @media screen and (max-width: 900px) {
       height: 70vh;
+      min-height: 400px;
       position: relative;
       max-width: 100%;
       width: 100%;
@@ -203,11 +203,12 @@ figure {
 }
 .verse {
   position: relative;
+  z-index: 2;
   span {
     color: $primary-color;
-    font-family: "flood-std", sans-serif;
+    font-family: "subway-new-york-std",sans-serif;
     font-size: 12rem;
-    left: -2rem;
+    left: -5rem;
     line-height: 1;
     position: absolute;
     top: -3rem;
@@ -224,9 +225,9 @@ figure {
 }
 figcaption {
   color: $primary-color;
-  font-family: "flood-std", sans-serif;
+  font-family: "subway-new-york-std",sans-serif;
   font-size: 6rem;
-  letter-spacing: -0.6rem;
+  letter-spacing: 0;
   line-height: 0.8;
 
   @media screen and (max-width: 1300px) {
@@ -235,12 +236,10 @@ figcaption {
 
   @media screen and (max-width: 900px) {
     font-size: 4rem;
-    letter-spacing: -0.4rem;
   }
 
   @media screen and (max-width: 600px) {
     font-size: 3rem;
-    letter-spacing: -0.2rem;
   }
 
   @include transform(rotate(-8deg));
