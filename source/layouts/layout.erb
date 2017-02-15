@@ -46,8 +46,12 @@
       </script>
     <% end %>
     <script>
-      $(window).bind("load", function() {
-        $('html').addClass('js-load');
+      $(window).on("load", function() {
+        setTimeout(function(){
+          // This is nasty and needs re-doing but bigtext isn't calculating properly
+          $(window).trigger('resize');
+          $('html').addClass('js-load');
+        }, 100)
         <% unless content_page? %>
           var player = new iTunesPreviewPlayer(track);
           var audio = document.getElementsByTagName('audio');

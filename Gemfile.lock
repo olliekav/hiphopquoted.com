@@ -1,7 +1,13 @@
 GIT
+  remote: git://github.com/flori/json.git
+  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
+  branch: v1.8
+  specs:
+    json (1.8.6)
+
+GIT
   remote: git://github.com/middleman/middleman-sprockets.git
   revision: 9b77b2b56d2881b80ddcf4b5d335e68be4c1a7f2
-  branch: master
   specs:
     middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
@@ -142,6 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json!
   middleman
   middleman-imageoptim
   middleman-livereload
