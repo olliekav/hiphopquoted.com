@@ -24,7 +24,7 @@ body {
 }
 a {
   text-decoration: none;
-  @include transition(color 0.1s linear)
+  @include transition(color 0.2s linear);
 }
 h1,h2,h3,h4 {
   font-weight: 400;
@@ -67,7 +67,7 @@ article {
     width: 25px;
     rect {
       fill: $black;
-      @include transition(fill 0.1s ease);
+      @include transition(fill 0.1s ease-in-out);
     }
   }
   #logo {
@@ -84,7 +84,7 @@ article {
       left:0;
       width: 100%;
       path {
-        @include transition(fill 0.1s ease);
+        @include transition(all 0.2s ease-in-out);
       }
     }
   }

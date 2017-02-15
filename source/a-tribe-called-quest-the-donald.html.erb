@@ -1,0 +1,66 @@
+---
+title: A Tribe Called Quest - The Donald
+player_color: ffffff
+track: a tribe called quest the donald
+artist: A Tribe Called Quest
+song: The Donald
+album: We got it from Here... Thank You 4 Your service
+wiki_link: https://en.wikipedia.org/wiki/Kendrick_Lamar
+song_link: https://geo.itunes.apple.com/us/album/the-donald/id1173106678?i=1173107020&mt=1&app=music
+album_link: https://geo.itunes.apple.com/us/album/we-got-it-from-here...-thank/id1173106678?mt=1&app=music
+cat_id: 1173107020
+order: 41
+screenshot: atcq_the_donald.jpg
+genius_link: https://genius.com/A-tribe-called-quest-the-donald-lyrics
+---
+
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("a-tribe-called-quest-the-donald.css") %>
+<% end %>
+
+<% content_for :javascript do %>
+  <%= partial "font_javascripts", :locals => { :font_id => "fkg5nsu", :include_big_text => false, :include_lettering => false, :script => false } %>
+  <script>
+  $(function() {
+    var target = $('h1');
+    var targetHeight = target.outerHeight();
+    $(window).on('scroll', function(){
+      console.log('scrolling');
+      var scroll = $(window).scrollTop();
+      var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
+      if(scrollPercent >= 0){
+        $('.animated').css({
+          'opacity': scrollPercent
+        });
+      }
+    });
+  });
+  </script>
+<% end %>
+
+<article>
+  <header>
+    <div>
+      <h1><span>The</span> Donald</h1>
+      <p class="rip">
+        R.I.P. Malik "Phife Dawg" Taylor<br>
+        November 20, 1970 – March 22, 2016
+      </p> 
+    </div>
+    <%= image_tag 'atcq/atcq-logo.svg', alt: '', class: 'atcq-logo' %>   
+  </header>
+  <figure>
+    <blockquote>
+      <p class="verse verse-one">
+        <span>P</span>hife Dawg, what a go on with the crew? Nuff ting, that's why me had to come through. Phife Dawg, you spit wicked every verse, them no say, respect the Trini man first. Phife Dawg, I know you had the man shook up, good shit, 'cause you a mastermind that cook up. Phife Dawg, what a go on with the crew? Nuff ting, that's why me had to come through. Phife Dawg, you spit wicked every verse, them no say, respect Trini man first. Phife Dawg, I know on the one and twos. Give me that w-w-wait, damn, that's the one part I, alright, let me say. Phife Dawg, I know you on the one and twos, give me a zooguh zooguh and do exactly what you do. Tribe Called Quest, you see them back with one another. Ayo, Busa' Bus', them don't want no problem, brotha
+      </p>
+      <p class="verse verse-two">
+        <span>P</span>hife Dawg legend, you could call me Don Juice. I'm the shit right now, what, you need to see proof? Recently on the internet they chatting, taking polls, debating who could win in battle rapping. Let's make it happen, these cyber flows already par, no subliminals, with me you know who the fuck you are. Who wanna spar? Haha, well, here I are, orthodox spitter or bring on the southpaw. No doubt I'mma set it, dudes best be ready, off top on the spot, no reading from your Whackberry. Leave the iPhones home, skill sets must be shown. I'mma show you the real meaning of the danger zone, huh. I got it sewn, eh speak to all clones. Untouchable in my zone, watch it, don't leave him alone, fuck your ass cheek flows with bars sweeter than scones. Put down microphone.
+      </p>
+      <p class="verse verse-three">
+        <span>Y</span>es, yes, he the wrong ones to fuck with, no matter what the day. He could catch you on his plane or the one you on today. Visit niggas in their dreams, and make them scream of bloody murder. He's a Trini gladiator, ain't no need to take it further. If you wanna take it further your Huckleberry is here, doctor of your holiday, Wyatt Earp ya like the tears. We gon' celebreate him, elevate him, papa had to levitate him. Give him his and don't debate him, top dog is the way to rate him.
+      </p>
+    </blockquote>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
+  </figure>
+</article>

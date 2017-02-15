@@ -1,0 +1,247 @@
+// Kendrick Lamar - HiiiPower -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #b35089;
+$secondary-color: #371b7e;
+
+html {
+  background: #fff;
+}
+body {
+  background: #f2f2f2;
+  color: #000;
+  font-family: "ff-basic-gothic-web-pro",sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $primary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+  }
+}
+#logo {
+  path {
+    fill: $primary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: #fff;
+  }
+}
+#footer.sticky {
+  background-color: rgba($primary-color, 0.95);
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $secondary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $secondary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $secondary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #ffffff;
+}
+#main {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 0 0 0 50%;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 1.125rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
+}
+h1 {
+  color: $primary-color;
+  font-family: "flood-std", sans-serif;
+  font-size: 18vw;
+  left: 60%;
+  letter-spacing: -1.8rem;
+  line-height: 0.8;
+  position: absolute;
+  top: 3%;
+
+  @media screen and (max-width: 900px) {
+    left: 5%;
+    font-size: 26vw;
+    letter-spacing: -1.6rem;
+    position: relative;
+    top: 20%;
+  }
+
+  @media screen and (max-width: 600px) {
+    letter-spacing: -1rem;
+    top: 35%;
+  }
+
+  span {
+    display: block;
+    left: 8rem;
+    position: relative;
+    top: 4.5rem;
+
+    @media screen and (max-width: 1100px) {
+      left: 6rem;
+      top: 3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      left: 2rem;
+      top: 2rem;
+    }
+  }
+
+  @include transform(rotate(-8deg));
+}
+article {
+  header {
+    background: url('../images/atcq/phife-dawg.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    width: 50%;
+
+    @media screen and (max-width: 900px) {
+      height: 70vh;
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    // Hack for overflow-y issues
+    div {
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+}
+figure {
+  padding: 75% 10% 10%;
+  position: relative;
+  z-index: 10;
+
+  @media screen and (max-width: 900px) {
+    padding-top: 10%;
+  }
+}
+.rip {
+  bottom: 4rem;
+  color: #fff;
+  font-size: 1rem;
+  left: 1.5em;
+  line-height: 1.2;
+  margin: 0;
+  opacity: 0.4;
+  position: absolute;
+
+  @media screen and (max-width: 900px) {
+    bottom: 2rem;
+    left: 10%;
+  }
+}
+.atcq-logo {
+  bottom: 4rem;
+  position: absolute;
+  right: -2rem;
+  width: 200px;
+
+  @media screen and (max-width: 900px) {
+    bottom: -2rem;
+    right: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.verse {
+  position: relative;
+  span {
+    color: $primary-color;
+    font-family: "flood-std", sans-serif;
+    font-size: 12rem;
+    left: -2rem;
+    line-height: 1;
+    position: absolute;
+    top: -3rem;
+    z-index: -1;
+
+    @media screen and (max-width: 600px) {
+      left: -1rem;
+      font-size: 7rem;
+      top: -2rem;
+    }
+
+    @include transform(rotate(-8deg));
+  }
+}
+figcaption {
+  color: $primary-color;
+  font-family: "flood-std", sans-serif;
+  font-size: 6rem;
+  letter-spacing: -0.6rem;
+  line-height: 0.8;
+
+  @media screen and (max-width: 1300px) {
+    font-size: 5rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 4rem;
+    letter-spacing: -0.4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+  }
+
+  @include transform(rotate(-8deg));
+}
