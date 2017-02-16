@@ -100,20 +100,23 @@ h1 {
   color: $primary-color;
   font-family: "subway-new-york-std",sans-serif;
   font-size: 20vw;
-  left: 60%;
-  letter-spacing: 0;
+  left: 30%;
+  letter-spacing: 0.2rem;
   line-height: 0.8;
-  position: absolute;
+  padding-left: 1rem;
+  position: fixed;
   top: 3%;
+  z-index: 2;
 
   @media screen and (max-width: 900px) {
     left: 5%;
     font-size: 34vw;
     position: relative;
-    top: 15%;
+    top: 10%;
   }
 
   @media screen and (max-width: 600px) {
+    font-size: 32vw;
     top: 30%;
   }
 
@@ -136,34 +139,48 @@ h1 {
 
   @include transform(rotate(-8deg));
 }
-article {
-  header {
-    background: url('../images/atcq/phife-dawg.jpg') no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    width: 50%;
-    z-index: -1;
+.article-header {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  width: 50%;
+  z-index: -1;
 
-    @media screen and (max-width: 900px) {
-      height: 70vh;
-      min-height: 400px;
-      position: relative;
-      max-width: 100%;
-      width: 100%;
-    }
-    
-    // Hack for overflow-y issues
-    div {
-      height: 100%;
-      overflow: hidden;
-      width: 100%;
-    }
+  @media screen and (max-width: 900px) {
+    height: 70vh;
+    min-height: 400px;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
   }
 }
+.wrapper {
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.header-wrapper {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 50%;
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+    width: 100%;
+  }
+}
+.header-image {
+  background: url('../images/atcq/phife-dawg.jpg') no-repeat center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 figure {
-  padding: 75% 10% 10%;
+  padding: 75% 10% 20%;
   position: relative;
   z-index: 10;
 
@@ -180,6 +197,7 @@ figure {
   margin: 0;
   opacity: 0.4;
   position: absolute;
+  z-index: 2;
 
   @media screen and (max-width: 900px) {
     bottom: 2rem;
@@ -193,7 +211,7 @@ figure {
   width: 200px;
 
   @media screen and (max-width: 900px) {
-    bottom: -2rem;
+    bottom: -4rem;
     right: 2rem;
   }
 
@@ -202,6 +220,7 @@ figure {
   }
 }
 .verse {
+  letter-spacing: -0.05rem;
   position: relative;
   z-index: 2;
   span {
