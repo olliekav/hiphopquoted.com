@@ -26,26 +26,16 @@ genius_link: https://genius.com/A-tribe-called-quest-the-donald-lyrics
 
     var headerTween = new TimelineLite()
         .fromTo(".header-image", 6, {scale:1}, {scale:1.2}, 0)
+        .fromTo(".atcq-logo", 6, {rotation:0}, {rotation:360}, 0)
         .fromTo("h1", 3, {css: {opacity:1}}, {css: {opacity:0.3}}, 0.5)
 
-    // var headerImageTween = TweenMax
-    //   .fromTo(".header-image", 6, {scale:1}, {scale:1.2})
-    // var headerTween = TweenMax
-    //   .fromTo("h1", 3, {css: {opacity:1}}, {css: {opacity:0.3}})
     var scene1 = new ScrollMagic.Scene({ 
       triggerElement: "blockquote",
       offset: -100,
-      duration: '100%'
+      duration: '200%'
     })
     .setTween(headerTween)
     .addTo(controller);
-    // var scene2 = new ScrollMagic.Scene({ 
-    //   triggerElement: "blockquote",
-    //   duration: '100%',
-    //   offset: -100
-    // })
-    // .setTween(headerImageTween)
-    // .addTo(controller);
     
     $(window).on('resize', function(){
       if ($('html').width() < 900) {
