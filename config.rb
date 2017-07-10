@@ -7,7 +7,7 @@
 
 # Reload the browser automatically whenever files change
 # configure :development do
-#   activate :livereload, host: "hiphopquoted.dev", apply_js_live: true, apply_css_live: true
+#   activate :livereload, apply_js_live: true, apply_css_live: true
 # end
 
 # Ignore the sitemap layout

@@ -1,0 +1,137 @@
+// Kendrick Lamar - HiiiPower -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #bf171a;
+$secondary-color: #000000;
+
+@include loader($primary-color);
+
+html {
+  background: #fff;
+}
+body {
+  background: #fff url('../images/mobb-deep/vultures-background.svg') no-repeat bottom right;
+  background-size: cover;
+  color: $secondary-color;
+  font-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B',sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+  }
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $secondary-color;
+    opacity: 0.8;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #ffffff;
+}
+#main {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 10rem 5rem 5rem 0;
+}
+figure {
+  background: url('../images/mobb-deep/vultures-bird.svg') no-repeat top left;
+  background-size: 58% auto;
+  max-width: 90rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+blockquote {
+  padding: 5rem 22%;
+}
+svg {
+  width: 100%;
+}
+figcaption,
+.rip {
+  color: $secondary-color;
+  font-family: 'Gotham SSm A', 'Gotham SSm B',sans-serif;
+  font-weight: 800;
+  font-size: 4vw;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+figcaption {
+  bottom: 15.5%;
+  position: absolute;
+  right: 8%;
+  width: 40%;
+}
+.rip {
+  margin: -5rem 0 0 22%;
+}
+.rip span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.rip a {
+  display: inline-block;
+}
