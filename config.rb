@@ -28,7 +28,7 @@ helpers do
     if current_page.data.title
       "#{current_page.data.title} - Hip-Hop Quoted"
     else
-      "Hip-Hop Quoted - Hip Hop Quotes brought to life with Typography"
+      "Hip-Hop Quoted - Hip-Hop Quotes brought to life with Typography"
     end
   end
   # Set the page description

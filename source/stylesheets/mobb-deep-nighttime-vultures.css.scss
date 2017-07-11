@@ -12,7 +12,7 @@ html {
 }
 body {
   background: #fff url('../images/mobb-deep/vultures-background.svg') no-repeat bottom right;
-  background-size: cover;
+  background-size: 100% 100%;
   color: $secondary-color;
   font-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B',sans-serif;
   font-weight: 400;
@@ -21,7 +21,7 @@ body {
   @include box-sizing(border-box);
 }
 a {
-  color: $primary-color;
+  color: #fff;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
@@ -32,14 +32,10 @@ p {
   margin-bottom: 2em;
 }
 #header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 20;
-
-  @media screen and (max-width: 900px) {
-    position: absolute;
-  }
 }
 #logo {
   path {
@@ -92,21 +88,58 @@ p {
   font-size: 1.5rem;
   line-height: 1.6;
   padding: 10rem 5rem 5rem 0;
+
+  @media screen and (max-width: 600px) {
+    padding-right: 2rem;
+  }
 }
 figure {
   background: url('../images/mobb-deep/vultures-bird.svg') no-repeat top left;
-  background-size: 58% auto;
+  background-size: auto 100%;
   max-width: 90rem;
   margin: 0;
   padding: 0;
   position: relative;
   width: 100%;
+
+  // @media screen and (max-width: 900px) {
+  //   background-position: top left;
+  // }
 }
 blockquote {
-  padding: 5rem 22%;
+  margin: 5rem 0 0 22%;
+  padding-bottom: 85%;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    margin-left: 2rem;
+    padding-bottom: 130%;
+  }
 }
 svg {
-  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 80%;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+.svg-ff-replace {
+  display: none;
+}
+@-moz-document url-prefix() {
+  .svg-ff-replace {
+    display: block;
+    width: 80%;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+  }
+  svg {
+    display: none;
+  }
 }
 figcaption,
 .rip {
@@ -117,19 +150,37 @@ figcaption,
   letter-spacing: 0;
   line-height: 1;
   text-transform: uppercase;
+
+  @media screen and (max-width: 900px) {
+    font-size: 5.5vw;
+  }
+
 }
 figcaption {
   bottom: 15.5%;
   position: absolute;
-  right: 8%;
-  width: 40%;
+  right: 2rem;
+  width: 45%;
+
+  @media screen and (max-width: 900px) {
+    bottom: 13%;
+  }
+
+  @media screen and (max-width: 600px) {
+    right: 0;
+    width: 50%;
+  }
 }
 .rip {
-  margin: -5rem 0 0 22%;
+  margin: 0 0 0 22%;
+
+  @media screen and (max-width: 900px) {
+    margin-left: 2rem;
+  }
 }
 .rip span {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2vw;
   line-height: 1.2;
 }
 .rip a {
