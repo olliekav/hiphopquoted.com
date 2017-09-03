@@ -1,0 +1,293 @@
+// Fliptrix - One Time -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #261b63;
+$secondary-color: #00998a;
+
+@include loader($primary-color);
+
+html {
+  background: $primary-color;
+}
+body {
+  background: $primary-color;
+  color: #fff;
+  font-family: "din-2014", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: $secondary-color;
+    opacity: 0.8;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #ffffff;
+}
+#main {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 10rem 0 10rem 0;
+  overflow: hidden;
+}
+h1 {
+  color: $secondary-color;
+  font-family: "din-2014", sans-serif;
+  font-size: 22vw;
+  font-weight: 800;
+  line-height: 0.8;
+  margin: 0 0 4rem -0.8rem;
+  > .word2 {
+    color: #fff;
+    display: block;
+    margin-left: 0.8rem;
+    .char3 {
+      margin-left: -.9vw;
+    }
+    .char4 {
+      margin-left: -.6vw;
+    }
+  }
+  > .word1 {
+    .char2 {
+      margin-left: -.9vw;
+    }
+    .char3 {
+      margin-left: -.6vw;
+    }
+  }
+}
+article {
+  margin: 0 auto;
+  max-width: 90%;
+  width: 100%;
+}
+header {
+  padding-left: 1rem;
+  position: relative;
+  z-index: 10;
+}
+figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+blockquote {
+  counter-reset: column;
+  @include flexbox();
+  @include flex-flow(row wrap);
+  display: grid;
+  // -ms-grid-columns: auto (250px 10px)[4];
+  grid-template-columns: repeat(auto-fit, 25%);
+  position: relative;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: repeat(auto-fit, 33.3333333%);
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(auto-fit, 50%);
+  }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+  
+  > p { 
+    margin: 0 0 4rem;
+    padding: 4rem 1rem 0 1rem;
+    position: relative;
+    
+    @include box-sizing(border-box);
+    @include flex(1 1 25%);
+
+    @media screen and (max-width: 1000px) {
+      @include flex(1 1 33.3333333%);
+    }
+
+    @media screen and (max-width: 700px) {
+      @include flex(1 1 50%);
+    }
+
+    @media screen and (max-width: 500px) {
+      @include flex(1 1 100%);
+    }
+
+    &:before {
+      color: $secondary-color;
+      content: '0' counter( column);
+      counter-increment: column;
+      display: block;
+      font-family: "din-2014", sans-serif;
+      font-size: 8vw;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    &:after {
+      background-color: $secondary-color;
+      content: "";
+      height: 0.3rem;
+      left: 1rem;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+    }
+
+    &:nth-child(1):before,
+    &:nth-child(5):before {
+      display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+      &:nth-child(1),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}
+figcaption {
+  bottom: 100%;
+  color: $secondary-color;
+  font-family: "din-2014", sans-serif;
+  font-weight: 800;
+  font-size: 1.8vw;
+  right: 1rem;
+  line-height: 1.2;
+  margin-bottom: 35rem;
+  position: absolute;
+  transform-origin: bottom right;
+  width: 30rem;
+
+  @include transform(rotate(-90deg));
+
+  @media screen and (max-width: 1000px) {
+    font-size: 2.2vw;
+    line-height: 1.2;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 3vw;
+    line-height: 1.4;
+  }
+
+  cite > span:last-of-type:before {
+    content: "";
+    display: block;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+    }
+  }
+}
+
+object {
+  height: 130%;
+  left: 5%;
+  padding-left: 1rem;
+  position: absolute;
+  top: 15%;
+  width: 130%;
+
+  @media screen and (max-width: 800px) {
+    position: fixed;
+  }
+}
+
+.clock-attr {
+  color: $secondary-color;
+  display: inline-block;
+  font-family: "din-2014", sans-serif;
+  font-weight: 800;
+  font-size: 1.8vw;
+  line-height: 1.2;
+  margin: 20rem 0 0 5%;
+  position: relative;
+  transform-origin: top left;
+  width: 20rem;
+  z-index: 10;
+
+  @include transform(rotate(-90deg));
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+  blockquote > p {
+    @include flex(1 1 auto);
+    width: 25%;
+    @media screen and (max-width: 1000px) {
+      @include flex(1 1 auto);
+      width: 33.3333333%;
+    }
+
+    @media screen and (max-width: 700px) {
+      @include flex(1 1 auto);
+      width: 50%;
+    }
+
+    @media screen and (max-width: 500px) {
+      @include flex(1 1 auto);
+      width: 100%;
+    }
+  }
+}
