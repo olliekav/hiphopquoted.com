@@ -447,7 +447,7 @@ article {
       vertical-align: top;
       word-spacing: 0;
       width: 45%;
-      &:first-child, &:nth-child(3n+3) {
+      &:nth-child(2n+1) {
         margin-left: 0;
       }
       > a {
@@ -480,9 +480,6 @@ article {
         display: block;
         margin: 0 0 1.5em;
         width: 100%;
-          &:first-child, &:nth-child(3n+3) {
-          margin-left: 0;
-        }
       }
     }
   }
