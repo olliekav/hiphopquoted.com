@@ -194,6 +194,10 @@ blockquote {
       right: 1rem;
     }
 
+    &:nth-child(2):before {
+      letter-spacing: -0.6vw;
+    }
+
     &:nth-child(1):before,
     &:nth-child(5):before {
       display: none;
@@ -251,8 +255,11 @@ object {
   width: 130%;
 
   @media screen and (max-width: 800px) {
+    height: 160%;
     position: fixed;
+    width: 160%;
   }
+
 }
 
 .clock-attr {
