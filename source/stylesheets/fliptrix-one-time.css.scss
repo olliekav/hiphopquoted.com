@@ -228,7 +228,7 @@ figcaption {
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 3vw;
+    font-size: 2.8vw;
     line-height: 1.4;
   }
 
@@ -269,6 +269,16 @@ object {
   z-index: 10;
 
   @include transform(rotate(-90deg));
+
+  @media screen and (max-width: 1000px) {
+    font-size: 2.2vw;
+    line-height: 1.2;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 2.8vw;
+    line-height: 1.4;
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
