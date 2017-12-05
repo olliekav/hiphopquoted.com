@@ -1,0 +1,149 @@
+// Alkaholiks Contents Unda Pressure -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #47D6C1;
+$secondary-color: #000000;
+
+@include loader($primary-color);
+
+html {
+  background: $primary-color;
+}
+body {
+  background: $primary-color;
+  color: #fff;
+  font-family: "katarine-web", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $secondary-color;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 20;
+}
+#logo {
+  path {
+    fill: $secondary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: #fff;
+  }
+}
+#footer.sticky {
+  background-color: rgba($secondary-color, 0.95);
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $primary-color;
+      }
+      &:hover:after {
+        border-right-color: #ffffff;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $primary-color;
+      }
+      &:hover:after {
+        border-left-color: #ffffff;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $primary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: #ffffff;
+}
+#main {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 5rem 0 10rem 0;
+  overflow: hidden;
+}
+h1 {
+  color: #fff;
+  font-family: "corpulent-web", sans-serif;
+  font-size: 10vw;
+  font-weight: 400;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+article {
+  margin: 0 auto;
+  max-width: 90%;
+  position: relative;
+  width: 100%;
+
+  header {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+  }
+
+  img {
+    left: 50%;
+    margin: -37.5% 0 0 -37.5%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 75%;
+  }
+}
+figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 10;
+}
+blockquote {
+  p {
+    column-count: 3;
+    -webkit-column-count: 3;
+    column-gap: 4rem;
+    -webkit-column-gap: 50;
+    text-align: justify;
+  }
+}
+figcaption {
+  color: #fff;
+  font-family: "corpulent-web", sans-serif;
+  font-size: 3.2vw;
+  font-weight: 400;
+  left: 50%;
+  line-height: 1;
+  margin-left: -20%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 40vh;
+  z-index: 5;
+  width: 40%;
+}
