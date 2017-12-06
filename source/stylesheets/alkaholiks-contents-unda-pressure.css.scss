@@ -8,10 +8,10 @@ $secondary-color: #000000;
 @include loader($primary-color);
 
 html {
-  background: $primary-color;
+  background: #fff;
 }
 body {
-  background: $primary-color;
+  background: #fff;
   color: #fff;
   font-family: "katarine-web", sans-serif;
   font-weight: 400;
@@ -84,7 +84,7 @@ p {
 #main {
   font-size: 1.1rem;
   line-height: 1.6;
-  padding: 5rem 0 10rem 0;
+  padding: 0 0 5rem 0;
   overflow: hidden;
 }
 h1 {
@@ -98,23 +98,36 @@ h1 {
 }
 article {
   margin: 0 auto;
-  max-width: 90%;
   position: relative;
   width: 100%;
 
   header {
     margin: 0 auto;
+    padding: 5rem 0 5rem;
     position: relative;
-    width: 80%;
+    width: 100%;
+
+    &:after {
+      background-color: $primary-color;
+      border-radius: 0 0 50% 50%;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
   }
 
   img {
     left: 50%;
-    margin: -37.5% 0 0 -37.5%;
+    margin: -27.5% 0 0 -27.5%;
     position: absolute;
     right: 0;
     top: 50%;
-    width: 75%;
+    width: 55%;
   }
 }
 figure {
@@ -124,13 +137,49 @@ figure {
   z-index: 10;
 }
 blockquote {
-  p {
-    column-count: 3;
-    -webkit-column-count: 3;
-    column-gap: 4rem;
-    -webkit-column-gap: 50;
+  color: #000;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 0 2rem;
+  div {
+    float: left;
+    margin-right: 5%;
     text-align: justify;
+    width: 30%;
+    &:nth-child(1),
+    &:nth-child(3) {
+      margin-top: -30%;
+    }
+
+    &:nth-child(2) {
+      position: relative;
+      top: 2.7rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
+  p {
+    hyphens: auto;
+    position: relative;
+    top: 2rem;
+  }
+}
+[class^="shape"] {
+  background-color: transparent;
+  height: auto;
+  padding-top: 100vw;
+  width: 100vw;
+}
+.shape-one {
+  float: right; 
+  shape-outside: circle(50% at 108vw -25%);
+}
+
+.shape-two {
+  float: left; 
+  shape-outside: circle(50% at -9.8vw -25%);
 }
 figcaption {
   color: #fff;
@@ -139,11 +188,12 @@ figcaption {
   font-weight: 400;
   left: 50%;
   line-height: 1;
+  margin-top: 38%;
   margin-left: -20%;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 40vh;
+  top: 0;
   z-index: 5;
   width: 40%;
 }
