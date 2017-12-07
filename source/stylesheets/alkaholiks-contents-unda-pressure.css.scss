@@ -140,7 +140,7 @@ article {
   }
 }
 figure {
-  margin: 00;
+  margin: 0;
   padding: 0;
   width: 100%;
   z-index: 10;
@@ -149,8 +149,12 @@ blockquote {
   color: #000;
   margin: 4rem auto 0;
   max-width: 1600px;
+  left: 0;
   overflow: hidden;
   padding: 0 2rem;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
   width: 80%;
 
   div {
@@ -176,12 +180,17 @@ blockquote {
 
     @media screen and (max-width: 700px) {
       margin-bottom: 2rem;
+      top: 0 !important;
     }
   }
 }
 @supports (shape-outside: circle()) {
   blockquote {
-    margin: -25% auto 0;
+    margin: -25vw auto -10%;
+
+    @media screen and (max-width: 1280px) {
+      margin: -25vw auto 0;
+    }
 
     @media screen and (max-width: 700px) {
       margin: 0 auto;
