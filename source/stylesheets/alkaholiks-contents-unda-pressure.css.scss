@@ -186,7 +186,11 @@ blockquote {
 }
 @supports (shape-outside: circle()) {
   blockquote {
-    margin: -25vw auto -10%;
+    margin: -25vw auto -20%;
+
+    @media screen and (max-width: 1400px) {
+      margin: -25vw auto -10%;
+    }
 
     @media screen and (max-width: 1280px) {
       margin: -25vw auto 0;
