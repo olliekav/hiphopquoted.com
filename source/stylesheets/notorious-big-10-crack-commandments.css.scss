@@ -86,7 +86,6 @@ a {
 #main {
   font: 400 137.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times New Roman, serif;
   padding: 0 2em;
-  opacity: 1;
   overflow: hidden;
   @extend %clearfix;
   @media screen and (max-width: 500px) {

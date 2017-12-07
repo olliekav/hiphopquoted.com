@@ -18,7 +18,7 @@ genius_link: http://genius.com/The-pharcyde-drop-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "tri7njl", :include_big_text => true, :include_lettering => false, :script => "$('h1').bigtext();" } %>
+  <%= partial "font_javascripts", :locals => { font_id: "tri7njl", script: "$('h1').bigtext().resize();" } %>
 <% end %>
 
 <article>

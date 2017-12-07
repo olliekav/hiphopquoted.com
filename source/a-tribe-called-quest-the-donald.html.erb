@@ -19,7 +19,7 @@ genius_link: https://genius.com/A-tribe-called-quest-the-donald-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "fkg5nsu" } %>
+  <%= partial "font_javascripts", :locals => { font_id: "fkg5nsu" } %>
   <%= javascript_include_tag("animations.js") %>
   <script>
     var controller = new ScrollMagic.Controller();

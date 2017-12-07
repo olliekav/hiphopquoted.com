@@ -19,7 +19,7 @@ genius_link: http://genius.com/Gang-starr-full-clip-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "xnz0gsv", :include_big_text => true, :include_lettering => false, :script => "$('.chorus, figcaption, figcaption>a, figcaption>cite').bigtext();" } %>
+  <%= partial "font_javascripts", :locals => { font_id: "xnz0gsv", script: "$('.chorus, figcaption, figcaption>a, figcaption>cite').bigtext().resize();" } %>
 <% end %>
 
 <article>

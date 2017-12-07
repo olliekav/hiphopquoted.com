@@ -19,7 +19,7 @@ genius_link: http://genius.com/Raekwon-verbal-intercourse-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "jan2ukx", :include_big_text => true, :include_lettering => false, :script => "$('article>header').bigtext();" } %>
+  <%= partial "font_javascripts", :locals => { font_id: "jan2ukx", script: "$('article>header').bigtext().resize();" } %>
 <% end %>
 
 <article>

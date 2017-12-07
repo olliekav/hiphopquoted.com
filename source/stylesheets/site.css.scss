@@ -507,9 +507,14 @@ html.js main {
   visibility: hidden;
   @include transition(all 0.4s ease-in-out);
 }
-html.js.js-load main {
-  opacity: 1;
-  visibility: visible;
+html.js.wf-active {
+  main {
+    opacity: 1;
+    visibility: visible;
+  }
+  .loader {
+    display: none;
+  }
 }
 .loader,
 .loader:before,
@@ -569,9 +574,6 @@ html.js.js-load main {
     box-shadow: 0 -2em $white;
     height: 5em;
   }
-}
-html.js-load .loader {
-  display: none;
 }
 
 // iTunes affiliate banners

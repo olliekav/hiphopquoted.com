@@ -1,4 +1,9 @@
 //= require "jquery-2.2.2.min"
+//= require "circletype.min.js"
+//= require "bigtext.js"
+//= require "jquery.lettering.js"
+//= require "classList.js"
+//= require "iTunesPreviewPlayer.js"
 
 $(function() {
   

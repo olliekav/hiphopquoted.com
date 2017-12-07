@@ -20,10 +20,12 @@ genius_link: http://genius.com/Kendrick-lamar-hiiipower-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag("jquery.lettering.js") %>
   <script>
     $(function(){
       $("h1").lettering('letters');
+      setTimeout(function(){
+        $("html").addClass('wf-active');
+      }, 400);
     });
   </script>
 <% end %>

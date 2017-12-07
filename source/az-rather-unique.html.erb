@@ -19,7 +19,7 @@ genius_link: http://genius.com/Az-rather-unique-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "jsv0omn", :include_big_text => false, :include_lettering => true, :script => "$('h1>b, .chorus>b').lettering('words');" } %>
+  <%= partial "font_javascripts", :locals => { font_id: "jsv0omn", script: "$('h1>b, .chorus>b').lettering('words');" } %>
 <% end %>
 
 <article>

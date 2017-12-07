@@ -31,30 +31,19 @@
     <%= javascript_include_tag("application.js") %>
     <%= yield_content :javascript %>
     <% if content_page? %>
-      <%= partial "font_javascripts", :locals => { :font_id => "lsk1lvz", :include_big_text => false, :include_lettering => false, :script => false } %>
+      <%= partial "font_javascripts", :locals => { font_id: "lsk1lvz", script: false } %>
     <% else %>
-      <%= javascript_include_tag("/javascripts/classList.js") %>
-      <%= javascript_include_tag "/javascripts/iTunesPreviewPlayer.js" %>
       <script>
         var track = "<%= current_page.data.track %>";
         var playerCountry = "<%= current_page.data.player_country %>";
         var playerColor = "#<%= current_page.data.player_color %>";
         var playerAttribute = "<%= current_page.data.player_attribute %>";
+        var player = new iTunesPreviewPlayer(track);
+        var audio = document.getElementsByTagName('audio');
+        document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>
     <% end %>
     <script>
-      $(window).on("load", function() {
-        setTimeout(function(){
-          // This is nasty and needs re-doing but bigtext isn't calculating properly
-          $(window).trigger('resize');
-          $('html').addClass('js-load');
-        }, 100)
-        <% unless content_page? %>
-          var player = new iTunesPreviewPlayer(track);
-          var audio = document.getElementsByTagName('audio');
-          document.getElementById("audio-clip").appendChild(player.DOMElement());
-        <% end %>
-      });
       if( $(window).width() <= 768 ) { 
         setTimeout(function(){
           window.scrollTo(0,0);

@@ -12,11 +12,11 @@ body {
   color:#fff;
 }
 a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color: #3e3e3e;
+    color: #000;
   }
 }
 .button {
@@ -86,7 +86,6 @@ a {
 }
 #main {
   font: 400 112.5%/1.5 'Sentinel SSm A', 'Sentinel SSm B', Georgia, Times-New-roman, sans-serif;
-  opacity: 1;
 }
 article {
   margin:0 auto 6em;

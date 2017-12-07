@@ -86,6 +86,7 @@ p {
   line-height: 1.6;
   padding: 0 0 5rem 0;
   overflow: hidden;
+  visibility: visible;
 }
 h1 {
   color: #fff;
@@ -118,6 +119,14 @@ article {
       top: 0;
       width: 100%;
       z-index: -1;
+
+      @media screen and (max-width: 800px) {
+        height: 95%;
+      }
+
+      @media screen and (max-width: 500px) {
+        height: 90%;
+      }
     }
   }
 
@@ -131,55 +140,92 @@ article {
   }
 }
 figure {
-  margin: 0;
+  margin: 00;
   padding: 0;
   width: 100%;
   z-index: 10;
 }
 blockquote {
   color: #000;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   max-width: 80%;
+  overflow: hidden;
   padding: 0 2rem;
+
   div {
     float: left;
     margin-right: 5%;
     text-align: justify;
     width: 30%;
-    &:nth-child(1),
-    &:nth-child(3) {
-      margin-top: -30%;
-    }
-
-    &:nth-child(2) {
-      position: relative;
-      top: 2.7rem;
-    }
 
     &:last-of-type {
       margin-right: 0;
     }
+
+    @media screen and (max-width: 700px) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
   }
   p {
     hyphens: auto;
+    margin: 0;
     position: relative;
-    top: 2rem;
+
+    @media screen and (max-width: 700px) {
+      margin-bottom: 2rem;
+    }
   }
 }
-[class^="shape"] {
-  background-color: transparent;
-  height: auto;
-  padding-top: 100vw;
-  width: 100vw;
-}
-.shape-one {
-  float: right; 
-  shape-outside: circle(50% at 108vw -25%);
-}
+@supports (shape-outside: circle()) {
+  blockquote {
+    margin: -25% auto 0;
 
-.shape-two {
-  float: left; 
-  shape-outside: circle(50% at -9.8vw -25%);
+    @media screen and (max-width: 700px) {
+      margin: 0 auto;
+    }
+
+    div:nth-child(1) {
+      p {
+        top: 2rem;
+      }
+    }
+
+    div:nth-child(2) {
+      p {
+        top: 4.6rem;
+      }
+    }
+
+    div:nth-child(3) {
+      p {
+        top: 2.3rem;
+      }
+    }
+  }
+  [class^="shape"] {
+    background-color: transparent;
+    height: auto;
+    padding-top: 100vw;
+    width: 100vw;
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+  .shape-one {
+    float: right; 
+    shape-outside: circle(50% at 108vw -25%);
+  }
+  .shape-two {
+    float: left; 
+    shape-outside: circle(50% at 24vw -25%);;
+  }
+  .shape-three {
+    float: left; 
+    shape-outside: circle(50% at -8vw -25%);
+  }
 }
 figcaption {
   color: #fff;
@@ -196,4 +242,8 @@ figcaption {
   top: 0;
   z-index: 5;
   width: 40%;
+
+  @media screen and (max-width: 700px) {
+    margin-top: 45%;
+  }
 }
