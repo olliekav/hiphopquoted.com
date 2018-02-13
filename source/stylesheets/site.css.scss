@@ -506,12 +506,12 @@ article {
 // Page animations --------------------------------------------------------------------
 
 main {
-  -webkit-animation: pageAnimate 0.5s ease-in-out;
-  animation: pageAnimate 0.5s ease-in-out;
+  -webkit-animation: pageAnimate .8s ease-in-out;
+  animation: pageAnimate .8s ease-in-out;
 }
 
 @-webkit-keyframes pageAnimate {
-  0% {
+  0%, 50% {
     opacity: 0;
     visibility: hidden;
   }
@@ -521,7 +521,7 @@ main {
   }
 }
 @keyframes pageAnimate {
-  0% {
+  0%, 50% {
     opacity: 0;
     visibility: hidden;
   }
