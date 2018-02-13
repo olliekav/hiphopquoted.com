@@ -1,5 +1,7 @@
 // Foreign Beggars - Hold On -----------------------------------------------------------------
 
+@import url("//cloud.typography.com/613014/659388/css/fonts.css");
+
 @import "partials/common";
 
 $primary-color: #eb6907;
@@ -107,8 +109,7 @@ p {
 article {
   h1 {
     color: $tertiary-color;
-    //font: 800 18vw/0.8 'Quarto A', 'Quarto B', Georgia, serif;
-    font-family: 'Quarto A', 'Quarto B', Georgia, serif;
+    font-family: "Quarto A", "Quarto B", Georgia, serif;
     font-weight: 800;
     font-size: 18vw;
     line-height: 0.8;

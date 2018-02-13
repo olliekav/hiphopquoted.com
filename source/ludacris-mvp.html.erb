@@ -19,7 +19,9 @@ genius_link: http://genius.com/Ludacris-mvp-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "yqy5rzv", script: "$('h1').bigtext().resize();" } %>
+  <script>
+    $('h1').bigtext().resize();
+  </script>
 <% end %>
 
 <article>

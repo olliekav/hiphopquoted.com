@@ -20,7 +20,9 @@ genius_link: https://genius.com/Fliptrix-one-time-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "cfz8kog", script: "$('h1').lettering('words').children('span').lettering();" } %>
+  <script>
+    $('h1').lettering('words').children('span').lettering();
+  </script>
 <% end %>
 
 <article>

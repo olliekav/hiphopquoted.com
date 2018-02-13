@@ -20,7 +20,11 @@ genius_link: https://genius.com/Tha-alkaholiks-contents-unda-pressure-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "kst3xjl", script: "setTimeout(function(){var circleHeader = new CircleType(document.getElementById('circle-wrap'))}, 200)" } %>
+  <script>
+    setTimeout(function(){
+      var circleHeader = new CircleType(document.getElementById('circle-wrap'))
+    }, 100)
+  </script>
 <% end %>
 
 <article>

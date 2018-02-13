@@ -19,7 +19,9 @@ genius_link: http://genius.com/Jehst-city-of-industry-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "hud2lml", script: "$('h1').lettering('words');" } %>
+  <script>
+    $('h1').lettering('words');
+  </script>
 <% end %>
 
 <article>

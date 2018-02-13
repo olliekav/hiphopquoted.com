@@ -19,7 +19,9 @@ genius_link: http://genius.com/Talib-kweli-drugs-basketball-and-rap-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "bwu4rgz", script: "$('h1, h2').bigtext().resize();" } %>
+  <script>
+    $('h1, h2').bigtext().resize();
+  </script>
 <% end %>
 
 <article>

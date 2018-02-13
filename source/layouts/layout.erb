@@ -7,9 +7,8 @@
     <meta name="description" content="<%= page_description %>"/>
     <meta content="Hip-Hop, Hip-Hop Quotes, Hip-Hop Quoted, Hip-Hop Lyrics, Rap Quotes, Rap, Rap Quoted, Rap Lyrics, CSS3, HTML5, Art Direction, Typography, Fonts" name="keywords"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/images/favicon.ico" rel="shortcut icon">
-    <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
     <%= stylesheet_link_tag "site.css" %>
     <%= yield_content :stylesheet %>
     <script>
@@ -27,12 +26,9 @@
       <%= yield %>
     </main>
     <%= partial "footer" %>
-    <div class="loader">Loading...</div>
     <%= javascript_include_tag("application.js") %>
     <%= yield_content :javascript %>
-    <% if content_page? %>
-      <%= partial "font_javascripts", :locals => { font_id: "lsk1lvz", script: false } %>
-    <% else %>
+    <% unless content_page? %>
       <script>
         var track = "<%= current_page.data.track %>";
         var playerCountry = "<%= current_page.data.player_country %>";
@@ -43,12 +39,5 @@
         document.getElementById("audio-clip").appendChild(player.DOMElement());
       </script>
     <% end %>
-    <script>
-      if( $(window).width() <= 768 ) { 
-        setTimeout(function(){
-          window.scrollTo(0,0);
-        },1000)
-      }
-    </script>
   </body>
 </html>

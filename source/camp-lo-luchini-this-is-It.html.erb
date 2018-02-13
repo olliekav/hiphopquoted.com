@@ -19,7 +19,10 @@ genius_link: https://genius.com/Camp-lo-luchini-this-is-it-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { :font_id => "obq1daq", :include_big_text => false, :include_lettering => true, :script => "$('h1').lettering('words').children('span').lettering();$('figcaption').lettering('words');" } %>
+  <script>
+    $('h1').lettering('words').children('span').lettering();
+    $('figcaption').lettering('words');
+  </script>
 <% end %>
 
 <article>

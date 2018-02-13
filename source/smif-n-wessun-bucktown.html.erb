@@ -19,7 +19,9 @@ genius_link: http://genius.com/Smif-n-wessun-bucktown-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= partial "font_javascripts", :locals => { font_id: "qsx1olo", script: "$('h1, figcaption, figcaption>a, figcaption>cite').bigtext().resize();" } %>
+  <script>
+    $('h1, figcaption, figcaption>a, figcaption>cite').bigtext().resize();
+  </script>
 <% end %>
 
 <article>

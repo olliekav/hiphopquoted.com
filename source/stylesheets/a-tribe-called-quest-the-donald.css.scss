@@ -1,5 +1,7 @@
 // Kendrick Lamar - HiiiPower -----------------------------------------------------------------
 
+@import url("https://use.typekit.net/fkg5nsu.css");
+
 @import "partials/common";
 
 $primary-color: #b35089;
@@ -100,7 +102,7 @@ p {
 }
 h1 {
   color: $primary-color;
-  font-family: "subway-new-york-std",sans-serif;
+  font-family: "subway-new-york-std", sans-serif;
   font-size: 20vw;
   left: 30%;
   letter-spacing: 0.2rem;

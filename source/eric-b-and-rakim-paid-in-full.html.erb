@@ -18,18 +18,6 @@ genius_link: http://genius.com/Rakim-paid-in-full-lyrics
   <%= stylesheet_link_tag("eric-b-and-rakim-paid-in-full.css") %>
 <% end %>
 
-<% content_for :javascript do %>
-  <%= javascript_include_tag("jquery.lettering.js") %>
-  <script>
-    $(function(){
-      $("h1").lettering('words');
-      setTimeout(function(){
-        $("html").addClass('wf-active');
-      }, 400);
-    });
-  </script>
-<% end %>
-
 <article>
   <header>
     <h1>Paid in Full</h1>

@@ -19,19 +19,8 @@ genius_link: http://genius.com/Aesop-rock-battery-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js"></script>
   <script>
-    $(function(){
-      WebFont.load({
-        custom: {
-          families: ['veneerlowresregular']
-          //urls: ['/stylesheets/fonts/veneer.css']
-        },
-        active: function() {
-          $('h1, .chorus, figcaption, figcaption>a, figcaption>cite').bigtext();
-        }
-      });
-    });
+    $('h1, .chorus, figcaption, figcaption>a, figcaption>cite').bigtext();
   </script>
 <% end %>
 
