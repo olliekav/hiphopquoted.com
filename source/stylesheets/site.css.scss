@@ -507,7 +507,7 @@ html.js main {
   visibility: hidden;
   @include transition(all 0.4s ease-in-out);
 }
-html.js.wf-active {
+html.js {
   main {
     opacity: 1;
     visibility: visible;
