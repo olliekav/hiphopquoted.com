@@ -17,10 +17,13 @@ body {
   min-height: 100%;
   position: relative;
   width:100%;
-  @include box-sizing(border-box);
+
   &.nav-on {
     overflow: hidden;
   }
+ 
+  @include box-sizing(border-box);
+  @include transition(all 0.5s linear);
 }
 a {
   text-decoration: none;
@@ -500,117 +503,30 @@ article {
   }
 }
 
-// Typekit loading elements --------------------------------------------------------------------
+// Page animations --------------------------------------------------------------------
 
-html.js main {
-  opacity: 0;
-  visibility: hidden;
-  @include transition(all 0.4s ease-in-out);
+main {
+  -webkit-animation: pageAnimate 0.5s ease-in-out;
+  animation: pageAnimate 0.5s ease-in-out;
 }
-html.js {
-  main {
+
+@-webkit-keyframes pageAnimate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
     opacity: 1;
     visibility: visible;
   }
-  .loader {
-    display: none;
+}
+@keyframes pageAnimate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
   }
-}
-.loader,
-.loader:before,
-.loader:after {
-  background: $white;
-  height: 4em;
-  width: 1em;
-  -webkit-animation: loader 1s infinite ease-in-out;
-  animation: loader 1s infinite ease-in-out;
-}
-.loader:before,
-.loader:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  @include transform(translate3d(0,0,0));
-}
-.loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-.loader {
-  font-size: 11px;
-  left: 50%;
-  margin: -1.5em 0 0 -2em;
-  position: fixed;
-  text-indent: -9999em;
-  top: 55%;
-  @include transform(translateZ(0));
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-.loader:after {
-  left: 1.5em;
-}
-@-webkit-keyframes loader {
-  0%,
-  80%,
   100% {
-    box-shadow: 0 0 $white;
-    height: 4em;
+    opacity: 1;
+    visibility: visible;
   }
-  40% {
-    box-shadow: 0 -2em $white;
-    height: 5em;
-  }
-}
-@keyframes loader {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0 $white;
-    height: 4em;
-  }
-  40% {
-    box-shadow: 0 -2em $white;
-    height: 5em;
-  }
-}
-
-// iTunes affiliate banners
-.ad-banner {
-  margin: 0 auto;
-  max-width: 728px;
-  padding-bottom: 6em;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  z-index: 10;
-  @media screen and (max-width: 500px) {
-    padding-bottom: 6em;
-    width: 320px;
-  }
-}
-
-// Genuis.com embed 
-
-.rg_embed {
-  color: #3e3e3e;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  border: 0 !important;
-  max-width: auto;
-  margin: 0 !important;
-  width: 100%;
-}
-.rg_embed_body {
-  padding: 0 2em !important;
-}
-.rg_embed a[data-id] {
-  background-color: rgba(#fffc64, 0.4) !important;
-  @include transition(background-color 0.24s ease-in-out);
-  &:hover {
-    background-color: rgba(#fffc64, 0.6) !important;
-  }
-}
-.hide_genius_header {
-  display: none;
 }

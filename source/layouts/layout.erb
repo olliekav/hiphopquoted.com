@@ -9,7 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/images/favicon.ico" rel="shortcut icon">
+    <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
     <%= stylesheet_link_tag "site.css" %>
+    <% if content_page? %>
+      <link rel="stylesheet" href="https://use.typekit.net/lsk1lvz.css">
+    <% end %>
     <%= yield_content :stylesheet %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,6 +32,9 @@
     <%= partial "footer" %>
     <%= javascript_include_tag("application.js") %>
     <%= yield_content :javascript %>
+    <script>
+      $('html').addClass('animate-in');
+    </script>
     <% unless content_page? %>
       <script>
         var track = "<%= current_page.data.track %>";
