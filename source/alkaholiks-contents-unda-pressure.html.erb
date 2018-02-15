@@ -22,10 +22,10 @@ genius_link: https://genius.com/Tha-alkaholiks-contents-unda-pressure-lyrics
 
 <% content_for :javascript do %>
   <script>
+    circleHeader = new CircleType(document.getElementById('circle-wrap'));
     setTimeout(function(){
-      var circleHeader = new CircleType(document.getElementById('circle-wrap'))
+      circleHeader.refresh();
     }, 200);
-    circleHeader.refresh();
   </script>
 <% end %>
 
