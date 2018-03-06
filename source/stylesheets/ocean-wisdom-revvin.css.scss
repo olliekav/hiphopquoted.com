@@ -1,0 +1,204 @@
+// Ocean Wisdom - Revvin' -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #ffffff;
+$secondary-color: #000000;
+
+@include loader($primary-color);
+
+html {
+  background: $secondary-color;
+}
+body {
+  background: $secondary-color;
+  color: $primary-color;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+a {
+  color: #999;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: #fff;
+  }
+}
+p {
+  margin-bottom: 2em;
+}
+#header {
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 20;
+}
+#logo {
+  path {
+    fill: $primary-color;
+    pointer-events: all;
+  }
+  &:hover path {
+    fill: #fff;
+  }
+}
+#footer.sticky {
+  background-color: rgba($primary-color, 0.95);
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    &:hover {
+      color: rgba($secondary-color, 0.5);
+    }
+  }
+  .page-nav {
+    > a.prev {
+      &:after {
+        border-right-color: $secondary-color;
+      }
+      &:hover:after {
+        border-right-color: $secondary-color;
+      }
+    }
+    > a.next {
+      &:after {
+        border-left-color: $secondary-color;
+      }
+      &:hover:after {
+        border-left-color: $secondary-color;
+      }
+    }
+  }
+}
+.iTunesPreviewPlayer {
+  background-color: $secondary-color;
+}
+.iTunesPreviewPlayer:after {
+  color: $secondary-color;
+}
+.iTunesPreviewPlayer:hover:after {
+  color: rgba($secondary-color, 0.5);
+}
+#main {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 0 0 5rem 0;
+  overflow: hidden;
+  visibility: visible;
+}
+h1 {
+  color: #fff;
+  font-family: "Nitro A", "Nitro B", sans-serif;
+  font-size: 42vw;
+  font-weight: 400;
+  line-height: 0.7;
+  margin: 5rem auto 0;
+  position: relative;
+  z-index: 2;
+
+  span {
+    display: block;
+
+    &:first-child,
+    &:last-child {
+      text-align: right;
+    }
+
+    &:first-child {
+      left: 8vw;
+      position: relative;
+    }
+
+    &:last-child {
+      left: -1.6vw;
+      position: relative;
+    }
+  }
+}
+article {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 10;
+}
+blockquote {
+  color: #fff;
+  margin: 4rem auto 0;
+  max-width: 1600px;
+  left: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  width: 80%;
+}
+// @supports (shape-outside: circle()) {
+//   blockquote {
+//     margin: -25vw auto -20%;
+
+//     @media screen and (max-width: 1400px) {
+//       margin: -25vw auto -10%;
+//     }
+
+//     @media screen and (max-width: 1280px) {
+//       margin: -25vw auto 0;
+//     }
+
+//     @media screen and (max-width: 700px) {
+//       margin: 0 auto;
+//     }
+
+//     div:nth-child(1) {
+//       p {
+//         top: 2rem;
+//       }
+//     }
+
+//     div:nth-child(2) {
+//       p {
+//         top: 4.6rem;
+//       }
+//     }
+
+//     div:nth-child(3) {
+//       p {
+//         top: 2.3rem;
+//       }
+//     }
+//   }
+//   [class^="shape"] {
+//     background-color: transparent;
+//     height: auto;
+//     padding-top: 100vw;
+//     width: 100vw;
+
+//     @media screen and (max-width: 700px) {
+//       display: none;
+//     }
+//   }
+//   .shape-one {
+//     float: right; 
+//     shape-outside: circle(50% at 108vw -25%);
+//   }
+//   .shape-two {
+//     float: left; 
+//     shape-outside: circle(50% at 24vw -25%);;
+//   }
+//   .shape-three {
+//     float: left; 
+//     shape-outside: circle(50% at -8vw -25%);
+//   }
+// }
+figcaption {
+  color: #fff;
+  font-family: "Nitro A", "Nitro B", sans-serif;
+  font-size: 3.2vw;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1;
+}
