@@ -91,15 +91,17 @@ p {
 h1 {
   color: #fff;
   font-family: "Nitro A", "Nitro B", sans-serif;
-  font-size: 42vw;
+  font-size: 46vw;
   font-weight: 400;
   line-height: 0.7;
-  margin: 5rem auto 0;
+  margin: 0 auto 0 -10vw;
+  padding-top: 14vw;
   position: relative;
   z-index: 2;
 
   span {
     display: block;
+    position: relative;
 
     &:first-child,
     &:last-child {
@@ -107,13 +109,60 @@ h1 {
     }
 
     &:first-child {
-      left: 8vw;
+      left: 9vw;
       position: relative;
     }
 
     &:last-child {
       left: -1.6vw;
       position: relative;
+    }
+  }
+
+  &:before {
+    background-color: $primary-color;
+    content: "";
+    height: 8vw;
+    left: 51vw;
+    position: absolute;
+    top: 7vw;
+    width: 100vw;
+
+    @include transform(skew(-30deg));
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 6rem;
+
+    span:nth-child(1):before,
+    span:nth-child(3):before {
+      background-color: $primary-color;
+      content: "";
+      height: 28vw;
+      right: 83.5vw;
+      position: absolute;
+      top: 4.2vw;
+      width: 100vw;
+
+      @include transform(skew(-29deg));
+    }
+
+    span:nth-child(2):before {
+      background-color: $primary-color;
+      content: "";
+      height: 28vw;
+      left: 67vw;
+      position: absolute;
+      top: 4.5vw;
+      width: 100vw;
+
+      @include transform(skew(-29deg));
+    }
+
+    span:nth-child(3):before {
+      right: 63vw;
+
+      @include transform(skew(-28deg));
     }
   }
 }
@@ -130,75 +179,173 @@ figure {
 }
 blockquote {
   color: #fff;
-  margin: 4rem auto 0;
-  max-width: 1600px;
+  font-size: .72vw;
   left: 0;
+  line-height: 1.6;
   overflow: hidden;
-  padding: 0 2rem;
-  width: 80%;
+  padding: 18.2vw 0 5vw;
+  position: absolute;
+  text-align:justify;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  p {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 700px) {
+    font-size: .74vw;
+  }
+
+  @media screen and (min-width: 740px) and (max-width: 930px) {
+    font-size: .72vw;
+  }
+
+  @media screen and (min-width: 1300px) {
+    font-size: .76vw;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-top: 12vw;
+    position: relative;
+    text-align: left;
+  }
 }
-// @supports (shape-outside: circle()) {
-//   blockquote {
-//     margin: -25vw auto -20%;
 
-//     @media screen and (max-width: 1400px) {
-//       margin: -25vw auto -10%;
-//     }
+[class^="verse"] {
+  height: 28.5vw;
+  margin-bottom: 3.8vw;
+  position: relative;
 
-//     @media screen and (max-width: 1280px) {
-//       margin: -25vw auto 0;
-//     }
+  &:nth-child(1),
+  &:nth-child(3) {
+    padding-left: 2rem;
 
-//     @media screen and (max-width: 700px) {
-//       margin: 0 auto;
-//     }
+    .shape {
+      float: right;
+    }
+  }
 
-//     div:nth-child(1) {
-//       p {
-//         top: 2rem;
-//       }
-//     }
+  &:nth-child(2) {
+    margin-bottom: 3.4vw;
+    padding-right: 2rem;
 
-//     div:nth-child(2) {
-//       p {
-//         top: 4.6rem;
-//       }
-//     }
+    .shape {
+      float: left;
+    }
+  }
 
-//     div:nth-child(3) {
-//       p {
-//         top: 2.3rem;
-//       }
-//     }
-//   }
-//   [class^="shape"] {
-//     background-color: transparent;
-//     height: auto;
-//     padding-top: 100vw;
-//     width: 100vw;
+  @media screen and (max-width: 650px) {
+    height: auto;
+    margin: 0 auto 2rem;
+    max-width: 80vw;
+    width: 100%;
 
-//     @media screen and (max-width: 700px) {
-//       display: none;
-//     }
-//   }
-//   .shape-one {
-//     float: right; 
-//     shape-outside: circle(50% at 108vw -25%);
-//   }
-//   .shape-two {
-//     float: left; 
-//     shape-outside: circle(50% at 24vw -25%);;
-//   }
-//   .shape-three {
-//     float: left; 
-//     shape-outside: circle(50% at -8vw -25%);
-//   }
-// }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      padding: 0;
+    }
+  }
+}
+
+.shape {
+  height: 100%;
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}
+
+.verse-one .shape {
+  width: 81vw;
+  shape-outside: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.verse-two .shape {
+  width: 64vw;
+  shape-outside: polygon(0 0%, 100% 0%, 77% 100%, 0% 100%);
+}
+
+.verse-three .shape {
+  width: 71.5vw;
+  shape-outside: polygon(21% 0%, 100% 0%, 0 100%, 0% 100%);
+}
+
+.caption-wrapper {
+  height: 8.2vw;
+  margin-top: 3.8vw;
+  padding: 0 6rem 0 25vw;
+  position: relative;
+
+  .shape {
+    float: left;
+    margin-left: -15vw;
+    width: 20vw;
+    shape-outside: polygon(0 0%, 100% 0%, 20% 100%, 0% 100%);
+  }
+
+  &:before {
+    background-color: $primary-color;
+    content: "";
+    height: 100%;
+    margin-right: -25vw;
+    right: 100%;
+    position: absolute;
+    top: 0;
+    width: 50vw;
+
+    @include transform(skew(-30deg));
+  }
+
+  @media screen and (max-width: 650px) {
+    margin: 2rem 0 3rem;
+    padding: 0;
+
+    &:before,
+    .shape {
+      display: none;
+    }
+  }
+}
+
 figcaption {
   color: #fff;
   font-family: "Nitro A", "Nitro B", sans-serif;
   font-size: 3.2vw;
   font-weight: 400;
   letter-spacing: 3px;
-  line-height: 1;
+  line-height: 0.9;
+  position: relative;
+  z-index: 100;
+
+  @media screen and (max-width: 840px) {
+    font-size: 2.8vw;
+    line-height: 1;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 80vw;
+    width: 100%;
+  }
 }
+
+// Firefox hacks
+// @-moz-document url-prefix() { 
+//   blockquote {
+//      font-size: .62vw;
+//   }
+// }
+
+// IE Edge hacks
+// @supports (-ms-ime-align: auto) {
+//   blockquote {
+//      font-size: .62vw;
+//   }
+// }
