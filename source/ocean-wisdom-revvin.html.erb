@@ -21,7 +21,13 @@ genius_link: https://genius.com/Ocean-wisdom-revvin-lyrics
 <% end %>
 
 <% content_for :javascript do %>
-  <%= javascript_include_tag "shapes-polyfill.min" %>
+  <script src="/javascripts/shapes-polyfill.min.js" data-auto-run="false"></script>
+  <script>
+    window.setInterval(function() {
+      window.ShapesPolyfill.teardown();
+      window.ShapesPolyfill.run();
+    }, 500);
+  </script>
 <% end %>
 
 <article>
