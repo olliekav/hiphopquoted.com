@@ -21,7 +21,10 @@ genius_link: http://genius.com/Raekwon-verbal-intercourse-lyrics
 
 <% content_for :javascript do %>
   <script>
-    $('article>header').bigtext().resize();
+    var font = new FontFaceObserver('quatro-slab');
+    font.load().then(function () {
+      $('article>header').bigtext().resize();
+    });
   </script>
 <% end %>
 

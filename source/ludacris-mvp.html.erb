@@ -21,7 +21,10 @@ genius_link: http://genius.com/Ludacris-mvp-lyrics
 
 <% content_for :javascript do %>
   <script>
-    $('h1').bigtext().resize();
+    var font = new FontFaceObserver('refrigerator-deluxe');
+    font.load().then(function () {
+      $('h1').bigtext().resize();
+    });
   </script>
 <% end %>
 
