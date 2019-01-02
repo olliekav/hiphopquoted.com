@@ -18,29 +18,6 @@ genius_link: http://genius.com/D-d-all-stars-1-2-pass-it-lyrics
   <%= stylesheet_link_tag("d-and-d-all-stars-1-2-pass-it-remix.css") %>
 <% end %>
 
-<% content_for :javascript do %>
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api?version=3";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('video-iframe', {
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-    function onPlayerReady(event) {
-      player.mute();
-      player.playVideo();
-    }
-  </script>
-<% end %>
-
-<div class="video"><iframe id="video-iframe" style="height:100%; width: 100%;" frameborder="0" allowfullscreen="1" width="640" height="360" src="https://www.youtube.com/embed/6XB24E9HTqU?autohide=1&amp;cc_load_policy=0&amp;controls=3&amp;enablejsapi=1&amp;fs=0&amp;autoplay=1&amp;modestbranding=1&amp;origin=http%3A%2F%2Fhiphopquoted.dev&amp;iv_load_policy=3&amp;loop=1&amp;showinfo=0&amp;rel=0&amp;transparent=opaque&amp;hd=1&amp;playlist=6XB24E9HTqU&amp;start=10&amp;end=263"></iframe></div>
-
 <article>
   <header>
     <h1>1.. 2.. Pass It</h1>

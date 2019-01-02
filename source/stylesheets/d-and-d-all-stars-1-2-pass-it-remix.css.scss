@@ -9,10 +9,22 @@ $tertiary-color: #000000;
 @include loader($primary-color);
 
 body {
-  background-color: $tertiary-color;
+  background: $tertiary-color url('http://img.youtube.com/vi/FwxNCYqrUwk/hqdefault.jpg') no-repeat center center;
+  background-size: 200%;
+  background-attachment: fixed;
   color: $secondary-color;
   position: relative;
   width: 100%;
+  &:after {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMElEQVQYV2NkIBIwEqmOgSKFxlBbziLbhm4iTBFMDVwx2QpBJhFlNc5AoMjXWE0FACImBAup5WE3AAAAAElFTkSuQmCC');
+    background-color: rgba(0,0,0,0.4);
+    bottom: 0; 
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 a {
   color: $primary-color;
@@ -76,45 +88,6 @@ p {
 }
 .iTunesPreviewPlayer:hover:after {
   color: $secondary-color;
-}
-.video {
-  background-color: $tertiary-color;
-  bottom: 0;
-  height:200%;
-  left: -50%;
-  overflow:hidden;
-  position:fixed;
-  top: -50%;
-  right: 0;
-  z-index: -999;
-  width:200%;
-  -webkit-backface-visibility: hidden;
-  transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  &:after {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMElEQVQYV2NkIBIwEqmOgSKFxlBbziLbhm4iTBFMDVwx2QpBJhFlNc5AoMjXWE0FACImBAup5WE3AAAAAElFTkSuQmCC');
-    background-color: rgba(0,0,0,0.4);
-    bottom: 0; 
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  @media screen and (max-width: 800px) {
-    background: $tertiary-color url('http://img.youtube.com/vi/6XB24E9HTqU/hqdefault.jpg') no-repeat center center;
-    background-size: 300%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    > iframe {
-      display: none;
-    }
-    @media screen and (max-width: 500px) {
-      background-size: 400%;
-    }
-  }
 }
 .ad-banner {
   bottom: 0;

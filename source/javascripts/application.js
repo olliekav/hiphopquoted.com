@@ -3,6 +3,7 @@
 //= require "bigtext.js"
 //= require "jquery.lettering.js"
 //= require "classList.js"
+//= require "fontfaceobserver.standalone.js"
 //= require "iTunesPreviewPlayer.js"
 
 $(function() {

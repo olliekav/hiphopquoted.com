@@ -23,7 +23,6 @@ body {
   }
  
   @include box-sizing(border-box);
-  @include transition(all 0.5s linear);
 }
 a {
   text-decoration: none;
@@ -48,7 +47,7 @@ cite {
 }
 #main {
   display: block;
-  margin:0 auto;
+  margin: 0 auto;
   padding:0 1.5em 2em;
   position: relative;
   width: 100%;
@@ -506,27 +505,23 @@ article {
 // Page animations --------------------------------------------------------------------
 
 main {
-  -webkit-animation: pageAnimate .8s ease-in-out;
-  animation: pageAnimate .8s ease-in-out;
+  -webkit-animation: pageAnimate .5s ease-in-out;
+  animation: pageAnimate .5s ease-in-out;
 }
 
 @-webkit-keyframes pageAnimate {
-  0%, 50% {
+  0% {
     opacity: 0;
-    visibility: hidden;
   }
   100% {
     opacity: 1;
-    visibility: visible;
   }
 }
 @keyframes pageAnimate {
-  0%, 50% {
+  0% {
     opacity: 0;
-    visibility: hidden;
   }
   100% {
     opacity: 1;
-    visibility: visible;
   }
 }

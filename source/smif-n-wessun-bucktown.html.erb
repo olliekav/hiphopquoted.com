@@ -21,7 +21,10 @@ genius_link: http://genius.com/Smif-n-wessun-bucktown-lyrics
 
 <% content_for :javascript do %>
   <script>
-    $('h1, figcaption, figcaption>a, figcaption>cite').bigtext().resize();
+    var font = new FontFaceObserver('stud');
+    font.load().then(function () {
+      $('h1, figcaption, figcaption>a, figcaption>cite').bigtext().resize();
+    });
   </script>
 <% end %>
 
