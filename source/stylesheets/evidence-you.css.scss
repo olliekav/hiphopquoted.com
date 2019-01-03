@@ -1,0 +1,182 @@
+// Evidence - You -----------------------------------------------------------------
+
+@import "partials/common";
+
+$primary-color: #C0302D;
+$secondary-color: #000000;
+
+@include loader(#ffffff);
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  background-color: $primary-color;
+  color: #000000;
+  font-family: "Idlewild SSm A", "Idlewild SSm B";
+  font-style: normal;
+  font-weight: 500;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover {
+  opacity: .3;
+}
+
+#header {
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+@media screen and (min-width: 700px) {
+  #header {
+    position: fixed;
+  }
+}
+
+#logo path {
+  fill: #000;
+}
+
+#logo:hover {
+  opacity: .5;
+}
+
+#footer {
+  background-color: #000000;
+  color: #fff;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer a:hover {
+  color: $primary-color;
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: $primary-color;
+}
+
+.page-nav > a.next:after {
+  border-left-color: $primary-color;
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: #fff;
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: #fff;
+}
+
+.iTunesPreviewPlayer {
+  background-color: $primary-color;
+}
+
+.iTunesPreviewPlayer:after {
+  color: #fff;
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: $primary-color;
+}
+
+h1 {
+  color: #fff;
+  font-size: 70vw;
+  font-weight: 900;
+  line-height: 0.8;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: -5vw;
+  right: 0;
+  -webkit-text-stroke-width: 3vw;
+  -webkit-text-stroke-color: #fff;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    position: absolute;
+  }
+}
+
+h1 span {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 span:first-child {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 span:first-child {
+    margin-bottom: 2rem;
+  }
+}
+
+figure {
+  padding: 10rem 5% 5%;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 700px) {
+  figure {
+    align-items: flex-end;
+    display: flex;
+    padding-top: 25vw;
+  }
+}
+
+blockquote {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 700px) {
+  blockquote {
+    font-size: 1.2vw;
+    order: 2;
+    width: 50%;
+  }
+}
+
+blockquote p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  blockquote p:last-child {
+    margin: 0;
+  }
+}
+
+figcaption {
+  font-size: 1.8rem;
+  font-weight: 800;
+  -webkit-text-stroke-width: .2vw;
+  -webkit-text-stroke-color: #000;
+}
+
+@media screen and (min-width: 700px) {
+  figcaption {
+    font-size: 3vw;
+    order: 1;
+    padding-right: 5%;
+    width: 50%;
+  }
+}

@@ -171,9 +171,6 @@ article {
     @extend %clearfix;
     li {
       list-style: none;
-      a:hover {
-        color: #ffffff;
-      }
     }
   }
   &.sticky {
@@ -221,7 +218,7 @@ article {
     }
   }
   a:hover {
-    color: #fff;
+    color: #ffffff;
   }
   #audio-clip {
     width: 90px;
@@ -280,16 +277,6 @@ article {
   color: #fff;
   font: 500 150%/1.5 "ff-meta-serif-web-pro", Georgia, sans-serif;
   position: relative;
-  // &:before {
-  //   background-color: rgba(#000, 0.8);
-  //   bottom: 0;
-  //   content: "";
-  //   left: 0;
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   z-index: -1;
-  // }
   a {
     color: #666666;
     @include transition(all 0.3s ease);
