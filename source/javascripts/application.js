@@ -1,14 +1,22 @@
-//= require "jquery-2.2.2.min"
-//= require "circletype.min.js"
-//= require "bigtext.js"
-//= require "jquery.lettering.js"
-//= require "classList.js"
-//= require "fontfaceobserver.standalone.js"
-//= require "iTunesPreviewPlayer.js"
+import $ from "jquery";
+import CircleType from "circletype";
+import bigtext from "bigtext";
+import fitty from 'fitty';
+import "letteringjs";
+import FontFaceObserver from 'fontfaceobserver';
+import iTunesPreviewPlayer from "./vendor/iTunesPreviewPlayer";
+
+window.jQuery = $;
+window.$ = $;
+window.iTunesPreviewPlayer = iTunesPreviewPlayer;
+window.FontFaceObserver = FontFaceObserver;
+window.CircleType = CircleType;
+window.fitty = fitty;
 
 $(function() {
   
   if($('#footer').hasClass('sticky')) {
+
     // Hide Header on on scroll down
     var didScroll,
         lastScrollTop = 0,
@@ -28,7 +36,7 @@ $(function() {
     }, 250);
 
     function hasScrolled() {
-      var st = $(this).scrollTop();
+      const st = $(this).scrollTop();
       if(Math.abs(lastScrollTop - st) <= delta)
           return;
       if (st > lastScrollTop && st > footerHeight -40){

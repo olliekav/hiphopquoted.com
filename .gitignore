@@ -10,17 +10,22 @@
 # Ignore the build directory
 /build
 
-# Ignore Sass' cache
+# Ignore cache
 /.sass-cache
+/.cache
 
 # Ignore .DS_store file
 .DS_Store
 
-Rakefile
-
 .powenv
-.powrc
+.blog-space-hash
+.*-space-hash
+.env
 /tmp
-.cache
+/.divshot-cache
+.blog-space-hash
 /log
-.sass-cache
+.env.development
+.env
+node_modules
+.tmp

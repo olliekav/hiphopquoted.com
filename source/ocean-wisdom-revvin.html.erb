@@ -20,17 +20,6 @@ genius_link: https://genius.com/Ocean-wisdom-revvin-lyrics
   <%= stylesheet_link_tag("ocean-wisdom-revvin.css") %>
 <% end %>
 
-<% content_for :javascript do %>
-  <script src="/javascripts/shapes-polyfill.min.js" data-auto-run="false"></script>
-  <script>
-    window.onload = function() {
-      setTimeout(function(){
-        window.ShapesPolyfill.run({ force: ShapesPolyfill.Force.Styles });
-      }, 0); 
-    }
-  </script>
-<% end %>
-
 <article>
   <header>
     <h1 aria-label="Ocean Wisdom - Revvin">

@@ -1,5 +1,4 @@
-"use strict"
-var iTunesPreviewPlayer = function() {
+const iTunesPreviewPlayer = function() {
   // helpers
   var callbackCount = 0;
   var apiCall = function(args, callback) {
@@ -195,3 +194,5 @@ var iTunesPreviewPlayer = function() {
   };
   return player;
 }();
+
+export default iTunesPreviewPlayer;

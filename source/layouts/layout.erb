@@ -20,7 +20,7 @@
       <%= yield %>
     </main>
     <%= partial "footer" %>
-    <%= javascript_include_tag("application.js") %>
+    <%= javascript_include_tag("application.bundle") %>
     <%= yield_content :javascript %>
     <% unless content_page? %>
       <script>

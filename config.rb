@@ -10,6 +10,12 @@
 #   activate :livereload, apply_js_live: true, apply_css_live: true
 # end
 
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? 'npm run build' : 'npm run start',
+         source: ".tmp/dist",
+         latency: 1
+
 # Ignore the sitemap layout
 page '/*.xml', layout: false
 page '/*.json', layout: false
@@ -46,19 +52,19 @@ helpers do
   def quote_pages
     sitemap.resources.find_all {|p| p.source_file.match(/\.html/) && !p.path.match(/about/) && !p.path.match(/404/) && !p.path.match(/500/) && !p.path.match(/prints/) && !p.path.match(/index/)}.sort_by {|p| p.data.order.to_i}.reverse!
   end
+  def quote_pages
+    sitemap.resources.select do |resource|
+      resource.data.order
+    end.sort_by {|resource| resource.data.order.to_i}.reverse!
+  end
 end
 
-activate :sprockets
-sprockets.append_path File.join( root, 'source' )
 activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
 
   # Enable cache buster
   activate :asset_hash
