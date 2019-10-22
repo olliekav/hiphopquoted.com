@@ -23,8 +23,10 @@ page '/*.txt', layout: false
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def wrap_text(text, include_span)
-    if include_span == true
+  def wrap_text(text, include_span, fit)
+    if include_span == true && fit == true
+      '<span class="fit">' + text + '</span>'
+    elsif include_span == true
       '<span>' + text + '</span>'
     else
       text
@@ -49,9 +51,9 @@ helpers do
     content_pages = ["index.html", "about.html", "prints.html", "404.html", "500.html"]
     content_pages.include?(current_page.path)
   end
-  def quote_pages
-    sitemap.resources.find_all {|p| p.source_file.match(/\.html/) && !p.path.match(/about/) && !p.path.match(/404/) && !p.path.match(/500/) && !p.path.match(/prints/) && !p.path.match(/index/)}.sort_by {|p| p.data.order.to_i}.reverse!
-  end
+  # def quote_pages
+  #   sitemap.resources.find_all {|p| p.source_file.match(/\.html/) && !p.path.match(/about/) && !p.path.match(/404/) && !p.path.match(/500/) && !p.path.match(/prints/) && !p.path.match(/index/)}.sort_by {|p| p.data.order.to_i}.reverse!
+  # end
   def quote_pages
     sitemap.resources.select do |resource|
       resource.data.order

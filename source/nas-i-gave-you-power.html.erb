@@ -22,15 +22,15 @@ genius_link: http://genius.com/Nas-i-gave-you-power-lyrics
 <% content_for :javascript do %>
   <script>
     var font = new FontFaceObserver('bebas-neue');
-    font.load().then(function () {
-      $('h1').bigtext().resize();
+    font.load().then(function() {
+      fitty('.fit');
     });
   </script>
 <% end %>
 
 <article>
   <header>
-    <h1><span>I gave you</span> <span>power</span></h1>
+    <h1><span class="fit">I gave you</span> <span class="fit">power</span></h1>
   </header>
   <figure>
     <blockquote>

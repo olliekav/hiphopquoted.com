@@ -1,0 +1,239 @@
+// DJ Premier - Our Streets ft A$AP Ferg --------------------------------------------
+
+:root {
+  --color-primary: #a31923;
+  --color-blue: #77a4b6;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-blue);
+  background: radial-gradient(var(--color-white), var(--color-blue));
+  background-repeat:no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  height: auto;
+
+  @media (prefers-color-scheme: dark) {
+    background: radial-gradient(#3e3e3e, var(--color-black));
+  }
+}
+
+body {
+  border: 20px solid var(--color-white);
+  border-width: 20px 20px 65px 20px;
+  color: var(--color-black);
+  position: relative;
+}
+
+body:after {
+  background: url("../images/dj-premier/skyline.svg") no-repeat bottom center;
+  background-size: 100% auto;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-black);
+}
+
+#logo path {
+  fill: var(--color-black);
+}
+
+#logo:hover path {
+  fill: var(--color-primary);
+}
+
+#footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+#footer a {
+  color: var(--color-white);
+}
+
+#footer a:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: var(--color-primary);
+}
+
+.page-nav > a.next:after {
+  border-left-color: var(--color-primary);
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: var(--color-white);
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: var(--color-white);
+}
+
+.iTunesPreviewPlayer {
+  background-color: var(--color-primary);
+}
+
+.iTunesPreviewPlayer:after {
+  color: var(--color-white);
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: var(--color-primary);
+}
+
+#main {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-size: 62.5%;
+  font-weight: 400;
+  padding: 0;
+}
+
+article {
+  margin: 0 auto -21%;
+  max-width: 48rem;
+  padding: 0 2rem;
+  width: 100%;
+
+  @media screen and (max-width: 700px) {
+    margin: 0 auto;
+  }
+}
+
+header {
+  margin-bottom: .5rem;
+}
+
+blockquote {
+  display: flex;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  text-align: justify;
+  text-justify: auto;
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+}
+
+blockquote p {
+  font-size: 1.3rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+    opacity: .7;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+blockquote p:first-child:first-letter {
+  float: left;
+  margin: -.4rem 1rem -.6rem -.4rem;
+  font-size: 10rem;
+  line-height: .9;
+  font-weight: 900;
+
+  @media screen and (max-width: 500px) {
+    font-size: 7rem;
+  }
+}
+
+@-moz-document url-prefix() {
+  blockquote p:first-child:first-letter {
+    margin: .7rem 1rem 0 -.4rem;
+  }
+}
+
+h1,
+.sub-title,
+blockquote p:first-child:first-letter {
+  background: radial-gradient(#e6263c, var(--color-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
+  font-family: mostra-nuova, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: mostra-nuova, sans-serif;
+  font-size: 20vw;
+  line-height: .9;
+  font-weight: 900;
+}
+
+.sub-title {
+  font-weight: 400;
+}
+
+figcaption {
+  font-family: mostra-nuova, sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  margin: 23% auto 0;
+  max-width: 50%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 10;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+    opacity: .7;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+  }
+}
+
+figcaption a,
+figcaption cite {
+  display: block;
+}
+
+.car-image {
+  display: block;
+  width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+  }
+}

@@ -1,0 +1,45 @@
+---
+title: DJ Premier - Our Streets ft A$AP Ferg
+player_color: ffffff
+track: DJ Premier - A$AP Ferg - Our Streets
+artist: DJ Premier ft A$AP Ferg
+song: Our Streets
+album: 
+wiki_link: https://en.wikipedia.org/wiki/DJ_Premier
+song_link: https://geo.music.apple.com/us/album/our-streets-feat-a%24ap-ferg/1302459728?i=1302460408&mt=1&app=music
+album_link: 
+cat_id: 1302460408
+order: 47
+screenshot: dj_premier_asap_ferg_our_streets.jpg
+genius_link: https://genius.com/Dj-premier-our-streets-lyrics
+---
+
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag("https://use.typekit.net/hin0cpa.css") %>
+  <%= stylesheet_link_tag("dj-premier-asap-ferg-our-streets.css") %>
+<% end %>
+
+<% content_for :javascript do %>
+  <script>
+    var font = new FontFaceObserver('mostra-nuova');
+    font.load().then(function () {
+      fitty('.fit');
+    });
+  </script>
+<% end %>
+
+<article>
+  <header>
+    <h1 class="fit">Our <br>Streets</h1>
+    <p class="sub-title fit">See this is Harlem, these our streets</p>
+  </header>
+  <figure>
+    <blockquote>
+      <p>I got with Preemo, I’m just pressin’ the cheat code. We on a new level with the C-notes. I’m from where kids hustled on the block and rolled cee-lo, and niggas stay strapped like Girbauds. T-Nice with me week to week though, life was different when they got him for that R.I.C.O, for a couple kilos, coulda had ‘em underground, he was livin’ life illegal. Now he gettin’ right and our pockets lookin’ chicho, sippin’ cappuccino on a jet to Cannes, couple models gettin’ lit, they the best in France. Got Leonardo dough, catch me if you can, we had to kill Beijing and next Japan, man. This beat hot, I could catch a tan, my demographic in L.A. all Mexican. I love my supporters, they keep the check in hand, so every time I get a chance, I’ma bless the fam. What up, what up?</p>
+      <p>Done created a dream world, slept with my dream girl, brought mama that new house, diamonds and mean pearls. Done went to Africa, talked to the have-nots, donated some uniforms, teach ‘em how to have guap. Preemo put the soul in it, I make the track hot, and this thing forever got the game in a padlock. I just want somethin’ real, I’m tired of the ass shots, don’t wanna go to the club, I’m tired of them trap spots. My generation’s stuck on stupid, showin’ guns on the ‘gram, but no one use it. Sometimes I feel like I’m about to lose it, because the fake win when y’all know what the truth is. It’s me, the F-E-R to the fuckin’ G, my bars is Gang Starr, nobody can fuck with me, rest in peace Guru, nobody can fuck with he. You rappers is coocoo, better wake up out your fuckin’ dreams.</p>
+    </blockquote>
+    <%= partial 'figcaption', locals: { data: current_page.data } %>
+  </figure>
+</article>
+
+<%= image_tag "dj-premier/car.svg", alt: "", class: "car-image" %>

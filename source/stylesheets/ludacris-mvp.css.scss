@@ -92,9 +92,7 @@ article {
     max-width: 1200px;
     padding: 0 2em;
     position: relative;
-    text-align: justify;
     > h1 {
-      font-size: 14em;
       font-weight: 900;
       line-height: 0.8;
       margin: 0 auto;
@@ -172,4 +170,11 @@ article {
 }
 #ibb-widget {
   margin-top: 3em;
+}
+
+// Tweaks to letter spacing for fitty
+
+.fit:nth-child(2) {
+  margin-left: .5%;
+  padding-right: .1%;
 }

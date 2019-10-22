@@ -96,7 +96,9 @@ article {
     position: relative;
     > h1 {
       float: left;
-      font: 900 14em/0.8 "ff-good-headline-web-pro-con";
+      font-family: "ff-good-headline-web-pro-con";
+      line-height: .8;
+      font-weight: 900;
       margin: 0 auto;
       text-transform: uppercase;
       width: 48.5%;

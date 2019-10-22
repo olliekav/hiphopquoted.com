@@ -79,7 +79,7 @@ a {
   font: 500 100%/1.5 "kepler-std", Georgia, serif;
 }
 article {
-  margin: 0 auto;
+  margin: 0 auto 40px;
   max-width: 610px;
   position: relative;
   width: 100%;
@@ -101,7 +101,7 @@ article {
       &.chorus {
         left: 40px;
         position: absolute;
-        top: 0;
+        top: -8px;
         width: 40%;
       }
       &:not(.chorus):first-letter {
@@ -178,4 +178,9 @@ article {
       }
     }
   }
+}
+
+cite {
+  display: block;
+  width: 100%;
 }

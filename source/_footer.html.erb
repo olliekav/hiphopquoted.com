@@ -13,8 +13,8 @@
           <% if p.url == current_page.url %>
             <% next_page = quote_pages[index+1] %>
             <% prev_page = quote_pages[index-1] %>
-            <%= link_to("<span>Prev</span>", prev_page.path, :class => "prev") unless index == 0 %>
-            <%= link_to("<span>Next</span>", next_page.path, :class => "next") unless index == quote_pages.size - 1 %>
+            <%= link_to("<span>Prev</span>", prev_page.url, :class => "prev") unless index == 0 %>
+            <%= link_to("<span>Next</span>", next_page.url, :class => "next") unless index == quote_pages.size - 1 %>
           <% end %>
         <% end %>
       </li>

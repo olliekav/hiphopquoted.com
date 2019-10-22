@@ -22,8 +22,7 @@ genius_link: http://genius.com/Aesop-rock-battery-lyrics
   <script>
     var font = new FontFaceObserver('veneerlowresregular');
     font.load().then(function () {
-      fitty('span');
-      fitty('figcaption a');
+      fitty('.fit');
     });
   </script>
 <% end %>
@@ -31,9 +30,9 @@ genius_link: http://genius.com/Aesop-rock-battery-lyrics
 <article>
   <header>
     <h1>
-      <span>Yo change the</span>
-      <span>fuckin</span>
-      <span>channel</span>
+      <span class="fit">Yo change the</span>
+      <span class="fit">fuckin</span>
+      <span class="fit">channel</span>
     </h1>
   </header>
   <figure>
@@ -81,9 +80,9 @@ genius_link: http://genius.com/Aesop-rock-battery-lyrics
         Tell him Aesop Rock sent ya just to hear his horn blow like this.
       </p>
       <p class="chorus">
-        <span>And I ain't</span>
-        <span>getting any</span>
-        <span>younger</span>
+        <span class="fit">And I ain't</span>
+        <span class="fit">getting any</span>
+        <span class="fit">younger</span>
       </p>
       <p>
         My knuckles wear their bruises well,
@@ -128,6 +127,6 @@ genius_link: http://genius.com/Aesop-rock-battery-lyrics
         Then sit up on his crate as I witness the beauty born like this.
       </p>
     </blockquote>
-    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true, fit: true } %>
   </figure>
 </article>

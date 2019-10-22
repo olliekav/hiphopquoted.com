@@ -165,6 +165,8 @@ article {
         }
       }
       > cite {
+        display: block;
+        width: 100%;
         span:first-child {
           line-height: 0.9;
         }

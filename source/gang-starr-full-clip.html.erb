@@ -23,7 +23,7 @@ genius_link: http://genius.com/Gang-starr-full-clip-lyrics
   <script>
     var font = new FontFaceObserver('superclarendon');
     font.load().then(function () {
-      $('.chorus, figcaption, figcaption>a, figcaption>cite').bigtext().resize();
+      fitty('.fit');
     });
   </script>
 <% end %>
@@ -35,7 +35,7 @@ genius_link: http://genius.com/Gang-starr-full-clip-lyrics
   <%= image_tag("gang_starr_full_clip.jpg", :alt => "In memory of Keith Elam Guru • 1961-2010") %>
   <figure>
     <blockquote>
-      <p class="chorus"><span>Full</span> <span>clip</span> <span>do you wanna mess</span> <span>with this</span> <span>Gang</span> <span>starr</span> <span>one of the</span> <span>best yet</span> <span>I'm nice</span> <span>like that</span> <span>It's all good</span> <span>in this business</span> <span>of rap</span></p>
+      <p class="chorus"><span class="fit">Full</span> <span class="fit">clip</span> <span class="fit">do you wanna mess</span> <span class="fit">with this</span> <span class="fit">Gang</span> <span class="fit">starr</span> <span class="fit">one of the</span> <span class="fit">best yet</span> <span class="fit">I'm nice</span> <span class="fit">like that</span> <span class="fit">It's all good</span> <span class="fit">in this business</span> <span class="fit">of rap</span></p>
       <p>
         Fresh out the gate again, time to raise the stakes again.
         Fatten my plate again, y'all cats know we always play to win.
@@ -91,6 +91,6 @@ genius_link: http://genius.com/Gang-starr-full-clip-lyrics
         So watch your dome already cause this one might hit.
       </p>
     </blockquote>
-    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true } %>
+    <%= partial 'figcaption', locals: { data: current_page.data, include_span: true, fit: true } %>
   </figure>
 </article>
