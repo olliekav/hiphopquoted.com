@@ -1,26 +1,3 @@
-GIT
-  remote: git://github.com/flori/json.git
-  revision: 7f4cfd853f2c919d854fb95548a19980feff17e8
-  branch: v1.8
-  specs:
-    json (1.8.6)
-
-GIT
-  remote: git://github.com/middleman/middleman-sprockets.git
-  revision: 5e5197c3e4049845c446dc2b30d0169f2b3c6070
-  specs:
-    middleman-sprockets (4.1.1)
-      middleman-core (~> 4.0)
-      sprockets (>= 3.0)
-
-GIT
-  remote: git://github.com/rails/sprockets.git
-  revision: 1bcee8ebc03489eb7e42ee5c258a712443a6df3c
-  specs:
-    sprockets (4.0.0.beta10)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,7 +48,6 @@ GEM
     image_size (1.5.0)
     in_threads (1.5.3)
     kramdown (1.17.0)
-    libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -117,7 +93,6 @@ GEM
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
     minitest (5.11.3)
-    oj (3.9.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -133,14 +108,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    ref (2.0.0)
     sassc (2.2.0)
       ffi (~> 1.9)
     servolux (0.13.0)
     temple (0.8.1)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -153,14 +124,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  json!
   middleman
   middleman-imageoptim
   middleman-livereload
-  middleman-sprockets!
-  oj
-  sprockets!
-  therubyracer
 
 BUNDLED WITH
    1.17.2
