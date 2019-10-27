@@ -26,7 +26,7 @@ html {
 
 body {
   border: 20px solid var(--color-white);
-  border-width: 20px 20px 65px 20px;
+  border-width: 20px;
   color: var(--color-black);
   position: relative;
 }
@@ -117,7 +117,7 @@ a:focus {
 }
 
 article {
-  margin: 0 auto -21%;
+  margin: 0 auto -8%;
   max-width: 48rem;
   padding: 0 2rem;
   width: 100%;
@@ -204,11 +204,12 @@ figcaption {
   font-family: mostra-nuova, sans-serif;
   font-size: 1.3vw;
   font-weight: 700;
-  margin: 23% auto 0;
+  margin: 0 auto;
   max-width: 50%;
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  top: 13vw;
   z-index: 10;
 
   @media (prefers-color-scheme: dark) {
@@ -221,6 +222,10 @@ figcaption {
     margin: 2rem auto;
     max-width: 80%;
   }
+
+  // @media screen and (min-width: 1500px) {
+  //   margin: 28% auto 0;
+  // }
 }
 
 figcaption a,
