@@ -31,7 +31,7 @@ body {
   position: relative;
 }
 
-body:after {
+body:before {
   background: url("../images/dj-premier/skyline.svg") no-repeat bottom center;
   background-size: 100% auto;
   bottom: 0;
@@ -181,9 +181,9 @@ h1,
 blockquote p:first-child:first-letter {
   background: radial-gradient(#e6263c, var(--color-primary));
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: var(--color-primary);
   font-family: mostra-nuova, sans-serif;
   text-align: center;
   text-transform: uppercase;

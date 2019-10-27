@@ -143,24 +143,17 @@ figure {
   margin: 0;
   padding: 0;
   width: 100%;
-  z-index: 10;
 }
 blockquote {
   color: #000;
+  display: flex;
   margin: 4rem auto 0;
   max-width: 1600px;
-  left: 0;
-  overflow: hidden;
   padding: 0 2rem;
-  // position: absolute;
-  // right: 0;
-  // top: 0;
   width: 80%;
 
   div {
-    float: left;
     margin-right: 5%;
-    text-align: justify;
     width: 30%;
 
     &:last-of-type {
@@ -177,6 +170,7 @@ blockquote {
     hyphens: auto;
     margin: 0;
     position: relative;
+    text-align: justify;
 
     @media screen and (max-width: 700px) {
       margin-bottom: 2rem;
@@ -186,61 +180,36 @@ blockquote {
 }
 @supports (shape-outside: circle()) {
   blockquote {
-    margin: -25vw auto -20%;
-
-    @media screen and (max-width: 1400px) {
-      margin: -25vw auto -10%;
-    }
-
-    @media screen and (max-width: 1280px) {
-      margin: -25vw auto 0;
-    }
+    margin: -18rem auto 5rem;
 
     @media screen and (max-width: 700px) {
       margin: 0 auto;
     }
-
-    div:nth-child(1) {
-      p {
-        top: 2rem;
-      }
-    }
-
-    div:nth-child(2) {
-      p {
-        top: 4.6rem;
-      }
-    }
-
-    div:nth-child(3) {
-      p {
-        top: 2.3rem;
-      }
-    }
   }
-  [class^="shape"] {
+  [class^="column"]:before {
     background-color: transparent;
-    height: auto;
-    padding-top: 100vw;
-    width: 100vw;
+    content: "";
+    height: 500px;
+    width: 100%;
 
     @media screen and (max-width: 700px) {
       display: none;
     }
   }
-  .shape-one {
-    float: right; 
-    shape-outside: circle(50% at 108vw -25%);
+  .column-one:before {
+    float: right;
+    shape-outside: ellipse(175% 500px at 150% -10vw);
   }
-  .shape-two {
+  .column-two:before {
     float: left; 
-    shape-outside: circle(50% at 24vw -25%);;
+    shape-outside: inset(0px 0px 135px 0px);
   }
-  .shape-three {
+  .column-three:before {
     float: left; 
-    shape-outside: circle(50% at -8vw -25%);
+    shape-outside: ellipse(175% 500px at -50% -10vw);
   }
 }
+
 figcaption {
   color: #fff;
   font-family: "corpulent-web", sans-serif;

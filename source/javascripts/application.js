@@ -29,14 +29,14 @@ $(function() {
     });
 
     setInterval(function() {
-      if (didScroll) {
+      if(didScroll) {
         hasScrolled();
         didScroll = false;
       }
     }, 250);
 
     function hasScrolled() {
-      const st = $(this).scrollTop();
+      const st = $(window).scrollTop();
       if(Math.abs(lastScrollTop - st) <= delta)
           return;
       if (st > lastScrollTop && st > footerHeight -40){

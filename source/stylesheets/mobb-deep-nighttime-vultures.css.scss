@@ -113,7 +113,7 @@ blockquote {
 
   @media screen and (max-width: 900px) {
     margin-left: 2rem;
-    padding-bottom: 130%;
+    padding-bottom: 140%;
   }
 }
 svg {
@@ -132,7 +132,11 @@ svg {
 @-moz-document url-prefix() {
   .svg-ff-replace {
     display: block;
-    width: 80%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 76%;
+    
     @media screen and (max-width: 900px) {
       width: 100%;
     }
@@ -146,18 +150,18 @@ figcaption,
   color: $secondary-color;
   font-family: 'Gotham SSm A', 'Gotham SSm B',sans-serif;
   font-weight: 800;
-  font-size: 4vw;
+  font-size: 3vw;
   letter-spacing: 0;
   line-height: 1;
   text-transform: uppercase;
 
   @media screen and (max-width: 900px) {
-    font-size: 5.5vw;
+    font-size: 4vw;
   }
 
 }
 figcaption {
-  bottom: 15.5%;
+  bottom: 16.5%;
   position: absolute;
   right: 2rem;
   width: 45%;
