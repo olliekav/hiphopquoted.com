@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ba49972-3512-4d1f-9aff-391a104f4318/deploy-status)](https://app.netlify.com/sites/thisiscapra/deploys)
+
 Hip-Hop Quoted
 ================
 
