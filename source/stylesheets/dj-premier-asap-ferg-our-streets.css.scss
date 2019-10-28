@@ -256,6 +256,7 @@ figcaption cite {
   background: linear-gradient(0deg, rgba(255,255,255,.8), rgba(255,255,255,0));
   bottom: 25vw;
   clip-path: polygon(20% 0%, 80% 0%, 57% 100%, 48% 99%);
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 57% 100%, 48% 99%);
   height: 100%;
   position: absolute;
   z-index: -1;
