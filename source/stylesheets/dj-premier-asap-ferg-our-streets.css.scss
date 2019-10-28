@@ -28,22 +28,11 @@ body {
   border: 20px solid var(--color-white);
   border-width: 20px;
   color: var(--color-black);
+  overflow-x: hidden;
   position: relative;
-}
-
-body:before {
-  background: url("../images/dj-premier/skyline.svg") no-repeat bottom center;
-  background-size: 100% auto;
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 
   @media (prefers-color-scheme: dark) {
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
+    color: var(--color-white);
   }
 }
 
@@ -56,10 +45,18 @@ a {
 a:hover,
 a:focus {
   color: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
 }
 
 #logo path {
   fill: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    fill: var(--color-white);
+  }
 }
 
 #logo:hover path {
@@ -117,7 +114,7 @@ a:focus {
 }
 
 article {
-  margin: 0 auto -8%;
+  margin: 0 auto -4%;
   max-width: 48rem;
   padding: 0 2rem;
   width: 100%;
@@ -209,7 +206,7 @@ figcaption {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  top: 13vw;
+  top: 16.5vw;
   z-index: 10;
 
   @media (prefers-color-scheme: dark) {
@@ -222,10 +219,6 @@ figcaption {
     margin: 2rem auto;
     max-width: 80%;
   }
-
-  // @media screen and (min-width: 1500px) {
-  //   margin: 28% auto 0;
-  // }
 }
 
 figcaption a,
@@ -235,10 +228,123 @@ figcaption cite {
 
 .car-image {
   display: block;
+  position: relative;
   width: 100%;
+  z-index: 2;
 
   @media (prefers-color-scheme: dark) {
     filter: brightness(70%);
     -webkit-filter: brightness(70%);
   }
+}
+
+.skyline-image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(100%) grayscale(100%) brightness(50%);
+    -webkit-filter: invert(100%) grayscale(100%) brightness(50%);
+  }
+}
+
+// Spotlights
+
+.spotlight {
+  background: linear-gradient(0deg, rgba(255,255,255,.8), rgba(255,255,255,0));
+  bottom: 25vw;
+  clip-path: polygon(20% 0%, 80% 0%, 57% 100%, 48% 99%);
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(0deg, rgba(255,255,255,.1), rgba(255,255,255,0));
+  }
+}
+
+.spotlight:nth-of-type(1) {
+  animation: spotlight-one 8s infinite;
+  left: 15vw;
+  transform: rotate(-35deg);
+  width: 400px;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.spotlight:nth-of-type(2) {
+  animation: spotlight-two 8s infinite;
+  left: 30vw;
+  transform: rotate(20deg);
+  width: 400px;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.spotlight:nth-of-type(3) {
+  animation: spotlight-three 8s infinite;
+  right: 30vw;
+  transform: rotate(-20deg);
+  width: 400px;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.spotlight:nth-of-type(4) {
+  animation: spotlight-four 8s infinite;
+  right: 15vw;
+  transform: rotate(35deg);
+  width: 400px;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@-webkit-keyframes spotlight-one {
+  0, 100% { transform: rotate(-35deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+@keyframes spotlight-one {
+  0, 100% { transform: rotate(-35deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+@-webkit-keyframes spotlight-two {
+  0, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes spotlight-two {
+  0, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@-webkit-keyframes spotlight-three {
+  0, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+@keyframes spotlight-three {
+  0, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+@-webkit-keyframes spotlight-four {
+  0, 100% { transform: rotate(35deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes spotlight-four {
+  0, 100% { transform: rotate(35deg); }
+  50% { transform: rotate(10deg); }
 }
