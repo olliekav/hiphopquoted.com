@@ -137,8 +137,10 @@ blockquote {
   display: grid;
   grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
+  position: relative;
   text-align: justify;
   text-justify: auto;
+  z-index: 10;
 
   @media screen and (max-width: 500px) {
     display: block;
