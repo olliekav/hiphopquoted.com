@@ -16,8 +16,9 @@ html {
   background: radial-gradient(var(--color-white), var(--color-blue));
   background-repeat:no-repeat;
   background-size: cover;
-  min-height: 100%;
   height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
 
   @media (prefers-color-scheme: dark) {
     background: radial-gradient(#3e3e3e, var(--color-black));
@@ -26,13 +27,16 @@ html {
 
 body {
   border: 20px solid var(--color-white);
-  border-width: 20px;
   color: var(--color-black);
   overflow-x: hidden;
   position: relative;
 
   @media (prefers-color-scheme: dark) {
     color: var(--color-white);
+  }
+
+  @media screen and (max-width: 500px) {
+    border-width: 15px;
   }
 }
 
@@ -218,6 +222,10 @@ figcaption {
     font-size: 2rem;
     margin: 2rem auto;
     max-width: 80%;
+  }
+
+  @media screen and (max-width: 500px) {
+    top: 0;
   }
 }
 
