@@ -1,0 +1,107 @@
+// DJ Premier - Our Streets ft A$AP Ferg --------------------------------------------
+
+:root {
+  --color-blue: #009fe3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-white);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+}
+
+#logo path {
+  fill: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    fill: var(--color-white);
+  }
+}
+
+#logo:hover path {
+  fill: var(--color-primary);
+}
+
+#footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+#footer a {
+  color: var(--color-white);
+}
+
+#footer a:hover {
+  color: var(--color-blue);
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: var(--color-blue);
+}
+
+.page-nav > a.next:after {
+  border-left-color: var(--color-blue);
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: var(--color-white);
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: var(--color-white);
+}
+
+.iTunesPreviewPlayer {
+  background-color: var(--color-blue);
+}
+
+.iTunesPreviewPlayer:after {
+  color: var(--color-white);
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: var(--color-blue);
+}
+
+#main {
+  font-family: neue-haas-unica, sans-serif; 
+  font-style: normal;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h1, h3, p {
+  margin-bottom: 1.6rem;
+}
+
+blockquote {
+  font-size: 1.2rem;
+}
