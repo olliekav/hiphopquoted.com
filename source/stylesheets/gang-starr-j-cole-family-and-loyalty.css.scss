@@ -12,6 +12,7 @@
 
 html {
   background-color: var(--color-white);
+  overflow-x: hidden;
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-black);
@@ -31,6 +32,7 @@ a {
 a:hover,
 a:focus {
   color: var(--color-black);
+  text-decoration: none;
 
   @media (prefers-color-scheme: dark) {
     color: var(--color-blue);
@@ -111,7 +113,7 @@ a:focus {
   font-style: normal;
   font-size: 62.5%;
   font-weight: 400;
-  padding: 0 2rem 2rem;
+  padding: 0 2rem 6rem;
 
   @media (prefers-color-scheme: dark) {
     color: var(--color-white);
@@ -119,16 +121,28 @@ a:focus {
 }
 
 h1 {
-  font-size: 5.6vw;
+  font-size: 6rem;
   font-weight: 300;
   letter-spacing: -1px;
   line-height: 1;
+
+  @media only screen and (max-width: 1600px) {
+    font-size: 5.6vw;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 9.2vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 12.4vw;
+  }
 }
 
 h3, figcaption {
   font-size: 2.6rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 h1, h3, p {
@@ -139,13 +153,18 @@ blockquote {
   column-count: 2;
   font-size: 1.1rem;
   column-gap: 3rem;
+  text-align: justify;
+
+  @media only screen and (max-width: 800px) {
+    column-count: 1;
+  }
 }
 
 blockquote h3 {
   bottom: 100%;
   left: 0;
   position: absolute;
-  width: 25%;
+  width: 50%;
 }
 
 blockquote p:last-child {
@@ -155,21 +174,56 @@ blockquote p:last-child {
 article {
   display: grid;
   grid-gap: 3rem;
-  grid-template-columns: 2fr 0.3fr 1fr;
+  grid-template-columns: 2fr 0.3fr minmax(30%, 1fr);
+  margin: 0 auto;
+  max-width: 1600px;
   position: relative;
+  width: 100%;
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 2fr minmax(33%, 1fr);
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr minmax(50%, 1fr);
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
 }
 
 header {
   grid-column-start: 3;
   grid-column-end: 3;
+  min-width: 0;
   order: 2;
+
+  @media only screen and (max-width: 1100px) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
 }
 
 figcaption {
   bottom: 0;
   position: absolute;
   right: 0;
-  width: calc(34.3% - 6rem);
+  width: 30%;
+
+  @media only screen and (max-width: 1100px) {
+    width: 33%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 1.6rem;
+    position: static;
+    width: 100%;
+  }
 }
 
 figcaption a {
@@ -178,13 +232,18 @@ figcaption a {
 
 .diamond {
   display: block;
-  margin: 0 0 -10rem;
+  margin: 0 0 -25%;
 
   @media (prefers-color-scheme: dark) {
   }
 }
 
 .diamond img {
-  margin-top: -10rem;
-  margin-left: 25%;
+  margin-top: -25%;
+  width: 125%;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 0;
+    width: 150%;
+  }
 }
