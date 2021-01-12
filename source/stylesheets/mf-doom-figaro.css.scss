@@ -23,9 +23,25 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 #header {
@@ -33,6 +49,15 @@ img {
   top: 0;
   left: 0;
   z-index: 20;
+}
+
+#logo {
+  path {
+    fill: var(--color-white);
+  }
+  &:hover path {
+    fill: var(--color-white);
+  }
 }
 
 #footer {
@@ -87,39 +112,21 @@ img {
   line-height: 1.5
 }
 
-a {
-  color: var(--color-blue);
-  text-decoration: none;
-  transition: all .3s ease-in-out;
-}
-
-a:hover,
-a:focus {
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-#logo {
-  path {
-    fill: var(--color-blue);
-  }
-  &:hover path {
-    fill: var(--color-white);
-  }
-}
-
 header {
   position: relative;
 }
 
 h1 {
-  //font-family: MilkaBrittleTT-Regular;
   color: var(--color-pink);
   font-family: 'MilkaBrittleTT-Regular', sans-serif;
   font-size: 21vw;
-  margin: 0 0 -6rem;
-  transform: rotate(-6deg) translateX(-8vw);
+  margin: 0 0 -9vw;
+  transform: rotate(-6deg) translateX(-11vw);
   white-space: nowrap;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-6deg) translateX(-8vw);
+  }
 }
 
 h2, figcaption {
@@ -140,8 +147,12 @@ figcaption {
   color: var(--color-pink);
   line-height: .9;
   text-align: center;
-  transform: rotate(-4deg) translateX(-4vw) translateY(-5vw);
+  transform: rotate(-4deg) translateX(-8vw) translateY(-8vw);
   white-space: nowrap;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-4deg) translateX(-4vw) translateY(-5vw);
+  }
 }
 
 figcaption cite {
@@ -154,31 +165,60 @@ figcaption cite a:first-child:after {
 }
 
 article {
-  margin-bottom: 10vw;
+  margin-bottom: 8vw;
   position: relative;
 }
 
 blockquote {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-left: 15vw;
+  margin-left: 10vw;
   position: relative;
-  transform: rotate(-5deg);
-  width: 60vw;
+  transform: rotate(-3deg);
   z-index: 10;
+  width: 65vw;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5vw;
+    transform: rotate(-5deg);
+    width: 80vw;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    margin-left: 15vw;
+    width: 60vw;
+  }
 }
 
 .mask-image {
   margin: 0 0 -25vw 30vw;
-  transform: rotate(-5deg) translateY(-5rem);
-  width: 60vw;
+  transform: rotate(-5deg) translateY(0);
+  width: 80vw;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-5deg) translateY(-5vw);
+    width: 60vw;
+  }
 }
 
 .tag-image {
   left: 16vw;
   position: absolute;
-  top: 18vw;
+  top: 35vw;
   transform: rotate(-8deg);
-  width: 40vw;
+  width: 60vw;
+
+  @media only screen and (min-width: 600px) {
+    top: 18vw;
+    width: 40vw;
+  }
 }
