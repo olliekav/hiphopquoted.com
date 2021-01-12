@@ -1,0 +1,184 @@
+// MF Doom - Figaro --------------------------------------------
+
+:root {
+  --color-dark: #121721;
+  --color-blue: #5cbac4;
+  --color-pink: #fb5482;
+  --color-white: #ffffff;
+}
+
+// @import url("//hello.myfonts.net/count/3cfc4d");
+  
+@font-face {
+  font-family: 'MilkaBrittleTT-Regular';
+  src: url('/fonts/milka.woff2') format('woff2'), url('/fonts/milka.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#footer {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+#footer.sticky {
+  background-color: var(--color-blue);
+}
+
+#footer a {
+  color: var(--color-dark);
+}
+
+#footer a:hover {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: var(--color-dark);
+}
+
+.page-nav > a.next:after {
+  border-left-color: var(--color-dark);
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: var(--color-white);
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: var(--color-white);
+}
+
+.iTunesPreviewPlayer {
+  background-color: var(--color-dark);
+}
+
+.iTunesPreviewPlayer:after {
+  color: var(--color-dark);
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: var(--color-white);
+}
+
+#main {
+  color: var(--color-white);
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+#logo {
+  path {
+    fill: var(--color-blue);
+  }
+  &:hover path {
+    fill: var(--color-white);
+  }
+}
+
+header {
+  position: relative;
+}
+
+h1 {
+  //font-family: MilkaBrittleTT-Regular;
+  color: var(--color-pink);
+  font-family: 'MilkaBrittleTT-Regular', sans-serif;
+  font-size: 21vw;
+  margin: 0 0 -6rem;
+  transform: rotate(-6deg) translateX(-8vw);
+  white-space: nowrap;
+}
+
+h2, figcaption {
+  color: var(--color-white);
+  font-family: 'MilkaBrittleTT-Regular', sans-serif;
+  font-size: 7.2vw;
+  text-transform: uppercase;
+}
+
+h2 {
+  left: 50%;
+  transform: rotate(-9deg) translateX(-50%);
+  position: absolute;
+  top: 0;
+}
+
+figcaption {
+  color: var(--color-pink);
+  line-height: .9;
+  text-align: center;
+  transform: rotate(-4deg) translateX(-4vw) translateY(-5vw);
+  white-space: nowrap;
+}
+
+figcaption cite {
+  display: block;
+}
+
+figcaption cite a:first-child:after {
+  content: '';
+  display: block;
+}
+
+article {
+  margin-bottom: 10vw;
+  position: relative;
+}
+
+blockquote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-left: 15vw;
+  position: relative;
+  transform: rotate(-5deg);
+  width: 60vw;
+  z-index: 10;
+}
+
+.mask-image {
+  margin: 0 0 -25vw 30vw;
+  transform: rotate(-5deg) translateY(-5rem);
+  width: 60vw;
+}
+
+.tag-image {
+  left: 16vw;
+  position: absolute;
+  top: 18vw;
+  transform: rotate(-8deg);
+  width: 40vw;
+}
