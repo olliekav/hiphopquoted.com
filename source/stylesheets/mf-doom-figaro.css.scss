@@ -138,9 +138,9 @@ h2, figcaption {
 
 h2 {
   left: 50%;
-  transform: rotate(-9deg) translateX(-50%);
+  transform: rotate(-10deg) translateX(-50%);
   position: absolute;
-  top: 0;
+  top: -2vw;
 }
 
 figcaption {
@@ -196,6 +196,11 @@ blockquote {
   @media only screen and (min-width: 900px) {
     margin-left: 15vw;
     width: 60vw;
+
+    p {
+      min-height: 0vw;
+      font-size: clamp(1rem, 1.8vw, 2rem);
+    }
   }
 }
 
@@ -211,14 +216,14 @@ blockquote {
 }
 
 .tag-image {
-  left: 16vw;
+  left: 14vw;
   position: absolute;
   top: 35vw;
   transform: rotate(-8deg);
   width: 60vw;
 
   @media only screen and (min-width: 600px) {
-    top: 18vw;
+    top: 20vw;
     width: 40vw;
   }
 }
