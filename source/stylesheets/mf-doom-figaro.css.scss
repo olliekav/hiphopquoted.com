@@ -1,0 +1,229 @@
+// MF Doom - Figaro --------------------------------------------
+
+:root {
+  --color-dark: #121721;
+  --color-blue: #5cbac4;
+  --color-pink: #fb5482;
+  --color-white: #ffffff;
+}
+
+@import url("//hello.myfonts.net/count/3cfc4d");
+  
+@font-face {
+  font-family: 'MilkaBrittleTT-Regular';
+  src: url('/fonts/milka.woff2') format('woff2'), url('/fonts/milka.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#logo {
+  path {
+    fill: var(--color-white);
+  }
+  &:hover path {
+    fill: var(--color-blue);
+  }
+}
+
+#footer {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+#footer.sticky {
+  background-color: var(--color-blue);
+}
+
+#footer a {
+  color: var(--color-dark);
+}
+
+#footer a:hover {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: var(--color-dark);
+}
+
+.page-nav > a.next:after {
+  border-left-color: var(--color-dark);
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: var(--color-white);
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: var(--color-white);
+}
+
+.iTunesPreviewPlayer {
+  background-color: var(--color-dark);
+}
+
+.iTunesPreviewPlayer:after {
+  color: var(--color-dark);
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: var(--color-white);
+}
+
+#main {
+  color: var(--color-white);
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5
+}
+
+header {
+  position: relative;
+}
+
+h1 {
+  color: var(--color-pink);
+  font-family: 'MilkaBrittleTT-Regular', sans-serif;
+  font-size: 21vw;
+  margin: 0 0 -9vw;
+  transform: rotate(-6deg) translateX(-11vw);
+  white-space: nowrap;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-6deg) translateX(-8vw);
+  }
+}
+
+h2, figcaption {
+  color: var(--color-white);
+  font-family: 'MilkaBrittleTT-Regular', sans-serif;
+  font-size: 7.2vw;
+  text-transform: uppercase;
+}
+
+h2 {
+  left: 50%;
+  transform: rotate(-10deg) translateX(-50%);
+  position: absolute;
+  top: -2vw;
+}
+
+figcaption {
+  color: var(--color-pink);
+  line-height: .9;
+  text-align: center;
+  transform: rotate(-4deg) translateX(-8vw) translateY(-8vw);
+  white-space: nowrap;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-4deg) translateX(-4vw) translateY(-5vw);
+  }
+}
+
+figcaption cite {
+  display: block;
+}
+
+figcaption cite a:first-child:after {
+  content: '';
+  display: block;
+}
+
+article {
+  margin-bottom: 8vw;
+  position: relative;
+}
+
+blockquote {
+  margin-left: 10vw;
+  position: relative;
+  transform: rotate(-3deg);
+  z-index: 10;
+  width: 65vw;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5vw;
+    transform: rotate(-5deg);
+    width: 80vw;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    margin-left: 15vw;
+    width: 60vw;
+
+    p {
+      min-height: 0vw;
+      font-size: clamp(1rem, 1.4vw, 2rem);
+    }
+  }
+}
+
+.mask-image {
+  margin: 0 0 -25vw 30vw;
+  transform: rotate(-5deg) translateY(0);
+  width: 80vw;
+
+  @media only screen and (min-width: 600px) {
+    transform: rotate(-5deg) translateY(-5vw);
+    width: 60vw;
+  }
+}
+
+.tag-image {
+  left: 14vw;
+  position: absolute;
+  top: 35vw;
+  transform: rotate(-8deg);
+  width: 60vw;
+
+  @media only screen and (min-width: 600px) {
+    top: 20vw;
+    width: 40vw;
+  }
+}

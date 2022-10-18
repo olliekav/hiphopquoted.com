@@ -1,0 +1,248 @@
+// Gang Starr J-Cole Family and Loyalty --------------------------------------------
+
+:root {
+  --color-blue: #009fe3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-white);
+  overflow-x: hidden;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-black);
+  }
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+}
+
+a:hover,
+a:focus {
+  color: var(--color-black);
+  text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-blue);
+  }
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#logo path {
+  fill: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    fill: var(--color-white);
+  }
+}
+
+#logo:hover path {
+  fill: var(--color-black);
+
+  @media (prefers-color-scheme: dark) {
+    fill: var(--color-blue);
+  }
+}
+
+#footer {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+#footer.sticky {
+  background-color: var(--color-blue);
+}
+
+#footer a {
+  color: var(--color-white);
+}
+
+#footer a:hover {
+  color: var(--color-black);
+  opacity: 1;
+}
+
+.page-nav > a.prev:after {
+  border-right-color: var(--color-white);
+}
+
+.page-nav > a.next:after {
+  border-left-color: var(--color-white);
+}
+
+.page-nav > a.prev:hover:after {
+  border-right-color: var(--color-black);
+}
+
+.page-nav > a.next:hover:after {
+  border-left-color: var(--color-black);
+}
+
+.iTunesPreviewPlayer {
+  background-color: var(--color-black);
+}
+
+.iTunesPreviewPlayer:after {
+  color: var(--color-white);
+}
+
+.iTunesPreviewPlayer:hover:after {
+  color: var(--color-black);
+}
+
+#main {
+  font-family: neue-haas-unica, sans-serif; 
+  font-style: normal;
+  font-size: 62.5%;
+  font-weight: 400;
+  padding: 0 2rem 6rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-white);
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @media only screen and (max-width: 1600px) {
+    font-size: 5.6vw;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 9.2vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 12.4vw;
+  }
+}
+
+h3, figcaption {
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+h1, h3, p {
+  margin-bottom: 1.6rem;
+}
+
+blockquote {
+  column-count: 2;
+  font-size: 1.1rem;
+  column-gap: 3rem;
+
+  @media only screen and (max-width: 800px) {
+    column-count: 1;
+  }
+}
+
+blockquote h3 {
+  bottom: 100%;
+  left: 0;
+  position: absolute;
+  width: 50%;
+}
+
+blockquote p:last-child {
+  margin: 0;
+}
+
+article {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 2fr 0.3fr minmax(30%, 1fr);
+  margin: 0 auto;
+  max-width: 1600px;
+  position: relative;
+  width: 100%;
+
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 2fr minmax(33%, 1fr);
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr minmax(50%, 1fr);
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+header {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  min-width: 0;
+  order: 2;
+
+  @media only screen and (max-width: 1100px) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+}
+
+figcaption {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  width: 30%;
+
+  @media only screen and (max-width: 1100px) {
+    width: 33%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 1.6rem;
+    position: static;
+    width: 100%;
+  }
+}
+
+figcaption a {
+  text-decoration: underline;
+}
+
+.diamond {
+  display: block;
+  margin: 0 0 -25%;
+
+  @media (prefers-color-scheme: dark) {
+  }
+}
+
+.diamond img {
+  margin-top: -25%;
+  width: 125%;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 0;
+    width: 150%;
+  }
+}
