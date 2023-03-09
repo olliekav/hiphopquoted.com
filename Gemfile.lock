@@ -106,7 +106,7 @@ GEM
     parslet (2.0.0)
     progress (3.6.0)
     public_suffix (5.0.0)
-    rack (2.2.4)
+    rack (2.2.6.3)
     rack-livereload (0.3.17)
       rack
     rb-fsevent (0.11.2)
@@ -130,6 +130,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   haml (~> 5.0)
